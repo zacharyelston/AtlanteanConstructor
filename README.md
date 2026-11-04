@@ -412,6 +412,10 @@ images are in `docs/img/` (`tools/make_figs.py` redraws the SVGs).
 - **Investment and return:** [docs/economics.md](docs/economics.md) treats the
   homestead as a product, with surplus soil and stone sold, gravel and sand
   bought, and payback, NPV and builder margin.
+- **Where it makes sense:** [docs/where-it-pays.md](docs/where-it-pays.md)
+  sweeps the drivers. A homeowner needs two of three things: a fill market,
+  direct-sale produce, or land-value uplift. A builder profits almost anywhere
+  the fill has somewhere to go.
 
 Planning is on the shared
 [GitHub Project](https://github.com/users/zacharyelston/projects/7), with

@@ -1,0 +1,617 @@
+{
+ "fill_sweep": {
+  "fill_prices": [
+   -10,
+   -5,
+   0,
+   2.5,
+   5,
+   7.5,
+   10,
+   12.5,
+   15
+  ],
+  "sites": {
+   "NE 6 ft slope": {
+    "rows": [
+     {
+      "fill": -10,
+      "npv": -367160.7291578731,
+      "npv_screened": -276819.9781532226,
+      "earthworks_net": 387730.24372232775,
+      "net_capex": 488759.36620367924,
+      "build_cost": 318144.08942992584,
+      "uplift_needed_pct": 115.4070565371115,
+      "builder_profit_per_site": -91079.25441627193,
+      "sites_per_yr_to_break_even": null,
+      "sites_per_yr_per_crew": 2.9650855290374922,
+      "crew_days": 50.588759929866875
+     },
+     {
+      "fill": -5,
+      "npv": -281853.0907709964,
+      "npv_screened": -204308.48552437732,
+      "earthworks_net": 302422.6053354511,
+      "net_capex": 403451.72781680257,
+      "build_cost": 318144.08942992584,
+      "uplift_needed_pct": 88.59290495575186,
+      "builder_profit_per_site": -5771.616029395227,
+      "sites_per_yr_to_break_even": null,
+      "sites_per_yr_per_crew": 2.9650855290374922,
+      "crew_days": 50.588759929866875
+     },
+     {
+      "fill": 0,
+      "npv": -196545.45238411965,
+      "npv_screened": -131796.99289553228,
+      "earthworks_net": 217114.96694857435,
+      "net_capex": 318144.08942992584,
+      "build_cost": 318144.08942992584,
+      "uplift_needed_pct": 61.7787533743922,
+      "builder_profit_per_site": 79536.02235748147,
+      "sites_per_yr_to_break_even": 1.8859379128341638,
+      "sites_per_yr_per_crew": 2.9650855290374922,
+      "crew_days": 50.588759929866875
+     },
+     {
+      "fill": 2.5,
+      "npv": -153891.6331906813,
+      "npv_screened": -95541.24658110969,
+      "earthworks_net": 174461.14775513601,
+      "net_capex": 275490.2702364875,
+      "build_cost": 318144.08942992584,
+      "uplift_needed_pct": 48.37167758371238,
+      "builder_profit_per_site": 122189.84155091982,
+      "sites_per_yr_to_break_even": 1.2275979581943472,
+      "sites_per_yr_per_crew": 2.9650855290374922,
+      "crew_days": 50.588759929866875
+     },
+     {
+      "fill": 5,
+      "npv": -111237.81399724293,
+      "npv_screened": -59285.500266687115,
+      "earthworks_net": 131807.32856169765,
+      "net_capex": 232836.45104304914,
+      "build_cost": 318144.08942992584,
+      "uplift_needed_pct": 34.96460179303255,
+      "builder_profit_per_site": 164843.66074435817,
+      "sites_per_yr_to_break_even": 0.9099530993346603,
+      "sites_per_yr_per_crew": 2.9650855290374922,
+      "crew_days": 50.588759929866875
+     },
+     {
+      "fill": 7.5,
+      "npv": -68583.99480380455,
+      "npv_screened": -23029.753952264506,
+      "earthworks_net": 89153.5093682593,
+      "net_capex": 190182.63184961077,
+      "build_cost": 318144.08942992584,
+      "uplift_needed_pct": 21.55752600235272,
+      "builder_profit_per_site": 207497.47993779654,
+      "sites_per_yr_to_break_even": 0.7229003458016304,
+      "sites_per_yr_per_crew": 2.9650855290374922,
+      "crew_days": 50.588759929866875
+     },
+     {
+      "fill": 10,
+      "npv": -25930.175610366216,
+      "npv_screened": 13225.992362158155,
+      "earthworks_net": 46499.69017482095,
+      "net_capex": 147528.81265617243,
+      "build_cost": 318144.08942992584,
+      "uplift_needed_pct": 8.150450211672903,
+      "builder_profit_per_site": 250151.29913123487,
+      "sites_per_yr_to_break_even": 0.5996371017098204,
+      "sites_per_yr_per_crew": 2.9650855290374922,
+      "crew_days": 50.588759929866875
+     },
+     {
+      "fill": 12.5,
+      "npv": 16723.643583072084,
+      "npv_screened": 49481.73867658072,
+      "earthworks_net": 3845.8709813826135,
+      "net_capex": 104874.9934627341,
+      "build_cost": 318144.08942992584,
+      "uplift_needed_pct": 0.0,
+      "builder_profit_per_site": 292805.1183246732,
+      "sites_per_yr_to_break_even": 0.5122861268896073,
+      "sites_per_yr_per_crew": 2.9650855290374922,
+      "crew_days": 50.588759929866875
+     },
+     {
+      "fill": 15,
+      "npv": 59377.462776510474,
+      "npv_screened": 85737.4849910033,
+      "earthworks_net": -38807.94821205575,
+      "net_capex": 62221.174269295734,
+      "build_cost": 318144.08942992584,
+      "uplift_needed_pct": 0.0,
+      "builder_profit_per_site": 335458.93751811155,
+      "sites_per_yr_to_break_even": 0.4471486170849195,
+      "sites_per_yr_per_crew": 2.9650855290374922,
+      "crew_days": 50.588759929866875
+     }
+    ],
+    "fill_price_for_npv_zero": 11.519803859343222,
+    "fill_price_for_free_earthworks": 12.725411877183921,
+    "fill_price_for_npv_zero_screened": 9.088007163922535
+   },
+   "NE flat": {
+    "rows": [
+     {
+      "fill": -10,
+      "npv": -212842.66703229607,
+      "npv_screened": -164200.16185704866,
+      "earthworks_net": 242153.89720660402,
+      "net_capex": 343183.0196879555,
+      "build_cost": 256119.46907691393,
+      "uplift_needed_pct": 83.10288468089023,
+      "builder_profit_per_site": -23033.683341813085,
+      "sites_per_yr_to_break_even": null,
+      "sites_per_yr_per_crew": 4.365189519983651,
+      "crew_days": 34.36276920241525
+     },
+     {
+      "fill": -5,
+      "npv": -169310.89172677533,
+      "npv_screened": -127198.15284735597,
+      "earthworks_net": 198622.1219010832,
+      "net_capex": 299651.2443824347,
+      "build_cost": 256119.46907691393,
+      "uplift_needed_pct": 66.10621689049748,
+      "builder_profit_per_site": 20498.091963707695,
+      "sites_per_yr_to_break_even": 7.317754270279311,
+      "sites_per_yr_per_crew": 4.365189519983651,
+      "crew_days": 34.36276920241525
+     },
+     {
+      "fill": 0,
+      "npv": -125779.11642125456,
+      "npv_screened": -90196.14383766327,
+      "earthworks_net": 155090.34659556244,
+      "net_capex": 256119.46907691393,
+      "build_cost": 256119.46907691393,
+      "uplift_needed_pct": 49.109549100104715,
+      "builder_profit_per_site": 64029.867269228474,
+      "sites_per_yr_to_break_even": 2.342656738132692,
+      "sites_per_yr_per_crew": 4.365189519983651,
+      "crew_days": 34.36276920241525
+     },
+     {
+      "fill": 2.5,
+      "npv": -104013.22876849414,
+      "npv_screened": -71695.13933281698,
+      "earthworks_net": 133324.45894280204,
+      "net_capex": 234353.58142415353,
+      "build_cost": 256119.46907691393,
+      "uplift_needed_pct": 40.611215204908326,
+      "builder_profit_per_site": 85795.75492198886,
+      "sites_per_yr_to_break_even": 1.7483382497932427,
+      "sites_per_yr_per_crew": 4.365189519983651,
+      "crew_days": 34.36276920241525
+     },
+     {
+      "fill": 5,
+      "npv": -82247.34111573378,
+      "npv_screened": -53194.134827970665,
+      "earthworks_net": 111558.57129004167,
+      "net_capex": 212587.69377139315,
+      "build_cost": 256119.46907691393,
+      "uplift_needed_pct": 32.11288130971195,
+      "builder_profit_per_site": 107561.64257474925,
+      "sites_per_yr_to_break_even": 1.394549175797111,
+      "sites_per_yr_per_crew": 4.365189519983651,
+      "crew_days": 34.36276920241525
+     },
+     {
+      "fill": 7.5,
+      "npv": -60481.45346297339,
+      "npv_screened": -34693.130323124344,
+      "earthworks_net": 89792.68363728127,
+      "net_capex": 190821.80611863275,
+      "build_cost": 256119.46907691393,
+      "uplift_needed_pct": 23.61454741451557,
+      "builder_profit_per_site": 129327.53022750965,
+      "sites_per_yr_to_break_even": 1.1598458559915579,
+      "sites_per_yr_per_crew": 4.365189519983651,
+      "crew_days": 34.36276920241525
+     },
+     {
+      "fill": 10,
+      "npv": -38715.56581021301,
+      "npv_screened": -16192.12581827804,
+      "earthworks_net": 68026.79598452088,
+      "net_capex": 169055.91846587235,
+      "build_cost": 256119.46907691393,
+      "uplift_needed_pct": 15.116213519319196,
+      "builder_profit_per_site": 151093.41788027005,
+      "sites_per_yr_to_break_even": 0.9927632990529309,
+      "sites_per_yr_per_crew": 4.365189519983651,
+      "crew_days": 34.36276920241525
+     },
+     {
+      "fill": 12.5,
+      "npv": -16949.67815745263,
+      "npv_screened": 2308.878686568358,
+      "earthworks_net": 46260.9083317605,
+      "net_capex": 147290.03081311198,
+      "build_cost": 256119.46907691393,
+      "uplift_needed_pct": 6.617879624122818,
+      "builder_profit_per_site": 172859.30553303042,
+      "sites_per_yr_to_break_even": 0.8677577382221844,
+      "sites_per_yr_per_crew": 4.365189519983651,
+      "crew_days": 34.36276920241525
+     },
+     {
+      "fill": 15,
+      "npv": 4816.209495307799,
+      "npv_screened": 20809.883191414687,
+      "earthworks_net": 24495.02067900011,
+      "net_capex": 125524.1431603516,
+      "build_cost": 256119.46907691393,
+      "uplift_needed_pct": 0.0,
+      "builder_profit_per_site": 194625.1931857908,
+      "sites_per_yr_to_break_even": 0.770712144428336,
+      "sites_per_yr_per_crew": 4.365189519983651,
+      "crew_days": 34.36276920241525
+     }
+    ],
+    "fill_price_for_npv_zero": 14.446816783659063,
+    "fill_price_for_free_earthworks": null,
+    "fill_price_for_npv_zero_screened": 12.188006307175979
+   },
+   "Florida": {
+    "rows": [
+     {
+      "fill": -10,
+      "npv": -130003.93091349416,
+      "npv_screened": null,
+      "earthworks_net": 159295.60054023625,
+      "net_capex": 242579.03336641533,
+      "build_cost": 190903.99900461952,
+      "uplift_needed_pct": 68.09911347658479,
+      "builder_profit_per_site": -3949.034610640927,
+      "sites_per_yr_to_break_even": null,
+      "sites_per_yr_per_crew": 10.835732259228166,
+      "crew_days": 20.303196381826318
+     },
+     {
+      "fill": -5,
+      "npv": -104166.41373259621,
+      "npv_screened": null,
+      "earthworks_net": 133458.08335933834,
+      "net_capex": 216741.51618551742,
+      "build_cost": 190903.99900461952,
+      "uplift_needed_pct": 54.56481492044364,
+      "builder_profit_per_site": 21888.48257025698,
+      "sites_per_yr_to_break_even": 6.852919087402912,
+      "sites_per_yr_per_crew": 10.835732259228166,
+      "crew_days": 20.303196381826318
+     },
+     {
+      "fill": 0,
+      "npv": -78328.89655169833,
+      "npv_screened": null,
+      "earthworks_net": 107620.56617844044,
+      "net_capex": 190903.99900461952,
+      "build_cost": 190903.99900461952,
+      "uplift_needed_pct": 41.03051636430252,
+      "builder_profit_per_site": 47725.999751154886,
+      "sites_per_yr_to_break_even": 3.142940971003342,
+      "sites_per_yr_per_crew": 10.835732259228166,
+      "crew_days": 20.303196381826318
+     },
+     {
+      "fill": 2.5,
+      "npv": -65410.137961249355,
+      "npv_screened": null,
+      "earthworks_net": 94701.80758799148,
+      "net_capex": 177985.24041417055,
+      "build_cost": 190903.99900461952,
+      "uplift_needed_pct": 34.26336708623194,
+      "builder_profit_per_site": 60644.75834160384,
+      "sites_per_yr_to_break_even": 2.4734206896343784,
+      "sites_per_yr_per_crew": 10.835732259228166,
+      "crew_days": 20.303196381826318
+     },
+     {
+      "fill": 5,
+      "npv": -52491.379370800365,
+      "npv_screened": null,
+      "earthworks_net": 81783.04899754253,
+      "net_capex": 165066.4818237216,
+      "build_cost": 190903.99900461952,
+      "uplift_needed_pct": 27.496217808161354,
+      "builder_profit_per_site": 73563.5169320528,
+      "sites_per_yr_to_break_even": 2.0390542249162453,
+      "sites_per_yr_per_crew": 10.835732259228166,
+      "crew_days": 20.303196381826318
+     },
+     {
+      "fill": 7.5,
+      "npv": -39572.62078035146,
+      "npv_screened": null,
+      "earthworks_net": 68864.29040709358,
+      "net_capex": 152147.72323327267,
+      "build_cost": 190903.99900461952,
+      "uplift_needed_pct": 20.729068530090814,
+      "builder_profit_per_site": 86482.27552250175,
+      "sites_per_yr_to_break_even": 1.734459449566306,
+      "sites_per_yr_per_crew": 10.835732259228166,
+      "crew_days": 20.303196381826318
+     },
+     {
+      "fill": 10,
+      "npv": -26653.86218990253,
+      "npv_screened": null,
+      "earthworks_net": 55945.53181664462,
+      "net_capex": 139228.9646428237,
+      "build_cost": 190903.99900461952,
+      "uplift_needed_pct": 13.961919252020257,
+      "builder_profit_per_site": 99401.0341129507,
+      "sites_per_yr_to_break_even": 1.5090386265957056,
+      "sites_per_yr_per_crew": 10.835732259228166,
+      "crew_days": 20.303196381826318
+     },
+     {
+      "fill": 12.5,
+      "npv": -13735.103599453552,
+      "npv_screened": null,
+      "earthworks_net": 43026.77322619567,
+      "net_capex": 126310.20605237475,
+      "build_cost": 190903.99900461952,
+      "uplift_needed_pct": 7.1947699739496755,
+      "builder_profit_per_site": 112319.79270339965,
+      "sites_per_yr_to_break_even": 1.3354725502040554,
+      "sites_per_yr_per_crew": 10.835732259228166,
+      "crew_days": 20.303196381826318
+     },
+     {
+      "fill": 15,
+      "npv": -816.3450090046022,
+      "npv_screened": null,
+      "earthworks_net": 30108.014635746717,
+      "net_capex": 113391.4474619258,
+      "build_cost": 190903.99900461952,
+      "uplift_needed_pct": 0.42762069587910945,
+      "builder_profit_per_site": 125238.5512938486,
+      "sites_per_yr_to_break_even": 1.1977142696904353,
+      "sites_per_yr_per_crew": 10.835732259228166,
+      "crew_days": 20.303196381826318
+     }
+    ],
+    "fill_price_for_npv_zero": null,
+    "fill_price_for_free_earthworks": null,
+    "fill_price_for_npv_zero_screened": null
+   }
+  }
+ },
+ "tornado": {
+  "base_npv": -56128.27593242133,
+  "base": "NE till, flat, 8 ft ring, fill sold at $8/yd\u00b3, no uplift",
+  "rows": [
+   {
+    "driver": "Produce prices (\u00d70.6 farm-gate / \u00d72 direct sale)",
+    "low": -103357.60039702094,
+    "high": 61945.035229077774,
+    "span": 165302.63562609872
+   },
+   {
+    "driver": "Fill price ($0 / $15 per yd\u00b3)",
+    "low": -125779.11642125456,
+    "high": 4816.209495307799,
+    "span": 130595.32591656236
+   },
+   {
+    "driver": "Land value uplift (0 % / 50 % of build cost)",
+    "low": -56128.27593242133,
+    "high": 71931.45860603562,
+    "span": 128059.73453845695
+   },
+   {
+    "driver": "Discount rate (8 % / 3 %)",
+    "low": -89452.44768517496,
+    "high": -23641.128161128145,
+    "span": 65811.31952404682
+   },
+   {
+    "driver": "Earthworks hire rates (\u00d71.25 / \u00d70.8)",
+    "low": -86305.51874025258,
+    "high": -31986.481686156294,
+    "span": 54319.03705409628
+   },
+   {
+    "driver": "Upkeep (2 % / 0.5 % of build cost a year)",
+    "low": -92225.61192696965,
+    "high": -38079.60793514712,
+    "span": 54146.00399182253
+   },
+   {
+    "driver": "Electricity price ($0.20 / $0.40 per kWh)",
+    "low": -72249.7350953242,
+    "high": -40006.81676951841,
+    "span": 32242.91832580579
+   },
+   {
+    "driver": "Fish (unfed / fed catfish)",
+    "low": -56128.27593242133,
+    "high": -34243.77516603173,
+    "span": 21884.500766389603
+   },
+   {
+    "driver": "Solar installed cost ($3.5 / $2.2 per W)",
+    "low": -61566.074826113654,
+    "high": -47427.79770251346,
+    "span": 14138.277123600194
+   }
+  ]
+ },
+ "relief_sweep": [
+  {
+   "relief_ft": 0,
+   "fits": true,
+   "cut_m3": 9663.661615990677,
+   "surplus_m3": 7675.7967219073,
+   "npv_fill_0": -125804.07346628378,
+   "builder_profit_fill_0": 64034.39729869543,
+   "npv_fill_8": -56135.59123904681,
+   "builder_profit_fill_8": 133702.87952593243
+  },
+  {
+   "relief_ft": 2,
+   "fits": true,
+   "cut_m3": 11068.827611111017,
+   "surplus_m3": 9643.029115075775,
+   "npv_fill_0": -147597.96043644552,
+   "builder_profit_fill_0": 68809.82316661824,
+   "npv_fill_8": -57344.35844709365,
+   "builder_profit_fill_8": 159063.42515597015
+  },
+  {
+   "relief_ft": 4,
+   "fits": true,
+   "cut_m3": 12589.66194332563,
+   "surplus_m3": 11772.19718017623,
+   "npv_fill_0": -171185.84375537562,
+   "builder_profit_fill_0": 73978.34534556611,
+   "npv_fill_8": -58652.62713281242,
+   "builder_profit_fill_8": 186511.5619681292
+  },
+  {
+   "relief_ft": 6,
+   "fits": true,
+   "cut_m3": 14227.384847343803,
+   "surplus_m3": 14065.009245801673,
+   "npv_fill_0": -196586.64905707267,
+   "builder_profit_fill_0": 79544.1107764811,
+   "npv_fill_8": -60061.44697980491,
+   "builder_profit_fill_8": 216069.31285374882
+  },
+  {
+   "relief_ft": 7,
+   "fits": true,
+   "cut_m3": 15090.731512066048,
+   "surplus_m3": 15273.694576412818,
+   "npv_fill_0": -209977.00983463414,
+   "builder_profit_fill_0": 82478.1755133284,
+   "npv_fill_8": -60804.12445785154,
+   "builder_profit_fill_8": 231651.06089011114
+  },
+  {
+   "relief_ft": 8,
+   "fits": false,
+   "why": "Moat 1's banks daylight into berm 1's footprint (up to 4.4 m past the waterline on the high side). Widen the gap, flatten the slope or lower the freeboard."
+  },
+  {
+   "relief_ft": 10,
+   "fits": false,
+   "why": "Moat 1's banks daylight into berm 0's footprint (up to 4.4 m past the waterline on the high side). Widen the gap, flatten the slope or lower the freeboard."
+  }
+ ],
+ "conditions_grid": [
+  {
+   "fill": 0.0,
+   "produce": "farm-gate",
+   "uplift_pct": 0.0,
+   "NE 6 ft slope": -196545.45238411965,
+   "NE flat": -125779.11642125456,
+   "Florida": -78328.89655169833
+  },
+  {
+   "fill": 0.0,
+   "produce": "farm-gate",
+   "uplift_pct": 25.0,
+   "NE 6 ft slope": -117009.43002663819,
+   "NE flat": -61749.249152026074,
+   "Florida": -30602.89680054345
+  },
+  {
+   "fill": 0.0,
+   "produce": "direct sale",
+   "uplift_pct": 0.0,
+   "NE 6 ft slope": -78472.14122262056,
+   "NE flat": -7705.805259755463,
+   "Florida": 39744.41460980077
+  },
+  {
+   "fill": 0.0,
+   "produce": "direct sale",
+   "uplift_pct": 25.0,
+   "NE 6 ft slope": 1063.8811348609015,
+   "NE flat": 56324.06200947302,
+   "Florida": 87470.41436095565
+  },
+  {
+   "fill": 8.0,
+   "produce": "farm-gate",
+   "uplift_pct": 0.0,
+   "NE 6 ft slope": -60053.2309651169,
+   "NE flat": -56128.27593242133,
+   "Florida": -36988.86906226166
+  },
+  {
+   "fill": 8.0,
+   "produce": "farm-gate",
+   "uplift_pct": 25.0,
+   "NE 6 ft slope": 19482.79139236456,
+   "NE flat": 7901.591336807149,
+   "Florida": 10737.130688893216
+  },
+  {
+   "fill": 8.0,
+   "produce": "direct sale",
+   "uplift_pct": 0.0,
+   "NE 6 ft slope": 58020.08019638204,
+   "NE flat": 61945.035229077774,
+   "Florida": 81084.44209923739
+  },
+  {
+   "fill": 8.0,
+   "produce": "direct sale",
+   "uplift_pct": 25.0,
+   "NE 6 ft slope": 137556.1025538635,
+   "NE flat": 125974.90249830626,
+   "Florida": 128810.44185039226
+  },
+  {
+   "fill": 15.0,
+   "produce": "farm-gate",
+   "uplift_pct": 0.0,
+   "NE 6 ft slope": 59377.462776510474,
+   "NE flat": 4816.209495307799,
+   "Florida": -816.3450090046022
+  },
+  {
+   "fill": 15.0,
+   "produce": "farm-gate",
+   "uplift_pct": 25.0,
+   "NE 6 ft slope": 138913.48513399193,
+   "NE flat": 68846.07676453628,
+   "Florida": 46909.65474215028
+  },
+  {
+   "fill": 15.0,
+   "produce": "direct sale",
+   "uplift_pct": 0.0,
+   "NE 6 ft slope": 177450.77393800946,
+   "NE flat": 122889.52065680685,
+   "Florida": 117256.96615249442
+  },
+  {
+   "fill": 15.0,
+   "produce": "direct sale",
+   "uplift_pct": 25.0,
+   "NE 6 ft slope": 256986.79629549093,
+   "NE flat": 186919.38792603533,
+   "Florida": 164982.9659036493
+  }
+ ],
+ "builder": {
+  "overhead_usd_per_yr": 150000,
+  "season_days": {
+   "new_england": 150,
+   "florida": 220
+  },
+  "margin": 0.25
+ }
+}
