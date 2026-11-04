@@ -45,9 +45,13 @@ Atlantean version adds a circle, so one pivot can reach everything.
      digging. Two 10 ft winter holes in it then give the fish their refuge.
 4. **Berms are growing land, not spoil heaps.** Build them low (0.9 m) with
    wide flat tops and 3:1 sides you can mow, walk and plant.
-5. **Put surplus spoil where it helps.** Raise the house island up to a metre,
-   for dry floors and flood safety. Then build a bund on the uphill side that
-   turns outside runoff away from the rings.
+5. **Spoil is a product.** Raise the house island up to a metre, for dry
+   floors and flood safety.
+   - **With a buyer:** sell the rest as fill and screened fieldstone. Against keeping
+     it on site, a fill market cuts the earthworks bill by $40–200k depending
+     on the site ([economics.md](economics.md)).
+   - **Without one:** build a bund on the uphill side that turns outside
+     runoff away from the rings.
 6. **Strip the topsoil first and put it back on the berms.** Subsoil and till
    don't grow much. Topsoil is the berms' real crop, and it is free if you
    keep it.
@@ -269,7 +273,7 @@ Each stage is useful on its own. Stop at the stage that does the job.
 | When | What |
 |---|---|
 | Year 0, winter | Choose the flattest spot. Survey it (drone or phone). Dig 3–4 test pits to 10 ft. Talk to the NRCS field office (free pond design help) and the town about wetlands, building and septic permits. |
-| Year 1, July–October | Pond crew for about 4–5 weeks (New England, sloped) or 2 weeks (Florida): <ol><li>Strip and stockpile topsoil.</li><li>Build the causeway.</li><li>Dig the rings and winter holes.</li><li>Raise the island pad and the berms in compacted lifts.</li><li>Armour the spillway and the weir.</li><li>Shape the bund.</li><li>Respread topsoil, then seed and mulch.</li></ol> |
+| Year 1, July–October | Pond crew for about 10 weeks (New England, sloped), 7 weeks (New England, flat) or 4 weeks (Florida): <ol><li>Strip and stockpile topsoil.</li><li>Build the causeway.</li><li>Lay the ground-loop trench in the orchard berm core.</li><li>Dig the rings.</li><li>Raise the island pad and the berms in compacted lifts.</li><li>Armour the spillway and the weir.</li><li>Shape the bund.</li><li>Respread topsoil, then seed and mulch.</li></ol> |
 | Year 1, winter | The rings fill with rain and snowmelt. |
 | Year 2, spring | Plant the orchard berm and the ring edges. Bring the ducks. Fence the pasture. |
 | Year 2 | Buildings on the island. Stock fish once the water has had a summer. Bring the goats. |

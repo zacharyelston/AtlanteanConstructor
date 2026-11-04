@@ -383,6 +383,11 @@ images are in `docs/img/` (`tools/make_figs.py` redraws the SVGs).
   winter holes, orchard and pasture berms, a floating work spoke) and how to
   build it with the fewest things that can break. Its numbers come from
   `tools/homestead_numbers.py`.
+- **Energy:** [docs/energy.md](docs/energy.md) sizes the solar panels, solar
+  thermal, ground-source heat pump and pond or trench loops.
+- **Investment and return:** [docs/economics.md](docs/economics.md) treats the
+  homestead as a product, with surplus soil and stone sold, gravel and sand
+  bought, and payback, NPV and builder margin.
 
 Planning is on the shared
 [GitHub Project](https://github.com/users/zacharyelston/projects/7), with
