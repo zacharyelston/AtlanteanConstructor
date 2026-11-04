@@ -32,6 +32,30 @@ Results are under
 
 ---
 
+## The homestead
+
+The goal is a home farm: three domes on a raised island around a courtyard,
+a shallow inner ring, an orchard berm, an 8 ft deep ring for fish and the
+ground loop, and a pasture berm. Solar panels stand on the north border. See
+[docs/simple-build.md](docs/simple-build.md), [docs/energy.md](docs/energy.md)
+and [docs/economics.md](docs/economics.md).
+
+| New England, 6 ft slope | The island, courtyard and floating spoke |
+|---|---|
+| ![The homestead on a sloped New England site: domes on the island, inner and deep rings, orchard berm with hoops, causeway, spoke and solar array](docs/img/homestead-aerial.jpg) | ![Close view of the three domes on the raised island, the inner ring and the floating work spoke, with orchard trees and hoops on the berm](docs/img/homestead-island.jpg) |
+
+| Plan view | Florida, flat lot |
+|---|---|
+| ![Plan view of the homestead: rings, berms, one uphill causeway, the spoke and the north solar rows](docs/img/homestead-plan.jpg) | ![The same homestead on a flat Florida lot](docs/img/homestead-florida-aerial.jpg) |
+
+*Blender renders made by `tools/render_homestead.py` from
+`ring_engine/homestead_params.json`, with the relief exaggerated 1.5×. The
+ground, rings, berms and waterlines are the designed terrain. The domes,
+hoops, trees, spoke, eOx and panels are stand-ins placed by the rules in the
+docs.*
+
+---
+
 ## Two rigs, one terrain engine
 
 | | Pivot rig | Tethered eOx trencher |
