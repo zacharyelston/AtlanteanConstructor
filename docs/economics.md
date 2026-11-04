@@ -1,5 +1,8 @@
 # Investment and return: the homestead as a product
 
+*Where it pays, as a function of fill price, produce prices, land value and
+slope: [where-it-pays.md](where-it-pays.md).*
+
 A cheap hole in the ground is the wrong target. An Atlantean homestead is a
 product: someone pays for it to be built, and building it produces things
 worth selling. The surplus soil becomes fill, the till's stones become

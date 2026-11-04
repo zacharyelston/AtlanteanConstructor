@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 426" width="760" height="426" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif">
+<title id="t">Sensitivity of homeowner NPV</title>
+<desc id="d">Tornado chart of NPV for nine drivers, low and high values. Table in docs/where-it-pays.md.</desc>
+<rect width="100%" height="100%" rx="8" fill="#1a1a19"/>
+<line x1="443.7" y1="62.0" x2="443.7" y2="376.0" stroke="#2c2c2a" stroke-width="1" stroke-linecap="butt"/>
+<text x="443.7" y="394.0" font-size="11" font-weight="400" fill="#c3c2b7" text-anchor="middle">−$100k</text>
+<line x1="518.6" y1="62.0" x2="518.6" y2="376.0" stroke="#2c2c2a" stroke-width="1" stroke-linecap="butt"/>
+<text x="518.6" y="394.0" font-size="11" font-weight="400" fill="#c3c2b7" text-anchor="middle">−$50k</text>
+<line x1="593.6" y1="62.0" x2="593.6" y2="376.0" stroke="#2c2c2a" stroke-width="1" stroke-linecap="butt"/>
+<text x="593.6" y="394.0" font-size="11" font-weight="400" fill="#c3c2b7" text-anchor="middle">$0</text>
+<line x1="668.5" y1="62.0" x2="668.5" y2="376.0" stroke="#2c2c2a" stroke-width="1" stroke-linecap="butt"/>
+<text x="668.5" y="394.0" font-size="11" font-weight="400" fill="#c3c2b7" text-anchor="middle">$50k</text>
+<text x="328.0" y="85.0" font-size="12" font-weight="400" fill="#f0efec" text-anchor="end">Produce prices (×0.6 farm-gate / ×2 direct sale)</text>
+<rect x="438.7" y="72.0" width="247.7" height="20" rx="4" fill="#3987e5"/>
+<text x="433.7" y="86.0" font-size="11" font-weight="400" fill="#c3c2b7" text-anchor="end">−$103k</text>
+<text x="691.4" y="86.0" font-size="11" font-weight="400" fill="#c3c2b7" text-anchor="start">$62k</text>
+<text x="328.0" y="119.0" font-size="12" font-weight="400" fill="#f0efec" text-anchor="end">Fill price ($0 / $15 per yd³)</text>
+<rect x="405.1" y="106.0" width="195.7" height="20" rx="4" fill="#3987e5"/>
+<text x="400.1" y="120.0" font-size="11" font-weight="400" fill="#c3c2b7" text-anchor="end">−$126k</text>
+<text x="605.8" y="120.0" font-size="11" font-weight="400" fill="#c3c2b7" text-anchor="start">$5k</text>
+<text x="328.0" y="153.0" font-size="12" font-weight="400" fill="#f0efec" text-anchor="end">Land value uplift (0 % / 50 % of build cost)</text>
+<rect x="509.5" y="140.0" width="191.9" height="20" rx="4" fill="#3987e5"/>
+<text x="504.5" y="154.0" font-size="11" font-weight="400" fill="#c3c2b7" text-anchor="end">−$56k</text>
+<text x="706.4" y="154.0" font-size="11" font-weight="400" fill="#c3c2b7" text-anchor="start">$72k</text>
+<text x="328.0" y="187.0" font-size="12" font-weight="400" fill="#f0efec" text-anchor="end">Discount rate (8 % / 3 %)</text>
+<rect x="459.5" y="174.0" width="98.6" height="20" rx="4" fill="#3987e5"/>
+<text x="454.5" y="188.0" font-size="11" font-weight="400" fill="#c3c2b7" text-anchor="end">−$89k</text>
+<text x="563.1" y="188.0" font-size="11" font-weight="400" fill="#c3c2b7" text-anchor="start">−$24k</text>
+<text x="328.0" y="221.0" font-size="12" font-weight="400" fill="#f0efec" text-anchor="end">Earthworks hire rates (×1.25 / ×0.8)</text>
+<rect x="464.2" y="208.0" width="81.4" height="20" rx="4" fill="#3987e5"/>
+<text x="459.2" y="222.0" font-size="11" font-weight="400" fill="#c3c2b7" text-anchor="end">−$86k</text>
+<text x="550.6" y="222.0" font-size="11" font-weight="400" fill="#c3c2b7" text-anchor="start">−$32k</text>
+<text x="328.0" y="255.0" font-size="12" font-weight="400" fill="#f0efec" text-anchor="end">Upkeep (2 % / 0.5 % of build cost a year)</text>
+<rect x="455.4" y="242.0" width="81.1" height="20" rx="4" fill="#3987e5"/>
+<text x="450.4" y="256.0" font-size="11" font-weight="400" fill="#c3c2b7" text-anchor="end">−$92k</text>
+<text x="541.5" y="256.0" font-size="11" font-weight="400" fill="#c3c2b7" text-anchor="start">−$38k</text>
+<text x="328.0" y="289.0" font-size="12" font-weight="400" fill="#f0efec" text-anchor="end">Electricity price ($0.20 / $0.40 per kWh)</text>
+<rect x="485.3" y="276.0" width="48.3" height="20" rx="4" fill="#3987e5"/>
+<text x="480.3" y="290.0" font-size="11" font-weight="400" fill="#c3c2b7" text-anchor="end">−$72k</text>
+<text x="538.6" y="290.0" font-size="11" font-weight="400" fill="#c3c2b7" text-anchor="start">−$40k</text>
+<text x="328.0" y="323.0" font-size="12" font-weight="400" fill="#f0efec" text-anchor="end">Fish (unfed / fed catfish)</text>
+<rect x="509.5" y="310.0" width="32.8" height="20" rx="4" fill="#3987e5"/>
+<text x="504.5" y="324.0" font-size="11" font-weight="400" fill="#c3c2b7" text-anchor="end">−$56k</text>
+<text x="547.3" y="324.0" font-size="11" font-weight="400" fill="#c3c2b7" text-anchor="start">−$34k</text>
+<text x="328.0" y="357.0" font-size="12" font-weight="400" fill="#f0efec" text-anchor="end">Solar installed cost ($3.5 / $2.2 per W)</text>
+<rect x="501.3" y="344.0" width="21.2" height="20" rx="4" fill="#3987e5"/>
+<text x="496.3" y="358.0" font-size="11" font-weight="400" fill="#c3c2b7" text-anchor="end">−$62k</text>
+<text x="527.5" y="358.0" font-size="11" font-weight="400" fill="#c3c2b7" text-anchor="start">−$47k</text>
+<line x1="509.5" y1="58.0" x2="509.5" y2="376.0" stroke="#f0efec" stroke-width="1.5" stroke-linecap="butt"/>
+<line x1="593.6" y1="58.0" x2="593.6" y2="376.0" stroke="#c3c2b7" stroke-width="1" stroke-linecap="butt" stroke-dasharray="4,3"/>
+<text x="509.5" y="54.0" font-size="11" font-weight="600" fill="#f0efec" text-anchor="middle">base −$56k</text>
+<text x="30.0" y="24.0" font-size="15" font-weight="600" fill="#f0efec" text-anchor="start">What moves the homeowner&#x27;s NPV most</text>
+<text x="30.0" y="42.0" font-size="11" font-weight="400" fill="#c3c2b7" text-anchor="start">New England till, flat site, 8 ft ring, fill sold at $8/yd³ (base). Each bar: one driver at its low and high value; dashed = break-even</text>
+</svg>

@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 420" width="760" height="420" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif">
+<title id="t">Homeowner NPV vs fill price</title>
+<desc id="d">Net present value over 25 years at 5 percent for three sites, as the price received for surplus fill varies from minus 10 to plus 15 dollars per cubic yard. See the table in docs/where-it-pays.md.</desc>
+<rect width="100%" height="100%" rx="8" fill="#1a1a19"/>
+<line x1="78.0" y1="294.7" x2="610.0" y2="294.7" stroke="#2c2c2a" stroke-width="1" stroke-linecap="butt"/>
+<text x="70.0" y="298.7" font-size="11" font-weight="400" fill="#c3c2b7" text-anchor="end">−$300k</text>
+<line x1="78.0" y1="229.9" x2="610.0" y2="229.9" stroke="#2c2c2a" stroke-width="1" stroke-linecap="butt"/>
+<text x="70.0" y="233.9" font-size="11" font-weight="400" fill="#c3c2b7" text-anchor="end">−$200k</text>
+<line x1="78.0" y1="165.1" x2="610.0" y2="165.1" stroke="#2c2c2a" stroke-width="1" stroke-linecap="butt"/>
+<text x="70.0" y="169.1" font-size="11" font-weight="400" fill="#c3c2b7" text-anchor="end">−$100k</text>
+<line x1="78.0" y1="100.3" x2="610.0" y2="100.3" stroke="#2c2c2a" stroke-width="1" stroke-linecap="butt"/>
+<text x="70.0" y="104.3" font-size="11" font-weight="400" fill="#c3c2b7" text-anchor="end">$0</text>
+<text x="78.0" y="380.0" font-size="11" font-weight="400" fill="#c3c2b7" text-anchor="middle">−10</text>
+<text x="290.8" y="380.0" font-size="11" font-weight="400" fill="#c3c2b7" text-anchor="middle">0</text>
+<text x="397.2" y="380.0" font-size="11" font-weight="400" fill="#c3c2b7" text-anchor="middle">5</text>
+<text x="503.6" y="380.0" font-size="11" font-weight="400" fill="#c3c2b7" text-anchor="middle">10</text>
+<text x="610.0" y="380.0" font-size="11" font-weight="400" fill="#c3c2b7" text-anchor="middle">15</text>
+<line x1="78.0" y1="362.0" x2="610.0" y2="362.0" stroke="#383835" stroke-width="1" stroke-linecap="butt"/>
+<text x="344.0" y="406.0" font-size="12" font-weight="400" fill="#c3c2b7" text-anchor="middle">Net price the surplus spoil sells for ($ per yd³; negative = paying to dispose)</text>
+<text x="18" y="209.0" font-size="12" fill="#c3c2b7" text-anchor="middle" transform="rotate(-90 18 209.0)">Homeowner NPV, 25 years at 5 %</text>
+<line x1="78.0" y1="100.3" x2="610.0" y2="100.3" stroke="#c3c2b7" stroke-width="1.2" stroke-linecap="butt"/>
+<text x="82.0" y="94.3" font-size="11" font-weight="400" fill="#c3c2b7" text-anchor="start">break-even</text>
+<polyline points="78.0,338.2 184.4,282.9 290.8,227.6 344.0,200.0 397.2,172.3 450.4,144.7 503.6,117.1 556.8,89.4 610.0,61.8" fill="none" stroke="#3987e5" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="78.0" cy="338.2" r="4" fill="#3987e5" stroke="#1a1a19" stroke-width="2"/>
+<circle cx="184.4" cy="282.9" r="4" fill="#3987e5" stroke="#1a1a19" stroke-width="2"/>
+<circle cx="290.8" cy="227.6" r="4" fill="#3987e5" stroke="#1a1a19" stroke-width="2"/>
+<circle cx="344.0" cy="200.0" r="4" fill="#3987e5" stroke="#1a1a19" stroke-width="2"/>
+<circle cx="397.2" cy="172.3" r="4" fill="#3987e5" stroke="#1a1a19" stroke-width="2"/>
+<circle cx="450.4" cy="144.7" r="4" fill="#3987e5" stroke="#1a1a19" stroke-width="2"/>
+<circle cx="503.6" cy="117.1" r="4" fill="#3987e5" stroke="#1a1a19" stroke-width="2"/>
+<circle cx="556.8" cy="89.4" r="4" fill="#3987e5" stroke="#1a1a19" stroke-width="2"/>
+<circle cx="610.0" cy="61.8" r="4" fill="#3987e5" stroke="#1a1a19" stroke-width="2"/>
+<circle cx="535.9" cy="100.3" r="6" fill="none" stroke="#f0efec" stroke-width="2"/>
+<polyline points="78.0,238.2 184.4,210.0 290.8,181.8 344.0,167.7 397.2,153.6 450.4,139.5 503.6,125.3 556.8,111.2 610.0,97.1" fill="none" stroke="#d95926" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="78.0" cy="238.2" r="4" fill="#d95926" stroke="#1a1a19" stroke-width="2"/>
+<circle cx="184.4" cy="210.0" r="4" fill="#d95926" stroke="#1a1a19" stroke-width="2"/>
+<circle cx="290.8" cy="181.8" r="4" fill="#d95926" stroke="#1a1a19" stroke-width="2"/>
+<circle cx="344.0" cy="167.7" r="4" fill="#d95926" stroke="#1a1a19" stroke-width="2"/>
+<circle cx="397.2" cy="153.6" r="4" fill="#d95926" stroke="#1a1a19" stroke-width="2"/>
+<circle cx="450.4" cy="139.5" r="4" fill="#d95926" stroke="#1a1a19" stroke-width="2"/>
+<circle cx="503.6" cy="125.3" r="4" fill="#d95926" stroke="#1a1a19" stroke-width="2"/>
+<circle cx="556.8" cy="111.2" r="4" fill="#d95926" stroke="#1a1a19" stroke-width="2"/>
+<circle cx="610.0" cy="97.1" r="4" fill="#d95926" stroke="#1a1a19" stroke-width="2"/>
+<circle cx="598.2" cy="100.3" r="6" fill="none" stroke="#f0efec" stroke-width="2"/>
+<polyline points="78.0,184.5 184.4,167.8 290.8,151.0 344.0,142.6 397.2,134.3 450.4,125.9 503.6,117.5 556.8,109.2 610.0,100.8" fill="none" stroke="#199e70" stroke-width="2" stroke-linejoin="round"/>
+<circle cx="78.0" cy="184.5" r="4" fill="#199e70" stroke="#1a1a19" stroke-width="2"/>
+<circle cx="184.4" cy="167.8" r="4" fill="#199e70" stroke="#1a1a19" stroke-width="2"/>
+<circle cx="290.8" cy="151.0" r="4" fill="#199e70" stroke="#1a1a19" stroke-width="2"/>
+<circle cx="344.0" cy="142.6" r="4" fill="#199e70" stroke="#1a1a19" stroke-width="2"/>
+<circle cx="397.2" cy="134.3" r="4" fill="#199e70" stroke="#1a1a19" stroke-width="2"/>
+<circle cx="450.4" cy="125.9" r="4" fill="#199e70" stroke="#1a1a19" stroke-width="2"/>
+<circle cx="503.6" cy="117.5" r="4" fill="#199e70" stroke="#1a1a19" stroke-width="2"/>
+<circle cx="556.8" cy="109.2" r="4" fill="#199e70" stroke="#1a1a19" stroke-width="2"/>
+<circle cx="610.0" cy="100.8" r="4" fill="#199e70" stroke="#1a1a19" stroke-width="2"/>
+<text x="620.0" y="65.8" font-size="12" font-weight="600" fill="#f0efec" text-anchor="start">NE 6 ft slope</text>
+<text x="620.0" y="101.1" font-size="12" font-weight="600" fill="#f0efec" text-anchor="start">NE flat</text>
+<text x="620.0" y="117.1" font-size="12" font-weight="600" fill="#f0efec" text-anchor="start">Florida</text>
+<line x1="78.0" y1="348.0" x2="96.0" y2="348.0" stroke="#3987e5" stroke-width="2" stroke-linecap="butt"/>
+<circle cx="87.0" cy="348.0" r="4" fill="#3987e5" stroke="#1a1a19" stroke-width="2"/>
+<text x="102.0" y="352.0" font-size="11" font-weight="400" fill="#f0efec" text-anchor="start">NE 6 ft slope</text>
+<line x1="203.0" y1="348.0" x2="221.0" y2="348.0" stroke="#d95926" stroke-width="2" stroke-linecap="butt"/>
+<circle cx="212.0" cy="348.0" r="4" fill="#d95926" stroke="#1a1a19" stroke-width="2"/>
+<text x="227.0" y="352.0" font-size="11" font-weight="400" fill="#f0efec" text-anchor="start">NE flat</text>
+<line x1="286.0" y1="348.0" x2="304.0" y2="348.0" stroke="#199e70" stroke-width="2" stroke-linecap="butt"/>
+<circle cx="295.0" cy="348.0" r="4" fill="#199e70" stroke="#1a1a19" stroke-width="2"/>
+<text x="310.0" y="352.0" font-size="11" font-weight="400" fill="#f0efec" text-anchor="start">Florida</text>
+<text x="78.0" y="24.0" font-size="15" font-weight="600" fill="#f0efec" text-anchor="start">When does the homestead pay for itself?</text>
+<text x="78.0" y="42.0" font-size="11" font-weight="400" fill="#c3c2b7" text-anchor="start">8 ft outer ring, unfed fish, no land-value uplift; circles mark where each site breaks even</text>
+</svg>
