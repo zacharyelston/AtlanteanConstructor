@@ -1,0 +1,234 @@
+[
+ {
+  "climate": "New England (Hartford, CT)",
+  "warm_bay": false,
+  "loads": {
+   "household (lights, appliances, cooking, well)": 5000,
+   "house heating _th (150 m2, well insulated)": 6750,
+   "house cooling _th": 800,
+   "hot water _th (family of 4)": 3000,
+   "barn (heated troughs, lights)": 900,
+   "workshop + eOx charging": 1500,
+   "farm (irrigation pump, spoke drive)": 350,
+   "winter aerator (optional)": 600
+  },
+  "warming_options_kwh_th": {
+   "whole inner ring, open, +8 K in spring and autumn": 285897.60000000003,
+   "whole inner ring, floating cover, same": 95299.20000000001,
+   "100 m2 greenhouse warm bay, warm all year (tilapia, greens)": 26676.0
+  },
+  "electric_kwh": {
+   "plain loads": 8350,
+   "heat pump (house + bay)": 2088.5714285714284,
+   "hot water heat pump": 1000.0,
+   "total": 11438.571428571428
+  },
+  "pv_grid_tied": {
+   "kwp": 9.532142857142857,
+   "panels": 23,
+   "ground_m2": 80.5
+  },
+  "pv_off_grid": {
+   "december_need_kwh": 1087.7380952380952,
+   "kwp": 20.143298059964724,
+   "panels": 47,
+   "battery_kwh": 70.17665130568356,
+   "eox_packs": 18
+  },
+  "solar_thermal": {
+   "hot_water_collectors": 2,
+   "hot_water_m2": 4.333333333333333,
+   "warm_bay_collectors_for_40pct": 0
+  },
+  "ground_source": {
+   "design_kw": 5.0,
+   "tons": 1.5,
+   "pond_loop_ft": 450.0,
+   "pond_coils": 2,
+   "trench_ft": 300.0,
+   "winter_heat_from_ring_kwh": 6964.285714285715,
+   "as_ice_cm_over_deep_ring": 1.8239395056995986,
+   "summer_heat_into_ring_kwh": 960.0,
+   "summer_ring_rise_K_no_losses": 0.11592740582910906
+  },
+  "spoke_canopy": {
+   "panels": 22,
+   "kwp": 9.46,
+   "design_gust_load_kN": 77.22
+  }
+ },
+ {
+  "climate": "New England (Hartford, CT)",
+  "warm_bay": true,
+  "loads": {
+   "household (lights, appliances, cooking, well)": 5000,
+   "house heating _th (150 m2, well insulated)": 6750,
+   "house cooling _th": 800,
+   "hot water _th (family of 4)": 3000,
+   "barn (heated troughs, lights)": 900,
+   "workshop + eOx charging": 1500,
+   "farm (irrigation pump, spoke drive)": 350,
+   "winter aerator (optional)": 600
+  },
+  "warming_options_kwh_th": {
+   "whole inner ring, open, +8 K in spring and autumn": 285897.60000000003,
+   "whole inner ring, floating cover, same": 95299.20000000001,
+   "100 m2 greenhouse warm bay, warm all year (tilapia, greens)": 26676.0
+  },
+  "electric_kwh": {
+   "plain loads": 8350,
+   "heat pump (house + bay)": 9710.285714285714,
+   "hot water heat pump": 1000.0,
+   "total": 19060.285714285714
+  },
+  "pv_grid_tied": {
+   "kwp": 15.883571428571429,
+   "panels": 37,
+   "ground_m2": 129.5
+  },
+  "pv_off_grid": {
+   "december_need_kwh": 2307.212380952381,
+   "kwp": 42.72615520282187,
+   "panels": 100,
+   "battery_kwh": 148.85241167434717,
+   "eox_packs": 37
+  },
+  "solar_thermal": {
+   "hot_water_collectors": 2,
+   "hot_water_m2": 4.333333333333333,
+   "warm_bay_collectors_for_40pct": 10
+  },
+  "ground_source": {
+   "design_kw": 12.2,
+   "tons": 3.5,
+   "pond_loop_ft": 1050.0,
+   "pond_coils": 4,
+   "trench_ft": 700.0,
+   "winter_heat_from_ring_kwh": 26018.571428571428,
+   "as_ice_cm_over_deep_ring": 6.814237993293698,
+   "summer_heat_into_ring_kwh": 960.0,
+   "summer_ring_rise_K_no_losses": 0.11592740582910906
+  },
+  "spoke_canopy": {
+   "panels": 22,
+   "kwp": 9.46,
+   "design_gust_load_kN": 77.22
+  }
+ },
+ {
+  "climate": "Florida (Orlando)",
+  "warm_bay": false,
+  "loads": {
+   "household (lights, appliances, cooking, well)": 5000,
+   "house heating _th (150 m2, well insulated)": 500,
+   "house cooling _th": 9000,
+   "hot water _th (family of 4)": 2500,
+   "barn (fans, lights)": 500,
+   "workshop + eOx charging": 1500,
+   "farm (irrigation pump, spoke drive)": 350,
+   "winter aerator (optional)": 0
+  },
+  "warming_options_kwh_th": {
+   "whole inner ring, open, +4 K in spring and autumn": 95299.2,
+   "whole inner ring, floating cover, same": 31766.399999999998,
+   "100 m2 greenhouse warm bay, warm all year (tilapia, greens)": 5184.0
+  },
+  "electric_kwh": {
+   "plain loads": 7350,
+   "heat pump (house + bay)": 1942.857142857143,
+   "hot water heat pump": 833.3333333333334,
+   "total": 10126.190476190477
+  },
+  "pv_grid_tied": {
+   "kwp": 6.983579638752053,
+   "panels": 17,
+   "ground_m2": 59.5
+  },
+  "pv_off_grid": {
+   "december_need_kwh": 724.8015873015873,
+   "kwp": 7.690202517788725,
+   "panels": 18,
+   "battery_kwh": 46.76139272913467,
+   "eox_packs": 12
+  },
+  "solar_thermal": {
+   "hot_water_collectors": 2,
+   "hot_water_m2": 3.076923076923077,
+   "warm_bay_collectors_for_40pct": 0
+  },
+  "ground_source": {
+   "design_kw": 3.0,
+   "tons": 1.0,
+   "pond_loop_ft": 300.0,
+   "pond_coils": 1,
+   "trench_ft": 200.0,
+   "winter_heat_from_ring_kwh": 2142.857142857143,
+   "as_ice_cm_over_deep_ring": 0.5612121555998765,
+   "summer_heat_into_ring_kwh": 10800.0,
+   "summer_ring_rise_K_no_losses": 1.304183315577477
+  },
+  "spoke_canopy": {
+   "panels": 22,
+   "kwp": 9.46,
+   "design_gust_load_kN": 77.22
+  }
+ },
+ {
+  "climate": "Florida (Orlando)",
+  "warm_bay": true,
+  "loads": {
+   "household (lights, appliances, cooking, well)": 5000,
+   "house heating _th (150 m2, well insulated)": 500,
+   "house cooling _th": 9000,
+   "hot water _th (family of 4)": 2500,
+   "barn (fans, lights)": 500,
+   "workshop + eOx charging": 1500,
+   "farm (irrigation pump, spoke drive)": 350,
+   "winter aerator (optional)": 0
+  },
+  "warming_options_kwh_th": {
+   "whole inner ring, open, +4 K in spring and autumn": 95299.2,
+   "whole inner ring, floating cover, same": 31766.399999999998,
+   "100 m2 greenhouse warm bay, warm all year (tilapia, greens)": 5184.0
+  },
+  "electric_kwh": {
+   "plain loads": 7350,
+   "heat pump (house + bay)": 3424.0,
+   "hot water heat pump": 833.3333333333334,
+   "total": 11607.333333333334
+  },
+  "pv_grid_tied": {
+   "kwp": 8.005057471264369,
+   "panels": 19,
+   "ground_m2": 66.5
+  },
+  "pv_off_grid": {
+   "december_need_kwh": 1169.1444444444444,
+   "kwp": 12.404715590922487,
+   "panels": 29,
+   "battery_kwh": 75.42867383512545,
+   "eox_packs": 19
+  },
+  "solar_thermal": {
+   "hot_water_collectors": 2,
+   "hot_water_m2": 3.076923076923077,
+   "warm_bay_collectors_for_40pct": 2
+  },
+  "ground_source": {
+   "design_kw": 6.84,
+   "tons": 2.0,
+   "pond_loop_ft": 600.0,
+   "pond_coils": 2,
+   "trench_ft": 400.0,
+   "winter_heat_from_ring_kwh": 5845.714285714286,
+   "as_ice_cm_over_deep_ring": 1.530986760476463,
+   "summer_heat_into_ring_kwh": 10800.0,
+   "summer_ring_rise_K_no_losses": 1.304183315577477
+  },
+  "spoke_canopy": {
+   "panels": 22,
+   "kwp": 9.46,
+   "design_gust_load_kN": 77.22
+  }
+ }
+]

@@ -1,11 +1,10 @@
 {
   "_comment": "Generic tractor loader-backhoe (TLB) classes for the construction baseline. Figures are TYPICAL values for each class from published spec sheets and earthmoving handbooks (rounded), not one model. Rates and fuel are ASSUMED (rental + operator, 2026 USD); edit for local quotes.",
-
   "job": {
     "efficiency": 0.83,
     "_efficiency": "50-minute working hour",
     "hours_per_day": 8,
-    "mode_switch_overhead": 0.10,
+    "mode_switch_overhead": 0.1,
     "_mode_switch": "a TLB swaps between backhoe and loader; one machine does both in turn",
     "spread_and_compact_factor": 0.15,
     "_spread": "extra loader time to spread and track-in the berm, as a fraction of carry time",
@@ -17,34 +16,74 @@
     "_bwt": "productivity on volume below the water table (sloughing, mucky bucket, pump on)",
     "pump_usd_per_day": 60
   },
-
   "machines": {
     "subcompact_tlb": {
       "label": "Subcompact TLB (~25 hp)",
       "operating_mass_kg": 1100,
-      "dig_depth_m": 1.8, "reach_m": 3.0,
-      "backhoe_bucket_m3": 0.035, "backhoe_cycle_s": 30,
-      "loader_bucket_m3": 0.14, "loader_fixed_s": 30, "loader_speed_m_s": 1.2,
-      "rock_delay_min": 10, "oversize_rock_fraction": 0.40,
-      "rate_usd_per_h": 95, "fuel_l_per_h": 2.5, "mobilization_usd": 250
+      "dig_depth_m": 1.8,
+      "reach_m": 3.0,
+      "backhoe_bucket_m3": 0.035,
+      "backhoe_cycle_s": 30,
+      "loader_bucket_m3": 0.14,
+      "loader_fixed_s": 30,
+      "loader_speed_m_s": 1.2,
+      "rock_delay_min": 10,
+      "oversize_rock_fraction": 0.4,
+      "rate_usd_per_h": 95,
+      "fuel_l_per_h": 2.5,
+      "mobilization_usd": 250
     },
     "compact_tlb": {
       "label": "Compact TLB (~45 hp)",
       "operating_mass_kg": 2300,
-      "dig_depth_m": 2.7, "reach_m": 4.0,
-      "backhoe_bucket_m3": 0.07, "backhoe_cycle_s": 25,
-      "loader_bucket_m3": 0.30, "loader_fixed_s": 28, "loader_speed_m_s": 1.5,
-      "rock_delay_min": 5, "oversize_rock_fraction": 0.15,
-      "rate_usd_per_h": 125, "fuel_l_per_h": 5.0, "mobilization_usd": 350
+      "dig_depth_m": 2.7,
+      "reach_m": 4.0,
+      "backhoe_bucket_m3": 0.07,
+      "backhoe_cycle_s": 25,
+      "loader_bucket_m3": 0.3,
+      "loader_fixed_s": 28,
+      "loader_speed_m_s": 1.5,
+      "rock_delay_min": 5,
+      "oversize_rock_fraction": 0.15,
+      "rate_usd_per_h": 125,
+      "fuel_l_per_h": 5.0,
+      "mobilization_usd": 350
     },
     "backhoe_loader": {
       "label": "Backhoe loader (~90 hp)",
       "operating_mass_kg": 7500,
-      "dig_depth_m": 4.3, "reach_m": 5.5,
-      "backhoe_bucket_m3": 0.20, "backhoe_cycle_s": 20,
-      "loader_bucket_m3": 0.90, "loader_fixed_s": 25, "loader_speed_m_s": 2.0,
-      "rock_delay_min": 2, "oversize_rock_fraction": 0.02,
-      "rate_usd_per_h": 175, "fuel_l_per_h": 11.0, "mobilization_usd": 600
+      "dig_depth_m": 4.3,
+      "reach_m": 5.5,
+      "backhoe_bucket_m3": 0.2,
+      "backhoe_cycle_s": 20,
+      "loader_bucket_m3": 0.9,
+      "loader_fixed_s": 25,
+      "loader_speed_m_s": 2.0,
+      "rock_delay_min": 2,
+      "oversize_rock_fraction": 0.02,
+      "rate_usd_per_h": 175,
+      "fuel_l_per_h": 11.0,
+      "mobilization_usd": 600
+    },
+    "excavator_dozer": {
+      "label": "Excavator (~14 t) + small dozer (pond crew)",
+      "operating_mass_kg": 14000,
+      "dig_depth_m": 6.0,
+      "reach_m": 8.5,
+      "backhoe_bucket_m3": 0.65,
+      "backhoe_cycle_s": 18,
+      "loader_bucket_m3": 2.0,
+      "loader_fixed_s": 20,
+      "loader_speed_m_s": 1.2,
+      "_loader": "the dozer pushes spoil from the trench edge onto the berm and spreads it (blade load ~2 m3 loose)",
+      "separate_carrier": true,
+      "rock_delay_min": 1,
+      "oversize_rock_fraction": 0.0,
+      "rate_usd_per_h": 185,
+      "carrier_rate_usd_per_h": 165,
+      "fuel_l_per_h": 16.0,
+      "carrier_fuel_l_per_h": 12.0,
+      "mobilization_usd": 1500
     }
   }
 }

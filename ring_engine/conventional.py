@@ -87,7 +87,11 @@ def estimate(cfg, T, machine, job, geometry=None):
             t_carry = V * sf / P_carry * (1.0 + job["spread_and_compact_factor"])
         rocks = soil.get("rock_refusals_per_bank_m3", 0.0) * V
         t_rock = rocks * machine["rock_delay_min"] * (1.0 + 2.0 * machine["oversize_rock_fraction"]) / 60.0
-        hours = (t_dig + t_carry) * (1.0 + (job["mode_switch_overhead"] if t_carry else 0.0)) + t_rock
+        if machine.get("separate_carrier"):
+            # two machines at once: the job takes the longer task; both machines are paid for
+            hours = max(t_dig, t_carry) + t_rock
+        else:
+            hours = (t_dig + t_carry) * (1.0 + (job["mode_switch_overhead"] if t_carry else 0.0)) + t_rock
         per_moat.append({"moat": g["moat"], "V_bank_m3": V, "hours": hours, "dig_h": t_dig,
                          "carry_h": t_carry, "rock_h": t_rock, "cast_direct": cast, "haul_m": d,
                          "bench_m3": deep, "below_water_m3": g["V_below_water_m3"]})
@@ -103,6 +107,9 @@ def estimate(cfg, T, machine, job, geometry=None):
     pump_days = days * tot["bwt_m3"] / max(V, 1e-9) if tot["bwt_m3"] > 0 else 0.0
     cost = (hours * machine["rate_usd_per_h"] + hours * machine["fuel_l_per_h"] * job["fuel_usd_per_l"]
             + machine["mobilization_usd"] + pump_days * job["pump_usd_per_day"])
+    if machine.get("separate_carrier"):
+        cost += hours * (machine["carrier_rate_usd_per_h"]
+                         + machine["carrier_fuel_l_per_h"] * job["fuel_usd_per_l"])
     max_depth = max(g["max_depth_m"] for g in geo)
     return {
         "machine": machine["label"], "V_bank_m3": V, "hours": hours, "working_days": days,
@@ -143,11 +150,12 @@ def main():
     p.add_argument("--soil", default="ne_glacial_till")
     p.add_argument("--site", choices=["flat", "slope"])
     p.add_argument("--res", type=int, default=448)
+    p.add_argument("--params", default=None, help="site params (default tether_params.json)")
     a = p.parse_args()
     ov = ['soil.preset="%s"' % a.soil, "grid.resolution=%d" % a.res]
     if a.site == "flat":
         ov.append('site={"type": "flat"}')
-    cfg = load_config(ts.DEFAULT_PARAMS, ov)
+    cfg = load_config(a.params or ts.DEFAULT_PARAMS, ov)
     T = Terrain(cfg)
     data = load_machines()
     print("%s: %s m3 bank, deepest cut %.2f m" % (cfg.soil["label"], "{:,.0f}".format(T.design_cut_total),
