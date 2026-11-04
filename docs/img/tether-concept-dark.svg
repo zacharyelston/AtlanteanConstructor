@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 560" width="920" height="560" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif">
+<title id="t">Tethered EOx trencher concept</title>
+<desc id="d">Plan view: a winch at the pivot holds the trencher on a leash in the outer moat; it tows a pan around the ring, climbs a spiral ramp to the outer berm, spreads the load and spirals back. Inset: side view of the trencher towing the pan.</desc>
+<rect width="100%" height="100%" rx="8" fill="#1a1a19"/>
+<text x="16.0" y="26.0" font-size="16" font-weight="600" fill="#f0efec" text-anchor="start">Tethered EOx trencher: one leash, no steering</text>
+<text x="16.0" y="46.0" font-size="12" font-weight="400" fill="#c3c2b7" text-anchor="start">Plan view of the garden-scale site (2 moats, 2 berms, ~105 m across), and the trencher in the cut</text>
+<circle cx="270" cy="300" r="57.2" fill="none" stroke="#3987e5" stroke-opacity="0.2" stroke-width="26.4"/>
+<circle cx="270" cy="300" r="102.3" fill="none" stroke="#c98500" stroke-opacity="0.28" stroke-width="33.0"/>
+<circle cx="270" cy="300" r="149.6" fill="none" stroke="#3987e5" stroke-opacity="0.2" stroke-width="30.8"/>
+<circle cx="270" cy="300" r="206.8" fill="none" stroke="#c98500" stroke-opacity="0.28" stroke-width="48.4"/>
+<text x="327.2" y="304.0" font-size="10" font-weight="400" fill="#c3c2b7" text-anchor="middle">moat</text>
+<text x="372.3" y="304.0" font-size="10" font-weight="400" fill="#c3c2b7" text-anchor="middle">berm</text>
+<text x="419.6" y="304.0" font-size="10" font-weight="400" fill="#c3c2b7" text-anchor="middle">moat</text>
+<text x="476.8" y="304.0" font-size="10" font-weight="400" fill="#c3c2b7" text-anchor="middle">berm</text>
+<circle cx="270" cy="300" r="44.0" fill="#2c2c2a" fill-opacity="0.5"/>
+<line x1="270.0" y1="300.0" x2="384.6" y2="203.8" stroke="#f0efec" stroke-width="1.6" stroke-linecap="butt"/>
+<circle cx="270" cy="300" r="9" fill="#1a1a19" stroke="#f0efec" stroke-width="2"/>
+<circle cx="270" cy="300" r="3" fill="#f0efec"/>
+<line x1="384.6" y1="203.8" x2="391.3" y2="212.5" stroke="#c3c2b7" stroke-width="1.2" stroke-linecap="butt"/>
+<rect x="386.8" y="208.5" width="9.0" height="8.0" rx="2" fill="#383835" stroke="#c3c2b7" stroke-width="1.2" transform="rotate(54.2 391.3 212.5)"/>
+<rect x="379.1" y="199.8" width="11.0" height="8.0" rx="2" fill="#199e70" stroke="#f0efec" stroke-width="1.2" transform="rotate(50.0 384.6 203.8)"/>
+<polyline points="373.9,192.4 372.0,190.6 370.1,188.8 368.1,187.1 366.2,185.4 364.1,183.7 362.1,182.1 360.0,180.5 357.9,179.0 355.8,177.5 353.7,176.0 351.5,174.5 349.3,173.1 347.0,171.8 344.8,170.4 342.5,169.2 340.2,167.9 337.9,166.7 335.6,165.5 333.2,164.4 330.8,163.3 328.5,162.3 326.0,161.3 323.6,160.3 321.2,159.4 318.7,158.6" fill="none" stroke="#199e70" stroke-width="2" stroke-linejoin="round"/>
+<polygon points="318.7,158.6 326.6,157.1 323.9,164.6" fill="#199e70" stroke="none" stroke-width="1.0" stroke-linejoin="round"/>
+<polyline points="325.7,147.0 321.2,144.5 316.6,142.2 311.9,140.0 307.2,137.9 302.3,136.0 297.4,134.2 292.3,132.6 287.3,131.1 282.1,129.8 276.9,128.6 271.6,127.6 266.2,126.8 260.8,126.1 255.4,125.6 249.9,125.3 244.4,125.1 238.8,125.2 233.3,125.3 227.7,125.7 222.1,126.3 216.5,127.0 210.9,127.9 205.3,129.0 199.7,130.3 194.1,131.7 188.6,133.4 183.1,135.2 177.6,137.2 172.2,139.4 166.8,141.8 161.4,144.3 156.1,147.1 150.9,150.0 145.8,153.1 140.7,156.3 135.7,159.8 130.9,163.4 126.1,167.1 121.4,171.1 116.8,175.2 112.3,179.4 107.9,183.9 103.7,188.4 99.6,193.2 95.6,198.1 91.8,203.1 88.1,208.2 84.6,213.5" fill="none" stroke="#d95926" stroke-width="2" stroke-linejoin="round" stroke-dasharray="6,4"/>
+<polygon points="84.6,213.5 85.1,205.5 91.7,210.0" fill="#d95926" stroke="none" stroke-width="1.0" stroke-linejoin="round"/>
+<polyline points="75.7,229.3 72.2,239.5 69.3,250.0 67.0,260.5 65.2,271.2 64.0,282.0 63.3,292.8 63.2,303.6 63.7,314.4 64.7,325.2 66.3,335.9 68.5,346.5 71.2,357.0 74.5,367.3 78.3,377.5 82.6,387.4 87.4,397.1" fill="none" stroke="#d95926" stroke-width="9" stroke-opacity="0.45" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="100.6,418.6 105.3,423.6 110.1,428.4 115.0,432.9 120.1,437.4 125.3,441.6 130.6,445.6 136.0,449.4 141.5,453.1 147.2,456.5 152.9,459.7 158.6,462.8 164.5,465.6 170.4,468.2 176.4,470.6 182.4,472.8 188.5,474.8 194.6,476.6 200.7,478.1 206.9,479.5 213.1,480.6 219.2,481.5 225.4,482.3 231.6,482.8 237.7,483.1 243.8,483.2 250.0,483.1 256.0,482.8 262.0,482.2 268.0,481.5 273.9,480.6 279.8,479.5 285.6,478.3 291.3,476.8 297.0,475.1 302.5,473.3 308.0,471.3 313.3,469.1 318.6,466.8 323.8,464.3 328.8,461.6 333.7,458.8 338.6,455.8 343.2,452.7 347.8,449.4 352.2,446.1 356.5,442.5 360.6,438.9 364.6,435.2" fill="none" stroke="#898781" stroke-width="1.4" stroke-linejoin="round" stroke-dasharray="2,4"/>
+<polygon points="364.6,435.2 362.6,441.9 357.8,436.8" fill="#898781" stroke="none" stroke-width="1.0" stroke-linejoin="round"/>
+<text x="231.4" y="518.8" font-size="10" font-weight="400" fill="#898781" text-anchor="middle">return</text>
+<circle cx="254.0" cy="284.0" r="10" fill="#f0efec"/>
+<text x="254.0" y="288.0" font-size="11" font-weight="600" fill="#1a1a19" text-anchor="middle">1</text>
+<circle cx="381.1" cy="172.2" r="10" fill="#f0efec"/>
+<text x="381.1" y="176.2" font-size="11" font-weight="600" fill="#1a1a19" text-anchor="middle">2</text>
+<circle cx="194.2" cy="98.3" r="10" fill="#f0efec"/>
+<text x="194.2" y="102.3" font-size="11" font-weight="600" fill="#1a1a19" text-anchor="middle">3</text>
+<circle cx="41.2" cy="300.0" r="10" fill="#f0efec"/>
+<text x="41.2" y="304.0" font-size="11" font-weight="600" fill="#1a1a19" text-anchor="middle">4</text>
+<circle cx="570.0" cy="80.0" r="10" fill="#f0efec"/>
+<text x="570.0" y="84.0" font-size="11" font-weight="600" fill="#1a1a19" text-anchor="middle">1</text>
+<text x="588.0" y="84.0" font-size="13" font-weight="600" fill="#f0efec" text-anchor="start">Pivot and winch</text>
+<text x="588.0" y="102.0" font-size="12" font-weight="400" fill="#c3c2b7" text-anchor="start">A winch on the centre post sets the radius.</text>
+<text x="588.0" y="118.0" font-size="12" font-weight="400" fill="#c3c2b7" text-anchor="start">The leash also carries tether power, so</text>
+<text x="588.0" y="134.0" font-size="12" font-weight="400" fill="#c3c2b7" text-anchor="start">there is no steering and no battery swap.</text>
+<circle cx="570.0" cy="166.0" r="10" fill="#f0efec"/>
+<text x="570.0" y="170.0" font-size="11" font-weight="600" fill="#1a1a19" text-anchor="middle">2</text>
+<text x="588.0" y="170.0" font-size="13" font-weight="600" fill="#f0efec" text-anchor="start">Cut laps</text>
+<text x="588.0" y="188.0" font-size="12" font-weight="400" fill="#c3c2b7" text-anchor="start">The trencher drives around the ring towing</text>
+<text x="588.0" y="204.0" font-size="12" font-weight="400" fill="#c3c2b7" text-anchor="start">a box scraper. Each lap cuts whatever depth</text>
+<text x="588.0" y="220.0" font-size="12" font-weight="400" fill="#c3c2b7" text-anchor="start">the pull budget (grip or motor) allows.</text>
+<circle cx="570.0" cy="252.0" r="10" fill="#f0efec"/>
+<text x="570.0" y="256.0" font-size="11" font-weight="600" fill="#1a1a19" text-anchor="middle">3</text>
+<text x="588.0" y="256.0" font-size="13" font-weight="600" fill="#f0efec" text-anchor="start">Spiral ramp out</text>
+<text x="588.0" y="274.0" font-size="12" font-weight="400" fill="#c3c2b7" text-anchor="start">When the pan is full, the winch walks the</text>
+<text x="588.0" y="290.0" font-size="12" font-weight="400" fill="#c3c2b7" text-anchor="start">vehicle out on a spiral ramp to the paired</text>
+<text x="588.0" y="306.0" font-size="12" font-weight="400" fill="#c3c2b7" text-anchor="start">berm. Ramp grade is limited by grip.</text>
+<circle cx="570.0" cy="338.0" r="10" fill="#f0efec"/>
+<text x="570.0" y="342.0" font-size="11" font-weight="600" fill="#1a1a19" text-anchor="middle">4</text>
+<text x="588.0" y="342.0" font-size="13" font-weight="600" fill="#f0efec" text-anchor="start">Spread and return</text>
+<text x="588.0" y="360.0" font-size="12" font-weight="400" fill="#c3c2b7" text-anchor="start">It spreads the load in thin layers where</text>
+<text x="588.0" y="376.0" font-size="12" font-weight="400" fill="#c3c2b7" text-anchor="start">the berm is lowest, grades it now and</text>
+<text x="588.0" y="392.0" font-size="12" font-weight="400" fill="#c3c2b7" text-anchor="start">then, and spirals back to the cut.</text>
+<text x="560.0" y="418.0" font-size="12" font-weight="600" fill="#c3c2b7" text-anchor="start">In the cut (side view, not to scale)</text>
+<polygon points="560.0,450.0 650.0,450.0 676.0,470.0 900.0,470.0 900.0,500.0 560.0,500.0" fill="#c98500" fill-opacity="0.28" stroke="none" stroke-width="1.0" stroke-linejoin="round"/>
+<polyline points="560.0,450.0 650.0,450.0 676.0,470.0 900.0,470.0" fill="none" stroke="#c3c2b7" stroke-width="1.4" stroke-linejoin="round"/>
+<line x1="676.0" y1="476.0" x2="900.0" y2="476.0" stroke="#898781" stroke-width="1" stroke-linecap="butt" stroke-dasharray="3,3"/>
+<text x="900.0" y="490.0" font-size="10" font-weight="400" fill="#898781" text-anchor="end">next lap cuts to here</text>
+<rect x="720" y="436" width="90" height="20" rx="3" fill="#199e70" stroke="#f0efec" stroke-width="1.2"/>
+<circle cx="735" cy="461" r="9" fill="#c3c2b7"/>
+<circle cx="765" cy="461" r="9" fill="#c3c2b7"/>
+<circle cx="795" cy="461" r="9" fill="#c3c2b7"/>
+<text x="765.0" y="430.0" font-size="10" font-weight="400" fill="#c3c2b7" text-anchor="middle">6WD trencher</text>
+<polygon points="682.0,440.0 710.0,440.0 710.0,468.0 686.0,473.0" fill="#383835" stroke="#c3c2b7" stroke-width="1.2" stroke-linejoin="round"/>
+<line x1="710.0" y1="450.0" x2="720.0" y2="450.0" stroke="#c3c2b7" stroke-width="1.4" stroke-linecap="butt"/>
+<text x="696.0" y="434.0" font-size="10" font-weight="400" fill="#c3c2b7" text-anchor="middle">pan</text>
+<line x1="820.0" y1="446.0" x2="860.0" y2="446.0" stroke="#199e70" stroke-width="2" stroke-linecap="butt"/>
+<polygon points="862.0,446.0 855.1,450.0 855.1,442.0" fill="#199e70" stroke="none" stroke-width="1.0" stroke-linejoin="round"/>
+<text x="840.0" y="440.0" font-size="10" font-weight="400" fill="#c3c2b7" text-anchor="middle">travel</text>
+<circle cx="765" cy="446" r="3.5" fill="#1a1a19" stroke="#f0efec" stroke-width="1.4"/>
+<text x="560.0" y="518.0" font-size="11" font-weight="400" fill="#898781" text-anchor="start">Leash runs into the page, to the pivot.</text>
+</svg>

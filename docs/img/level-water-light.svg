@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 410" width="920" height="410" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif">
+<title id="t">Level-water design on a slope</title>
+<desc id="d">Schematic section: each moat has one flat bed and one waterline, set from the lowest ground along the moat less freeboard. On the high side the cut is deeper, the banks rise at the side-slope angle until they meet existing ground, and the berms sit on top of existing ground.</desc>
+<rect width="100%" height="100%" rx="8" fill="#fcfcfb"/>
+<text x="16.0" y="26.0" font-size="16" font-weight="600" fill="#0b0b0b" text-anchor="start">Level-water moats on sloping ground</text>
+<text x="16.0" y="46.0" font-size="12" font-weight="400" fill="#52514e" text-anchor="start">Section through one ring moat, on the low side and the high side of the pivot (schematic, slope exaggerated)</text>
+<polygon points="24.0,285.0 32.5,284.1 71.5,250.1 109.5,246.2 148.5,272.2 162.5,270.7 222.0,330.0 278.0,330.0 357.5,250.6 516.0,234.2 612.0,330.0 668.0,330.0 792.5,205.7 806.5,204.2 845.5,170.2 853.0,169.4 892.0,195.4 896.0,195.0 896.0,356.0 24.0,356.0" fill="#eda100" fill-opacity="0.22" stroke="none" stroke-width="1.0" stroke-linejoin="round"/>
+<polygon points="175.8,284.0 222.0,330.0 278.0,330.0 324.0,284.0" fill="#2a78d6" fill-opacity="0.3" stroke="none" stroke-width="1.0" stroke-linejoin="round"/>
+<line x1="175.8" y1="284.0" x2="324.0" y2="284.0" stroke="#2a78d6" stroke-width="1.5" stroke-linecap="butt"/>
+<polygon points="565.9,284.0 612.0,330.0 668.0,330.0 714.1,284.0" fill="#2a78d6" fill-opacity="0.3" stroke="none" stroke-width="1.0" stroke-linejoin="round"/>
+<line x1="565.9" y1="284.0" x2="714.1" y2="284.0" stroke="#2a78d6" stroke-width="1.5" stroke-linecap="butt"/>
+<line x1="24.0" y1="285.0" x2="896.0" y2="195.0" stroke="#898781" stroke-width="1.5" stroke-linecap="butt" stroke-dasharray="3,3"/>
+<polyline points="24.0,285.0 32.5,284.1 71.5,250.1 109.5,246.2 148.5,272.2 162.5,270.7 222.0,330.0 278.0,330.0 357.5,250.6 516.0,234.2 612.0,330.0 668.0,330.0 792.5,205.7 806.5,204.2 845.5,170.2 853.0,169.4 892.0,195.4 896.0,195.0" fill="none" stroke="#0b0b0b" stroke-width="2" stroke-linejoin="round"/>
+<line x1="24.0" y1="284.0" x2="896.0" y2="284.0" stroke="#2a78d6" stroke-width="0.8" stroke-linecap="butt" stroke-dasharray="6,4"/>
+<line x1="395.0" y1="120.0" x2="395.0" y2="246.7" stroke="#c3c2b7" stroke-width="1" stroke-linecap="butt" stroke-dasharray="2,3"/>
+<text x="395.0" y="114.0" font-size="11" font-weight="400" fill="#898781" text-anchor="middle">pivot</text>
+<line x1="250.0" y1="263.7" x2="250.0" y2="328.0" stroke="#0b0b0b" stroke-width="1" stroke-linecap="butt"/>
+<polygon points="250.0,261.7 253.0,266.9 247.0,266.9" fill="#0b0b0b" stroke="none" stroke-width="1.0" stroke-linejoin="round"/>
+<polygon points="250.0,330.0 247.0,324.8 253.0,324.8" fill="#0b0b0b" stroke="none" stroke-width="1.0" stroke-linejoin="round"/>
+<text x="250.0" y="346.0" font-size="11" font-weight="400" fill="#0b0b0b" text-anchor="middle">shallow cut</text>
+<line x1="640.0" y1="223.4" x2="640.0" y2="328.0" stroke="#0b0b0b" stroke-width="1" stroke-linecap="butt"/>
+<polygon points="640.0,221.4 643.0,226.6 637.0,226.6" fill="#0b0b0b" stroke="none" stroke-width="1.0" stroke-linejoin="round"/>
+<polygon points="640.0,330.0 637.0,324.8 643.0,324.8" fill="#0b0b0b" stroke="none" stroke-width="1.0" stroke-linejoin="round"/>
+<text x="640.0" y="346.0" font-size="11" font-weight="400" fill="#0b0b0b" text-anchor="middle">deeper cut</text>
+<text x="28.0" y="378.0" font-size="11.5" font-weight="400" fill="#52514e" text-anchor="start">Waterline = the lowest existing ground along the moat, less freeboard (0.3 m).</text>
+<text x="28.0" y="393.0" font-size="11.5" font-weight="400" fill="#52514e" text-anchor="start">The bed and the water are level all the way round.</text>
+<text x="896.0" y="298.0" font-size="11" font-weight="400" fill="#2a78d6" text-anchor="end">one waterline</text>
+<text x="560.0" y="150.0" font-size="11.5" font-weight="400" fill="#52514e" text-anchor="start">High side: same bed and waterline,</text>
+<text x="560.0" y="165.0" font-size="11.5" font-weight="400" fill="#52514e" text-anchor="start">so the cut is deeper</text>
+<line x1="516.0" y1="234.2" x2="476.0" y2="194.2" stroke="#52514e" stroke-width="1" stroke-linecap="butt"/>
+<circle cx="516.0" cy="234.2" r="3" fill="#0b0b0b"/>
+<text x="472.0" y="174.2" font-size="11.5" font-weight="400" fill="#52514e" text-anchor="end">banks rise at β until they</text>
+<text x="472.0" y="189.2" font-size="11.5" font-weight="400" fill="#52514e" text-anchor="end">daylight into existing ground</text>
+<text x="90.5" y="238.1" font-size="11.5" font-weight="400" fill="#52514e" text-anchor="middle">berm follows ground</text>
+<text x="849.2" y="158.2" font-size="11.5" font-weight="400" fill="#52514e" text-anchor="middle">berm follows ground</text>
+<line x1="16.0" y1="68.0" x2="38.0" y2="68.0" stroke="#898781" stroke-width="1.5" stroke-linecap="butt" stroke-dasharray="3,3"/>
+<text x="44.0" y="72.0" font-size="11" font-weight="400" fill="#52514e" text-anchor="start">existing ground</text>
+<line x1="156.0" y1="68.0" x2="178.0" y2="68.0" stroke="#0b0b0b" stroke-width="2" stroke-linecap="butt"/>
+<text x="184.0" y="72.0" font-size="11" font-weight="400" fill="#52514e" text-anchor="start">design surface</text>
+<rect x="286" y="62" width="22" height="10" fill="#2a78d6" fill-opacity="0.30"/>
+<text x="314.0" y="72.0" font-size="11" font-weight="400" fill="#52514e" text-anchor="start">water</text>
+<text x="896.0" y="72.0" font-size="11" font-weight="400" fill="#898781" text-anchor="end">low side ← → high side</text>
+</svg>
