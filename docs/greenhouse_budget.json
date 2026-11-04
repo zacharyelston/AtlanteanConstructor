@@ -1,0 +1,311 @@
+{
+ "layout": {
+  "berm_crown_width_m": 8.844143303901934,
+  "ring_radius_m": 69.0,
+  "tunnel_ft": [
+   24,
+   72
+  ],
+  "tunnel_floor_ft2": 1728,
+  "footprint_with_bow_m": 8.187680723478262,
+  "fits": true,
+  "max_tunnels": 17,
+  "max_floor_ft2": 29376
+ },
+ "one_tunnel_new_england": [
+  {
+   "case": "unheated, typical yield, wholesale",
+   "floor_ft2": 1728,
+   "revenue": 11491.2,
+   "inputs": 1296.0,
+   "labour": 10886.4,
+   "labour_h": 604.8,
+   "selling": 0.0,
+   "upkeep": 172.8,
+   "energy": 0.0,
+   "net_yearly": -863.9999999999989,
+   "capex": 8640.0,
+   "grant": 0.0,
+   "net_capex": 8640.0,
+   "payback_years": null,
+   "heat_kwh_th": 0.0,
+   "heat_kwh_e": 0.0,
+   "pv_panels_for_heat": 0,
+   "revenue_ft2": 6.65,
+   "net_ft2": -0.49999999999999933
+  },
+  {
+   "case": "unheated, typical yield, direct",
+   "floor_ft2": 1728,
+   "revenue": 20937.8304,
+   "inputs": 1296.0,
+   "labour": 10886.4,
+   "labour_h": 604.8,
+   "selling": 3140.67456,
+   "upkeep": 172.8,
+   "energy": 0.0,
+   "net_yearly": 5441.95584,
+   "capex": 8640.0,
+   "grant": 0.0,
+   "net_capex": 8640.0,
+   "payback_years": 1.5876644820403394,
+   "heat_kwh_th": 0.0,
+   "heat_kwh_e": 0.0,
+   "pv_panels_for_heat": 0,
+   "revenue_ft2": 12.1168,
+   "net_ft2": 3.1492799999999996
+  },
+  {
+   "case": "unheated, optimal yield, direct",
+   "floor_ft2": 1728,
+   "revenue": 30551.04,
+   "inputs": 1296.0,
+   "labour": 10886.4,
+   "labour_h": 604.8,
+   "selling": 4582.656,
+   "upkeep": 172.8,
+   "energy": 0.0,
+   "net_yearly": 13613.184000000001,
+   "capex": 8640.0,
+   "grant": 0.0,
+   "net_capex": 8640.0,
+   "payback_years": 0.6346788525006346,
+   "heat_kwh_th": 0.0,
+   "heat_kwh_e": 0.0,
+   "pv_panels_for_heat": 0,
+   "revenue_ft2": 17.68,
+   "net_ft2": 7.878000000000001
+  },
+  {
+   "case": "frost-free, optimal yield, direct",
+   "floor_ft2": 1728,
+   "revenue": 35562.24,
+   "inputs": 1296.0,
+   "labour": 10886.4,
+   "labour_h": 604.8,
+   "selling": 5334.335999999999,
+   "upkeep": 172.8,
+   "energy": 1510.9871043376318,
+   "net_yearly": 16361.716895662366,
+   "capex": 21231.559202813598,
+   "grant": 0.0,
+   "net_capex": 21231.559202813598,
+   "payback_years": 1.2976363873183914,
+   "heat_kwh_th": 15109.871043376317,
+   "heat_kwh_e": 5036.623681125439,
+   "pv_panels_for_heat": 10,
+   "revenue_ft2": 20.58,
+   "net_ft2": 9.468586166471276
+  },
+  {
+   "case": "unheated, optimal yield, direct, family labour",
+   "floor_ft2": 1728,
+   "revenue": 30551.04,
+   "inputs": 1296.0,
+   "labour": 0.0,
+   "labour_h": 604.8,
+   "selling": 4582.656,
+   "upkeep": 172.8,
+   "energy": 0.0,
+   "net_yearly": 24499.584000000003,
+   "capex": 8640.0,
+   "grant": 0.0,
+   "net_capex": 8640.0,
+   "payback_years": 0.3526590492312032,
+   "heat_kwh_th": 0.0,
+   "heat_kwh_e": 0.0,
+   "pv_panels_for_heat": 0,
+   "revenue_ft2": 17.68,
+   "net_ft2": 14.178
+  }
+ ],
+ "scaling_new_england": [
+  {
+   "floor_ft2": 3456.0,
+   "revenue": 61102.08,
+   "inputs": 2592.0,
+   "labour": 21772.8,
+   "labour_h": 1209.6,
+   "selling": 9165.312,
+   "upkeep": 345.6,
+   "energy": 0.0,
+   "net_yearly": 27226.368000000002,
+   "capex": 17280.0,
+   "grant": 6497.28,
+   "net_capex": 10782.720000000001,
+   "payback_years": 0.39603960396039606,
+   "heat_kwh_th": 0.0,
+   "heat_kwh_e": 0.0,
+   "pv_panels_for_heat": 0.0,
+   "revenue_ft2": 35.36,
+   "net_ft2": 15.756000000000002,
+   "tunnels": 2,
+   "heated": 0,
+   "fte": 0.6048
+  },
+  {
+   "floor_ft2": 6912.0,
+   "revenue": 105904.35475113124,
+   "inputs": 5184.0,
+   "labour": 43545.6,
+   "labour_h": 2419.2,
+   "selling": 11999.999999999993,
+   "upkeep": 691.2,
+   "energy": 1510.9871043376318,
+   "net_yearly": 42972.567646793585,
+   "capex": 47151.5592028136,
+   "grant": 6497.28,
+   "net_capex": 40654.2792028136,
+   "payback_years": 0.9460518984335589,
+   "heat_kwh_th": 15109.871043376317,
+   "heat_kwh_e": 5036.623681125439,
+   "pv_panels_for_heat": 10.0,
+   "revenue_ft2": 73.62,
+   "net_ft2": 33.102586166471276,
+   "tunnels": 4,
+   "heated": 1,
+   "sold_wholesale_usd": 25904.354751131228,
+   "fte": 1.2096
+  },
+  {
+   "floor_ft2": 13824.0,
+   "revenue": 175700.11221719458,
+   "inputs": 10368.0,
+   "labour": 87091.2,
+   "labour_h": 4838.400000000001,
+   "selling": 11999.999999999996,
+   "upkeep": 1382.3999999999999,
+   "energy": 3021.9742086752635,
+   "net_yearly": 61836.5380085193,
+   "capex": 94303.1184056272,
+   "grant": 6497.28,
+   "net_capex": 87805.8384056272,
+   "payback_years": 1.419966919776946,
+   "heat_kwh_th": 30219.742086752634,
+   "heat_kwh_e": 10073.247362250879,
+   "pv_panels_for_heat": 20.0,
+   "revenue_ft2": 147.24,
+   "net_ft2": 66.20517233294255,
+   "tunnels": 8,
+   "heated": 2,
+   "sold_wholesale_usd": 95700.11221719458,
+   "fte": 2.4192000000000005
+  },
+  {
+   "floor_ft2": 29376.0,
+   "revenue": 326554.5122171944,
+   "inputs": 22032.0,
+   "labour": 185068.79999999996,
+   "labour_h": 10281.599999999999,
+   "selling": 12000.000000000044,
+   "upkeep": 2937.600000000001,
+   "energy": 3021.9742086752635,
+   "net_yearly": 101494.1380085194,
+   "capex": 172063.1184056272,
+   "grant": 6497.28,
+   "net_capex": 165565.8384056272,
+   "payback_years": 1.6312847387474698,
+   "heat_kwh_th": 30219.742086752634,
+   "heat_kwh_e": 10073.247362250879,
+   "pv_panels_for_heat": 20.0,
+   "revenue_ft2": 306.36000000000007,
+   "net_ft2": 137.10717233294258,
+   "tunnels": 17,
+   "heated": 2,
+   "sold_wholesale_usd": 246554.51221719445,
+   "fte": 5.1408
+  }
+ ],
+ "florida_one_tunnel": {
+  "floor_ft2": 1728,
+  "revenue": 23459.327999999998,
+  "inputs": 1296.0,
+  "labour": 10886.4,
+  "labour_h": 604.8,
+  "selling": 3518.8992,
+  "upkeep": 172.8,
+  "energy": 0.0,
+  "net_yearly": 7585.228799999998,
+  "capex": 8640.0,
+  "grant": 0.0,
+  "net_capex": 8640.0,
+  "payback_years": 1.1390559504282853,
+  "heat_kwh_th": 0.0,
+  "heat_kwh_e": 0.0,
+  "pv_panels_for_heat": 0,
+  "revenue_ft2": 13.575999999999999,
+  "net_ft2": 4.389599999999999
+ },
+ "season_weeks": {
+  "new_england": {
+   "open_field": 20,
+   "unheated_tunnel": 36,
+   "frost_free_tunnel": 52,
+   "notes": "Tunnels plant tomatoes ~4 weeks early and pick ~4 weeks late; winter greens grow slowly Nov-Feb under row cover, much faster frost-free."
+  },
+  "florida": {
+   "open_field": 30,
+   "unheated_tunnel": 44,
+   "frost_free_tunnel": 44,
+   "notes": "Florida's prime season is winter; tunnels protect from rain, pests and the odd freeze, and need shade cloth and full ventilation in summer."
+  }
+ },
+ "assumptions": {
+  "tunnel": {
+   "width_ft": 24,
+   "length_ft": 72,
+   "gap_m": 3.0,
+   "causeway_gap_m": 8.0,
+   "cover_to_floor": 1.7
+  },
+  "crops": {
+   "tomato_lb_ft2": {
+    "typical": 1.78,
+    "optimal": 3.0
+   },
+   "tomato_usd_lb": {
+    "direct": 4.56,
+    "wholesale": 2.5
+   },
+   "winter_greens_usd_ft2": {
+    "unheated": 3.0,
+    "heated": 5.9
+   },
+   "shoulder_greens_usd_ft2": 1.0,
+   "wholesale_greens_factor": 0.55
+  },
+  "costs": {
+   "installed_usd_ft2": 5.0,
+   "eqip_usd_ft2": 3.76,
+   "eqip_cap_ft2": 2178,
+   "inputs_usd_ft2": 1.0,
+   "aquaponic_input_saving": 0.25,
+   "labour_h_ft2": {
+    "tomato": 0.25,
+    "greens": 0.1
+   },
+   "labour_usd_h": 18.0,
+   "selling_cost_pct_of_direct": 15.0,
+   "upkeep_pct": 2.0,
+   "direct_market_cap_usd": 80000
+  },
+  "heat": {
+   "u_btu_hr_ft2_f": 0.75,
+   "frost_free_degree_days_f": {
+    "new_england": 1500,
+    "florida": 0
+   },
+   "solar_credit": 0.35,
+   "heat_pump_cop": 3.0,
+   "pv_kwh_per_kwp": {
+    "new_england": 1200,
+    "florida": 1450
+   },
+   "pv_usd_per_w": 3.0,
+   "electricity_usd_per_kwh": {
+    "new_england": 0.3,
+    "florida": 0.15
+   }
+  }
+ }
+}

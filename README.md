@@ -412,6 +412,9 @@ images are in `docs/img/` (`tools/make_figs.py` redraws the SVGs).
 - **Investment and return:** [docs/economics.md](docs/economics.md) treats the
   homestead as a product, with surplus soil and stone sold, gravel and sand
   bought, and payback, NPV and builder margin.
+- **Greenhouses:** [docs/greenhouse.md](docs/greenhouse.md) puts 24×72 ft
+  high tunnels on the pasture berm. Four, sized to the direct market, make the
+  homestead pay even without a fill market.
 - **Where it makes sense:** [docs/where-it-pays.md](docs/where-it-pays.md)
   sweeps the drivers. A homeowner needs two of three things: a fill market,
   direct-sale produce, or land-value uplift. A builder profits almost anywhere

@@ -24,6 +24,10 @@ site. These are screening sizes; for a real site, run
 
 ## The loads
 
+*A frost-free high tunnel adds about 15,000 kWh of heat a year: 5,000 kWh of
+electricity through the heat pump, or 10 more panels. See
+[greenhouse.md](greenhouse.md).*
+
 | Load | New England | Florida |
 |---|---|---|
 | Household: lights, appliances, cooking, well | 5,000 kWh | 5,000 kWh |

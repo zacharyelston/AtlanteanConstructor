@@ -43,6 +43,7 @@ def args_after_dashes():
     p.add_argument("--exaggeration", type=float, default=1.5)
     p.add_argument("--samples", type=int, default=32)
     p.add_argument("--prefix", default="homestead")
+    p.add_argument("--tunnels", type=int, default=0, help="high tunnels on the pasture berm, from the south arc")
     return p.parse_args(argv)
 
 
@@ -410,6 +411,51 @@ def add_trees(T, z, cfg, ex):
         o.location = (x, y, ground_z(T, z, x, y) * ex)
 
 
+def add_tunnels(T, z, cfg, ex, n):
+    """24 x 72 ft gothic high tunnels on the pasture berm crown (docs/greenhouse.md). The first ones sit on
+    the south arc, where the ring runs east-west: the best orientation for winter light."""
+    if n <= 0:
+        return
+    poly = material("TunnelPoly", (0.92, 0.94, 0.95), rough=0.3, alpha=0.45)
+    pb = poly.node_tree.nodes.get("Principled BSDF")
+    if "Transmission Weight" in pb.inputs:
+        pb.inputs["Transmission Weight"].default_value = 0.5
+    for attr, val in (("surface_render_method", "BLENDED"), ("blend_method", "BLEND")):
+        try:
+            setattr(poly, attr, val)
+        except (AttributeError, TypeError):
+            pass
+    crop = material("TunnelCrop", (0.06, 0.20, 0.03), rough=0.9)
+    b = cfg.berms[1]
+    rc = 0.5 * (b.r_in + b.r_out)
+    hw, h, wall, L = 0.5 * 24 * 0.3048, 12 * 0.3048, 0.9, 72 * 0.3048
+    step = (L + 3.0) / rc                                         # angular spacing
+    order = [0]
+    for i in range(1, n):
+        order.append(((i + 1) // 2) * (1 if i % 2 else -1))       # 0, +1, -1, +2, -2 ... around the south
+    prof = [(hw * math.cos(t), wall + (h - wall) * math.sin(t)) for t in np.linspace(0, math.pi, 17)]
+    prof = [(hw, 0.0)] + prof + [(-hw, 0.0)]
+    for k, o in enumerate(order[:n]):
+        a = math.radians(270) + o * step
+        cx, cy = rc * math.cos(a), rc * math.sin(a)
+        g = ground_z(T, z, cx, cy) * ex
+        bm = bmesh.new()
+        ends = []
+        for yy in (-L / 2, L / 2):
+            ends.append([bm.verts.new((px_, yy, pz)) for px_, pz in prof])
+        for i in range(len(prof) - 1):
+            bm.faces.new((ends[0][i], ends[0][i + 1], ends[1][i + 1], ends[1][i]))
+        bm.faces.new(ends[0][::-1])
+        bm.faces.new(ends[1])
+        o_ = mesh_obj("Tunnel_%d" % k, bm, poly)
+        o_.location = (cx, cy, g + 0.02)
+        o_.rotation_euler = (0, 0, a)                             # long axis along the ring tangent
+        for row in (-2.0, -0.7, 0.7, 2.0):                        # crop rows inside
+            rx = cx + row * math.cos(a)
+            ry = cy + row * math.sin(a)
+            box("TunnelRow", (0.7, L - 2.0, 0.5), (rx, ry, g + 0.25), crop, (0, 0, a))
+
+
 def add_spoke(T, z, cfg, ex):
     """Floating work spoke: island edge across the inner ring and orchard berm to the deep ring."""
     steel = material("Spoke", (0.55, 0.56, 0.58), rough=0.4, metal=0.8)
@@ -556,6 +602,7 @@ def main():
     add_hoops_and_crops(T, z, cfg, ex)
     add_trees(T, z, cfg, ex)
     add_spoke(T, z, cfg, ex)
+    add_tunnels(T, z, cfg, ex, a.tunnels)
     add_solar(T, z, cfg, ex)
     add_eox(T, z, cfg, ex)
     lights_world()
@@ -567,6 +614,9 @@ def main():
     if "plan" in views:
         render(camera("Plan", (0, 0, 400), (0, 0.001, 0), ortho=200),
                os.path.join(a.out, "%s-plan.png" % a.prefix), 1200, 1200, a.samples)
+    if "tunnels" in views:
+        render(camera("Tunnels", (34, -94, 16), (-4, -66, 1), lens=32),
+               os.path.join(a.out, "%s-tunnels.png" % a.prefix), 1600, 900, a.samples)
     if "island" in views:
         render(camera("Island", (-34, -52, 18), (-2, 2, 2), lens=30),
                os.path.join(a.out, "%s-island.png" % a.prefix), 1600, 900, a.samples)

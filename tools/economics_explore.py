@@ -68,13 +68,13 @@ class Knobs:
         he.PRICES, he.FARM, he.STONE, he.DISCOUNT, he.PRODUCT_MARGIN = self.saved
 
 
-def run(r, eb, fill, screen=False, fed=False, hire_x=1.0, uplift=0.0, **knobs):
+def run(r, eb, fill, screen=False, fed=False, hire_x=1.0, uplift=0.0, greenhouse=None, **knobs):
     """One evaluation. ``uplift`` = fraction of the build cost that shows up as land value at once."""
     r = copy.deepcopy(r)
     r["build"]["excavator_dozer"]["cost_usd"] *= hire_x
     he.SCENARIOS["_sweep"] = {"label": "sweep", "fill_usd_per_yd3": fill, "screen": screen}
     with Knobs(**knobs):
-        s = he.site_economics(r, eb, "_sweep", fed_fish=fed)
+        s = he.site_economics(r, eb, "_sweep", fed_fish=fed, greenhouse=greenhouse)
     s["npv_with_uplift"] = s["npv_25y_5pct"] + uplift * s["total_capex"]
     return s
 
@@ -151,6 +151,21 @@ def conditions_grid(rec, eb):
                 for name, r in rec.items():
                     row[name] = run(r, eb, fill, produce_x=produce_x, uplift=uplift)["npv_with_uplift"]
                 out.append(row)
+    return out
+
+
+def greenhouse_grid(rec, eb):
+    """Homeowner NPV with 0-8 high tunnels on the pasture berm (typical yield, hired labour, sold direct)."""
+    out = []
+    for n in (0, 2, 4, 8):
+        for fill in (0.0, 8.0):
+            row = {"tunnels": n, "fill": fill}
+            for name, r in rec.items():
+                g = {"tunnels": n, "heated": 0, "yields": "typical", "channel": "direct", "hired_labour": True}
+                s = run(r, eb, fill, greenhouse=g)
+                row[name] = s["npv_25y_5pct"]
+                row[name + " payback"] = s["payback_years"]
+            out.append(row)
     return out
 
 
@@ -323,7 +338,9 @@ def main():
     tor = tornado(rec["NE flat"], eb)
     rel = relief_sweep(eb)
     grid = conditions_grid(rec, eb)
-    res = {"fill_sweep": data, "tornado": tor, "relief_sweep": rel, "conditions_grid": grid, "builder": BUILDER}
+    ggrid = greenhouse_grid(rec, eb)
+    res = {"fill_sweep": data, "tornado": tor, "relief_sweep": rel, "conditions_grid": grid,
+           "greenhouse_grid": ggrid, "builder": BUILDER}
     with open(os.path.join(ROOT, "docs", "economics_explore.json"), "w") as fh:
         json.dump(res, fh, indent=1, default=float)
     for th in mf.THEMES:
@@ -350,6 +367,10 @@ def main():
     for g in grid:
         print("  fill $%4.1f  %-11s uplift %2.0f%%  " % (g["fill"], g["produce"], g["uplift_pct"])
               + "  ".join("%s %9s" % (n, money(g[n])) for n, _ in SITES))
+    print("\nGreenhouse grid (typical yield, hired labour, direct):")
+    for g in ggrid:
+        print("  %d tunnels, fill $%4.1f  " % (g["tunnels"], g["fill"]) + "  ".join(
+            "%s %9s (%s)" % (n, money(g[n]), "%.0f y" % g[n + " payback"] if g[n + " payback"] else "-") for n, _ in SITES))
     print("\nRelief sweep (NE till, 8 ft ring):")
     for r in rel:
         if not r["fits"]:

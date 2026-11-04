@@ -88,7 +88,7 @@ walls.
 | Inner ring | 18–26 m | 0.9 m deep: emergent plants, summer rafts of greens, ducks. A 100 m² greenhouse bay beside the courtyard can be kept warm ([energy.md](energy.md)). |
 | Orchard berm | 30–40 m | 0.9 m high, with a 4.9 m flat top. Fruit trees on both edges lean over both rings. |
 | Deep ring | 44–58 m | 8 ft deep (2.44 m), with a safety shelf at the edge and 2:1 banks below it. A third of its bed is deeper than 8 ft. It holds the larger fish, their winter refuge and the pond loop. |
-| Pasture berm | 62–76 m | 0.9 m high, with an 8.8 m flat top, for goats. |
+| Pasture berm | 62–76 m | 0.9 m high, with an 8.8 m flat top, for goats. Four 24×72 ft high tunnels on its south arc ([greenhouse.md](greenhouse.md)). The ring takes up to 17. |
 | Outer land | beyond 76 m | The north border holds the solar array, on the south face of a windbreak bund made from surplus spoil. |
 
 ![Plan view of the homestead layout](img/homestead-plan.jpg)

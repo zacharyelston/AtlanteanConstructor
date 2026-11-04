@@ -64,6 +64,9 @@ FARM = {
 }
 YEARS, DISCOUNT = 25, 0.05
 PRODUCT_MARGIN = 0.25          # design-build price = build cost x (1 + margin); soil returns kept by the builder
+# High tunnels on the pasture berm (tools/greenhouse_budget.py). 0 tunnels = off, which keeps every
+# earlier result unchanged.
+GREENHOUSE = {"tunnels": 0, "heated": 0, "yields": "typical", "channel": "direct", "hired_labour": True}
 
 
 def load(name):
@@ -80,7 +83,7 @@ def energy_for(eb, climate, warm_bay=False):
     return next(e for e in eb if want in e["climate"] and e["warm_bay"] == warm_bay)
 
 
-def site_economics(r, eb, scenario, fed_fish=False):
+def site_economics(r, eb, scenario, fed_fish=False, greenhouse=None):
     clim = climate_of(r["soil"])
     P = PRICES
     capex, onetime = {}, {}
@@ -127,6 +130,13 @@ def site_economics(r, eb, scenario, fed_fish=False):
     avoided_bore = gs["tons"] * P["bore_loop_usd_per_ton"] - loop
     for k, v in FARM["setup_usd"].items():
         capex["farm: " + k] = v
+    gh = dict(GREENHOUSE, **(greenhouse or {}))
+    gh_farm = None
+    if gh["tunnels"] > 0:
+        import greenhouse_budget as gb
+        gh_farm = gb.farm(gh["tunnels"], gh["heated"], climate=clim, channel=gh["channel"],
+                          yields=gh["yields"], hired_labour=gh["hired_labour"])
+        capex["greenhouses: %d tunnels on the pasture berm (after EQIP)" % gh["tunnels"]] = gh_farm["net_capex"]
 
     # Yearly value
     acres = r["rings"][-1]["water_area_m2"] / 4046.9
@@ -139,7 +149,10 @@ def site_economics(r, eb, scenario, fed_fish=False):
         "greens": FARM["greens_usd"],
     }
     total_capex = sum(capex.values())
-    upkeep = total_capex * FARM["upkeep_pct_of_capex"] / 100.0
+    gh_capex = sum(v for k, v in capex.items() if k.startswith("greenhouses"))
+    upkeep = (total_capex - gh_capex) * FARM["upkeep_pct_of_capex"] / 100.0   # tunnels carry their own upkeep
+    if gh_farm:
+        yearly["greenhouses (net of inputs, labour, selling, upkeep, heat)"] = gh_farm["net_yearly"]
     net_capex = total_capex - sum(onetime.values())
     net_yearly = sum(yearly.values()) - upkeep
     # NPV: the orchard ramps in over 5 years

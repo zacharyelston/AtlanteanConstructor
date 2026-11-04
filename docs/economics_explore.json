@@ -606,6 +606,88 @@
    "Florida": 164982.9659036493
   }
  ],
+ "greenhouse_grid": [
+  {
+   "tunnels": 0,
+   "fill": 0.0,
+   "NE 6 ft slope": -196545.45238411965,
+   "NE 6 ft slope payback": 34.23195154087336,
+   "NE flat": -125779.11642125456,
+   "NE flat payback": 25.834062502115906,
+   "Florida": -78328.89655169833,
+   "Florida payback": 22.060813318120275
+  },
+  {
+   "tunnels": 0,
+   "fill": 8.0,
+   "NE 6 ft slope": -60053.2309651169,
+   "NE 6 ft slope payback": 19.545539740189582,
+   "NE flat": -56128.27593242133,
+   "NE flat payback": 18.8085748537206,
+   "Florida": -36988.86906226166,
+   "Florida payback": 17.283571176700523
+  },
+  {
+   "tunnels": 2,
+   "fill": 0.0,
+   "NE 6 ft slope": -53930.924504472634,
+   "NE 6 ft slope payback": 16.301511588332108,
+   "NE flat": 16835.411458392464,
+   "NE flat payback": 12.833110762791902,
+   "Florida": -36530.79950872731,
+   "Florida payback": 16.28571429005618
+  },
+  {
+   "tunnels": 2,
+   "fill": 8.0,
+   "NE 6 ft slope": 82561.29691453004,
+   "NE 6 ft slope payback": 9.53699904210537,
+   "NE flat": 86486.25194722573,
+   "NE flat payback": 9.484180003527246,
+   "Florida": 4809.227980709327,
+   "Florida payback": 12.94760715162525
+  },
+  {
+   "tunnels": 4,
+   "fill": 0.0,
+   "NE 6 ft slope": 66262.91239869181,
+   "NE 6 ft slope payback": 11.566523775148108,
+   "NE flat": 137029.24836155694,
+   "NE flat payback": 9.301578067338689,
+   "Florida": -1229.9824657564113,
+   "Florida payback": 13.587749165182963
+  },
+  {
+   "tunnels": 4,
+   "fill": 8.0,
+   "NE 6 ft slope": 202755.1338176945,
+   "NE 6 ft slope payback": 7.006415535898641,
+   "NE flat": 206680.08885039017,
+   "NE flat payback": 7.021833751317206,
+   "Florida": 40110.04502368025,
+   "Florida payback": 11.022437292393825
+  },
+  {
+   "tunnels": 8,
+   "fill": 0.0,
+   "NE 6 ft slope": -17005.760021558937,
+   "NE 6 ft slope payback": 14.381695458361442,
+   "NE flat": 53760.575941306175,
+   "NE flat payback": 11.76342314759357,
+   "Florida": -159057.75211204813,
+   "Florida payback": 34.40515161012981
+  },
+  {
+   "tunnels": 8,
+   "fill": 8.0,
+   "NE 6 ft slope": 119486.46139744378,
+   "NE 6 ft slope payback": 9.22633655556665,
+   "NE flat": 123411.4164301394,
+   "NE flat payback": 9.19290585388828,
+   "Florida": -117717.72462261145,
+   "Florida payback": 28.795052923391058
+  }
+ ],
  "builder": {
   "overhead_usd_per_yr": 150000,
   "season_days": {
