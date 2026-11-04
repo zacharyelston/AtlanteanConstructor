@@ -1,6 +1,6 @@
-"""Build an EOx vehicle description from modules: N drive-axle modules on the 48 V bus.
+"""Build an eOx vehicle description from modules: N drive-axle modules on the 48 V bus.
 
-Part data are EOx's shared modules (zacharyelston/EOx @30f9dd8):
+Part data are eOx's shared modules (zacharyelston/EOx @30f9dd8):
 
 * 3 HP unit  (design/units.toml): 2,240 W rated at 3,600 rpm (5.94 N*m), peak torque x4,
   motor 0.80, controller 0.97, 18 + 2.5 kg, 100 A battery-side limit per controller.
@@ -11,7 +11,7 @@ Part data are EOx's shared modules (zacharyelston/EOx @30f9dd8):
 
 A tethered trencher needs no steering (the leash sets the radius), so every axle is a
 driven module and all of the machine's weight is on driven wheels. For two or more
-axles on a circle, a fixed chassis scrubs; an articulated frame (EOx Pro, issue EOx#5)
+axles on a circle, a fixed chassis scrubs; an articulated frame (eOx Pro, issue eOx#5)
 locked to the circle's curvature avoids it.
 """
 import copy
@@ -50,11 +50,11 @@ def build(spec):
     warnings = []
     units_total = n + spec.get("aux_units", 0)
     if units_total > BUS["max_units_rated"]:
-        warnings.append("%d units exceed the EOx bus rating (%d at rated power); needs a bigger "
+        warnings.append("%d units exceed the eOx bus rating (%d at rated power); needs a bigger "
                         "pack/bus or a tether supply sized for it" % (units_total, BUS["max_units_rated"]))
     current_a = units_total * UNIT["rated_w"] / (UNIT["motor_eff"] * UNIT["controller_eff"] * 44.0)
     veh = {
-        "name": spec.get("name", "EOx trencher %dWD" % (2 * n)),
+        "name": spec.get("name", "eOx trencher %dWD" % (2 * n)),
         "derived_from": "eox_vehicle.build(%s)" % json.dumps({k: v for k, v in spec.items() if k != "tool"}),
         "mass_kg": mass,
         "ballast_kg": spec.get("ballast_kg", 0.0),
@@ -78,7 +78,7 @@ def train(car, n):
     """n identical cars coupled nose-to-tail on one leash, each towing its own pan along the same
     ring: pull, mass, pans and hotel load scale by n; the cut width does not."""
     t = copy.deepcopy(car)
-    t["name"] = "EOx train %d x %s" % (n, car["name"].replace("EOx trencher ", ""))
+    t["name"] = "eOx train %d x %s" % (n, car["name"].replace("eOx trencher ", ""))
     t["mass_kg"] = car["mass_kg"] * n
     t["ballast_kg"] = car.get("ballast_kg", 0.0) * n
     t["drive"]["units"] = car["drive"]["units"] * n
