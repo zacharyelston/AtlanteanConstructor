@@ -1,0 +1,42 @@
+{
+  "_comment": "EOx Home as a tethered earthmoving stand-in. Figures from zacharyelston/EOx @30f9dd8 (out/home-report.md, design/axle.toml, design/models/home.toml) unless marked ASSUMED.",
+  "name": "EOx Home (tethered stand-in)",
+
+  "mass_kg": 237,
+  "ballast_kg": 0,
+  "drive_axle_static_fraction": 0.55,
+
+  "tyre": { "diameter_mm": 457, "width_mm": 216, "rim_mm": 203, "pressure_kpa": 83,
+            "driven": 2, "total": 4 },
+
+  "drive": {
+    "peak_force_n": 1451,
+    "rated_force_n": 360,
+    "rated_shaft_power_w": 2240,
+    "units": 1,
+    "motor_eff": 0.80,
+    "controller_eff": 0.97,
+    "driveline_eff": 0.90,
+    "v_max_m_s": 2.2,
+    "thermal_time_constant_s": 600,
+    "_note": "rated_force = peak 1,451 N x rated/peak torque 5.9/23.8 N*m. Above rated is short-time duty: a 10-minute heating average must stay <= 1."
+  },
+
+  "battery": { "usable_wh": 4096, "charger_w": 1400, "handling_min": 10 },
+  "hotel_w": 60,
+
+  "tether": { "line_loss": 0.08, "winch_radial_speed_m_s": 0.5,
+              "_note": "ASSUMED: power down the line through a slip ring at the pivot; the pivot winch sets the radius." },
+
+  "tool": {
+    "type": "towed box scraper (pan)",
+    "width_m": 1.2,
+    "capacity_loose_m3": 0.30,
+    "mass_kg": 90,
+    "tongue_weight_fraction": 0.15,
+    "rolling_resistance": 0.15,
+    "cut_speed_m_s": 1.0,
+    "spread_length_m": 6.0,
+    "_note": "ASSUMED: an ATV-class 4 ft box scraper with an electric lift actuator on an EOx 3 HP unit."
+  }
+}

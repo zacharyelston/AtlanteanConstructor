@@ -12,6 +12,7 @@ from typing import List, Optional
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 DEFAULT_PARAMS_PATH = os.path.join(HERE, "params.json")
+SOILS_PATH = os.path.join(HERE, "soils.json")
 
 SPEC_MIN_RESOLUTION = 512
 MAX_CANAL_SLOPE_DEG = 33.0
@@ -70,6 +71,9 @@ class Config:
     relax_every: int
     relax_window: float
     display_exaggeration: float = 3.0
+    soil: dict = field(default_factory=dict)      # merged soil properties (preset + overrides)
+    site: dict = field(default_factory=dict)      # existing-ground generator settings
+    design: dict = field(default_factory=dict)    # design datum rules (level water, berm mode)
     warnings: List[str] = field(default_factory=list)
 
     @property
@@ -125,13 +129,31 @@ def apply_overrides(raw, overrides):
     return raw
 
 
+def resolve_soil(soil):
+    """Merge a named preset from soils.json with any keys given alongside it."""
+    soil = dict(soil)
+    name = soil.pop("preset", None)
+    if not name:
+        return soil
+    with open(SOILS_PATH) as fh:
+        lib = json.load(fh)
+    if name not in lib:
+        raise ValueError("Unknown soil preset %r; choose from %s"
+                         % (name, ", ".join(k for k in lib if not k.startswith("_"))))
+    merged = dict(lib[name])
+    merged.update(soil)
+    merged["preset"] = name
+    return merged
+
+
 def load_config(path=None, overrides=None):
     path = path or DEFAULT_PARAMS_PATH
     with open(path, "r") as fh:
         raw = json.load(fh)
     raw = apply_overrides(raw, overrides)
+    soil = resolve_soil(raw["soil"])
 
-    g, hub, soil = raw["grid"], raw["hub"], raw["soil"]
+    g, hub = raw["grid"], raw["hub"]
     rig, spd, anim = raw["rig"], raw["speeds"], raw["animation"]
     cfg = Config(
         raw=raw,
@@ -164,6 +186,9 @@ def load_config(path=None, overrides=None):
         relax_every=int(anim.get("relax_every_n_steps", 20)),
         relax_window=float(anim.get("relax_window_m", 14.0)),
         display_exaggeration=float(anim.get("display_exaggeration", 3.0)),
+        soil=soil,
+        site=dict(raw.get("site", {"type": "flat"})),
+        design=dict(raw.get("design", {})),
     )
     validate(cfg)
     return cfg

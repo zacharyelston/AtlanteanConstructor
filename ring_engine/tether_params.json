@@ -1,0 +1,43 @@
+{
+  "_comment": "Garden-scale Atlantean site (~100 m across) for a tethered EOx. Moats are cut to a level waterline; berms follow existing ground. Soil and site are swapped per scenario (scenarios.json).",
+
+  "grid": { "resolution": 512, "extent_m": 56.0 },
+  "hub": { "radius_m": 10.0 },
+
+  "site": { "type": "slope", "relief_ft": 6.0, "uphill_azimuth_deg": 30.0, "undulation": 0.25, "seed": 7 },
+  "design": { "moat_datum": "level_water", "freeboard_m": 0.3, "berm_mode": "follow" },
+
+  "soil": { "preset": "ne_glacial_till" },
+
+  "moats": [
+    { "r_in": 10.0, "r_out": 16.0, "depth": 1.0 },
+    { "r_in": 30.5, "r_out": 37.5, "depth": 1.2 }
+  ],
+  "berms": [
+    { "r_in": 19.5, "r_out": 27.0, "height": null, "source_moat": 0 },
+    { "r_in": 41.5, "r_out": 52.5, "height": null, "source_moat": 1 }
+  ],
+  "balance": { "auto_size_berms": true },
+
+  "rig": {
+    "mast_height_m": 3.0,
+    "footprint_radius_m": 0.6,
+    "chute_radius_m": 0.6,
+    "bucket_capacity_m3": 0.3,
+    "lifts": 1,
+    "lift_depth_m": 0.3,
+    "path_mode": "spiral",
+    "pass_overlap": 0.25,
+    "path_step_m": 0.4
+  },
+  "speeds": { "v_theta_rad_s": 1.0, "v_r_m_s": 0.5, "v_tool_max_m_s": 2.2, "production_rate_m3_hr": null },
+  "animation": { "frames": 120, "fps": 24, "relax_every_n_steps": 40, "relax_window_m": 4.0, "display_exaggeration": 3.0 },
+
+  "operations": {
+    "power": "tether",
+    "hours_per_day": 10,
+    "haul_when_pull_used": 0.75,
+    "max_laps_per_ring": 800,
+    "max_sim_hours": 60000
+  }
+}

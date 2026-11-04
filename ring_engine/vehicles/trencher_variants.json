@@ -1,0 +1,28 @@
+{
+  "_comment": "Candidate EOx trenchers built from shared EOx modules (eox_vehicle.build). Forces are per machine. Tools are ASSUMED towed box scrapers sized to each machine's pull.",
+
+  "tools": {
+    "pan_4ft": { "type": "towed box scraper 4 ft", "width_m": 1.2, "capacity_loose_m3": 0.30, "mass_kg": 90,
+                 "tongue_weight_fraction": 0.15, "rolling_resistance": 0.15, "cut_speed_m_s": 1.0, "spread_length_m": 6.0 },
+    "pan_5ft": { "type": "towed box scraper 5 ft", "width_m": 1.5, "capacity_loose_m3": 0.55, "mass_kg": 140,
+                 "tongue_weight_fraction": 0.20, "rolling_resistance": 0.12, "cut_speed_m_s": 0.9, "spread_length_m": 7.0 },
+    "pan_6ft": { "type": "towed box scraper 6 ft", "width_m": 1.8, "capacity_loose_m3": 0.80, "mass_kg": 190,
+                 "tongue_weight_fraction": 0.20, "rolling_resistance": 0.12, "cut_speed_m_s": 0.8, "spread_length_m": 8.0 }
+  },
+
+  "variants": {
+    "home_2wd":   { "file": "eox_home_tethered.json" },
+    "t4_15":      { "name": "EOx trencher 4WD, 15:1",            "modules": 2, "ratio": 15.0, "ballast_kg": 0,   "tool": "pan_4ft" },
+    "t4_25":      { "name": "EOx trencher 4WD, 24.8:1",          "modules": 2, "ratio": 24.8, "ballast_kg": 0,   "tool": "pan_5ft" },
+    "t4_25_b250": { "name": "EOx trencher 4WD, 24.8:1, +250 kg", "modules": 2, "ratio": 24.8, "ballast_kg": 250, "tool": "pan_5ft" },
+    "t6_25":      { "name": "EOx trencher 6WD, 24.8:1",          "modules": 3, "ratio": 24.8, "ballast_kg": 0,   "tool": "pan_6ft" },
+    "t6_25_b400": { "name": "EOx trencher 6WD, 24.8:1, +400 kg", "modules": 3, "ratio": 24.8, "ballast_kg": 400, "tool": "pan_6ft" },
+    "t6_25_fan":  { "name": "EOx trencher 6WD, 24.8:1, fan-cooled motors", "modules": 3, "ratio": 24.8, "ballast_kg": 0, "tool": "pan_6ft",
+                    "continuous_factor": 1.4, "hotel_w": 140,
+                    "_note": "ASSUMED: a 12 V/48 V blower on each motor gives ~1.4x continuous torque at low speed; verify on a bench motor" },
+    "train_3x4wd": { "name": "EOx trencher 4WD, 24.8:1", "modules": 2, "ratio": 24.8, "ballast_kg": 0, "tool": "pan_5ft",
+                     "train_cars": 3 },
+    "train_2x6wd": { "name": "EOx trencher 6WD, 24.8:1", "modules": 3, "ratio": 24.8, "ballast_kg": 0, "tool": "pan_6ft",
+                     "train_cars": 2 }
+  }
+}
