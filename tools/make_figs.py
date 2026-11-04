@@ -2,7 +2,7 @@
 import json, math, os, re, sys
 from html import escape
 
-REPO = "/Users/zacelston/code/AtlanteanConstructor"
+REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(REPO, "docs", "img")
 V1 = os.path.join(REPO, "runs", "2026-11-04_compare_v1")
 
