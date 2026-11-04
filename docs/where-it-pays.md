@@ -16,6 +16,11 @@ and extension prices, not quotes, and the buildings and land are left out.
 
 ## The short answer
 
+- **Four high tunnels on the pasture berm beat every other lever.** With
+  typical yields, hired labour and direct sales, they move the New England
+  homestead's NPV from −$56k to about +$205k with fill at $8/yd³, and to
+  +$66–137k with no fill market at all. See [greenhouse.md](greenhouse.md).
+  The levers below are for a homestead without tunnels.
 - **For a homeowner, any two of three things make it pay:**
   1. **a fill market:** the surplus spoil sells for about $8/yd³ or more,
      with the buyer hauling it;
