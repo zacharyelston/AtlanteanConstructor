@@ -16,6 +16,11 @@ break. The numbers come from `tools/homestead_numbers.py` and
 the repo. They are screening estimates: handbook soil values, assumed hire
 rates, and a synthetic site.
 
+![The homestead on a sloped New England site: three domes on the island, the inner ring, the orchard berm with hoops between the tree rows, the deep ring, the pasture berm, one uphill causeway, the floating spoke and the north solar array](img/homestead-aerial.jpg)
+
+*Rendered from the design by `tools/render_homestead.py`, with the relief
+exaggerated 1.5×.*
+
 It has old precedents. The Pearl River Delta's dike-pond farms grew mulberry
 on embankments between fish ponds, fed the leaves to silkworms and the
 silkworm droppings to the fish, then dug the pond mud back onto the dikes. FAO
@@ -85,6 +90,8 @@ walls.
 | Deep ring | 44–58 m | 8 ft deep (2.44 m), with a safety shelf at the edge and 2:1 banks below it. A third of its bed is deeper than 8 ft. It holds the larger fish, their winter refuge and the pond loop. |
 | Pasture berm | 62–76 m | 0.9 m high, with an 8.8 m flat top, for goats. |
 | Outer land | beyond 76 m | The north border holds the solar array, on the south face of a windbreak bund made from surplus spoil. |
+
+![Plan view of the homestead layout](img/homestead-plan.jpg)
 
 The whole site is **152 m across (1.81 ha, 4.5 acres)**. A causeway crosses
 both rings on the uphill side, with a culvert beneath it, so trucks reach the
