@@ -1,0 +1,62 @@
+{
+  "_comment": "Atlantean Berm & Ring Engine - all lengths in metres, angles in degrees, speeds in SI units.",
+
+  "grid": {
+    "resolution": 512,
+    "extent_m": 215.0
+  },
+
+  "hub": {
+    "radius_m": 30.0
+  },
+
+  "soil": {
+    "swell_factor": 1.25,
+    "angle_of_repose_deg": 33.0,
+    "canal_side_slope_deg": 30.0
+  },
+
+  "moats": [
+    { "r_in": 30.0,  "r_out": 50.0,  "depth": 4.0 },
+    { "r_in": 80.0,  "r_out": 105.0, "depth": 5.0 },
+    { "r_in": 140.0, "r_out": 170.0, "depth": 5.0 }
+  ],
+
+  "berms": [
+    { "r_in": 55.0,  "r_out": 75.0,  "height": null, "source_moat": 0 },
+    { "r_in": 110.0, "r_out": 135.0, "height": null, "source_moat": 1 },
+    { "r_in": 175.0, "r_out": 205.0, "height": null, "source_moat": 2 }
+  ],
+
+  "balance": {
+    "_comment": "If true, every berm crown height is solved so that V_berm = Sf * V_source_moat (null heights are always solved).",
+    "auto_size_berms": true
+  },
+
+  "rig": {
+    "mast_height_m": 22.0,
+    "footprint_radius_m": 3.0,
+    "chute_radius_m": 4.0,
+    "bucket_capacity_m3": 60.0,
+    "lifts": 8,
+    "path_mode": "spiral",
+    "revolutions_per_moat": null,
+    "pass_overlap": 0.25,
+    "path_step_m": 1.5
+  },
+
+  "speeds": {
+    "v_theta_rad_s": 0.02,
+    "v_r_m_s": 0.5,
+    "v_tool_max_m_s": 2.5,
+    "production_rate_m3_hr": 600.0
+  },
+
+  "animation": {
+    "frames": 300,
+    "fps": 24,
+    "relax_every_n_steps": 20,
+    "relax_window_m": 14.0,
+    "display_exaggeration": 3.0
+  }
+}
