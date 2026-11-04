@@ -6,8 +6,8 @@ two ways to do the work:
 
 - a **centre-pivot rig**: a radial truss over a 410 m site, with a scraper
   carriage, a conveyor and a discharge chute;
-- a **tethered EOx trencher**: an electric tractor from the sibling
-  [EOx](https://github.com/zacharyelston/EOx) project, on a leash from a
+- a **tethered eOx trencher**: an electric tractor from the sibling
+  [eOx](https://github.com/zacharyelston/EOx) project, on a leash from a
   central pivot, cutting a garden-scale site about 100 m across.
 
 All the code is plain Python and NumPy in [`ring_engine/`](ring_engine/). Blender
@@ -23,9 +23,9 @@ holds at the swell factor (Sf = 1.25) all the way through.*
 
 | New England till, 6 ft slope | Florida sand, flat lot |
 |---|---|
-| ![Top-down hillshade of the finished New England site cut by the 6WD EOx trencher: two moats in blue, two berms in orange](docs/img/site-ne-final.png) | ![Top-down hillshade of the finished Florida site cut by the 6WD EOx trencher](docs/img/site-fl-final.png) |
+| ![Top-down hillshade of the finished New England site cut by the 6WD eOx trencher: two moats in blue, two berms in orange](docs/img/site-ne-final.png) | ![Top-down hillshade of the finished Florida site cut by the 6WD eOx trencher](docs/img/site-fl-final.png) |
 
-*The same garden-scale site cut by the tethered 6WD EOx trencher
+*The same garden-scale site cut by the tethered 6WD eOx trencher
 (`tether_sim.py`). Blue is cut below existing ground and orange is fill.
 Results are under
 [Results](#results-tractor-loader-backhoes-vs-eox-trenchers).*
@@ -34,10 +34,10 @@ Results are under
 
 ## Two rigs, one terrain engine
 
-| | Pivot rig | Tethered EOx trencher |
+| | Pivot rig | Tethered eOx trencher |
 |---|---|---|
 | Site | 3 moats, 3 berms, 410 m across | 2 moats, 2 berms, about 105 m across |
-| Machine | 211 m radial truss on a 22 m mast; scraper carriage, conveyor, chute | EOx built from EOx drive-axle modules, towing a box scraper |
+| Machine | 211 m radial truss on a 22 m mast; scraper carriage, conveyor, chute | eOx built from eOx drive-axle modules, towing a box scraper |
 | Soil moved | 164,000 m³ bank cut | 2,200–3,900 m³ bank cut |
 | Ground | Flat | Flat, or sloped 6 ft with moats cut to a level waterline |
 | Limited by | Kinematics and an assumed 600 m³/h production rate | Tyre grip, motor force, motor heat, rock, wet ground |
@@ -85,14 +85,14 @@ a conveyor carries each cut to a chute over the paired berm.
 
 ---
 
-## Tethered EOx trencher
+## Tethered eOx trencher
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="docs/img/tether-concept-dark.svg">
   <img alt="Plan view of the tethered trencher: a winch at the pivot holds the trencher on a leash in the outer moat; it tows a pan around the ring, climbs a spiral ramp to the outer berm, spreads the load and spirals back. Inset: side view of the trencher towing the pan" src="docs/img/tether-concept-light.svg" width="100%">
 </picture>
 
-An EOx on a leash tows a box scraper around and around a central pivot. The
+An eOx on a leash tows a box scraper around and around a central pivot. The
 winch sets the radius, so the vehicle never steers.
 
 - **Cutting:** each lap cuts whatever the pull budget allows.
@@ -101,7 +101,7 @@ winch sets the radius, so the vehicle never steers.
   berm is lowest, then spirals back.
 - **Physics per step:**
   - pull available = min(tyre grip, motor force), with grip from Brixius /
-    ASAE D497 (`tyres.py`, ported from EOx);
+    ASAE D497 (`tyres.py`, ported from eOx);
   - pull needed = rolling + grade + cutting energy per metre;
   - speed = min(tool speed, shaft power / pull).
 - **What slows it down:**
@@ -114,13 +114,13 @@ winch sets the radius, so the vehicle never steers.
 
 ### Vehicles
 
-Every trencher is built from EOx parts (`eox_vehicle.py`): N golf-cart
+Every trencher is built from eOx parts (`eox_vehicle.py`): N golf-cart
 drive-axle modules, each with a 3 HP unit on the 48 V bus. Every axle is
 driven, because the leash does the steering.
 
 | Key | Vehicle | Mass | Rated / peak pull | Pan |
 |---|---|---|---|---|
-| `home_2wd` | EOx Home (tethered stand-in) | 237 kg | 360 / 1,451 N | |
+| `home_2wd` | eOx Home (tethered stand-in) | 237 kg | 360 / 1,451 N | |
 | `t4_15` | 4WD, 15:1 | 272 kg | 725 / 2,902 N | 4 ft |
 | `t4_25` | 4WD, 24.8:1 | 272 kg | 1,199 / 4,798 N | 5 ft |
 | `t4_25_b250` | 4WD, 24.8:1, +250 kg ballast | 522 kg | 1,199 / 4,798 N | 5 ft |
@@ -193,9 +193,9 @@ existing ground.*
 
 ---
 
-## Results: tractor loader-backhoes vs EOx trenchers
+## Results: tractor loader-backhoes vs eOx trenchers
 
-27 runs: 9 EOx vehicles × 3 scenarios, plus the TLB baseline for each scenario.
+27 runs: 9 eOx vehicles × 3 scenarios, plus the TLB baseline for each scenario.
 The full tables, with every column, are in
 [`runs/2026-11-04_compare_v2/COMPARISON.md`](runs/2026-11-04_compare_v2/COMPARISON.md).
 
@@ -204,7 +204,7 @@ test-pit data, and machine rates are assumed. Brixius is optimistic about grip
 in loose sand. Compare the scenarios and machines with each other; don't read
 any single number as a prediction.
 
-**Days to build the site.** TLB days are 8 h operator days. EOx days are 10 h
+**Days to build the site.** TLB days are 8 h operator days. eOx days are 10 h
 of unattended running on the tether. The "fleet" figure is 4 identical
 machines working at once: one per moat first, then sharing a moat at 85 %
 efficiency each.
@@ -215,19 +215,19 @@ efficiency each.
 | Compact TLB (~45 hp) | 242 | 247 | 72 |
 | **Backhoe loader (~90 hp)** | **68** | **69** | **20** |
 | Backhoe loader × 2 | 55 | 57 | 16 |
-| EOx Home 2WD | 1,707 | 1,298 | 332 |
-| EOx 4WD, 15:1 | 206 | 284 | 52 |
-| EOx 4WD, 24.8:1 | 103 | 123 | 25 |
-| EOx 6WD, 24.8:1 | 72 | 85 | 14 |
-| EOx 6WD, 24.8:1, fan-cooled | 51 | 66 | 13 |
-| **EOx train, 2 × 6WD** | **44** | **53** | **8** |
-| EOx train, 2 × 6WD, fleet of 4 | 14 | 16 | 3 |
+| eOx Home 2WD | 1,707 | 1,298 | 332 |
+| eOx 4WD, 15:1 | 206 | 284 | 52 |
+| eOx 4WD, 24.8:1 | 103 | 123 | 25 |
+| eOx 6WD, 24.8:1 | 72 | 85 | 14 |
+| eOx 6WD, 24.8:1, fan-cooled | 51 | 66 | 13 |
+| **eOx train, 2 × 6WD** | **44** | **53** | **8** |
+| eOx train, 2 × 6WD, fleet of 4 | 14 | 16 | 3 |
 
 **Cost to build.**
 - **TLB:** rental with operator, plus fuel, delivery and a pump. In New
   England: backhoe loader **$102k** ($26/m³), compact $253k, subcompact $481k.
   In Florida: $31k, $76k and $140k.
-- **EOx:** running cost only, electricity at $0.25/kWh plus $40/h of labour
+- **eOx:** running cost only, electricity at $0.25/kWh plus $40/h of labour
   to clear boulders and stalls: about **$5k** in New England and $0.2–0.6k in
   Florida. That figure excludes buying or building the machine, and anyone
   supervising it.
@@ -247,12 +247,12 @@ What the runs show:
 - **The Home 2WD isn't a trencher.** Its 360 N continuous pull barely covers
   its own rolling resistance plus a pan, and it spends most of its life
   stopped while the motor cools.
-- **EOx trenchers are limited by motor heat, not grip.** On dry till, 96–100 %
+- **eOx trenchers are limited by motor heat, not grip.** On dry till, 96–100 %
   of the cutting that hits a limit is held back to manage heat. That means:
   - **Ballast makes every trencher slower** (6WD: 717 h becomes 816 h).
     Extra mass only adds rolling and grade load.
   - **The 24.8:1 chain stage halves the hours** against 15:1, which bears on
-    [EOx#2](https://github.com/zacharyelston/EOx/issues/2).
+    [eOx#2](https://github.com/zacharyelston/EOx/issues/2).
   - **Fan-cooled motors save 29 %** on the 6WD in New England, assuming
     1.4× continuous torque, which needs a bench test.
 - **Wet spring moves the limit to grip.** On saturated clay, grip is the limit
@@ -262,16 +262,16 @@ What the runs show:
   doubles the pull for the same cut width and beats the single fan-cooled 6WD.
   A fleet of 4 trains working the moats in parallel finishes in about 14 days
   in New England.
-- **So: a backhoe loader is the safe build, and EOx is a real option.** One
+- **So: a backhoe loader is the safe build, and eOx is a real option.** One
   rented backhoe loader digs the New England site in about 68 days for about
-  $100k, with known machines and known risk. An EOx train is competitive on
+  $100k, with known machines and known risk. An eOx train is competitive on
   calendar time and far cheaper to run once it is built, but it needs:
   - someone on call for about 550 boulder refusals;
   - a multi-ring swivel at the pivot for each leash, if several machines run
     at once;
   - real soil data.
 
-  Either way, the EOx stays on site afterwards for regrading, cleaning silt
+  Either way, the eOx stays on site afterwards for regrading, cleaning silt
   out of the moats and topping up berms.
 
 ---
@@ -288,7 +288,7 @@ flowchart LR
   K --> SR["simulation_runner.py<br/>pivot-rig main loop"]
   SR --> O1["output/<br/>report.json, telemetry.csv,<br/>top-down PNGs, section"]
   SR -.-> BL["Blender scene<br/>frame handler, HUD,<br/>stills + animation"]
-  VJ["vehicles/*.json<br/>trencher variants,<br/>TLB classes"] --> EV["eox_vehicle.py<br/>EOx modules → trencher,<br/>trains of cars"]
+  VJ["vehicles/*.json<br/>trencher variants,<br/>TLB classes"] --> EV["eox_vehicle.py<br/>eOx modules → trencher,<br/>trains of cars"]
   EV --> TS["tether_sim.py<br/>grip, motor, heat,<br/>rock, ramps, spreading"]
   TY["tyres.py<br/>Brixius / ASAE D497"] --> TS
   TE --> TS
@@ -369,8 +369,8 @@ images are in `docs/img/` (`tools/make_figs.py` redraws the SVGs).
 | `ring_engine/simulation_runner.py` | Pivot-rig main loop, telemetry, report, headless outputs, Blender scene, HUD and frame handler |
 | `ring_engine/tether_params.json` | Garden-scale site: 2 moats, 2 berms, level water, 6 ft slope |
 | `ring_engine/soils.json` | Soil presets: swell, repose, density, cutting energy, cone index, water table, boulder refusals |
-| `ring_engine/tyres.py` | Tyre grip and rolling resistance, ported from EOx `src/eox/tyres.py` |
-| `ring_engine/eox_vehicle.py`, `vehicles/` | Trenchers built from EOx modules; trains of cars; the TLB classes |
+| `ring_engine/tyres.py` | Tyre grip and rolling resistance, ported from eOx `src/eox/tyres.py` |
+| `ring_engine/eox_vehicle.py`, `vehicles/` | Trenchers built from eOx modules; trains of cars; the TLB classes |
 | `ring_engine/tether_sim.py` | Tethered-trencher sim |
 | `ring_engine/conventional.py` | TLB construction baseline |
 | `ring_engine/compare_sites.py` | Vehicle × scenario sweep and comparison table |
@@ -380,7 +380,7 @@ images are in `docs/img/` (`tools/make_figs.py` redraws the SVGs).
 
 Planning is on the shared
 [GitHub Project](https://github.com/users/zacharyelston/projects/7), with
-[EOx](https://github.com/zacharyelston/EOx). EOx supplies the drive-axle
+[eOx](https://github.com/zacharyelston/EOx). eOx supplies the drive-axle
 module, the 3 HP unit, the 48 V bus limits and the tyre model.
 
 - **Kept runs:** every run behind the figures and tables above is kept in
@@ -391,6 +391,6 @@ module, the 3 HP unit, the 48 V bus limits and the tyre model.
   needs a bench motor test.
 - **Multi-axle chassis:** a fixed 4WD or 6WD frame scrubs its tyres on a
   circle. An articulated frame locked to the ring's curvature avoids that
-  ([EOx issue 5](https://github.com/zacharyelston/EOx/issues/5)).
+  ([eOx issue 5](https://github.com/zacharyelston/EOx/issues/5)).
 - **Grip in sand:** Brixius is fitted to agricultural soils and is optimistic
-  in loose sand, so treat the Florida EOx figures as a best case.
+  in loose sand, so treat the Florida eOx figures as a best case.

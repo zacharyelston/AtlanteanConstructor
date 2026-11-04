@@ -1,5 +1,5 @@
 {
-  "_comment": "Candidate EOx trenchers built from shared EOx modules (eox_vehicle.build). Forces are per machine. Tools are ASSUMED towed box scrapers sized to each machine's pull.",
+  "_comment": "Candidate eOx trenchers built from shared eOx modules (eox_vehicle.build). Forces are per machine. Tools are ASSUMED towed box scrapers sized to each machine's pull.",
 
   "tools": {
     "pan_4ft": { "type": "towed box scraper 4 ft", "width_m": 1.2, "capacity_loose_m3": 0.30, "mass_kg": 90,
@@ -12,17 +12,17 @@
 
   "variants": {
     "home_2wd":   { "file": "eox_home_tethered.json" },
-    "t4_15":      { "name": "EOx trencher 4WD, 15:1",            "modules": 2, "ratio": 15.0, "ballast_kg": 0,   "tool": "pan_4ft" },
-    "t4_25":      { "name": "EOx trencher 4WD, 24.8:1",          "modules": 2, "ratio": 24.8, "ballast_kg": 0,   "tool": "pan_5ft" },
-    "t4_25_b250": { "name": "EOx trencher 4WD, 24.8:1, +250 kg", "modules": 2, "ratio": 24.8, "ballast_kg": 250, "tool": "pan_5ft" },
-    "t6_25":      { "name": "EOx trencher 6WD, 24.8:1",          "modules": 3, "ratio": 24.8, "ballast_kg": 0,   "tool": "pan_6ft" },
-    "t6_25_b400": { "name": "EOx trencher 6WD, 24.8:1, +400 kg", "modules": 3, "ratio": 24.8, "ballast_kg": 400, "tool": "pan_6ft" },
-    "t6_25_fan":  { "name": "EOx trencher 6WD, 24.8:1, fan-cooled motors", "modules": 3, "ratio": 24.8, "ballast_kg": 0, "tool": "pan_6ft",
+    "t4_15":      { "name": "eOx trencher 4WD, 15:1",            "modules": 2, "ratio": 15.0, "ballast_kg": 0,   "tool": "pan_4ft" },
+    "t4_25":      { "name": "eOx trencher 4WD, 24.8:1",          "modules": 2, "ratio": 24.8, "ballast_kg": 0,   "tool": "pan_5ft" },
+    "t4_25_b250": { "name": "eOx trencher 4WD, 24.8:1, +250 kg", "modules": 2, "ratio": 24.8, "ballast_kg": 250, "tool": "pan_5ft" },
+    "t6_25":      { "name": "eOx trencher 6WD, 24.8:1",          "modules": 3, "ratio": 24.8, "ballast_kg": 0,   "tool": "pan_6ft" },
+    "t6_25_b400": { "name": "eOx trencher 6WD, 24.8:1, +400 kg", "modules": 3, "ratio": 24.8, "ballast_kg": 400, "tool": "pan_6ft" },
+    "t6_25_fan":  { "name": "eOx trencher 6WD, 24.8:1, fan-cooled motors", "modules": 3, "ratio": 24.8, "ballast_kg": 0, "tool": "pan_6ft",
                     "continuous_factor": 1.4, "hotel_w": 140,
                     "_note": "ASSUMED: a 12 V/48 V blower on each motor gives ~1.4x continuous torque at low speed; verify on a bench motor" },
-    "train_3x4wd": { "name": "EOx trencher 4WD, 24.8:1", "modules": 2, "ratio": 24.8, "ballast_kg": 0, "tool": "pan_5ft",
+    "train_3x4wd": { "name": "eOx trencher 4WD, 24.8:1", "modules": 2, "ratio": 24.8, "ballast_kg": 0, "tool": "pan_5ft",
                      "train_cars": 3 },
-    "train_2x6wd": { "name": "EOx trencher 6WD, 24.8:1", "modules": 3, "ratio": 24.8, "ballast_kg": 0, "tool": "pan_6ft",
+    "train_2x6wd": { "name": "eOx trencher 6WD, 24.8:1", "modules": 3, "ratio": 24.8, "ballast_kg": 0, "tool": "pan_6ft",
                      "train_cars": 2 }
   }
 }

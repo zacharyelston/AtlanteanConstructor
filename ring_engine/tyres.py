@@ -1,7 +1,7 @@
 """Tyre grip and rolling resistance on soil (Brixius 1987 / ASAE D497).
 
-Ported from zacharyelston/EOx ``src/eox/tyres.py`` (MIT) so the tethered-EOx sim
-uses the same traction physics as the EOx calcs. Keep the two in step.
+Ported from zacharyelston/EOx ``src/eox/tyres.py`` (MIT) so the tethered-eOx sim
+uses the same traction physics as the eOx calcs. Keep the two in step.
 
     Bn  = (CI b d / W) * (1 + 5 delta/h) / (1 + 3 b/d)
     GTR = 0.88 (1 - e^(-0.1 Bn)) (1 - e^(-7.5 s)) + 0.04     gross traction ratio

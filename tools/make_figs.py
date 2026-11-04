@@ -1,4 +1,4 @@
-"""README figures for AtlanteanConstructor, light + dark, in EOx's SVG conventions."""
+"""README figures for AtlanteanConstructor, light + dark, in eOx's SVG conventions."""
 import json, math, os, re, sys
 from html import escape
 
@@ -173,7 +173,7 @@ def section_fig(theme):
     s.line(left, yb - 4, left, yb + 4, t["ink2"], 1)
     s.line(left + 10 * px_m, yb - 4, left + 10 * px_m, yb + 4, t["ink2"], 1)
     s.text(left + 10 * px_m + 8, yb + 4, "10 m", 11, t["ink2"])
-    s.text(W - right, yb + 4, "tether_sim.py, compare_v1 run, EOx trencher 6WD 24.8:1", 10, t["muted"], "end")
+    s.text(W - right, yb + 4, "tether_sim.py, compare_v1 run, eOx trencher 6WD 24.8:1", 10, t["muted"], "end")
     s.h = yb + 18
     write("section-ne-fl", theme, s.render(
         "Section through the pivot, New England vs Florida",
@@ -188,7 +188,7 @@ def concept_fig(theme):
     t = THEMES[theme]
     W, H = 920, 560
     s = Svg(W, H, theme)
-    s.text(16, 26, "Tethered EOx trencher: one leash, no steering", 16, weight=600)
+    s.text(16, 26, "Tethered eOx trencher: one leash, no steering", 16, weight=600)
     s.text(16, 46, "Plan view of the garden-scale site (2 moats, 2 berms, ~105 m across), and the trencher in the cut",
            12, t["ink2"])
     cx, cy, k = 270, 300, 4.4          # px per m
@@ -317,7 +317,7 @@ def concept_fig(theme):
     s.text(ox, oy + 48, "Leash runs into the page, to the pivot.", 11, t["muted"])
 
     write("tether-concept", theme, s.render(
-        "Tethered EOx trencher concept",
+        "Tethered eOx trencher concept",
         "Plan view: a winch at the pivot holds the trencher on a leash in the outer moat; it tows a pan around the "
         "ring, climbs a spiral ramp to the outer berm, spreads the load and spirals back. Inset: side view of the "
         "trencher towing the pan."))
