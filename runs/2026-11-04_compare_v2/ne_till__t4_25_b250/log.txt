@@ -1,0 +1,26 @@
+[init] EOx trencher 4WD, 24.8:1, +250 kg on New England glacial till (rocky clay loam, dense basal till), dry season: grid 448 (dx 0.25 m), design cut 3,888 m3, fill 5,443 m3, 10 lifts, relief 1.83 m (6.0 ft)  0.1s
+[warn] Grid resolution 448 is below the spec minimum of 512 (fine for quick previews).
+  lift 1/10 moat 1 r= 35.3    8.1%  cut      317 m3  t      72 h  rocks    45  loads    826  (16s)
+  lift 2/10 moat 1 r= 34.2   15.0%  cut      583 m3  t     137 h  rocks    86  loads   1518  (33s)
+  lift 3/10 moat 0 r= 15.9   21.8%  cut      847 m3  t     197 h  rocks   121  loads   2209  (49s)
+  lift 3/10 moat 1 r= 35.3   28.1%  cut     1093 m3  t     259 h  rocks   163  loads   2849  (64s)
+  lift 4/10 moat 1 r= 35.3   33.6%  cut     1305 m3  t     316 h  rocks   189  loads   3403  (80s)
+  lift 5/10 moat 0 r=  9.2   40.0%  cut     1554 m3  t     376 h  rocks   217  loads   4051  (95s)
+  lift 5/10 moat 1 r= 34.2   46.7%  cut     1816 m3  t     450 h  rocks   257  loads   4734  (111s)
+  lift 6/10 moat 1 r= 35.3   53.5%  cut     2081 m3  t     534 h  rocks   295  loads   5426  (129s)
+  lift 6/10 moat 0 r= 11.4   59.7%  cut     2321 m3  t     607 h  rocks   331  loads   6054  (144s)
+  lift 7/10 moat 1 r= 34.2   66.6%  cut     2591 m3  t     692 h  rocks   357  loads   6757  (161s)
+  lift 8/10 moat 1 r= 37.6   71.0%  cut     2759 m3  t     753 h  rocks   375  loads   7195  (176s)
+  lift 8/10 moat 1 r= 33.1   76.1%  cut     2960 m3  t     822 h  rocks   399  loads   7718  (194s)
+  lift 9/10 moat 0 r= 13.7   81.2%  cut     3155 m3  t     886 h  rocks   428  loads   8228  (210s)
+  lift 9/10 moat 1 r= 34.2   86.6%  cut     3367 m3  t     958 h  rocks   441  loads   8781  (226s)
+  lift 10/10 moat 1 r= 37.6   90.9%  cut     3535 m3  t    1024 h  rocks   469  loads   9218  (242s)
+  lift 10/10 moat 1 r= 33.1   96.1%  cut     3735 m3  t    1101 h  rocks   496  loads   9741  (258s)
+----------------------------------------------------------------------------
+ New England glacial till (rocky clay loam, dense basal till), dry season | slope | tether power
+  design cut 3,888 m3 bank (max 2.76 m deep), fill 5,443 m3 loose, relief 1.83 m
+  achieved 99.8% of cut, 3,879 m3, balance error 2.3e-03 m3
+  time 1,152 h = 115 working days at 10 h/day  (moving 539, motor cooling 503, rocks 104, stalls 6, charging 0 h)
+  3.37 m3/h, 0.29 kWh per bank m3, 1,223 grid kWh, 0 charges
+  10,116 loads (avg 0.383 bank m3), 6,052 laps, 2671 km driven, 519 rock refusals, 5697 stalls
+  cutting limited by: grip 0%, motor 0%, motor heat 100%; wet ground 0% of cut steps; max cross-slope 38 deg

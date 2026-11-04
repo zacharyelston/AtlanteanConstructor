@@ -1,0 +1,25 @@
+[init] EOx trencher 6WD, 24.8:1, fan-cooled motors on New England glacial till, wet spring (perched water table, saturated clay): grid 448 (dx 0.25 m), design cut 3,861 m3, fill 5,212 m3, 10 lifts, relief 1.83 m (6.0 ft)  0.1s
+[warn] Grid resolution 448 is below the spec minimum of 512 (fine for quick previews).
+  lift 1/10 moat 1 r= 37.8    9.7%  cut      376 m3  t      49 h  rocks    58  loads    649  (15s)
+  lift 2/10 moat 1 r= 29.7   18.0%  cut      697 m3  t      91 h  rocks   100  loads   1205  (30s)
+  lift 3/10 moat 1 r= 35.1   27.9%  cut     1075 m3  t     141 h  rocks   154  loads   1895  (48s)
+  lift 4/10 moat 1 r= 33.7   35.6%  cut     1373 m3  t     190 h  rocks   203  loads   2468  (64s)
+  lift 5/10 moat 1 r= 31.0   43.1%  cut     1664 m3  t     233 h  rocks   245  loads   3020  (80s)
+  lift 5/10 moat 1 r= 37.8   49.5%  cut     1912 m3  t     276 h  rocks   276  loads   3532  (96s)
+  lift 6/10 moat 1 r= 33.7   55.5%  cut     2142 m3  t     319 h  rocks   314  loads   3995  (112s)
+  lift 7/10 moat 0 r= 15.8   61.5%  cut     2375 m3  t     355 h  rocks   339  loads   4459  (127s)
+  lift 7/10 moat 1 r= 35.1   67.7%  cut     2612 m3  t     400 h  rocks   372  loads   4950  (145s)
+  lift 8/10 moat 1 r= 35.1   73.8%  cut     2848 m3  t     447 h  rocks   403  loads   5446  (164s)
+  lift 8/10 moat 0 r= 14.5   78.6%  cut     3034 m3  t     486 h  rocks   432  loads   5810  (180s)
+  lift 9/10 moat 1 r= 32.4   84.3%  cut     3256 m3  t     528 h  rocks   471  loads   6234  (197s)
+  lift 9/10 moat 1 r= 37.8   89.3%  cut     3449 m3  t     572 h  rocks   506  loads   6648  (213s)
+  lift 10/10 moat 1 r= 35.1   93.7%  cut     3617 m3  t     606 h  rocks   519  loads   7011  (228s)
+  lift 10/10 moat 1 r= 29.7   97.6%  cut     3770 m3  t     643 h  rocks   545  loads   7320  (244s)
+----------------------------------------------------------------------------
+ New England glacial till, wet spring (perched water table, saturated clay) | slope | tether power
+  design cut 3,861 m3 bank (max 2.76 m deep), fill 5,212 m3 loose, relief 1.83 m
+  achieved 99.5% of cut, 3,841 m3, balance error 6.0e-09 m3
+  time 655 h = 66 working days at 10 h/day  (moving 456, motor cooling 0, rocks 166, stalls 33, charging 0 h)
+  5.86 m3/h, 0.33 kWh per bank m3, 1,390 grid kWh, 0 charges
+  7,459 loads (avg 0.515 bank m3), 3,683 laps, 2267 km driven, 554 rock refusals, 29720 stalls
+  cutting limited by: grip 89%, motor 0%, motor heat 11%; wet ground 110% of cut steps; max cross-slope 35 deg

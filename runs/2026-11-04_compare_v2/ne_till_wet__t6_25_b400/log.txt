@@ -1,0 +1,23 @@
+[init] EOx trencher 6WD, 24.8:1, +400 kg on New England glacial till, wet spring (perched water table, saturated clay): grid 448 (dx 0.25 m), design cut 3,861 m3, fill 5,212 m3, 10 lifts, relief 1.83 m (6.0 ft)  0.1s
+[warn] Grid resolution 448 is below the spec minimum of 512 (fine for quick previews).
+  lift 1/10 moat 1 r= 37.8    9.7%  cut      376 m3  t      78 h  rocks    61  loads    646  (16s)
+  lift 2/10 moat 1 r= 32.4   17.0%  cut      655 m3  t     142 h  rocks    99  loads   1127  (32s)
+  lift 3/10 moat 1 r= 33.7   26.3%  cut     1015 m3  t     222 h  rocks   154  loads   1767  (48s)
+  lift 4/10 moat 1 r= 33.7   35.6%  cut     1373 m3  t     320 h  rocks   209  loads   2445  (65s)
+  lift 5/10 moat 1 r= 32.4   44.5%  cut     1720 m3  t     414 h  rocks   258  loads   3086  (82s)
+  lift 6/10 moat 1 r= 36.4   52.2%  cut     2016 m3  t     512 h  rocks   296  loads   3664  (99s)
+  lift 6/10 moat 0 r= 13.1   59.1%  cut     2283 m3  t     602 h  rocks   334  loads   4191  (114s)
+  lift 7/10 moat 1 r= 33.7   66.1%  cut     2551 m3  t     695 h  rocks   375  loads   4696  (130s)
+  lift 8/10 moat 1 r= 36.4   72.1%  cut     2784 m3  t     778 h  rocks   405  loads   5177  (147s)
+  lift 8/10 moat 1 r= 31.0   77.4%  cut     2989 m3  t     860 h  rocks   433  loads   5639  (162s)
+  lift 9/10 moat 1 r= 32.4   84.3%  cut     3256 m3  t     959 h  rocks   471  loads   6131  (179s)
+  lift 10/10 moat 1 r= 39.1   89.9%  cut     3472 m3  t    1044 h  rocks   497  loads   6578  (195s)
+  lift 10/10 moat 1 r= 33.7   95.3%  cut     3678 m3  t    1131 h  rocks   527  loads   7003  (213s)
+----------------------------------------------------------------------------
+ New England glacial till, wet spring (perched water table, saturated clay) | slope | tether power
+  design cut 3,861 m3 bank (max 2.76 m deep), fill 5,212 m3 loose, relief 1.83 m
+  achieved 99.5% of cut, 3,841 m3, balance error 3.1e-03 m3
+  time 1,202 h = 120 working days at 10 h/day  (moving 400, motor cooling 617, rocks 167, stalls 18, charging 0 h)
+  3.19 m3/h, 0.40 kWh per bank m3, 1,690 grid kWh, 0 charges
+  7,309 loads (avg 0.526 bank m3), 3,218 laps, 2025 km driven, 557 rock refusals, 15857 stalls
+  cutting limited by: grip 53%, motor 0%, motor heat 47%; wet ground 106% of cut steps; max cross-slope 35 deg

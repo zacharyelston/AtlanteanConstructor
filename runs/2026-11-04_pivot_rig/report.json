@@ -1,0 +1,106 @@
+{
+  "inputs": {
+    "swell_factor": 1.25,
+    "angle_of_repose_deg": 33.0,
+    "canal_side_slope_deg": 30.0,
+    "grid_resolution": 512,
+    "cell_size_m": 0.8414872798434487,
+    "lifts": 8,
+    "path_mode": "spiral"
+  },
+  "design": {
+    "moats": [
+      {
+        "index": 0,
+        "r_in": 30.0,
+        "r_out": 50.0,
+        "depth": 4.0,
+        "V_bank_grid_m3": 13140.134445976928,
+        "V_bank_exact_m3": 13141.203400818926
+      },
+      {
+        "index": 1,
+        "r_in": 80.0,
+        "r_out": 105.0,
+        "depth": 5.0,
+        "V_bank_grid_m3": 47484.4157679138,
+        "V_bank_exact_m3": 47482.86385061526
+      },
+      {
+        "index": 2,
+        "r_in": 140.0,
+        "r_out": 170.0,
+        "depth": 5.0,
+        "V_bank_grid_m3": 103915.97195561904,
+        "V_bank_exact_m3": 103913.2228572077
+      }
+    ],
+    "berms": [
+      {
+        "index": 0,
+        "r_in": 55.0,
+        "r_out": 75.0,
+        "source_moat": 0,
+        "crown_height_m": 2.4869704244950714,
+        "repose_peak_m": 6.494075931975106,
+        "V_target_loose_m3": 16425.16805747116,
+        "V_design_grid_m3": 16425.16805747116,
+        "V_design_exact_m3": 16424.21584660444
+      },
+      {
+        "index": 1,
+        "r_in": 110.0,
+        "r_out": 135.0,
+        "source_moat": 1,
+        "crown_height_m": 4.140857391124092,
+        "repose_peak_m": 8.117594914968882,
+        "V_target_loose_m3": 59355.51970989225,
+        "V_design_grid_m3": 59355.51970989226,
+        "V_design_exact_m3": 59356.8397172891
+      },
+      {
+        "index": 2,
+        "r_in": 175.0,
+        "r_out": 205.0,
+        "source_moat": 2,
+        "crown_height_m": 4.818820012780106,
+        "repose_peak_m": 9.741113897962657,
+        "V_target_loose_m3": 129894.9649445238,
+        "V_design_grid_m3": 129894.96494452379,
+        "V_design_exact_m3": 129894.78757409897
+      }
+    ]
+  },
+  "design_totals": {
+    "V_cut_bank_m3": 164540.52216950976,
+    "V_fill_loose_m3": 205675.6527118872,
+    "design_parity_ratio": 1.25
+  },
+  "achieved": {
+    "V_cut_bank_m3": 164158.13322062357,
+    "V_loose_generated_m3": 205197.66652577947,
+    "V_fill_in_place_m3": 205197.66652577798,
+    "V_bucket_residual_m3": 0.0,
+    "fill_cut_ratio": 1.249999999999991,
+    "target_ratio_Sf": 1.25,
+    "mass_balance_error_m3": -1.4842953532934189e-09,
+    "grid_check_bank_cut_m3": 164158.13322063469,
+    "grid_check_loose_m3": 205197.66652579332,
+    "loose_on_berms_m3": 205197.66652579338,
+    "loose_spilled_outside_berms_m3": -5.820766091346741e-11,
+    "moat_completion_pct": 99.76760195978889,
+    "moat_profile_rmse_m": 0.030480223252162115,
+    "berm_profile_rmse_m": 0.014317981008217642
+  },
+  "cycle_time": {
+    "kinematic_path_time_h": 11.792896304745609,
+    "production_limited_time_h": 273.91285456317394,
+    "production_rate_m3_hr": 600.0,
+    "v_theta_rad_s": 0.02,
+    "v_r_m_s": 0.5,
+    "v_tool_max_m_s": 2.5,
+    "total_revolutions": 120.00000000000001,
+    "trajectory_samples": 52448
+  },
+  "warnings": []
+}

@@ -1,0 +1,21 @@
+[init] EOx trencher 6WD, 24.8:1 on New England glacial till (rocky clay loam, dense basal till), dry season: grid 448 (dx 0.25 m), design cut 3,888 m3, fill 5,443 m3, 10 lifts, relief 1.83 m (6.0 ft)  0.1s
+[warn] Grid resolution 448 is below the spec minimum of 512 (fine for quick previews).
+  lift 2/10 moat 1 r= 39.5   10.2%  cut      396 m3  t      57 h  rocks    49  loads    710  (15s)
+  lift 3/10 moat 0 r= 10.6   20.3%  cut      790 m3  t     114 h  rocks   107  loads   1418  (30s)
+  lift 3/10 moat 1 r= 38.1   29.9%  cut     1162 m3  t     176 h  rocks   160  loads   2085  (46s)
+  lift 4/10 moat 0 r= 14.7   38.9%  cut     1511 m3  t     239 h  rocks   222  loads   2711  (61s)
+  lift 5/10 moat 1 r= 35.4   48.4%  cut     1881 m3  t     303 h  rocks   271  loads   3374  (76s)
+  lift 6/10 moat 1 r= 32.7   56.7%  cut     2205 m3  t     365 h  rocks   307  loads   3957  (92s)
+  lift 7/10 moat 1 r= 34.1   66.8%  cut     2597 m3  t     440 h  rocks   371  loads   4660  (109s)
+  lift 8/10 moat 1 r= 34.1   75.2%  cut     2925 m3  t     511 h  rocks   413  loads   5249  (127s)
+  lift 9/10 moat 1 r= 31.4   83.6%  cut     3250 m3  t     575 h  rocks   460  loads   5831  (143s)
+  lift 10/10 moat 1 r= 38.1   90.7%  cut     3528 m3  t     639 h  rocks   499  loads   6330  (159s)
+  lift 10/10 moat 1 r= 30.0   98.0%  cut     3810 m3  t     702 h  rocks   533  loads   6836  (174s)
+----------------------------------------------------------------------------
+ New England glacial till (rocky clay loam, dense basal till), dry season | slope | tether power
+  design cut 3,888 m3 bank (max 2.76 m deep), fill 5,443 m3 loose, relief 1.83 m
+  achieved 99.9% of cut, 3,884 m3, balance error 1.5e-02 m3
+  time 717 h = 72 working days at 10 h/day  (moving 416, motor cooling 170, rocks 109, stalls 22, charging 0 h)
+  5.42 m3/h, 0.25 kWh per bank m3, 1,056 grid kWh, 0 charges
+  6,970 loads (avg 0.557 bank m3), 4,205 laps, 1904 km driven, 546 rock refusals, 19911 stalls
+  cutting limited by: grip 100%, motor 0%; wet ground 0% of cut steps; max cross-slope 37 deg

@@ -1,0 +1,156 @@
+{
+  "scenario": {
+    "soil": "ne_glacial_till_wet",
+    "soil_label": "New England glacial till, wet spring (perched water table, saturated clay)",
+    "site": {
+      "type": "slope",
+      "relief_ft": 6.0,
+      "uphill_azimuth_deg": 30.0,
+      "undulation": 0.25,
+      "seed": 7
+    },
+    "vehicle": "EOx trencher 6WD, 24.8:1, +400 kg",
+    "power": "tether",
+    "ballast_kg": 400,
+    "units": 3,
+    "key": "ne_till_wet",
+    "vehicle_key": "t6_25_b400"
+  },
+  "design": {
+    "existing_relief_m": 1.8288000000000002,
+    "water_levels_m": [
+      0.32673065776889204,
+      -0.05012339817567266
+    ],
+    "max_cut_m": 2.7569368081083896,
+    "max_fill_m": 1.8451933006677244,
+    "V_cut_bank_m3": 3860.6632577161545,
+    "V_fill_loose_m3": 5211.895397916808,
+    "moats": [
+      {
+        "index": 0,
+        "r_in": 10.0,
+        "r_out": 16.0,
+        "depth": 1.0,
+        "water_level_m": 0.32673065776889204,
+        "max_cut_m": 1.8491235995081101,
+        "cut_r_min": 8.469126190109284,
+        "cut_r_max": 17.788826899381128,
+        "V_bank_grid_m3": 710.7424939383106,
+        "V_bank_exact_m3": null
+      },
+      {
+        "index": 1,
+        "r_in": 30.5,
+        "r_out": 37.5,
+        "depth": 1.2,
+        "water_level_m": -0.05012339817567266,
+        "max_cut_m": 2.7569368081083896,
+        "cut_r_min": 27.684816757029864,
+        "cut_r_max": 40.79617620848232,
+        "V_bank_grid_m3": 3149.9207637778436,
+        "V_bank_exact_m3": null
+      }
+    ],
+    "berms": [
+      {
+        "index": 0,
+        "r_in": 19.5,
+        "r_out": 27.0,
+        "source_moat": 0,
+        "mode": "follow",
+        "crown_height_m": 1.2189075724990421,
+        "crown_elevation_m": null,
+        "repose_peak_m": 2.165063509461096,
+        "V_target_loose_m3": 959.5023668167195,
+        "V_design_grid_m3": 959.5023668167194,
+        "V_design_exact_m3": null
+      },
+      {
+        "index": 1,
+        "r_in": 41.5,
+        "r_out": 52.5,
+        "source_moat": 1,
+        "mode": "follow",
+        "crown_height_m": 1.8451933006677241,
+        "crown_elevation_m": null,
+        "repose_peak_m": 3.175426480542941,
+        "V_target_loose_m3": 4252.3930311000895,
+        "V_design_grid_m3": 4252.393031100089,
+        "V_design_exact_m3": null
+      }
+    ],
+    "lifts": 10
+  },
+  "achieved": {
+    "V_cut_bank_m3": 3841.2480363737336,
+    "V_fill_m3": 5180.573104207146,
+    "V_rock_bank_m3": 3.7888028894073416,
+    "pan_residual_m3": 0.0,
+    "mass_balance_error_m3": 0.0031390033045681776,
+    "moat_completion_pct": 99.49710140339779,
+    "moat_rmse_m": 0.04231287658549003,
+    "berm_rmse_m": 0.38026111499234416,
+    "aborted": null
+  },
+  "time": {
+    "total_h": 1202.282303354664,
+    "moving_h": 400.32497620768027,
+    "rock_delay_h": 167.1,
+    "stall_h": 17.61888888888889,
+    "charging_h": 0.0,
+    "motor_cooling_h": 617.2384382580949,
+    "motor_cooling_pauses": 5308,
+    "working_days": 120.2282303354664,
+    "hours_per_day": 10,
+    "m3_per_hour": 3.1949634671122618,
+    "projected_total_h": 1208.359124433354
+  },
+  "energy": {
+    "battery_side_kwh": 1555.0330799063026,
+    "grid_kwh": 1690.2533477242418,
+    "kwh_per_bank_m3": 0.40482495927919976,
+    "charges": 0
+  },
+  "machine": {
+    "laps": 3218,
+    "loads": 7309,
+    "grading_laps": 1030,
+    "avg_load_bank_m3": 0.5255504222703151,
+    "distance_km": 2024.8220189882575,
+    "stalls": 15857,
+    "stalls_cutting": 0,
+    "stalls_travelling": 15857,
+    "rock_refusals": 557,
+    "cut_steps_limited_pct": 38.87803001480798,
+    "limit_grip_pct": 100.0,
+    "limit_motor_pct": 0.0,
+    "wet_ground_steps_pct": 106.11059173949262,
+    "max_cross_slope_deg": 35.38085517237501,
+    "steep_cross_slope_steps_pct": 31.700895692107075,
+    "infeasible_rings": 0,
+    "stuck_rings": 0
+  },
+  "wall_time_s": 206.85034799575806,
+  "vehicle_spec": {
+    "mass_kg": 365.5,
+    "ballast_kg": 400,
+    "drive": {
+      "peak_force_n": 2398.9727558675722,
+      "rated_force_n": 599.7431889668931,
+      "rated_shaft_power_w": 2240.0,
+      "units": 3,
+      "motor_eff": 0.8,
+      "controller_eff": 0.97,
+      "driveline_eff": 0.93,
+      "v_max_m_s": 2.2,
+      "thermal_time_constant_s": 600
+    },
+    "tool": "towed box scraper 6 ft",
+    "bus": {
+      "units": 3,
+      "rated_current_a": 196.81349578256797,
+      "warnings": []
+    }
+  }
+}

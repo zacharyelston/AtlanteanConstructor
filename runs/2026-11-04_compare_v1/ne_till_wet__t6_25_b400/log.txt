@@ -1,0 +1,22 @@
+[init] EOx trencher 6WD, 24.8:1, +400 kg on New England glacial till, wet spring (perched water table, saturated clay): grid 448 (dx 0.25 m), design cut 3,861 m3, fill 5,212 m3, 10 lifts, relief 1.83 m (6.0 ft)  0.0s
+[warn] Grid resolution 448 is below the spec minimum of 512 (fine for quick previews).
+  lift 2/10 moat 1 r= 39.1   10.3%  cut      398 m3  t      84 h  rocks    65  loads    686  (15s)
+  lift 3/10 moat 0 r=  9.1   20.0%  cut      771 m3  t     166 h  rocks   120  loads   1328  (31s)
+  lift 3/10 moat 1 r= 37.8   29.6%  cut     1144 m3  t     255 h  rocks   172  loads   2006  (47s)
+  lift 4/10 moat 1 r= 31.0   37.6%  cut     1453 m3  t     342 h  rocks   220  loads   2597  (62s)
+  lift 5/10 moat 1 r= 35.1   47.8%  cut     1844 m3  t     456 h  rocks   280  loads   3342  (80s)
+  lift 6/10 moat 1 r= 33.7   55.5%  cut     2142 m3  t     554 h  rocks   312  loads   3924  (98s)
+  lift 7/10 moat 1 r= 31.0   63.0%  cut     2432 m3  t     652 h  rocks   355  loads   4470  (114s)
+  lift 7/10 moat 1 r= 39.1   69.7%  cut     2689 m3  t     743 h  rocks   389  loads   4997  (129s)
+  lift 8/10 moat 1 r= 32.4   76.7%  cut     2959 m3  t     847 h  rocks   431  loads   5582  (147s)
+  lift 9/10 moat 1 r= 32.4   84.3%  cut     3256 m3  t     959 h  rocks   471  loads   6131  (165s)
+  lift 10/10 moat 1 r= 39.1   89.9%  cut     3472 m3  t    1044 h  rocks   497  loads   6578  (180s)
+  lift 10/10 moat 1 r= 32.4   96.6%  cut     3728 m3  t    1154 h  rocks   537  loads   7100  (198s)
+----------------------------------------------------------------------------
+ New England glacial till, wet spring (perched water table, saturated clay) | slope | tether power
+  design cut 3,861 m3 bank (max 2.76 m deep), fill 5,212 m3 loose, relief 1.83 m
+  achieved 99.5% of cut, 3,841 m3, balance error 3.1e-03 m3
+  time 1,202 h = 120 working days at 10 h/day  (moving 400, motor cooling 617, rocks 167, stalls 18, charging 0 h)
+  3.19 m3/h, 0.40 kWh per bank m3, 1,690 grid kWh, 0 charges
+  7,309 loads (avg 0.526 bank m3), 3,218 laps, 2025 km driven, 557 rock refusals, 15857 stalls
+  cutting limited by: grip 100%, motor 0%; wet ground 106% of cut steps; max cross-slope 35 deg

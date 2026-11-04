@@ -1,0 +1,18 @@
+[init] EOx trencher 4WD, 15:1 on Florida fine sand (sandy lot, shallow water table): grid 448 (dx 0.25 m), design cut 2,156 m3, fill 2,415 m3, 5 lifts, relief 0.00 m (0.0 ft)  0.0s
+[warn] Grid resolution 448 is below the spec minimum of 512 (fine for quick previews).
+  lift 1/5 moat 1 r= 34.8   16.2%  cut      349 m3  t      51 h  rocks     0  loads   1317  (17s)
+  lift 2/5 moat 1 r= 33.9   30.0%  cut      648 m3  t     101 h  rocks     0  loads   2443  (35s)
+  lift 3/5 moat 0 r= 13.4   43.1%  cut      929 m3  t     142 h  rocks     0  loads   3504  (51s)
+  lift 3/5 moat 1 r= 34.8   56.2%  cut     1211 m3  t     209 h  rocks     0  loads   4571  (68s)
+  lift 4/5 moat 1 r= 34.8   67.4%  cut     1453 m3  t     285 h  rocks     0  loads   5541  (88s)
+  lift 4/5 moat 1 r= 30.3   75.5%  cut     1627 m3  t     338 h  rocks     0  loads   6305  (103s)
+  lift 5/5 moat 1 r= 31.2   86.2%  cut     1859 m3  t     392 h  rocks     0  loads   7270  (120s)
+  lift 5/5 moat 1 r= 33.9   93.5%  cut     2016 m3  t     467 h  rocks     0  loads   7980  (139s)
+----------------------------------------------------------------------------
+ Florida fine sand (sandy lot, shallow water table) | flat | tether power
+  design cut 2,156 m3 bank (max 1.50 m deep), fill 2,415 m3 loose, relief 0.00 m
+  achieved 100.0% of cut, 2,156 m3, balance error 4.8e-04 m3
+  time 516 h = 52 working days at 10 h/day  (moving 274, motor cooling 230, rocks 0, stalls 11, charging 0 h)
+  4.18 m3/h, 0.22 kWh per bank m3, 507 grid kWh, 0 charges
+  8,607 loads (avg 0.250 bank m3), 1,422 laps, 1822 km driven, 0 rock refusals, 9939 stalls
+  cutting limited by: grip 100%, motor 0%; wet ground 57% of cut steps; max cross-slope 35 deg

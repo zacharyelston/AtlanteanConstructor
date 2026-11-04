@@ -1,0 +1,18 @@
+[init] EOx train 2 x 6WD, 24.8:1 on New England glacial till (rocky clay loam, dense basal till), dry season: grid 448 (dx 0.25 m), design cut 3,888 m3, fill 5,443 m3, 10 lifts, relief 1.83 m (6.0 ft)  0.0s
+[warn] Grid resolution 448 is below the spec minimum of 512 (fine for quick previews).
+  lift 2/10 moat 1 r= 36.8   12.0%  cut      468 m3  t      43 h  rocks    65  loads    419  (16s)
+  lift 3/10 moat 1 r= 34.1   26.8%  cut     1043 m3  t      96 h  rocks   144  loads    935  (33s)
+  lift 4/10 moat 0 r= 16.0   38.4%  cut     1493 m3  t     148 h  rocks   219  loads   1338  (48s)
+  lift 6/10 moat 1 r= 36.8   52.0%  cut     2022 m3  t     206 h  rocks   297  loads   1812  (63s)
+  lift 7/10 moat 1 r= 32.7   65.2%  cut     2533 m3  t     265 h  rocks   369  loads   2271  (79s)
+  lift 8/10 moat 1 r= 32.7   76.7%  cut     2982 m3  t     325 h  rocks   441  loads   2674  (95s)
+  lift 9/10 moat 1 r= 35.4   88.3%  cut     3434 m3  t     379 h  rocks   501  loads   3079  (111s)
+  lift 10/10 moat 1 r= 30.0   98.0%  cut     3810 m3  t     431 h  rocks   550  loads   3416  (126s)
+----------------------------------------------------------------------------
+ New England glacial till (rocky clay loam, dense basal till), dry season | slope | tether power
+  design cut 3,888 m3 bank (max 2.76 m deep), fill 5,443 m3 loose, relief 1.83 m
+  achieved 99.9% of cut, 3,884 m3, balance error 1.3e-02 m3
+  time 440 h = 44 working days at 10 h/day  (moving 227, motor cooling 89, rocks 112, stalls 12, charging 0 h)
+  8.83 m3/h, 0.26 kWh per bank m3, 1,101 grid kWh, 0 charges
+  3,484 loads (avg 1.115 bank m3), 2,382 laps, 1009 km driven, 561 rock refusals, 10905 stalls
+  cutting limited by: grip 9%, motor 0%, motor heat 91%; wet ground 0% of cut steps; max cross-slope 36 deg

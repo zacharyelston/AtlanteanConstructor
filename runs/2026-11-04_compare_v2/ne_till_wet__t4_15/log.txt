@@ -1,0 +1,41 @@
+[init] EOx trencher 4WD, 15:1 on New England glacial till, wet spring (perched water table, saturated clay): grid 448 (dx 0.25 m), design cut 3,861 m3, fill 5,212 m3, 10 lifts, relief 1.83 m (6.0 ft)  0.1s
+[warn] Grid resolution 448 is below the spec minimum of 512 (fine for quick previews).
+  lift 1/10 moat 1 r= 31.7    3.7%  cut      143 m3  t      56 h  rocks    17  loads    657  (16s)
+  lift 1/10 moat 1 r= 35.3    7.9%  cut      306 m3  t     155 h  rocks    42  loads   1406  (34s)
+  lift 2/10 moat 1 r= 38.0   10.8%  cut      417 m3  t     222 h  rocks    61  loads   1916  (50s)
+  lift 2/10 moat 1 r= 34.4   14.6%  cut      562 m3  t     317 h  rocks    80  loads   2584  (68s)
+  lift 2/10 moat 1 r= 30.8   17.8%  cut      686 m3  t     392 h  rocks   101  loads   3151  (83s)
+  lift 3/10 moat 0 r= 15.2   21.7%  cut      837 m3  t     445 h  rocks   121  loads   3846  (99s)
+  lift 3/10 moat 1 r= 32.6   24.7%  cut      953 m3  t     507 h  rocks   138  loads   4383  (114s)
+  lift 3/10 moat 1 r= 35.3   27.9%  cut     1078 m3  t     615 h  rocks   156  loads   4971  (132s)
+  lift 4/10 moat 1 r= 38.9   30.3%  cut     1171 m3  t     686 h  rocks   167  loads   5402  (148s)
+  lift 4/10 moat 1 r= 35.3   33.5%  cut     1292 m3  t     786 h  rocks   183  loads   5969  (163s)
+  lift 4/10 moat 1 r= 31.7   37.3%  cut     1439 m3  t     874 h  rocks   203  loads   6655  (180s)
+  lift 5/10 moat 0 r= 13.4   41.2%  cut     1589 m3  t     940 h  rocks   223  loads   7346  (196s)
+  lift 5/10 moat 1 r= 32.6   44.7%  cut     1725 m3  t    1029 h  rocks   241  loads   7974  (213s)
+  lift 5/10 moat 1 r= 35.3   47.9%  cut     1850 m3  t    1113 h  rocks   255  loads   8551  (229s)
+  lift 6/10 moat 1 r= 38.0   50.8%  cut     1961 m3  t    1192 h  rocks   273  loads   9062  (245s)
+  lift 6/10 moat 1 r= 34.4   54.6%  cut     2106 m3  t    1314 h  rocks   295  loads   9734  (265s)
+  lift 6/10 moat 1 r= 30.8   57.7%  cut     2229 m3  t    1402 h  rocks   313  loads  10303  (281s)
+  lift 7/10 moat 0 r= 14.3   61.4%  cut     2372 m3  t    1477 h  rocks   325  loads  10961  (296s)
+  lift 7/10 moat 1 r= 32.6   64.7%  cut     2497 m3  t    1569 h  rocks   342  loads  11538  (317s)
+  lift 7/10 moat 1 r= 35.3   67.9%  cut     2622 m3  t    1671 h  rocks   355  loads  12116  (335s)
+  lift 8/10 moat 1 r= 38.9   70.3%  cut     2715 m3  t    1764 h  rocks   365  loads  12548  (350s)
+  lift 8/10 moat 1 r= 35.3   73.5%  cut     2836 m3  t    1871 h  rocks   388  loads  13107  (368s)
+  lift 8/10 moat 1 r= 32.6   76.5%  cut     2955 m3  t    1981 h  rocks   403  loads  13658  (385s)
+  lift 8/10 moat 0 r= 13.4   79.2%  cut     3059 m3  t    2065 h  rocks   410  loads  14135  (400s)
+  lift 9/10 moat 1 r= 29.9   82.3%  cut     3179 m3  t    2136 h  rocks   421  loads  14690  (415s)
+  lift 9/10 moat 1 r= 33.5   85.8%  cut     3311 m3  t    2271 h  rocks   443  loads  15298  (436s)
+  lift 9/10 moat 1 r= 36.2   88.7%  cut     3426 m3  t    2394 h  rocks   456  loads  15829  (453s)
+  lift 10/10 moat 1 r= 38.0   90.8%  cut     3504 m3  t    2476 h  rocks   469  loads  16192  (470s)
+  lift 10/10 moat 1 r= 35.3   93.4%  cut     3608 m3  t    2591 h  rocks   488  loads  16669  (486s)
+  lift 10/10 moat 1 r= 32.6   96.5%  cut     3727 m3  t    2738 h  rocks   511  loads  17221  (506s)
+  lift 10/10 moat 0 r= 14.3   98.9%  cut     3818 m3  t    2819 h  rocks   528  loads  17642  (521s)
+----------------------------------------------------------------------------
+ New England glacial till, wet spring (perched water table, saturated clay) | slope | tether power
+  design cut 3,861 m3 bank (max 2.76 m deep), fill 5,212 m3 loose, relief 1.83 m
+  achieved 100.0% of cut, 3,859 m3, balance error 1.4e-02 m3
+  time 2,845 h = 284 working days at 10 h/day  (moving 913, motor cooling 1688, rocks 159, stalls 85, charging 0 h)
+  1.36 m3/h, 0.42 kWh per bank m3, 1,762 grid kWh, 0 charges
+  17,831 loads (avg 0.216 bank m3), 7,076 laps, 5050 km driven, 531 rock refusals, 76357 stalls
+  cutting limited by: grip 38%, motor 0%, motor heat 62%; wet ground 95% of cut steps; max cross-slope 34 deg

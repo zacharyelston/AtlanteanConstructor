@@ -1,0 +1,22 @@
+[init] EOx trencher 6WD, 24.8:1, fan-cooled motors on New England glacial till (rocky clay loam, dense basal till), dry season: grid 448 (dx 0.25 m), design cut 3,888 m3, fill 5,443 m3, 10 lifts, relief 1.83 m (6.0 ft)  0.0s
+[warn] Grid resolution 448 is below the spec minimum of 512 (fine for quick previews).
+  lift 1/10 moat 1 r= 38.1    9.9%  cut      385 m3  t      45 h  rocks    58  loads    690  (16s)
+  lift 2/10 moat 1 r= 30.0   18.1%  cut      703 m3  t      83 h  rocks   101  loads   1261  (31s)
+  lift 3/10 moat 1 r= 35.4   28.4%  cut     1104 m3  t     128 h  rocks   160  loads   1980  (47s)
+  lift 4/10 moat 1 r= 32.7   36.7%  cut     1428 m3  t     173 h  rocks   214  loads   2563  (63s)
+  lift 5/10 moat 1 r= 31.4   43.6%  cut     1696 m3  t     204 h  rocks   248  loads   3043  (78s)
+  lift 6/10 moat 1 r= 38.1   50.8%  cut     1974 m3  t     243 h  rocks   294  loads   3542  (94s)
+  lift 6/10 moat 0 r= 14.7   58.8%  cut     2288 m3  t     283 h  rocks   336  loads   4105  (109s)
+  lift 7/10 moat 1 r= 34.1   66.8%  cut     2597 m3  t     321 h  rocks   374  loads   4659  (126s)
+  lift 8/10 moat 1 r= 35.4   73.6%  cut     2862 m3  t     360 h  rocks   413  loads   5135  (144s)
+  lift 9/10 moat 0 r= 12.0   80.7%  cut     3138 m3  t     398 h  rocks   458  loads   5629  (160s)
+  lift 9/10 moat 1 r= 35.4   88.3%  cut     3434 m3  t     440 h  rocks   497  loads   6162  (178s)
+  lift 10/10 moat 1 r= 34.1   95.2%  cut     3702 m3  t     482 h  rocks   536  loads   6642  (195s)
+----------------------------------------------------------------------------
+ New England glacial till (rocky clay loam, dense basal till), dry season | slope | tether power
+  design cut 3,888 m3 bank (max 2.76 m deep), fill 5,443 m3 loose, relief 1.83 m
+  achieved 99.9% of cut, 3,884 m3, balance error 3.9e-03 m3
+  time 507 h = 51 working days at 10 h/day  (moving 373, motor cooling 0, rocks 112, stalls 22, charging 0 h)
+  7.66 m3/h, 0.24 kWh per bank m3, 1,020 grid kWh, 0 charges
+  6,969 loads (avg 0.557 bank m3), 3,445 laps, 1781 km driven, 560 rock refusals, 19705 stalls
+  cutting limited by: grip 24%, motor 0%, motor heat 76%; wet ground 0% of cut steps; max cross-slope 36 deg

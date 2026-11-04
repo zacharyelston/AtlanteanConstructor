@@ -1,0 +1,12 @@
+[init] EOx train 3 x 4WD, 24.8:1 on Florida fine sand (sandy lot, shallow water table): grid 448 (dx 0.25 m), design cut 2,156 m3, fill 2,415 m3, 5 lifts, relief 0.00 m (0.0 ft)  0.0s
+[warn] Grid resolution 448 is below the spec minimum of 512 (fine for quick previews).
+  lift 3/5 moat 0 r=  9.9   40.2%  cut      866 m3  t      28 h  rocks     0  loads    730  (15s)
+  lift 4/5 moat 1 r= 32.7   73.4%  cut     1583 m3  t      61 h  rocks     0  loads   1518  (30s)
+----------------------------------------------------------------------------
+ Florida fine sand (sandy lot, shallow water table) | flat | tether power
+  design cut 2,156 m3 bank (max 1.50 m deep), fill 2,415 m3 loose, relief 0.00 m
+  achieved 99.8% of cut, 2,152 m3, balance error 1.3e-09 m3
+  time 96 h = 10 working days at 10 h/day  (moving 84, motor cooling 8, rocks 0, stalls 4, charging 0 h)
+  22.34 m3/h, 0.19 kWh per bank m3, 438 grid kWh, 0 charges
+  2,322 loads (avg 0.927 bank m3), 627 laps, 489 km driven, 0 rock refusals, 3808 stalls
+  cutting limited by: grip 70%, motor 0%, motor heat 30%; wet ground 49% of cut steps; max cross-slope 33 deg
