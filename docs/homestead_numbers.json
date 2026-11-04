@@ -1,0 +1,346 @@
+[
+ {
+  "layout": "First try: 15 m deep ring, berms sized to take all the spoil, 3:1 banks",
+  "soil": "New England till, 6 ft slope",
+  "site_diameter_m": 170.0,
+  "site_area_m2": 22698.006922186254,
+  "cut_bank_m3": 13249.398946004165,
+  "fill_loose_m3": 10305.5882808549,
+  "max_cut_m": 3.3995228991573594,
+  "rings": [
+   {
+    "ring": 0,
+    "water_m3": 3001.4845233679252,
+    "water_area_m2": 2410.4879302469644,
+    "max_water_depth_m": 2.44,
+    "area_deeper_6ft_pct": 26.464955955572577,
+    "area_deeper_8ft_pct": 3.791650708540789
+   },
+   {
+    "ring": 1,
+    "water_m3": 2894.740392092321,
+    "water_area_m2": 3774.9847364151046,
+    "max_water_depth_m": 1.1999999999999997,
+    "area_deeper_6ft_pct": 0.0,
+    "area_deeper_8ft_pct": 0.0
+   }
+  ],
+  "berms": [
+   {
+    "berm": 0,
+    "crown_height_m": 1.6661868290689221,
+    "footprint_m2": 2768.691421987992,
+    "flat_crown_m2": 148.6359849750139,
+    "flat_crown_width_m": 0.5376398120478671
+   },
+   {
+    "berm": 1,
+    "crown_height_m": 2.332661560696491,
+    "footprint_m2": 6868.64427462176,
+    "flat_crown_m2": 344.35541860670924,
+    "flat_crown_width_m": 0.7026393211761104
+   }
+  ],
+  "island_m2": 1017.8760197630929,
+  "water_area_m2": 6185.472666662069,
+  "land_m2": 10655.211716372845,
+  "land_to_water": 1.7226188345801596,
+  "spoil": {
+   "winter_holes_bank_m3": 142.01365026133334,
+   "loose_total_m3": 18747.977634771694,
+   "berms_take_m3": 10305.5882808549,
+   "surplus_m3": 8442.389353916795,
+   "island_raise_m": 1.0,
+   "to_bund_m3": 7424.513334153702
+  },
+  "water_balance": {
+   "rain_on_site_m3_yr": 27237.608306623504,
+   "evaporation_from_rings_m3_yr": 4020.557233330345,
+   "rings_volume_m3": 5896.224915460247
+  },
+  "build": {
+   "subcompact_tlb": {
+    "machine": "Subcompact TLB (~25 hp)",
+    "days": 2268.8265304046754,
+    "cost_usd": 1772203.5202460515,
+    "full_depth": false
+   },
+   "compact_tlb": {
+    "machine": "Compact TLB (~45 hp)",
+    "days": 877.946461948381,
+    "cost_usd": 915170.213350213,
+    "full_depth": false
+   },
+   "backhoe_loader": {
+    "machine": "Backhoe loader (~90 hp)",
+    "days": 243.488457788979,
+    "cost_usd": 363982.1744042722,
+    "full_depth": true
+   },
+   "excavator_dozer": {
+    "machine": "Excavator (~14 t) + small dozer (pond crew)",
+    "days": 47.62313347704589,
+    "cost_usd": 146045.73472952968,
+    "full_depth": true
+   }
+  }
+ },
+ {
+  "layout": "First try: 15 m deep ring, berms sized to take all the spoil, 3:1 banks",
+  "soil": "Florida sand, flat",
+  "site_diameter_m": 170.0,
+  "site_area_m2": 22698.006922186254,
+  "cut_bank_m3": 7893.245145206018,
+  "fill_loose_m3": 6926.1582273181775,
+  "max_cut_m": 2.7399999999999998,
+  "rings": [
+   {
+    "ring": 0,
+    "water_m3": 3001.4845233679252,
+    "water_area_m2": 2410.4879302469644,
+    "max_water_depth_m": 2.44,
+    "area_deeper_6ft_pct": 26.464955955572577,
+    "area_deeper_8ft_pct": 3.791650708540789
+   },
+   {
+    "ring": 1,
+    "water_m3": 2894.7403920923216,
+    "water_area_m2": 3774.9847364151046,
+    "max_water_depth_m": 1.2,
+    "area_deeper_6ft_pct": 0.0,
+    "area_deeper_8ft_pct": 0.0
+   }
+  ],
+  "berms": [
+   {
+    "berm": 0,
+    "crown_height_m": 1.6661868290689221,
+    "footprint_m2": 2768.691421987992,
+    "flat_crown_m2": 148.6359849750139,
+    "flat_crown_width_m": 0.5376398120478671
+   },
+   {
+    "berm": 1,
+    "crown_height_m": 0.8167475409962546,
+    "footprint_m2": 6868.64427462176,
+    "flat_crown_m2": 4586.481822086143,
+    "flat_crown_width_m": 9.358477607514521
+   }
+  ],
+  "island_m2": 1017.8760197630929,
+  "water_area_m2": 6185.472666662069,
+  "land_m2": 10655.211716372845,
+  "land_to_water": 1.7226188345801596,
+  "spoil": {
+   "winter_holes_bank_m3": 142.01365026133334,
+   "loose_total_m3": 8999.489850923434,
+   "berms_take_m3": 6926.1582273181775,
+   "surplus_m3": 2073.331623605256,
+   "island_raise_m": 1.0,
+   "to_bund_m3": 1055.455603842163
+  },
+  "water_balance": {
+   "rain_on_site_m3_yr": 30642.309344951445,
+   "evaporation_from_rings_m3_yr": 8041.11446666069,
+   "rings_volume_m3": 5896.224915460247
+  },
+  "build": {
+   "subcompact_tlb": {
+    "machine": "Subcompact TLB (~25 hp)",
+    "days": 742.3791117419844,
+    "cost_usd": 595419.041914886,
+    "full_depth": false
+   },
+   "compact_tlb": {
+    "machine": "Compact TLB (~45 hp)",
+    "days": 296.76608866568887,
+    "cost_usd": 315724.8047107481,
+    "full_depth": false
+   },
+   "backhoe_loader": {
+    "machine": "Backhoe loader (~90 hp)",
+    "days": 81.74158711561304,
+    "cost_usd": 124283.60374708947,
+    "full_depth": true
+   },
+   "excavator_dozer": {
+    "machine": "Excavator (~14 t) + small dozer (pond crew)",
+    "days": 17.37999191056818,
+    "cost_usd": 54611.604088998756,
+    "full_depth": true
+   }
+  }
+ },
+ {
+  "layout": "Simple: 1.5 m fish ring + winter holes, 0.9 m plant ring, 0.9 m flat berms",
+  "soil": "New England till, 6 ft slope",
+  "site_diameter_m": 148.0,
+  "site_area_m2": 17203.36137105771,
+  "cut_bank_m3": 8870.720078531109,
+  "fill_loose_m3": 5890.943590807326,
+  "max_cut_m": 2.552352060790449,
+  "rings": [
+   {
+    "ring": 0,
+    "water_m3": 2035.8906817763534,
+    "water_area_m2": 1811.5365160304905,
+    "max_water_depth_m": 1.5,
+    "area_deeper_6ft_pct": 0.0,
+    "area_deeper_8ft_pct": 0.0
+   },
+   {
+    "ring": 1,
+    "water_m3": 1823.3359075834092,
+    "water_area_m2": 2607.292435015544,
+    "max_water_depth_m": 0.8999999999999999,
+    "area_deeper_6ft_pct": 0.0,
+    "area_deeper_8ft_pct": 0.0
+   }
+  ],
+  "berms": [
+   {
+    "berm": 0,
+    "crown_height_m": 0.9,
+    "footprint_m2": 2453.2751603732754,
+    "flat_crown_m2": 1196.934248648486,
+    "flat_crown_width_m": 4.884564159702315
+   },
+   {
+    "berm": 1,
+    "crown_height_m": 0.9,
+    "footprint_m2": 5894.461125237673,
+    "flat_crown_m2": 3733.818786684707,
+    "flat_crown_width_m": 8.869488306123198
+   }
+  ],
+  "island_m2": 1017.8760197630929,
+  "water_area_m2": 4418.8289510460345,
+  "land_m2": 9365.612305374041,
+  "land_to_water": 2.119478352552432,
+  "spoil": {
+   "winter_holes_bank_m3": 255.34658764800002,
+   "loose_total_m3": 12776.493332650753,
+   "berms_take_m3": 5890.943590807326,
+   "surplus_m3": 6885.549741843427,
+   "island_raise_m": 1.0,
+   "to_bund_m3": 5867.673722080334
+  },
+  "water_balance": {
+   "rain_on_site_m3_yr": 20644.03364526925,
+   "evaporation_from_rings_m3_yr": 2872.2388181799224,
+   "rings_volume_m3": 3859.2265893597623
+  },
+  "build": {
+   "subcompact_tlb": {
+    "machine": "Subcompact TLB (~25 hp)",
+    "days": 1481.4109480723341,
+    "cost_usd": 1157231.950444493,
+    "full_depth": false
+   },
+   "compact_tlb": {
+    "machine": "Compact TLB (~45 hp)",
+    "days": 580.2157334879663,
+    "cost_usd": 604934.7942944609,
+    "full_depth": true
+   },
+   "backhoe_loader": {
+    "machine": "Backhoe loader (~90 hp)",
+    "days": 162.28920702409687,
+    "cost_usd": 242800.41256276218,
+    "full_depth": true
+   },
+   "excavator_dozer": {
+    "machine": "Excavator (~14 t) + small dozer (pond crew)",
+    "days": 32.45452171976751,
+    "cost_usd": 100005.96432383836,
+    "full_depth": true
+   }
+  }
+ },
+ {
+  "layout": "Simple: 1.5 m fish ring + winter holes, 0.9 m plant ring, 0.9 m flat berms",
+  "soil": "Florida sand, flat",
+  "site_diameter_m": 148.0,
+  "site_area_m2": 17203.36137105771,
+  "cut_bank_m3": 5271.898823205725,
+  "fill_loose_m3": 5890.943590807326,
+  "max_cut_m": 1.8,
+  "rings": [
+   {
+    "ring": 0,
+    "water_m3": 2035.8906817763534,
+    "water_area_m2": 1811.5365160304905,
+    "max_water_depth_m": 1.5,
+    "area_deeper_6ft_pct": 0.0,
+    "area_deeper_8ft_pct": 0.0
+   },
+   {
+    "ring": 1,
+    "water_m3": 1823.3359075834094,
+    "water_area_m2": 2607.292435015544,
+    "max_water_depth_m": 0.8999999999999999,
+    "area_deeper_6ft_pct": 0.0,
+    "area_deeper_8ft_pct": 0.0
+   }
+  ],
+  "berms": [
+   {
+    "berm": 0,
+    "crown_height_m": 0.9,
+    "footprint_m2": 2453.2751603732754,
+    "flat_crown_m2": 1196.934248648486,
+    "flat_crown_width_m": 4.884564159702315
+   },
+   {
+    "berm": 1,
+    "crown_height_m": 0.9,
+    "footprint_m2": 5894.461125237673,
+    "flat_crown_m2": 3733.818786684707,
+    "flat_crown_width_m": 8.869488306123198
+   }
+  ],
+  "island_m2": 1017.8760197630929,
+  "water_area_m2": 4418.8289510460345,
+  "land_m2": 9365.612305374041,
+  "land_to_water": 2.119478352552432,
+  "spoil": {
+   "winter_holes_bank_m3": 255.34658764800002,
+   "loose_total_m3": 6190.514860156173,
+   "berms_take_m3": 5890.943590807326,
+   "surplus_m3": 299.57126934884764,
+   "island_raise_m": 0.29431017484680677,
+   "to_bund_m3": 0.0
+  },
+  "water_balance": {
+   "rain_on_site_m3_yr": 23224.537850927907,
+   "evaporation_from_rings_m3_yr": 5744.477636359845,
+   "rings_volume_m3": 3859.226589359763
+  },
+  "build": {
+   "subcompact_tlb": {
+    "machine": "Subcompact TLB (~25 hp)",
+    "days": 471.09340146154415,
+    "cost_usd": 376095.20148877404,
+    "full_depth": true
+   },
+   "compact_tlb": {
+    "machine": "Compact TLB (~45 hp)",
+    "days": 192.90649980053462,
+    "cost_usd": 204602.22163370773,
+    "full_depth": true
+   },
+   "backhoe_loader": {
+    "machine": "Backhoe loader (~90 hp)",
+    "days": 53.357374313061584,
+    "cost_usd": 81127.72921881538,
+    "full_depth": true
+   },
+   "excavator_dozer": {
+    "machine": "Excavator (~14 t) + small dozer (pond crew)",
+    "days": 10.439949345209985,
+    "cost_usd": 33362.87799856426,
+    "full_depth": true
+   }
+  }
+ }
+]

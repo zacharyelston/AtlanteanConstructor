@@ -1,0 +1,87 @@
+{
+  "_comment": "Simple homestead layout (docs/simple-build.md): an 18 m island for 3 domes and a courtyard, a 1.5 m fish ring (2 or 3 deep winter holes dug separately), a 0.9 m plant/duck/runoff ring, and low flat-topped berms at a set height (0.9 m, 3:1 flanks). Spoil beyond the berms raises the island and builds an uphill diversion bund. Underwater banks 2:1 (NRCS minimum) below a shallow safety shelf.",
+  "grid": {
+    "resolution": 448,
+    "extent_m": 82.0
+  },
+  "hub": {
+    "radius_m": 18.0
+  },
+  "site": {
+    "type": "slope",
+    "relief_ft": 6.0,
+    "uphill_azimuth_deg": 30.0,
+    "undulation": 0.25,
+    "seed": 7
+  },
+  "design": {
+    "moat_datum": "level_water",
+    "freeboard_m": 0.3,
+    "berm_mode": "follow"
+  },
+  "soil": {
+    "preset": "ne_glacial_till",
+    "canal_side_slope_deg": 26.57,
+    "angle_of_repose_deg": 18.43
+  },
+  "moats": [
+    {
+      "r_in": 18.0,
+      "r_out": 30.0,
+      "depth": 1.5
+    },
+    {
+      "r_in": 48.0,
+      "r_out": 56.0,
+      "depth": 0.9
+    }
+  ],
+  "berms": [
+    {
+      "r_in": 34.0,
+      "r_out": 44.0,
+      "height": 0.9,
+      "source_moat": 0
+    },
+    {
+      "r_in": 60.0,
+      "r_out": 74.0,
+      "height": 0.9,
+      "source_moat": 1
+    }
+  ],
+  "balance": {
+    "auto_size_berms": false
+  },
+  "rig": {
+    "mast_height_m": 3.0,
+    "footprint_radius_m": 0.6,
+    "chute_radius_m": 0.6,
+    "bucket_capacity_m3": 0.3,
+    "lifts": 1,
+    "lift_depth_m": 0.3,
+    "path_mode": "spiral",
+    "pass_overlap": 0.25,
+    "path_step_m": 0.4
+  },
+  "speeds": {
+    "v_theta_rad_s": 1.0,
+    "v_r_m_s": 0.5,
+    "v_tool_max_m_s": 2.2,
+    "production_rate_m3_hr": null
+  },
+  "animation": {
+    "frames": 120,
+    "fps": 24,
+    "relax_every_n_steps": 40,
+    "relax_window_m": 4.0,
+    "display_exaggeration": 3.0
+  },
+  "operations": {
+    "power": "tether",
+    "hours_per_day": 10,
+    "haul_when_pull_used": 0.75,
+    "max_laps_per_ring": 800,
+    "max_sim_hours": 60000
+  }
+}
