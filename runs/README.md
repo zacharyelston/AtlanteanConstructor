@@ -25,8 +25,11 @@ Each `compare_*/<scenario>__<vehicle>/` folder holds:
 `COMPARISON.md` and `comparison.json` in each `compare_*` folder hold the
 combined tables and every report.
 
+**Naming:** these runs were made before the project was relabelled to "eOx",
+so their reports and tables say "EOx". They are left unedited.
+
 **Not kept:** an interrupted rerun between v1 and v2. It was stopped after 3
-runs, when the loader-backhoe baseline and EOx trains were added.
+runs, when the loader-backhoe baseline and eOx trains were added.
 
 All figures are screening estimates. Soil values are handbook figures, and the
 machine rates and the fan-cooling factor are assumed. See the main

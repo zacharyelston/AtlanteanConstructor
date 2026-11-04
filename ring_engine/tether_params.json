@@ -1,5 +1,5 @@
 {
-  "_comment": "Garden-scale Atlantean site (~100 m across) for a tethered EOx. Moats are cut to a level waterline; berms follow existing ground. Soil and site are swapped per scenario (scenarios.json).",
+  "_comment": "Garden-scale Atlantean site (~100 m across) for a tethered eOx. Moats are cut to a level waterline; berms follow existing ground. Soil and site are swapped per scenario (scenarios.json).",
 
   "grid": { "resolution": 512, "extent_m": 56.0 },
   "hub": { "radius_m": 10.0 },

@@ -1,8 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 560" width="920" height="560" role="img" aria-labelledby="t d" font-family="system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif">
-<title id="t">Tethered EOx trencher concept</title>
+<title id="t">Tethered eOx trencher concept</title>
 <desc id="d">Plan view: a winch at the pivot holds the trencher on a leash in the outer moat; it tows a pan around the ring, climbs a spiral ramp to the outer berm, spreads the load and spirals back. Inset: side view of the trencher towing the pan.</desc>
 <rect width="100%" height="100%" rx="8" fill="#1a1a19"/>
-<text x="16.0" y="26.0" font-size="16" font-weight="600" fill="#f0efec" text-anchor="start">Tethered EOx trencher: one leash, no steering</text>
+<text x="16.0" y="26.0" font-size="16" font-weight="600" fill="#f0efec" text-anchor="start">Tethered eOx trencher: one leash, no steering</text>
 <text x="16.0" y="46.0" font-size="12" font-weight="400" fill="#c3c2b7" text-anchor="start">Plan view of the garden-scale site (2 moats, 2 berms, ~105 m across), and the trencher in the cut</text>
 <circle cx="270" cy="300" r="57.2" fill="none" stroke="#3987e5" stroke-opacity="0.2" stroke-width="26.4"/>
 <circle cx="270" cy="300" r="102.3" fill="none" stroke="#c98500" stroke-opacity="0.28" stroke-width="33.0"/>

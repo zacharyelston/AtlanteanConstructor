@@ -1,6 +1,6 @@
 {
-  "_comment": "EOx Home as a tethered earthmoving stand-in. Figures from zacharyelston/EOx @30f9dd8 (out/home-report.md, design/axle.toml, design/models/home.toml) unless marked ASSUMED.",
-  "name": "EOx Home (tethered stand-in)",
+  "_comment": "eOx Home as a tethered earthmoving stand-in. Figures from zacharyelston/EOx @30f9dd8 (out/home-report.md, design/axle.toml, design/models/home.toml) unless marked ASSUMED.",
+  "name": "eOx Home (tethered stand-in)",
 
   "mass_kg": 237,
   "ballast_kg": 0,
@@ -37,6 +37,6 @@
     "rolling_resistance": 0.15,
     "cut_speed_m_s": 1.0,
     "spread_length_m": 6.0,
-    "_note": "ASSUMED: an ATV-class 4 ft box scraper with an electric lift actuator on an EOx 3 HP unit."
+    "_note": "ASSUMED: an ATV-class 4 ft box scraper with an electric lift actuator on an eOx 3 HP unit."
   }
 }

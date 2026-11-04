@@ -1,4 +1,4 @@
-"""Tethered EOx earthmoving sim: an EOx on a leash towing a box scraper in circles.
+"""Tethered eOx earthmoving sim: an eOx on a leash towing a box scraper in circles.
 
 The vehicle drives tangentially around a fixed pivot. A winch at the pivot sets the
 radius, so there is no steering: each lap the scraper takes whatever depth the pull
@@ -6,7 +6,7 @@ budget allows. When the pan is full (or its load uses up most of the pull), the
 winch walks the vehicle out on a spiral to the paired berm, it spreads the load,
 and spirals back to the ring it was cutting.
 
-Every step is limited by physics from the EOx models:
+Every step is limited by physics from the eOx models:
 
     pull available  = min(tyre grip [Brixius, eox.tyres], motor force [rated, or peak while cool])
     pull needed     = rolling (vehicle + pan) + grade (along the direction of travel)
@@ -610,7 +610,7 @@ def build_overrides(args):
 
 
 def main(argv=None):
-    p = argparse.ArgumentParser(description="Tethered EOx earthmoving sim")
+    p = argparse.ArgumentParser(description="Tethered eOx earthmoving sim")
     p.add_argument("--params", default=DEFAULT_PARAMS)
     p.add_argument("--vehicle", default=DEFAULT_VEHICLE)
     p.add_argument("--soil", help="soil preset from soils.json")
