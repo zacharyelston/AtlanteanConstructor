@@ -1,8 +1,8 @@
 {
-  "_comment": "Simple homestead layout (docs/simple-build.md): an 18 m island for 3 domes and a courtyard, a 1.5 m fish ring (2 or 3 deep winter holes dug separately), a 0.9 m plant/duck/runoff ring, and low flat-topped berms at a set height (0.9 m, 3:1 flanks). Spoil beyond the berms raises the island and builds an uphill diversion bund. Underwater banks 2:1 (NRCS minimum) below a shallow safety shelf.",
+  "_comment": "Simple homestead layout (docs/simple-build.md): an 18 m island for 3 buildings and a courtyard; a shallow 0.9 m inner ring (plants, ducks, warmable bay); an 8 ft outer ring for the larger fish, their winter refuge and the ground-source pond loop; low flat-topped berms at a set height (0.9 m, 3:1 flanks). Spoil beyond the berms raises the island and builds an uphill bund. Underwater banks 2:1 (NRCS minimum) below a shallow safety shelf.",
   "grid": {
     "resolution": 448,
-    "extent_m": 82.0
+    "extent_m": 84.0
   },
   "hub": {
     "radius_m": 18.0
@@ -27,25 +27,25 @@
   "moats": [
     {
       "r_in": 18.0,
-      "r_out": 30.0,
-      "depth": 1.5
+      "r_out": 26.0,
+      "depth": 0.9
     },
     {
-      "r_in": 48.0,
-      "r_out": 56.0,
-      "depth": 0.9
+      "r_in": 44.0,
+      "r_out": 58.0,
+      "depth": 2.44
     }
   ],
   "berms": [
     {
-      "r_in": 34.0,
-      "r_out": 44.0,
+      "r_in": 30.0,
+      "r_out": 40.0,
       "height": 0.9,
       "source_moat": 0
     },
     {
-      "r_in": 60.0,
-      "r_out": 74.0,
+      "r_in": 62.0,
+      "r_out": 76.0,
       "height": 0.9,
       "source_moat": 1
     }

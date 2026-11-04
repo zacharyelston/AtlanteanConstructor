@@ -3,10 +3,12 @@
 The Atlantean site is a home farm, not an earthworks demo. A family lives on
 the centre island in three buildings around a shared courtyard: a house, a barn
 for goats and ducks, and a workshop for tools and an eOx. Around the island,
-water rings alternate with planted berms. Fish live in the rings, fruit trees
-on the berms lean out over the water, ducks work the shallows, and goats graze
-the outer ring. A pivot arm floats on the water to tend, pick and clean. The
-rings freeze in winter, when nothing is growing, so the arm simply parks.
+water rings alternate with planted berms. Fruit trees on the berms lean out
+over the water, ducks work the shallow inner ring, the larger fish live in the
+deep outer ring, and goats graze the outer berm. A pivot arm floats on the
+water to tend, pick and clean. The rings freeze in winter, when nothing is
+growing, so the arm simply parks. Energy (solar, heat pumps, ground loops) is
+in [energy.md](energy.md).
 
 This document is about building that with as few things as possible that can
 break. The numbers come from `tools/homestead_numbers.py` and
@@ -33,10 +35,14 @@ Atlantean version adds a circle, so one pivot can reach everything.
 2. **Let rain fill it, and make the spillway the main structure.** In New
    England the rain on the site is about five times what the rings hold. The
    water problem is overflow, not supply.
-3. **Shallow rings, deep winter holes.** Keep the rings 0.9–1.5 m deep so
-   they're cheap to dig, easy to plant at the edges and easy to wade. Dig two
-   or three 10 ft holes in the fish ring where fish overwinter under the ice.
-   That is far cheaper than deepening the whole ring.
+3. **Shallow inside, deep outside.**
+   - **The inner ring:** 0.9 m deep and next to the courtyard. It's cheap,
+     easy to plant and wade, and the one to warm.
+   - **The outer ring:** 8 ft deep. Its greater length gives the larger fish
+     several times the water, a winter refuge under the ice, and a bed for the
+     ground-source loop.
+   - **The cheaper option:** a 6 ft outer ring saves about a quarter of the
+     digging. Two 10 ft winter holes in it then give the fish their refuge.
 4. **Berms are growing land, not spoil heaps.** Build them low (0.9 m) with
    wide flat tops and 3:1 sides you can mow, walk and plant.
 5. **Put surplus spoil where it helps.** Raise the house island up to a metre,
@@ -64,78 +70,94 @@ walls.
 
 ## The layout
 
-<!-- radii in homestead_params.json; daylight gaps are 4 m because the banks
-     reach further on the high side of a sloped site -->
+<!-- radii in ring_engine/homestead_params.json; daylight gaps are 4 m because
+     the banks reach further on the high side of a sloped site -->
 
 | Ring | Radius | What it is |
 |---|---|---|
 | Island | 0–18 m | Three buildings around a courtyard, raised up to 1 m with spoil. The arm turns from a bearing at the island edge. |
-| Fish ring | 18–30 m | 1.5 m deep, plus 2 winter holes 10 ft deep and about 12 m across. A shallow safety shelf at the edge, then 2:1 banks below it (the NRCS minimum). |
-| Orchard berm | 34–44 m | 0.9 m high, with a 4.9 m flat top. Fruit trees on both edges lean over the water. |
-| Plant and duck ring | 48–56 m | 0.9 m deep: emergent plants, summer floating rafts, ducks. |
-| Pasture berm | 60–74 m | 0.9 m high, with an 8.9 m flat top, for goats. |
-| Uphill bund | outside | Surplus spoil, shaped to turn runoff around the site. |
+| Inner ring | 18–26 m | 0.9 m deep: emergent plants, summer rafts of greens, ducks. A 100 m² greenhouse bay beside the courtyard can be kept warm ([energy.md](energy.md)). |
+| Orchard berm | 30–40 m | 0.9 m high, with a 4.9 m flat top. Fruit trees on both edges lean over both rings. |
+| Deep ring | 44–58 m | 8 ft deep (2.44 m), with a safety shelf at the edge and 2:1 banks below it. A third of its bed is deeper than 8 ft. It holds the larger fish, their winter refuge and the pond loop. |
+| Pasture berm | 62–76 m | 0.9 m high, with an 8.8 m flat top, for goats. |
+| Outer land | beyond 76 m | The north border holds the solar array, on the south face of a windbreak bund made from surplus spoil. |
 
-The whole site is **148 m across (1.72 ha, 4.3 acres)**. A causeway crosses
+The whole site is **152 m across (1.81 ha, 4.5 acres)**. A causeway crosses
 both rings on the uphill side, with a culvert beneath it, so trucks reach the
 island.
 
-**Why these sizes.** Three buildings about 10 m across around a courtyard
-about 10 m across need an island of about 18 m radius, against 10 m in the
-earlier garden site. The 4 m gaps between rings and berms exist because, on a
-slope, a level-water moat's banks reach further out on the high side. The
-design check in `terrain_engine.py` refuses a layout where they would run
-into a berm.
+**Why these sizes.**
+- **The island:** three buildings about 10 m across around a courtyard about
+  10 m across need an island of about 18 m radius.
+- **The gaps:** on a slope, a level-water moat's banks reach further out on
+  the high side, so the rings and berms sit 4 m apart. The design check in
+  `terrain_engine.py` refuses a layout where they would run into a berm.
+- **The deep ring:** at 1.1 acres of water, with about 0.35 acre deeper than
+  8 ft, it meets the usual pond-loop rule of at least half an acre and
+  8–10 ft of depth.
 
 ---
 
 ## The numbers
 
+From `tools/homestead_numbers.py`, which writes `docs/homestead_numbers.json`.
+
 | | NE till, 6 ft slope | NE till, flat | Florida sand, flat |
 |---|---|---|---|
-| Bank cut (incl. winter holes) | 8,871 m³ | 5,272 m³ | 5,272 m³ |
-| Deepest dig | 2.55 m | 1.80 m | 1.80 m |
-| Spoil the berms can't take | 6,886 m³ | 1,847 m³ | 300 m³ |
-| → island raise / uphill bund | +1.0 m / 5,868 m³ | +1.0 m / 830 m³ | +0.3 m / 0 |
-| **Pond crew (excavator + dozer)** | **32 days, $100k** | **20 days, $61k** | **10 days, $33k** |
-| Backhoe loader (~90 hp) | 162 days, $243k | – | 53 days, $81k |
-| Compact TLB (~45 hp) | 580 days, $605k | – | 193 days, $205k |
-| Water held in the rings | 3,859 m³ | 3,859 m³ | 3,859 m³ |
-| Rain on the site per year | 20,600 m³ | 20,600 m³ | 23,200 m³ |
-| Evaporation from the rings | 2,900 m³ | 2,900 m³ | 5,700 m³ |
+| **Recommended: 8 ft outer ring** | | | |
+| Bank cut | 14,225 m³ | 9,663 m³ | 9,663 m³ |
+| Deepest dig | 4.07 m | 2.74 m | 2.74 m |
+| Spoil the berms can't take | 14,062 m³ | 7,674 m³ | 4,969 m³ |
+| **Pond crew (excavator + dozer)** | **51 days, $155k** | **34 days, $106k** | **20 days, $64k** |
+| Backhoe loader (~90 hp) | 257 days, $385k | 175 days, $262k | 100 days, $153k |
+| **Cheaper: 6 ft outer ring** | | | |
+| Bank cut | 11,112 m³ | 7,111 m³ | 7,111 m³ |
+| Pond crew | 40 days, $121k | 25 days, $78k | 14 days, $45k |
+| **Either layout** | | | |
+| Water held (8 ft / 6 ft ring) | 7,900 / 5,600 m³ | same | same |
+| Rain on the site per year | 21,800 m³ | 21,800 m³ | 24,500 m³ |
+| Evaporation from the rings | 3,600 m³ | 3,600 m³ | 7,300 m³ |
 
 8 h working days. Cost is hire with operators, fuel, delivery and a pump.
 These are screening rates; get local quotes.
 
-- **Pick the flattest ground you have.** The 6 ft slope adds 68 % to the
-  digging and about $39k. It is also where most of the surplus spoil comes
-  from, because the high side has to be cut down to level water.
-- **The pond crew beats any tractor loader-backhoe.** It is 5× faster and
-  2.4× cheaper than the backhoe loader, and digs the 10 ft winter holes
-  without fuss.
-- **A first try sized the berms to take all the spoil, the way the earlier
-  sims do.** It left the berms as sharp ridges with flat tops only 0.5–0.7 m
-  wide, useless for trees or goats, and dug 13,249 m³. Low berms at a set
-  height, with the surplus spent on the island and the bund, are cheaper and
-  give 5–9 m of flat growing ground.
-
----
+- **Pick the flattest ground you have.** On the 6 ft slope, the deep outer ring
+  costs about $50k more than on flat ground, and doubles the surplus spoil. The
+  outer ring is long, so it crosses more of the slope, and its high side has to
+  be cut to 4 m to hold level water.
+- **The pond crew beats any tractor loader-backhoe.** It is about 5× faster and
+  2.5× cheaper than the backhoe loader. The compact TLB can't reach the bed of
+  an 8 ft ring at all.
+- **Surplus spoil:**
+  - **Where it goes:** it raises the island by up to 1 m, then becomes a
+    windbreak bund along the north and northwest border. That shelters the
+    island from winter winds and gives the solar array a south-facing slope.
+  - **How much:** on flat ground that's about a 3 m bund roughly 170 m long.
+    On the slope it's twice that.
+  - **The alternative:** clean fill can also be given away. Haulers often take
+    it for free.
+- **Two layouts that didn't work:**
+  - **Spoil-sized berms:** sizing the berms to take all the spoil, the way the
+    earlier sims do, left them as ridges with flat tops only 0.5–0.7 m wide.
+  - **The deep ring inside:** putting it inside is cheaper (8,871 m³ on the
+    slope), but gives the fish half the water and puts the coldest ring next to
+    the house.
 
 ## Water: rain, spillway, winter
 
-- **New England: always overflowing.** About 20,600 m³ of rain falls on the
-  site each year. The rings hold 3,900 m³ and lose about 2,900 m³ to
+- **New England: always overflowing.** About 21,800 m³ of rain falls on the
+  site each year. The rings hold 7,900 m³ and lose about 3,600 m³ to
   evaporation.
   - The rings never need pumping or topping up.
   - A 100-year, 24-hour storm (about 7.5 in in southern New England) puts
-    about 3,300 m³ on the site in a day, nearly the rings' whole volume. The
-    spillway has to pass that without washing out.
+    about 3,400 m³ on the site in a day. The spillway has to pass that without
+    washing out.
 - **The spillway: wide, shallow and stone-lined, at the low side.**
   - Build it as a grassed channel through undisturbed ground, armoured with
     the boulders from the dig.
   - Avoid pipes and risers as the main outlet: they clog, and that is how
     small ponds fail.
-  - The fish ring overflows into the plant ring over a stone weir. The plant
+  - The inner ring overflows into the deep ring over a stone weir. The deep
     ring overflows off site through the spillway.
 - **Florida: groundwater-fed.** With the water table about 0.9 m down, the
   rings fill from below and their level follows the water table. They need no
@@ -146,14 +168,14 @@ These are screening rates; get local quotes.
 - **Winter: ice is fine, winterkill is the risk.**
   - Fish die over winter when long ice and snow cover cut off light and air,
     and shallow, weedy ponds are worst.
-  - The deep holes are the refuge.
+  - The 8 ft outer ring is the refuge (or the winter holes, in a 6 ft ring).
   - Penn State Extension's advice is to keep about 30 % of the ice clear of
     lasting snow, so light still reaches the plants that make oxygen. With
     holes this deep, a small aerator is optional.
 - **NRCS reference depths.** Ohio's pond standard asks 8 ft for excavated
   ponds (6 ft if spring-fed). Colorado asks 10 ft over a third of the area for
-  cold-water ponds. These rings are shallower on purpose; the holes supply the
-  depth.
+  cold-water ponds. The 8 ft outer ring meets the Ohio figure, with about a
+  third of its bed at full depth. The inner ring is shallow on purpose.
 
 ---
 
@@ -198,9 +220,10 @@ These are screening rates; get local quotes.
 
 | Part | What lives there | What it gives | Care |
 |---|---|---|---|
-| Fish ring | New England: yellow perch, bluegill, channel catfish. Florida: catfish, bluegill, and tilapia where the state allows it. | Fish; nutrient-rich water | Stock after the first summer of water, once plankton has established. Check state stocking rules. |
+| Deep ring | New England: largemouth bass, channel catfish, yellow perch, bluegill. Florida: catfish, bass, bluegill. | Fish; nutrient-rich water; the ground loop's heat source | Stock after the first summer of water, once plankton has established. Check state stocking rules. Keep pond-loop coils away from the deepest refuge. |
+| Warm bay (optional) | Tilapia and greens in a 100 m² greenhouse bay of the inner ring | Year-round fish and greens | Needs heat ([energy.md](energy.md)). Tilapia must not escape into open water; check state rules. |
 | Orchard berm | Mulberry, persimmon, apples, pears on the water edges | Fruit; dropped fruit feeds the fish | Keep goats out: they strip bark. |
-| Plant and duck ring | Watercress, pickerelweed, cattail at the edges; floating rafts of greens in summer | Greens; filtering | Ducks winter in the barn. Ice lets foxes cross. |
+| Inner ring | Watercress, pickerelweed, cattail at the edges; floating rafts of greens in summer; ducks | Greens; filtering | Ducks winter in the barn. Ice lets foxes cross. |
 | Pasture berm | Goats on rotational paddocks | Milk, meat, brush control | Keep manure back from the water's edge, with a grassed buffer. |
 | Pond mud | Dredged from the rings every few years | Fertiliser for the berms | The dike-pond loop. |
 
@@ -216,22 +239,26 @@ These are screening rates; get local quotes.
 
 Each stage is useful on its own. Stop at the stage that does the job.
 
-1. **A boat.** A flat-bottomed punt or kayak with a rope ring around the fish
-   ring: feeding, picking overhanging fruit, netting.
-2. **A floating spoke.** An aluminium or steel walkway from a pivot bearing at
-   the island edge out across the fish ring, onto one or two dock floats (HDPE
-   cubes or drums) mid-ring.
-   - It cantilevers over the orchard berm's inner edge, so you walk out and
-     pick from the trees.
+1. **A boat.** A flat-bottomed punt or kayak, with a rope ring in each ring:
+   feeding, picking overhanging fruit, netting.
+2. **A floating spoke.** A walkway from a pivot bearing at the island edge out
+   to the deep ring.
+   - It sits on one dock float (HDPE cubes or drums) in the inner ring and one
+     in the deep ring.
+   - Over the orchard berm it's a light 24 m truss, which is also a trellis
+     for vines.
+   - You walk out and pick from the trees on both edges.
    - You push it round by hand, on a rope.
-   - It spans about 26 m. The outer rings are served by boat and the goats.
-3. **A powered spoke.** The same spoke, turned by one eOx 3 HP unit at the
-   island end, winding a cable laid around the ring like a capstan.
+3. **A powered spoke.** The same spoke, turned by one eOx 3 HP unit on the
+   island, winding a cable laid around the inner ring like a capstan.
    - The motor and the bus stay on the island, and nothing powered floats.
    - **It sweeps 340° and back** instead of turning full circle, so it never
      meets the causeway. Its cable hangs free, and it needs no slip ring.
-   - Tools hang from the spoke: picking trays, a skimmer, later a small suction
+   - Tools hang from it: picking trays, a skimmer, later a small suction
      dredge for pond mud.
+   - Two small flat panels on it can power its own controls. Don't load it
+     with the main solar array: 22 panels would put about 77 kN on a floating
+     walkway in a design gust ([energy.md](energy.md)).
 4. **Winter.** Swing the spoke to the island and lift the floats out, or leave
    them frozen in on purpose. Nothing needs to run until spring.
 
@@ -252,12 +279,15 @@ Each stage is useful on its own. Stop at the stage that does the job.
 
 ## How this changes the simulations
 
-- **New layout:** `ring_engine/homestead_params.json`, with berms at a set
-  height (`balance.auto_size_berms: false`) instead of sized to take all the
-  spoil.
+- **New layout:** `ring_engine/homestead_params.json` has a shallow inner
+  ring, an 8 ft outer ring, and berms at a set height
+  (`balance.auto_size_berms: false`) instead of sized to take all the spoil.
 - **New numbers script:** `tools/homestead_numbers.py` reports water held,
   deep-water area, flat crown width, spoil surplus, the water balance, and
-  build days and cost for each machine.
+  build days and cost for each machine. It covers each layout tried and each
+  soil.
+- **Energy:** `tools/energy_budget.py` sizes the PV, solar thermal, heat pump
+  and loops ([energy.md](energy.md)).
 - **New baseline machine:** the pond crew (`excavator_dozer` in
   `vehicles/conventional_machines.json`). It digs and pushes at the same time,
   so the job takes the longer task; both machines are paid for.

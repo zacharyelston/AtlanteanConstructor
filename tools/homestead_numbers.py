@@ -23,16 +23,28 @@ from terrain_engine import Terrain  # noqa: E402
 PARAMS = os.path.join(ENGINE, "homestead_params.json")
 
 LAYOUTS = {
-    "first_try": {"label": "First try: 15 m deep ring, berms sized to take all the spoil, 3:1 banks", "overrides": [
+    "first_try": {"label": "First try: 15 m deep ring, berms sized to take all the spoil, 3:1 banks", "holes": 2,
+                  "overrides": [
         'moats=[{"r_in": 18.0, "r_out": 33.0, "depth": 2.44}, {"r_in": 55.0, "r_out": 65.0, "depth": 1.2}]',
         'berms=[{"r_in": 39.0, "r_out": 49.0, "height": null, "source_moat": 0},'
         ' {"r_in": 71.0, "r_out": 85.0, "height": null, "source_moat": 1}]',
         'balance.auto_size_berms=true', 'soil.canal_side_slope_deg=18.43', 'grid.extent_m=92.0']},
-    "simple": {"label": "Simple: 1.5 m fish ring + winter holes, 0.9 m plant ring, 0.9 m flat berms", "overrides": []},
+    "inner_deep": {"label": "Inner fish ring 1.5 m + 2 winter holes, 0.9 m outer plant ring", "holes": 2,
+                   "overrides": [
+        'moats=[{"r_in": 18.0, "r_out": 30.0, "depth": 1.5}, {"r_in": 48.0, "r_out": 56.0, "depth": 0.9}]',
+        'berms=[{"r_in": 34.0, "r_out": 44.0, "height": 0.9, "source_moat": 0},'
+        ' {"r_in": 60.0, "r_out": 74.0, "height": 0.9, "source_moat": 1}]', 'grid.extent_m=82.0']},
+    "outer_deep": {"label": "Shallow 0.9 m inner ring, 8 ft outer fish ring (recommended)", "holes": 0, "overrides": []},
+    "outer_6ft": {"label": "Shallow 0.9 m inner ring, 6 ft outer fish ring (cheaper)", "holes": 0, "overrides": [
+        'moats=[{"r_in": 18.0, "r_out": 26.0, "depth": 0.9}, {"r_in": 44.0, "r_out": 56.0, "depth": 1.83}]',
+        'berms=[{"r_in": 30.0, "r_out": 40.0, "height": 0.9, "source_moat": 0},'
+        ' {"r_in": 60.0, "r_out": 74.0, "height": 0.9, "source_moat": 1}]', 'grid.extent_m=82.0']},
 }
 WINTER_HOLES = {"count": 2, "depth_ft": 10, "top_m": 12.0, "side_slope_h": 2.0}
 SOILS = {
     "ne_till": {"label": "New England till, 6 ft slope", "overrides": ['soil.preset="ne_glacial_till"'],
+                "rain_m": 1.2, "evap_m": 0.65},
+    "ne_flat": {"label": "New England till, flat", "overrides": ['soil.preset="ne_glacial_till"', 'site={"type": "flat"}'],
                 "rain_m": 1.2, "evap_m": 0.65},
     "florida": {"label": "Florida sand, flat", "overrides": ['soil.preset="florida_sand"', 'site={"type": "flat"}'],
                 "rain_m": 1.35, "evap_m": 1.3},
@@ -77,9 +89,10 @@ def numbers(layout, soil, res=384):
     # Spoil the berms don't take raises the island, then goes to an uphill diversion bund.
     sf = cfg.swell_factor
     hole = WINTER_HOLES
-    d_h = hole["depth_ft"] * FT - next(r for r in out["rings"])["max_water_depth_m"]   # extra below the ring bed
+    n_holes = LAYOUTS[layout].get("holes", 0)
+    d_h = max(hole["depth_ft"] * FT - out["rings"][0]["max_water_depth_m"], 0.0)   # extra below the ring bed
     bot = max(hole["top_m"] - 2 * hole["side_slope_h"] * d_h, 1.0)
-    v_hole = d_h / 3.0 * (hole["top_m"] ** 2 + bot ** 2 + hole["top_m"] * bot) * hole["count"]
+    v_hole = d_h / 3.0 * (hole["top_m"] ** 2 + bot ** 2 + hole["top_m"] * bot) * n_holes
     loose = sf * (T.design_cut_total + v_hole)
     surplus = loose - T.design_fill_total
     raise_m = min(max(surplus, 0.0) / island, 1.0)
@@ -92,7 +105,7 @@ def numbers(layout, soil, res=384):
                             "rings_volume_m3": sum(r["water_m3"] for r in out["rings"])}
     data = load_machines()
     geo = moat_geometry(T, cfg)
-    geo[0]["V_bank_m3"] += v_hole           # the excavator digs the winter holes too
+    geo[0]["V_bank_m3"] += v_hole           # the excavator digs any winter holes too
     out["build"] = {}
     for key, mach in data["machines"].items():
         e = estimate(cfg, T, mach, data["job"], geo)
