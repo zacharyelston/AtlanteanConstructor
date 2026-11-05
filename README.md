@@ -426,6 +426,10 @@ images are in `docs/img/` (`tools/make_figs.py` redraws the SVGs).
   workshop, each under $50k engineered: $1.57M at retail down to $613k.
   `tools/lease_scenario.py` has a site corporation lease cabins at $1,300 a
   month and tunnels, paying ten investors about 12 % a year.
+- **Everyone grows:** `tools/resident_economy.py` maxes the site out at 14
+  cabins (two for a resident cooking and cleaning crew) and 17 tunnels, one
+  per cabin plus three second tunnels. One tunnel earns about a cabin's rent;
+  two tunnels are a full-time job.
 - **Where it makes sense:** [docs/where-it-pays.md](docs/where-it-pays.md)
   sweeps the drivers. A homeowner needs two of three things: a fill market,
   direct-sale produce, or land-value uplift. A builder profits almost anywhere
