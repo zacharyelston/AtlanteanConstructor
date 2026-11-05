@@ -451,6 +451,11 @@ images are in `docs/img/` (`tools/make_figs.py` redraws the SVGs).
   needs about 1,800 visitors per market day to carry its loan.
 
   ![Destination-scale site](docs/img/destination-aerial.jpg)
+- **Hybrid build:** `tools/hybrid_build.py` schedules one excavator and
+  its operator by day and a tethered train of three eOx by night (topsoil,
+  carrying, spreading, grading) in place of the pond crew's dozer. It halves
+  the earthworks bill; flat New England till with a 21 t excavator is done
+  in about a month of excavator time.
 - **Where it makes sense:** [docs/where-it-pays.md](docs/where-it-pays.md)
   sweeps the drivers. A homeowner needs two of three things: a fill market,
   direct-sale produce, or land-value uplift. A builder profits almost anywhere
