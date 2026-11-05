@@ -456,13 +456,20 @@ images are in `docs/img/` (`tools/make_figs.py` redraws the SVGs).
   carrying, spreading, grading) in place of the pond crew's dozer. It halves
   the earthworks bill; flat New England till with a 21 t excavator is done
   in about a month of excavator time.
-- **Synergy sweep:** `tools/synergy_sweep.py` picks the best mix of 23 site
+- **Synergy sweep:** `tools/synergy_sweep.py` picks the best mix of 24 site
   features (art studios, kitchen, gallery, youth camp, studio memberships,
-  tunnels, crops, maple, bees, festivals), 5 herds and fish in the deep and
+  a landscape supply yard, tunnels, crops, maple, bees, festivals), 5 herds and fish in the deep and
   inner rings, with pairwise synergies. Labour is costed on a calendar (a
   year-round crew plus seasonal help), so features busy in different
   months share one crew. About 500 million sets per market, solved by an
   iterated local search that reproduces the earlier exhaustive optimum.
+- **How many rings:** `tools/ring_count.py` builds 0-5 rings outward in the
+  homestead's pattern through the terrain engine and weighs each ring's
+  cost against its crowns, water and fill. Two rings is the sweet spot for
+  a farm; each further ring costs $150-260k more than it returns, unless it
+  pays through extra waterfront homes. Selling the spoil as loam and stone
+  through a landscape yard makes two rings worth $220-350k, and with a busy
+  yard the extra deep rings pay too.
 - **Where it makes sense:** [docs/where-it-pays.md](docs/where-it-pays.md)
   sweeps the drivers. A homeowner needs two of three things: a fill market,
   direct-sale produce, or land-value uplift. A builder profits almost anywhere
