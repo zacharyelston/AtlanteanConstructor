@@ -440,6 +440,10 @@ images are in `docs/img/` (`tools/make_figs.py` redraws the SVGs).
   staff in the cabins. Fully staffed it loses money; lean (10 staff, 4
   market-rent cabins) with a USDA Section 514 housing loan it covers its
   debt 1.67 times.
+- **Farm hub, arm and homes:** `tools/farm_hub.py` has one farm-hub dome on
+  the island (store, cafe, wash-pack, the arm's pivot), a permanent powered
+  arm, and 16 cottages for sale outside the rings. The home sales fund the
+  farm with no loan; members' work-share and farm dinners make the farm pay.
 - **Where it makes sense:** [docs/where-it-pays.md](docs/where-it-pays.md)
   sweeps the drivers. A homeowner needs two of three things: a fill market,
   direct-sale produce, or land-value uplift. A builder profits almost anywhere
