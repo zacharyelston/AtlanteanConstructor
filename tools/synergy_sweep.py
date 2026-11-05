@@ -82,7 +82,15 @@ AQUA = {   # one fish crop in the rings; the tunnels' drip lines get its nutrien
                "feed_usd_kg": 0, "seed": 4 * 1103 * 0.12 + 300, "capex": 2000, "hours": 100, "visitors": 1500,
                "activity": 1500 * 5},                       # a harvest day
 }
-NEW = ["youth", "membership", "maple", "bees", "yard"]
+NEW = ["youth", "membership", "maple", "bees", "yard", "backhoe", "berm_shelter"]
+# An owned backhoe loader (ASSUMED: used ~90 hp machine). Off-site custom digging pays; on site it hauls,
+# feeds the yard and digs the berm shelters.
+BACKHOE = {"capex": 55000, "fixed": 4000, "custom_h": 300, "custom_usd_h": 110.0, "fuel_wear_usd_h": 27.0, "admin_h": 50}
+# Earth-berm shelters: the buildings are dug into the berms and backfilled with spoil. Earth-sheltered
+# buildings cost about 10-20 % MORE to build (structure, waterproofing; DOE consumer guide), less so when the
+# owner's backhoe digs and backfills with site spoil (ASSUMED +5 % instead of +15 %); heating and cooling
+# fall by half or more (ASSUMED 50 %; proponents claim up to 80 %).
+BERM = {"design_usd": 10000, "capex_saving": -0.05, "capex_saving_hired": -0.15, "energy_saving": 0.50}
 # A landscape supply yard on the road edge (ASSUMED; prices from Connecticut and Hudson Valley yards, 2022-26):
 # it resells bought-in mulch and stone and sells screened loam and fieldstone from the rings' spoil.
 YARD = {"capex": 120000,                       # used compact wheel loader, used screener, bins, a small office
@@ -126,6 +134,7 @@ PROFILES = {k: _norm(v) for k, v in {
     "maple": [10, 40, 40, 0, 0, 0, 0, 0, 0, 0, 10, 0],           # tap in winter, boil in February and March
     "bees": [0, 0, 5, 15, 20, 20, 15, 15, 10, 0, 0, 0],
     "yard": [2, 2, 6, 14, 18, 16, 6, 5, 10, 12, 6, 3],          # spring planting and fall cleanup
+    "backhoe": [0, 0, 4, 12, 14, 12, 8, 10, 14, 14, 10, 2],      # frozen ground in January and February
 }.items()}
 
 ANIMALS = {   # per head on 3 acres of pasture (berm crown and border)
@@ -150,7 +159,7 @@ YARN_NET_USD_LB = 30.0                                      # mini-mill yarn sol
 TUNNEL = {"n": 4, "revenue": 20900, "costs": 4600, "capex": 8640 * 4 - 6500, "hours": 605}
 
 
-def evaluate(chosen, animal, market, synergies=True, aqua="none+none", calendar=True):
+def evaluate(chosen, animal, market, synergies=True, aqua="none+none", calendar=True, solo=None):
     """Yearly value of a set of features. Returns a dict with the parts and the synergy credits.
 
     calendar=True costs labour month by month: a year-round resident crew sized to the work, plus
@@ -191,8 +200,15 @@ def evaluate(chosen, animal, market, synergies=True, aqua="none+none", calendar=
         rev["%s tuition" % s] = tuition
         cost["%s instructors" % s] = tuition * share
         cost["%s consumables" % s] = tuition * st["consumables"]
+        berm = "berm_shelter" in has and s != "forge"
+        if berm and synergies:
+            save = BERM["capex_saving"] if "backhoe" in has else BERM["capex_saving_hired"]
+            syn["%s built into the berm" % s] = st["capex"] * save * CRF + energy * BERM["energy_saving"]
+            energy *= 1 - BERM["energy_saving"]
         cost["%s energy" % s] = energy * (0.9 if cluster else 1.0)
         c = st["capex"] * (0.85 if cluster else 1.0)
+        if berm and synergies:
+            c *= 1 - (BERM["capex_saving"] if "backhoe" in has else BERM["capex_saving_hired"])
         if cluster:
             syn["hot-arts cluster shares gas, venting, a tech (%s)" % s] = (st["capex"] * 0.15 * CRF + energy * 0.1)
         capex += c
@@ -469,6 +485,31 @@ def evaluate(chosen, animal, market, synergies=True, aqua="none+none", calendar=
             rev["gallery commission (40 %)"] = 0.0
         capex += 60000
         hl.append(("gallery", 1000))
+    if "berm_shelter" in has:
+        capex += BERM["design_usd"]
+        if synergies:
+            save = BERM["capex_saving"] if "backhoe" in has else BERM["capex_saving_hired"]
+            for b_, cap_, en_ in (("kitchen", 150000, 6000), ("gallery", 60000, 0)):
+                if b_ in has:
+                    capex -= cap_ * save
+                    if en_:
+                        cost["kitchen energy"] = en_ * (1 - BERM["energy_saving"])
+                    syn["%s built into the berm" % b_] = cap_ * save * CRF + en_ * BERM["energy_saving"]
+    if "backhoe" in has:
+        b = BACKHOE
+        capex += b["capex"]
+        cost["backhoe insurance and upkeep"] = b["fixed"]
+        jobs = b["custom_h"] * min(m["fill"], 1.0)
+        rev["custom backhoe work for neighbours"] = jobs * b["custom_usd_h"] * m["price"]
+        cost["backhoe fuel and wear on custom work"] = jobs * b["fuel_wear_usd_h"]
+        hl.append(("backhoe", jobs + b["admin_h"]))
+        if synergies and "yard" in has:
+            syn["the backhoe is the yard's loader"] = 30000 * CRF + 2000
+            capex -= 30000
+            cost["landscape yard: loader, screener, fuel, insurance"] -= 2000
+        if synergies and ({"tunnels", "berries", "flock"} & has or animal != "none"):
+            syn["the backhoe hauls compost, hay and mulch"] = 80 * WAGE
+            hl.append(("flat", -80))
     buildings = len(has & BUILDING)
     hm = [0.0] * 12
     kinds = {}
@@ -478,7 +519,18 @@ def evaluate(chosen, animal, market, synergies=True, aqua="none+none", calendar=
         for i in range(12):
             hm[i] += h * prof[i]
     hours = sum(hm)
-    if calendar:
+    if solo:
+        lines = len(has) + (animal != "none") + sum(p_ != "none" for p_ in aqua.split("+"))
+        extra = solo.get("overhead_h", 60) * lines
+        for i in range(12):
+            hm[i] += extra / 12
+        hours = sum(hm)
+        over = [max(h - solo["owner_h_month"], 0.0) for h in hm]
+        help_h = sum(over)
+        labour = help_h * SEASONAL_WAGE
+        crew = {"crew": 0, "owner_h": sum(min(h, solo["owner_h_month"]) for h in hm), "seasonal_h": help_h,
+                "solo_ok": help_h <= solo["help_max_h"]}
+    elif calendar:
         labour, crew = crew_cost(hm)
     else:
         labour, crew = hours * WAGE, None
@@ -523,26 +575,31 @@ def valid(chosen, animal):
 
 
 def feasible(r, cell, hours_max=None):
+    if r["crew"] and r["crew"].get("solo_ok") is False:
+        return False
     return r["buildings"] <= cell[0] and r["capex"] <= cell[1] and (hours_max is None or r["hours"] <= hours_max)
 
 
-def search(market, cell, calendar=True, features=None, hours_max=None, restarts=24, kicks=30, seed=1):
+def search(market, cell, calendar=True, features=None, hours_max=None, restarts=24, kicks=30, seed=1, solo=None,
+           require=()):
     """Iterated local search: from random starts, climb by the best single change (add or drop a feature,
     change the herd, change either fish), then kick the best set with three random flips and climb again.
     Exact search is no longer possible (23 features, 5 herds, 12 fish pairs: about 500 million sets)."""
     import random
-    feats = list(features or FEATURES)
-    rng = random.Random(seed + hash((market, cell, calendar)) % 1000)
+    feats = [f for f in (features or FEATURES) if f not in require]
+    req = frozenset(require)
+    rng = random.Random(seed + hash((market, cell, calendar, bool(solo))) % 1000)
     cache = {}
 
     def score(state):
         key = (frozenset(state[0]), state[1], state[2])
         if key not in cache:
             chosen, animal, aqua = state
+            chosen = chosen | req
             if not valid(chosen, animal):
                 cache[key] = (-1e18, None)
             else:
-                r = evaluate(sorted(chosen), animal, market, aqua=aqua, calendar=calendar)
+                r = evaluate(sorted(chosen), animal, market, aqua=aqua, calendar=calendar, solo=solo)
                 cache[key] = (r["score"] if feasible(r, cell, hours_max) else -1e18, r)
         return cache[key]
 
@@ -633,7 +690,7 @@ def main():
     groups = {"Studios, camps and members": ["studio", "youth"], "Kitchen and cafe": ["kitchen"], "Gallery and shop": ["gallery"],
               "Tunnels, crops and bees": ["tunnels", "berries", "flowers", "mushrooms", "dye_garden", "willow", "bees", "biochar"],
               "Fish, animals and maple": ["trout", "prawns", "perch", "catfish", "tilapia", "herd", "maple", "flat"],
-              "Festivals": ["festival"], "Landscape yard": ["yard"]}
+              "Festivals": ["festival"], "Landscape yard": ["yard", "backhoe"]}
     by_group = {g: [0.0] * 12 for g in groups}
     for k, h in ref["hours_by_kind"].items():
         g = next(g for g, ks in groups.items() if k in ks)
