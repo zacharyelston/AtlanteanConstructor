@@ -19,8 +19,14 @@ cafe's bowls and a bowls-and-soup benefit dinner; the gallery sells what every s
 
 The search is a quadratic knapsack: pick the set that maximises yearly net value (income less costs,
 paid labour and a capital charge) within a building limit, a capex budget and a labour cap. With 14
-binary features, 5 herds and 4 x 3 fish choices there are about 31 million combinations; they are scored
-exhaustively in parallel (multiprocessing), so the best set in each cell is exact, not a heuristic.
+binary features (now 23), 5 herds and 4 x 3 fish choices there are about 500 million combinations,
+too many to score one by one, so each cell is solved by iterated local search. The search is checked
+against the exhaustive optimum of the earlier 19-feature run, which it must reproduce.
+
+Labour is costed on a CALENDAR: each feature spreads its hours over the months, a year-round resident
+crew is paid every month, and seasonal help at a premium covers the peaks. Features whose busy months
+fall in each other's quiet ones (camps in summer studios, maple in March, trout in winter) cost less
+labour together than apart: a seasonal synergy.
 Writes docs/synergy_sweep.json. Every figure is a screening ASSUMPTION; class prices follow the
 Guilford Art Center's fall 2026 catalog.
 """
@@ -76,7 +82,40 @@ AQUA = {   # one fish crop in the rings; the tunnels' drip lines get its nutrien
                "feed_usd_kg": 0, "seed": 4 * 1103 * 0.12 + 300, "capex": 2000, "hours": 100, "visitors": 1500,
                "activity": 1500 * 5},                       # a harvest day
 }
-FEATURES = list(STUDIOS) + ["kitchen", "gallery"] + OTHER + list(CROPS)
+NEW = ["youth", "membership", "maple", "bees"]
+FEATURES = list(STUDIOS) + ["kitchen", "gallery"] + OTHER + list(CROPS) + NEW
+CREW_H_MONTH, SEASONAL_WAGE = 160.0, 28.0      # a resident crew member's month; seasonal help costs more
+
+
+def _norm(v):
+    t = float(sum(v))
+    return [x / t for x in v]
+
+
+# Share of each feature's yearly hours by month, January to December (ASSUMED from the crop and class calendars).
+PROFILES = {k: _norm(v) for k, v in {
+    "flat": [1] * 12,
+    "studio": [9, 9, 9, 9, 9, 5, 4, 4, 9, 11, 11, 11],          # fall and winter-spring semesters, a short summer
+    "kitchen": [6, 6, 7, 8, 9, 10, 10, 10, 9, 10, 8, 7],         # follows visitors
+    "gallery": [7, 6, 6, 7, 8, 8, 8, 8, 8, 9, 12, 13],           # holiday season
+    "tunnels": [4, 3, 5, 7, 10, 11, 13, 14, 12, 9, 6, 6],        # tomatoes peak July to September
+    "biochar": [20, 20, 15, 5, 0, 0, 0, 0, 0, 5, 15, 20],        # prunings in the dormant season
+    "festival": [0, 0, 0, 0, 5, 5, 5, 10, 15, 35, 5, 20],        # an October harvest fair and a December market
+    "herd": [8, 8, 10, 12, 9, 8, 8, 8, 8, 7, 7, 7],              # spring lambing or kidding
+    "berries": [0, 0, 0, 5, 15, 35, 30, 10, 5, 0, 0, 0],
+    "flowers": [0, 0, 5, 10, 15, 15, 15, 15, 13, 10, 2, 0],
+    "mushrooms": [0, 0, 15, 25, 15, 5, 5, 5, 10, 15, 5, 0],
+    "dye_garden": [0, 0, 0, 10, 20, 20, 20, 20, 10, 0, 0, 0],
+    "willow": [30, 30, 15, 5, 0, 0, 0, 0, 0, 0, 10, 10],         # cut in winter
+    "trout": [14, 12, 12, 12, 10, 0, 0, 0, 0, 12, 14, 14],       # cold season only
+    "prawns": [0, 0, 0, 0, 10, 25, 20, 20, 25, 0, 0, 0],         # stock in June, harvest in September
+    "perch": [2, 2, 4, 10, 14, 14, 14, 14, 12, 10, 2, 2],
+    "catfish": [2, 2, 4, 10, 14, 14, 14, 14, 12, 10, 2, 2],
+    "tilapia": [1] * 12,
+    "youth": [4, 4, 4, 4, 4, 20, 25, 25, 3, 3, 4, 0],            # summer camp
+    "maple": [10, 40, 40, 0, 0, 0, 0, 0, 0, 0, 10, 0],           # tap in winter, boil in February and March
+    "bees": [0, 0, 5, 15, 20, 20, 15, 15, 10, 0, 0, 0],
+}.items()}
 
 ANIMALS = {   # per head on 3 acres of pasture (berm crown and border)
     "none": {"per_acre": 0},
@@ -100,11 +139,16 @@ YARN_NET_USD_LB = 30.0                                      # mini-mill yarn sol
 TUNNEL = {"n": 4, "revenue": 20900, "costs": 4600, "capex": 8640 * 4 - 6500, "hours": 605}
 
 
-def evaluate(chosen, animal, market, synergies=True, aqua="none+none"):
-    """Yearly value of a set of features. Returns a dict with the parts and the synergy credits."""
+def evaluate(chosen, animal, market, synergies=True, aqua="none+none", calendar=True):
+    """Yearly value of a set of features. Returns a dict with the parts and the synergy credits.
+
+    calendar=True costs labour month by month: a year-round resident crew sized to the work, plus
+    seasonal help at a premium in the months the crew can't cover. calendar=False is the old flat
+    $22 for every hour, kept to check the search against the exhaustive run."""
     m = MARKETS[market]
     has = set(chosen)
     rev, cost, capex, hours, notes = {}, {}, 0.0, 0.0, {}
+    hl = []
     syn = {}
     studios = [s for s in STUDIOS if s in has]
     hot = [s for s in studios if STUDIOS[s]["hot"]]
@@ -141,7 +185,7 @@ def evaluate(chosen, animal, market, synergies=True, aqua="none+none"):
         if cluster:
             syn["hot-arts cluster shares gas, venting, a tech (%s)" % s] = (st["capex"] * 0.15 * CRF + energy * 0.1)
         capex += c
-        hours += st["hours"]
+        hl.append(("studio", st["hours"]))
     visitors = BASE_VISITORS + seat_visits
     # animals
     a = ANIMALS[animal]
@@ -167,12 +211,12 @@ def evaluate(chosen, animal, market, synergies=True, aqua="none+none"):
             rev["%s: orchard grazing" % animal] = 0.0
         cost["%s: hay, vet, shearing" % animal] = herd * (a["hay_t"] * HAY_USD_T + a["vet"] + a["shear"])
         capex += PASTURE_ACRES * a["fence_capex_acre"] + herd * ANIMAL_CAPEX_HEAD
-        hours += herd * a["hours"]
+        hl.append(("herd", herd * a["hours"]))
         visitors += a["visitors"]
     if "guard_llamas" in has:
         capex += 3000
         cost["guard llamas"] = 2 * (0.4 * HAY_USD_T + 80)
-        hours += 16
+        hl.append(("herd", 16))
         visitors += 300
     # tunnels, flock, biochar, heat recovery
     if "tunnels" in has:
@@ -194,10 +238,10 @@ def evaluate(chosen, animal, market, synergies=True, aqua="none+none"):
             c -= r * 0.25 * 0.15
         cost["tunnels"] = c
         capex += t["capex"]
-        hours += t["n"] * t["hours"]
+        hl.append(("tunnels", t["n"] * t["hours"]))
     if "heat_recovery" in has:
         capex += 25000
-        hours += 50
+        hl.append(("flat", 50))
         heat = 1.0 if "glass" in has else (0.3 if "ceramics" in has else 0.0)
         val = heat * ((2 * 2700 if "tunnels" in has else 0) + 4000)
         rev["heat recovery: frost-free tunnels and warm fish bay"] = val if synergies else 0.0
@@ -205,14 +249,14 @@ def evaluate(chosen, animal, market, synergies=True, aqua="none+none"):
             syn["furnace/kiln waste heat"] = val
     if "biochar" in has:
         capex += 8000
-        hours += 80
+        hl.append(("biochar", 80))
         rev["biochar bags"] = 2000
         if synergies and "willow" in has:
             rev["biochar bags"] += 1000
             syn["willow feeds the biochar kiln"] = 1000
     if "flock" in has:
         capex += 6000
-        hours += 180
+        hl.append(("flat", 180))
         rev["eggs"] = 667 * 7.0
         feed = 2500
         if synergies and "kitchen" in has:
@@ -223,7 +267,7 @@ def evaluate(chosen, animal, market, synergies=True, aqua="none+none"):
         visitors += 300
     if "residency" in has:
         cost["residency rent discount (4 cabins)"] = 4 * 650 * 12
-        hours += 60
+        hl.append(("flat", 60))
     if "festival" in has:
         ok = "gallery" in has or len(studios) >= 2
         if ok:
@@ -231,7 +275,7 @@ def evaluate(chosen, animal, market, synergies=True, aqua="none+none"):
             if synergies:
                 syn["festival grows with each studio"] = (2 * 50 * 150 + 2 * 1500 * 5) * m["visitors"] * 0.1 * len(studios)
             cost["festival marketing"] = 6000
-            hours += 200
+            hl.append(("festival", 200))
             visitors += 3000
     for c_ in CROPS:
         if c_ not in has:
@@ -241,7 +285,7 @@ def evaluate(chosen, animal, market, synergies=True, aqua="none+none"):
         rev[cr["label"]] = r
         cost[cr["label"]] = cr["costs"]
         capex += cr["capex"]
-        hours += cr["hours"]
+        hl.append((c_, cr["hours"]))
         visitors += cr["visitors"]
         if synergies and c_ == "flowers" and "gallery" in has:
             syn["flowers sold in the shop (no market costs)"] = r * 0.15
@@ -281,8 +325,67 @@ def evaluate(chosen, animal, market, synergies=True, aqua="none+none"):
             heat = 0
         cost[q["label"]] = q["kg"] * q["fcr"] * q["feed_usd_kg"] + q["seed"] + heat + (0.15 * r if part != "trout" else 0)
         capex += q["capex"]
-        hours += q["hours"]
+        hl.append((part, q["hours"]))
         visitors += q["visitors"]
+    if "youth" in has and studios:
+        camp = 8 * 20 * 450 * 0.85 + 30 * 8 * 250 * 0.85
+        camp *= m["price"] * min(m["fill"], 1.0)
+        if synergies and animal in ("llamas", "goats", "alpacas"):
+            syn["farm camp: kids come for the animals"] = camp * 0.10
+            camp *= 1.10
+        share = INSTRUCTOR_SHARE
+        if synergies and "membership" in has:
+            share -= 0.05
+            syn["studio members help teach the camps"] = camp * 0.05
+        rev["youth classes and summer camp"] = camp
+        cost["youth instructors and materials"] = camp * (share + 0.08)
+        capex += 10000
+        hl.append(("youth", 300))
+        visitors += 3000
+    if "membership" in has and studios:
+        members = min(12 * len(studios), 30)
+        fees = members * 150 * 12 * m["price"] * min(m["fill"], 1.0)
+        rev["studio memberships"] = fees
+        cost["member firings, energy, consumables"] = fees * 0.10 + 0.2 * sum(STUDIOS[s_]["energy"] for s_ in studios)
+        capex += 5000
+        hl.append(("flat", 200))
+    if "maple" in has:
+        syrup = 300 * 0.25 * 70 * m["price"]
+        if synergies and "gallery" in has:
+            syn["syrup sold in the shop at retail"] = syrup * 0.15
+            syrup *= 1.15
+        rev["maple syrup, 300 taps"] = syrup
+        cost["maple: tubing, filters, wood"] = 800
+        capex += 12000
+        hl.append(("maple", 250))
+        visitors += 1500
+        if synergies and "kitchen" in has:
+            pancakes = 2 * 400 * 15 * m["visitors"]
+            rev["maple weekend pancake breakfasts"] = pancakes
+            cost["pancake breakfasts"] = pancakes * 0.35
+            syn["maple weekend pancake breakfasts in the cafe"] = pancakes * 0.65
+            hl.append(("maple", 60))
+        if synergies and "festival" in has:
+            syn["maple weekend joins the festival calendar"] = 3000
+            rev["maple weekend booths"] = 3000
+    if "bees" in has:
+        honey = 10 * 40 * 12 * m["price"]
+        if synergies and "kitchen" in has:
+            syn["honey in the cafe at retail"] = honey * 0.15
+            honey *= 1.15
+        rev["honey, 10 hives"] = honey
+        rev["orchard pollination"] = 1500
+        cost["bees: equipment, treatments"] = 800
+        capex += 6000
+        hl.append(("bees", 150))
+        if synergies and "berries" in has:
+            syn["bees pollinate the berries"] = CROPS["berries"]["revenue"] * 0.10
+            rev["berry pollination"] = CROPS["berries"]["revenue"] * 0.10
+        if synergies and studios:
+            wax = 10 * 10 * 45 * m["price"] * (1 - INSTRUCTOR_SHARE)
+            syn["beeswax candle and encaustic workshops"] = wax
+            rev["beeswax workshops (net)"] = wax
+            hl.append(("studio", 40))
     if synergies and aqua == "trout+prawns":
         syn["one dock and one crowd for two fish seasons"] = 3000
         capex -= 2000
@@ -299,7 +402,7 @@ def evaluate(chosen, animal, market, synergies=True, aqua="none+none"):
         cost["kitchen instructors"] = classes * INSTRUCTOR_SHARE
         cost["kitchen energy"] = 6000
         capex += 150000
-        hours += 400 + covers * 0.1
+        hl.append(("kitchen", 400 + covers * 0.1))
         if synergies and "ceramics" in has:
             bowls = 2 * 150 * 45 * m["price"]
             rev["bowls-and-soup benefit dinners"] = bowls
@@ -311,6 +414,9 @@ def evaluate(chosen, animal, market, synergies=True, aqua="none+none"):
         if resid:
             art += 10000
             syn["residents stock the gallery"] = 10000 * 0.4
+        if synergies and "membership" in has and studios:
+            art += 15000
+            syn["studio members stock the gallery"] = 15000 * 0.4
         farm_goods = visitors * 0.25 * 20 * 0.4
         rev["gallery commission (40 %)"] = art * 0.4
         rev["shop margin on farm goods"] = farm_goods
@@ -319,144 +425,188 @@ def evaluate(chosen, animal, market, synergies=True, aqua="none+none"):
         elif not synergies:
             rev["gallery commission (40 %)"] = 0.0
         capex += 60000
-        hours += 1000
+        hl.append(("gallery", 1000))
     buildings = len(has & BUILDING)
+    hm = [0.0] * 12
+    kinds = {}
+    for k, h in hl:
+        kinds[k] = kinds.get(k, 0.0) + h
+        prof = PROFILES.get(k, PROFILES["flat"])
+        for i in range(12):
+            hm[i] += h * prof[i]
+    hours = sum(hm)
+    if calendar:
+        labour, crew = crew_cost(hm)
+    else:
+        labour, crew = hours * WAGE, None
     income = sum(rev.values())
     costs = sum(cost.values())
-    net = income - costs - hours * WAGE
+    net = income - costs - labour
     return {"features": sorted(has), "animal": animal, "aqua": aqua, "market": market, "buildings": buildings, "capex": capex,
-            "hours": hours, "visitors": visitors, "income": income, "costs": costs, "labour": hours * WAGE,
+            "hours": hours, "hours_by_month": hm, "hours_by_kind": kinds, "crew": crew, "visitors": visitors, "income": income, "costs": costs,
+            "labour": labour, "flat_labour": hours * WAGE,
             "net": net, "score": net - capex * CRF, "synergies": syn, "revenue": rev, "cost_lines": cost}
+
+
+def crew_cost(hm):
+    """Cheapest mix of a year-round crew (paid every month) and seasonal help in the busy months."""
+    best = None
+    for n in range(0, int(max(hm) / CREW_H_MONTH) + 2):
+        over = sum(max(h - n * CREW_H_MONTH, 0.0) for h in hm)
+        c = n * CREW_H_MONTH * 12 * WAGE + over * SEASONAL_WAGE
+        if best is None or c < best[0]:
+            used = sum(min(h, n * CREW_H_MONTH) for h in hm)
+            best = (c, {"crew": n, "seasonal_h": over, "crew_use": used / (n * CREW_H_MONTH * 12) if n else 1.0})
+    return best
 
 
 DEEP, INNER = ["none", "perch", "catfish", "trout"], ["none", "prawns", "tilapia"]
 ANIMAL_KEYS = list(ANIMALS)
 AQUA_KEYS = ["%s+%s" % (d, i) for d in DEEP for i in INNER]
-NB = len(FEATURES)
-TOTAL = (1 << NB) * len(ANIMAL_KEYS) * len(AQUA_KEYS)
-CELLS = [(blim, budget, hcap) for blim in (2, 3, 4, 6) for budget in (300000, 600000, 1200000) for hcap in (6000, 12000)]
-REF = (4, 600000, 12000)
-
-
-def decode(idx):
-    bits, rest = idx % (1 << NB), idx >> NB
-    animal, aqua = ANIMAL_KEYS[rest % len(ANIMAL_KEYS)], AQUA_KEYS[rest // len(ANIMAL_KEYS)]
-    chosen = [f for k, f in enumerate(FEATURES) if bits >> k & 1]
-    return chosen, animal, aqua
+CELLS = [(blim, budget) for blim in (2, 3, 4, 6) for budget in (300000, 600000)]
+REF = (4, 600000)
+EXACT_REF = 189830      # the exhaustive optimum for REF, flat labour, old features (commit c4f4795, 19.1 M sets)
 
 
 def valid(chosen, animal):
-    if "heat_recovery" in chosen and not ({"glass", "ceramics"} & set(chosen)):
+    has = set(chosen)
+    if "heat_recovery" in has and not ({"glass", "ceramics"} & has):
         return False
-    if "residency" in chosen and not (set(STUDIOS) & set(chosen)):
+    if ({"residency", "youth", "membership"} & has) and not (set(STUDIOS) & has):
         return False
-    if "guard_llamas" in chosen and animal not in ("sheep", "goats"):
+    if "guard_llamas" in has and animal not in ("sheep", "goats"):
         return False
     return True
 
 
-def work(args):
-    """Score a slice of the index space for both markets; keep the best per cell and the top 50 of REF."""
-    lo, hi = args
-    best = {(mk,) + c: (-1e18, -1) for mk in MARKETS for c in CELLS}
-    top = {mk: [] for mk in MARKETS}
-    n = 0
-    for idx in range(lo, hi):
-        chosen, animal, aqua = decode(idx)
-        if not valid(chosen, animal):
-            continue
-        n += 1
-        for mk in MARKETS:
-            r = evaluate(chosen, animal, mk, aqua=aqua)
-            sc, b, cap, h = r["score"], r["buildings"], r["capex"], r["hours"]
-            for c in CELLS:
-                if b <= c[0] and cap <= c[1] and h <= c[2] and sc > best[(mk,) + c][0]:
-                    best[(mk,) + c] = (sc, idx)
-            if b <= REF[0] and cap <= REF[1] and h <= REF[2]:
-                t = top[mk]
-                if len(t) < 50:
-                    t.append((sc, idx))
-                    t.sort()
-                elif sc > t[0][0]:
-                    t[0] = (sc, idx)
-                    t.sort()
-    return best, top, n
+def feasible(r, cell, hours_max=None):
+    return r["buildings"] <= cell[0] and r["capex"] <= cell[1] and (hours_max is None or r["hours"] <= hours_max)
+
+
+def search(market, cell, calendar=True, features=None, hours_max=None, restarts=24, kicks=30, seed=1):
+    """Iterated local search: from random starts, climb by the best single change (add or drop a feature,
+    change the herd, change either fish), then kick the best set with three random flips and climb again.
+    Exact search is no longer possible (23 features, 5 herds, 12 fish pairs: about 500 million sets)."""
+    import random
+    feats = list(features or FEATURES)
+    rng = random.Random(seed + hash((market, cell, calendar)) % 1000)
+    cache = {}
+
+    def score(state):
+        key = (frozenset(state[0]), state[1], state[2])
+        if key not in cache:
+            chosen, animal, aqua = state
+            if not valid(chosen, animal):
+                cache[key] = (-1e18, None)
+            else:
+                r = evaluate(sorted(chosen), animal, market, aqua=aqua, calendar=calendar)
+                cache[key] = (r["score"] if feasible(r, cell, hours_max) else -1e18, r)
+        return cache[key]
+
+    def neighbours(state):
+        chosen, animal, aqua = state
+        for f in feats:
+            yield (chosen ^ {f}, animal, aqua)
+        for a_ in ANIMAL_KEYS:
+            if a_ != animal:
+                yield (chosen, a_, aqua)
+        d, i = aqua.split("+")
+        for d2 in DEEP:
+            if d2 != d:
+                yield (chosen, animal, d2 + "+" + i)
+        for i2 in INNER:
+            if i2 != i:
+                yield (chosen, animal, d + "+" + i2)
+
+    def climb(state):
+        cur = score(state)[0]
+        while True:
+            best_n, best_s = None, cur
+            for n in neighbours(state):
+                sc = score(n)[0]
+                if sc > best_s + 1e-6:
+                    best_n, best_s = n, sc
+            if best_n is None:
+                return state, cur
+            state, cur = best_n, best_s
+
+    best = (frozenset(), "none", "none+none")
+    best_s = score(best)[0]
+    for _ in range(restarts):
+        st = (frozenset(f for f in feats if rng.random() < 0.3), rng.choice(ANIMAL_KEYS), rng.choice(AQUA_KEYS))
+        if score(st)[0] < -1e17:
+            st = (frozenset(), st[1], st[2])
+        st, sc = climb(st)
+        for _ in range(kicks):
+            ch = set(st[0])
+            for f in rng.sample(feats, 3):
+                ch ^= {f}
+            cand, csc = climb((frozenset(ch), st[1] if rng.random() < 0.7 else rng.choice(ANIMAL_KEYS), st[2]))
+            if csc > sc:
+                st, sc = cand, csc
+        if sc > best_s:
+            best, best_s = st, sc
+    r = score(best)[1]
+    return r, len(cache)
+
+
+def run_cell(args):
+    market, cell, calendar = args
+    r, n = search(market, cell, calendar=calendar)
+    r0 = evaluate(r["features"], r["animal"], market, synergies=False, aqua=r["aqua"], calendar=calendar)
+    return {"market": market, "buildings_max": cell[0], "budget": cell[1], "calendar": calendar, "best": r,
+            "score_without_synergies": r0["score"], "sets_scored": n}
 
 
 def main():
     import multiprocessing as mp
-    chunks = 128
-    step = TOTAL // chunks + 1
+    old = [f for f in FEATURES if f not in NEW]
+    chk, n = search("affluent", REF, calendar=False, features=old, hours_max=12000)
+    print("check: local search finds $%s against the exhaustive optimum $%s (%s sets scored)"
+          % ("{:,.0f}".format(chk["score"]), "{:,}".format(EXACT_REF), "{:,}".format(n)))
+    jobs = [(mk, c, cal) for mk in MARKETS for c in CELLS for cal in (True, False)]
     with mp.Pool() as pool:
-        parts = pool.map(work, [(i * step, min((i + 1) * step, TOTAL)) for i in range(chunks)])
-    best, top, n = {}, {mk: [] for mk in MARKETS}, 0
-    for b, t, k in parts:
-        n += k
-        for key, v in b.items():
-            if v > best.get(key, (-1e18, -1)):
-                best[key] = v
-        for mk in MARKETS:
-            top[mk].extend(t[mk])
-    for mk in MARKETS:
-        top[mk] = sorted(top[mk], reverse=True)[:50]
-    print("combinations scored: %s per market (of %s)" % ("{:,}".format(n), "{:,}".format(TOTAL)))
-    grid = []
-    for mk in MARKETS:
-        for c in CELLS:
-            sc, idx = best[(mk,) + c]
-            chosen, animal, aqua = decode(idx)
-            r = evaluate(chosen, animal, mk, aqua=aqua)
-            r0 = evaluate(chosen, animal, mk, synergies=False, aqua=aqua)
-            grid.append({"market": mk, "buildings_max": c[0], "budget": c[1], "hours_max": c[2],
-                         "best": r, "score_without_synergies": r0["score"]})
-            if c[2] == 12000:
-                print("%-8s bld<=%d budget $%9s: $%8s (synergies $%7s) capex $%8s %5.0f h | %s + %s + %s"
-                      % (mk, c[0], "{:,}".format(c[1]), "{:,.0f}".format(r["score"]),
-                         "{:,.0f}".format(r["score"] - r0["score"]), "{:,.0f}".format(r["capex"]), r["hours"],
-                         ", ".join(r["features"]), animal, aqua))
-    freq, afreq, qfreq = {}, {}, {}
-    sets = [decode(i) for _, i in top["affluent"]]
-    for f in FEATURES:
-        freq[f] = sum(f in ch for ch, _, _ in sets) / len(sets)
-    for a_ in ANIMALS:
-        afreq[a_] = sum(a_ == an for _, an, _ in sets) / len(sets)
-    for q in AQUA_KEYS:
-        qfreq[q] = sum(q == aq for _, _, aq in sets) / len(sets)
-    print("\nIn the top 50 (affluent, 4 buildings, $600k, 12,000 h):")
-    for f, v in sorted(freq.items(), key=lambda kv: -kv[1]):
-        print("  %-14s %3.0f %%" % (f, 100 * v))
-    print("  herds:", {k: "%.0f %%" % (100 * v) for k, v in afreq.items()})
-    print("  fish:", {k: "%.0f %%" % (100 * v) for k, v in qfreq.items()})
-    ref = [g for g in grid if g["market"] == "affluent" and (g["buildings_max"], g["budget"], g["hours_max"]) == REF][0]["best"]
-    print("\nAnimals added to the best set (affluent):")
+        grid = pool.map(run_cell, jobs)
+    for g in grid:
+        b = g["best"]
+        print("%-8s bld<=%d $%7s %-8s: $%8s (synergies $%7s) crew %s, %5.0f h | %s + %s + %s"
+              % (g["market"], g["buildings_max"], "{:,}".format(g["budget"]), "calendar" if g["calendar"] else "flat",
+                 "{:,.0f}".format(b["score"]), "{:,.0f}".format(b["score"] - g["score_without_synergies"]),
+                 b["crew"]["crew"] if b["crew"] else "-", b["hours"], ", ".join(b["features"]), b["animal"], b["aqua"]))
+    ref = [g for g in grid if g["market"] == "affluent" and (g["buildings_max"], g["budget"]) == REF and g["calendar"]][0]["best"]
+    print("\nBest set (affluent, 4 buildings, $600k, calendar): hours by month", [round(h) for h in ref["hours_by_month"]],
+          ref["crew"])
     mat = {}
-    for animal in ANIMALS:
-        base = [f for f in ref["features"] if f != "guard_llamas" or animal in ("sheep", "goats")]
-        r = evaluate(base, animal, "affluent", aqua=ref["aqua"])
-        mat["herd:" + animal] = r["score"] - ref["score"]
-        print("  %-8s %+9.0f" % (animal, r["score"] - ref["score"]))
-    print("Fish in the best set, against none (affluent):")
-    noaqua = evaluate(ref["features"], ref["animal"], "affluent", aqua="none+none")["score"]
-    for q in AQUA_KEYS:
-        r = evaluate(ref["features"], ref["animal"], "affluent", aqua=q)
-        alone = evaluate([], "none", "affluent", aqua=q)["score"] - evaluate([], "none", "affluent")["score"]
-        mat["fish:" + q] = {"in_best_set": r["score"] - noaqua, "alone": alone}
-        print("  %-16s in the best set %+8.0f   alone %+8.0f" % (q, r["score"] - noaqua, alone))
-    print("Crops: added to or removed from the best set (affluent):")
-    for c_ in CROPS:
-        ch = [f for f in ref["features"] if f != c_] if c_ in ref["features"] else ref["features"] + [c_]
+    print("New features, added to or removed from the best set (calendar):")
+    for f in NEW + ["tunnels", "berries", "festival"]:
+        ch = [x for x in ref["features"] if x != f] if f in ref["features"] else ref["features"] + [f]
         r = evaluate(ch, ref["animal"], "affluent", aqua=ref["aqua"])
-        alone = evaluate([c_], "none", "affluent")["score"] - evaluate([], "none", "affluent")["score"]
-        d = (ref["score"] - r["score"]) if c_ in ref["features"] else (r["score"] - ref["score"])
-        mat["crop:" + c_] = {"in_best_set": d, "alone": alone}
-        print("  %-11s worth %+8.0f in the best set   alone %+8.0f" % (c_, d, alone))
-    print("\nBest GAC-like set, synergies:")
+        d = (ref["score"] - r["score"]) if f in ref["features"] else (r["score"] - ref["score"])
+        dflat = ((evaluate(ref["features"], ref["animal"], "affluent", aqua=ref["aqua"], calendar=False)["score"]
+                  - evaluate(ch, ref["animal"], "affluent", aqua=ref["aqua"], calendar=False)["score"])
+                 * (1 if f in ref["features"] else -1))
+        mat[f] = {"calendar": d, "flat": dflat}
+        print("  %-11s worth %+8.0f with the calendar, %+8.0f with flat labour" % (f, d, dflat))
+    groups = {"Studios, camps and members": ["studio", "youth"], "Kitchen and cafe": ["kitchen"], "Gallery and shop": ["gallery"],
+              "Tunnels, crops and bees": ["tunnels", "berries", "flowers", "mushrooms", "dye_garden", "willow", "bees", "biochar"],
+              "Fish, animals and maple": ["trout", "prawns", "perch", "catfish", "tilapia", "herd", "maple", "flat"],
+              "Festivals": ["festival"]}
+    by_group = {g: [0.0] * 12 for g in groups}
+    for k, h in ref["hours_by_kind"].items():
+        g = next(g for g, ks in groups.items() if k in ks)
+        for i in range(12):
+            by_group[g][i] += h * PROFILES.get(k, PROFILES["flat"])[i]
+    print("Hours by month and group (best set):")
+    for g, v_ in by_group.items():
+        print("  %-28s %s" % (g, [round(x) for x in v_]))
+    print("\nSynergies in the best set:")
     for k, v in sorted(ref["synergies"].items(), key=lambda kv: -kv[1]):
         print("  %-55s $%8s" % (k, "{:,.0f}".format(v)))
     with open(os.path.join(ROOT, "docs", "synergy_sweep.json"), "w") as fh:
         json.dump({"features": FEATURES, "animals": ANIMALS, "aqua": AQUA, "crops": CROPS, "markets": MARKETS,
-                   "combinations_per_market": n, "grid": grid, "top50_frequency": freq, "top50_herds": afreq,
-                   "top50_fish": qfreq, "matrix": mat}, fh, indent=1, default=float)
+                   "profiles": PROFILES, "crew_h_month": CREW_H_MONTH, "seasonal_wage": SEASONAL_WAGE,
+                   "check": {"local_search": chk["score"], "exhaustive": EXACT_REF, "sets_scored": n},
+                   "grid": grid, "matrix": mat, "best_hours_by_group": by_group}, fh, indent=1, default=float)
 
 
 if __name__ == "__main__":
