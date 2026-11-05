@@ -435,6 +435,11 @@ images are in `docs/img/` (`tools/make_figs.py` redraws the SVGs).
   venue, and moves the homes outside the rings. A 150-guest dome at base
   bookings keeps about $183k a year after running costs; guest cabins add
   more.
+- **Farm-to-table co-op on a host farm:** `tools/farm_coop.py` has a farm
+  lease 10 acres to a co-op that borrows to build the site and houses its
+  staff in the cabins. Fully staffed it loses money; lean (10 staff, 4
+  market-rent cabins) with a USDA Section 514 housing loan it covers its
+  debt 1.67 times.
 - **Where it makes sense:** [docs/where-it-pays.md](docs/where-it-pays.md)
   sweeps the drivers. A homeowner needs two of three things: a fill market,
   direct-sale produce, or land-value uplift. A builder profits almost anywhere

@@ -1,0 +1,424 @@
+{
+ "assumptions": {
+  "acres": 10,
+  "ground_lease_usd_acre_year": 200,
+  "member_equity_usd": 100000,
+  "contingency_pct": 10,
+  "housing_share_of_utilities": 0.6,
+  "staff": [
+   [
+    "Farm manager and head grower",
+    1,
+    55000
+   ],
+   [
+    "Growers (tunnels, fish, goats, orchard)",
+    7,
+    40000
+   ],
+   [
+    "Chef",
+    1,
+    55000
+   ],
+   [
+    "Cooks",
+    2,
+    40000
+   ],
+   [
+    "Events and sales coordinator",
+    1,
+    50000
+   ],
+   [
+    "Site and machine maintenance (eOx, rings, buildings)",
+    1,
+    45000
+   ],
+   [
+    "Housekeeping and dish",
+    1,
+    36000
+   ]
+  ],
+  "payroll_burden_pct": 12,
+  "staff_rent_month": 700,
+  "staff_meals_per_week": 6,
+  "meal_food_usd": 5.0,
+  "dinners": 26,
+  "seats": 50,
+  "ticket_usd": 110,
+  "dinner_food_pct": 30,
+  "dinner_other_pct": 8,
+  "dinner_site_produce_share": 0.5,
+  "external_direct_usd": 200000,
+  "event_insurance_usd": 10000
+ },
+ "variants": {
+  "staffed": {
+   "label": "Fully staffed: 14 employees housed on site, 26 dinners a year"
+  },
+  "lean": {
+   "label": "Lean: 10 staff, 4 cabins leased at market rent, 40 dinners a year",
+   "staff": [
+    [
+     "Farm manager and head grower",
+     1,
+     55000
+    ],
+    [
+     "Growers (tunnels, fish, goats, orchard)",
+     5,
+     40000
+    ],
+    [
+     "Chef",
+     1,
+     55000
+    ],
+    [
+     "Cook",
+     1,
+     40000
+    ],
+    [
+     "Events and sales coordinator",
+     1,
+     50000
+    ],
+    [
+     "Site and machine maintenance (eOx, rings, buildings)",
+     1,
+     45000
+    ]
+   ],
+   "market_cabins": 4,
+   "market_rent_month": 1300,
+   "market_tunnel_lease": 3000,
+   "dinners": 40,
+   "event_day_staff": true
+  }
+ },
+ "ramp": {
+  "events": {
+   "1": 0.4,
+   "2": 0.7,
+   "3": 1.0
+  },
+  "dinners": {
+   "1": 0.6,
+   "2": 0.85,
+   "3": 1.0
+  },
+  "produce": {
+   "1": 0.7,
+   "2": 0.9,
+   "3": 1.0
+  }
+ },
+ "capex": {
+  "lines": {
+   "design, survey, test pits, permits": 18000,
+   "earthworks (pond crew)": 105797.87708317077,
+   "topsoil strip and respread": 7532.693909922908,
+   "surplus spoil: loading trucks": 13312.469512391675,
+   "gravel bought": 31500.0,
+   "sand bought": 4480.0,
+   "culverts, spillway extras": 6000,
+   "farm: fruit trees (about 70)": 4200,
+   "farm: pasture fencing": 3500,
+   "farm: fish stocking": 1500,
+   "farm: ducks and goats": 2000,
+   "farm: aquatic plants": 1000,
+   "farm: solar pump and drip lines": 2000,
+   "farm: floating spoke (stage 2)": 15000,
+   "greenhouses: 17 tunnels on the pasture berm (after EQIP)": 152974.2792028136,
+   "solar PV (27 kW)": 82267.85714285713,
+   "ground-source heat pump for hall and laundry house, 3 ton": 23400.0,
+   "Private cabin, 16 x 24 ft, SIP panels, own bathroom and kitchenette (x14), engineered": 592200,
+   "Laundry, mudroom and guest bath, 12 x 20 ft (x1), engineered": 26060,
+   "Workshop and barn, 30 x 40 ft steel arch, unheated (x1), engineered": 29500,
+   "septic, well, power service": 95000,
+   "formation, leases, zoning and engineering": 15000,
+   "event dome, 60 ft, 150 guests (also the staff dining hall)": 386092.90378792613,
+   "utility trench to homes outside the rings": 18398.106583522902,
+   "contingency (10 %)": 163671.61872226052
+  },
+  "total": 1800387.8059448656,
+  "housing": 763023.9172418752,
+  "dome": 386092.90378792613
+ },
+ "site_costs": {
+  "property tax": 15890.716731681769,
+  "insurance": 8000,
+  "grid and internet": 4000,
+  "building maintenance": 10464.9,
+  "site and farm upkeep": 10800.883163450499,
+  "ground lease to the host farm": 2000
+ },
+ "runs": {
+  "staffed": {
+   "years": {
+    "1": {
+     "variant": "staffed",
+     "label": "Fully staffed: 14 employees housed on site, 26 dinners a year",
+     "people": 14,
+     "market_cabins": 0,
+     "revenue": {
+      "produce from 17 tunnels": 278715.75804832956,
+      "events (full dome, base bookings)": 111800.0,
+      "farm-to-table dinners": 85800.0,
+      "staff rents": 117600,
+      "orchard, fish, eggs, goats": 9044.0
+     },
+     "payroll": 673120.0000000001,
+     "costs": {
+      "payroll (14 staff, with burden)": 673120.0000000001,
+      "tunnel inputs, selling, upkeep, heat": 53282.28710433756,
+      "staff meals (food)": 21840.0,
+      "dinners: food and supplies": 32604.0,
+      "events: running costs": 26088.0
+     },
+     "internal_market": 38678.0,
+     "sold_wholesale": 100037.75804832958,
+     "noi": -255131.02895114047
+    },
+    "2": {
+     "variant": "staffed",
+     "label": "Fully staffed: 14 employees housed on site, 26 dinners a year",
+     "people": 14,
+     "market_cabins": 0,
+     "revenue": {
+      "produce from 17 tunnels": 304959.04193516436,
+      "events (full dome, base bookings)": 195650.0,
+      "farm-to-table dinners": 121550.0,
+      "staff rents": 117600,
+      "orchard, fish, eggs, goats": 9044.0
+     },
+     "payroll": 673120.0000000001,
+     "costs": {
+      "payroll (14 staff, with burden)": 673120.0000000001,
+      "tunnel inputs, selling, upkeep, heat": 62007.26210433757,
+      "staff meals (food)": 21840.0,
+      "dinners: food and supplies": 46189.0,
+      "events: running costs": 38154.0
+     },
+     "internal_market": 56844.5,
+     "sold_wholesale": 68114.54193516438,
+     "noi": -143663.72006430558
+    },
+    "3": {
+     "variant": "staffed",
+     "label": "Fully staffed: 14 employees housed on site, 26 dinners a year",
+     "people": 14,
+     "market_cabins": 0,
+     "revenue": {
+      "produce from 17 tunnels": 321211.0504027466,
+      "events (full dome, base bookings)": 279500.0,
+      "farm-to-table dinners": 143000.0,
+      "staff rents": 117600,
+      "orchard, fish, eggs, goats": 9044.0
+     },
+     "payroll": 673120.0000000001,
+     "costs": {
+      "payroll (14 staff, with burden)": 673120.0000000001,
+      "tunnel inputs, selling, upkeep, heat": 67410.4871043376,
+      "staff meals (food)": 21840.0,
+      "dinners: food and supplies": 54340.0,
+      "events: running costs": 50220.0
+     },
+     "internal_market": 72866.0,
+     "sold_wholesale": 48345.05040274659,
+     "noi": -47731.93659672339
+    }
+   },
+   "finance": {
+    "conventional": {
+     "label": "All from a farm lender at 7 % over 25 years",
+     "loan": 2309400.4793847604,
+     "reserve": 678663.5139287277,
+     "tranches": [
+      {
+       "lender": "Farm lender",
+       "principal": 2309400.4793847604,
+       "rate": 0.07,
+       "years": 25,
+       "payment": 198170.84960565937
+      }
+     ],
+     "debt_service": 198170.84960565937,
+     "dscr": -0.24086255214480476,
+     "surplus": -245902.78620238276,
+     "surplus_per_staff": -17564.484728741627
+    },
+    "usda_mix": {
+     "label": "Housing on a USDA Section 514 loan (1 %, 33 years); $600k FSA direct farm ownership (6 %, 40 years); the rest from a farm lender (7 %, 25 years)",
+     "loan": 2209752.526956286,
+     "reserve": 579015.5615002533,
+     "tranches": [
+      {
+       "lender": "USDA Section 514 farm labor housing",
+       "principal": 763023.9172418752,
+       "rate": 0.01,
+       "years": 33,
+       "payment": 27260.88955602051
+      },
+      {
+       "lender": "FSA direct farm ownership",
+       "principal": 600000,
+       "rate": 0.06,
+       "years": 40,
+       "payment": 39876.9215524053
+      },
+      {
+       "lender": "Farm lender",
+       "principal": 846728.6097144107,
+       "rate": 0.07,
+       "years": 25,
+       "payment": 72658.21994512869
+      }
+     ],
+     "debt_service": 139796.0310535545,
+     "dscr": -0.34143985517326847,
+     "surplus": -187527.9676502779,
+     "surplus_per_staff": -13394.854832162706
+    }
+   }
+  },
+  "lean": {
+   "years": {
+    "1": {
+     "variant": "lean",
+     "label": "Lean: 10 staff, 4 cabins leased at market rent, 40 dinners a year",
+     "people": 10,
+     "market_cabins": 4,
+     "revenue": {
+      "produce from 13 tunnels": 235877.60237686522,
+      "events (full dome, base bookings)": 111800.0,
+      "farm-to-table dinners": 132000.0,
+      "staff rents": 84000,
+      "orchard, fish, eggs, goats": 9044.0,
+      "4 cabins leased at market rent, with a tunnel each": 71280.0,
+      "board from the market-rent residents": 15154.285714285714
+     },
+     "payroll": 498400.00000000006,
+     "costs": {
+      "payroll (10 staff, with burden)": 498400.00000000006,
+      "tunnel inputs, selling, upkeep, heat": 48446.58710433764,
+      "staff meals (food)": 21840.0,
+      "dinners: food and supplies": 50160.0,
+      "events: running costs": 32728.0
+     },
+     "internal_market": 45608.0,
+     "sold_wholesale": 50269.602376865216,
+     "noi": -43575.198908319115
+    },
+    "2": {
+     "variant": "lean",
+     "label": "Lean: 10 staff, 4 cabins leased at market rent, 40 dinners a year",
+     "people": 10,
+     "market_cabins": 4,
+     "revenue": {
+      "produce from 13 tunnels": 263423.6547339232,
+      "events (full dome, base bookings)": 195650.0,
+      "farm-to-table dinners": 187000.0,
+      "staff rents": 84000,
+      "orchard, fish, eggs, goats": 9044.0,
+      "4 cabins leased at market rent, with a tunnel each": 71280.0,
+      "board from the market-rent residents": 15154.285714285714
+     },
+     "payroll": 498400.00000000006,
+     "costs": {
+      "payroll (10 staff, with burden)": 498400.00000000006,
+      "tunnel inputs, selling, upkeep, heat": 57604.687104337674,
+      "staff meals (food)": 21840.0,
+      "dinners: food and supplies": 71060.0,
+      "events: running costs": 49774.0
+     },
+     "internal_market": 66662.0,
+     "sold_wholesale": 16761.654733923184,
+     "noi": 75716.75344873895
+    },
+    "3": {
+     "variant": "lean",
+     "label": "Lean: 10 staff, 4 cabins leased at market rent, 40 dinners a year",
+     "people": 10,
+     "market_cabins": 4,
+     "revenue": {
+      "produce from 13 tunnels": 277202.99520000006,
+      "events (full dome, base bookings)": 279500.0,
+      "farm-to-table dinners": 220000.0,
+      "staff rents": 84000,
+      "orchard, fish, eggs, goats": 9044.0,
+      "4 cabins leased at market rent, with a tunnel each": 71280.0,
+      "board from the market-rent residents": 15154.285714285714
+     },
+     "payroll": 498400.00000000006,
+     "costs": {
+      "payroll (10 staff, with burden)": 498400.00000000006,
+      "tunnel inputs, selling, upkeep, heat": 62185.83638433766,
+      "staff meals (food)": 21840.0,
+      "dinners: food and supplies": 83600.0,
+      "events: running costs": 66820.0
+     },
+     "internal_market": 84416.0,
+     "sold_wholesale": 0.0,
+     "noi": 172178.9446348158
+    }
+   },
+   "finance": {
+    "conventional": {
+     "label": "All from a farm lender at 7 % over 25 years",
+     "loan": 1878464.1758288941,
+     "reserve": 247727.21037286182,
+     "tranches": [
+      {
+       "lender": "Farm lender",
+       "principal": 1878464.1758288941,
+       "rate": 0.07,
+       "years": 25,
+       "payment": 161191.98250836873
+      }
+     ],
+     "debt_service": 161191.98250836873,
+     "dscr": 1.0681607233528296,
+     "surplus": 10986.962126447062,
+     "surplus_per_staff": 1098.6962126447063
+    },
+    "usda_mix": {
+     "label": "Housing on a USDA Section 514 loan (1 %, 33 years); $600k FSA direct farm ownership (6 %, 40 years); the rest from a farm lender (7 %, 25 years)",
+     "loan": 1778816.2234004198,
+     "reserve": 148079.25794438738,
+     "tranches": [
+      {
+       "lender": "USDA Section 514 farm labor housing",
+       "principal": 763023.9172418752,
+       "rate": 0.01,
+       "years": 33,
+       "payment": 27260.88955602051
+      },
+      {
+       "lender": "FSA direct farm ownership",
+       "principal": 600000,
+       "rate": 0.06,
+       "years": 40,
+       "payment": 39876.9215524053
+      },
+      {
+       "lender": "Farm lender",
+       "principal": 415792.3061585446,
+       "rate": 0.07,
+       "years": 25,
+       "payment": 35679.352847838054
+      }
+     ],
+     "debt_service": 102817.16395626386,
+     "dscr": 1.6746128565465674,
+     "surplus": 69361.78067855194,
+     "surplus_per_staff": 6936.178067855193
+    }
+   }
+  }
+ }
+}
