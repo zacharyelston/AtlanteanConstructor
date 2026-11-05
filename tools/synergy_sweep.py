@@ -82,7 +82,17 @@ AQUA = {   # one fish crop in the rings; the tunnels' drip lines get its nutrien
                "feed_usd_kg": 0, "seed": 4 * 1103 * 0.12 + 300, "capex": 2000, "hours": 100, "visitors": 1500,
                "activity": 1500 * 5},                       # a harvest day
 }
-NEW = ["youth", "membership", "maple", "bees"]
+NEW = ["youth", "membership", "maple", "bees", "yard"]
+# A landscape supply yard on the road edge (ASSUMED; prices from Connecticut and Hudson Valley yards, 2022-26):
+# it resells bought-in mulch and stone and sells screened loam and fieldstone from the rings' spoil.
+YARD = {"capex": 120000,                       # used compact wheel loader, used screener, bins, a small office
+        "hours": 900,
+        "mulch_yd3": 1500, "mulch_margin": 16.0,        # bought at ~$16, sold at ~$32
+        "stone_t": 300, "stone_margin": 40.0,
+        "loam_yd3": 1200, "loam_net": 28.0,             # screened from the spoil: ~$35 less screening and loading
+        "fieldstone_t": 100, "fieldstone_net": 90.0,
+        "running": 0.04 * 120000 + 6000 + 4000,          # loader and screener upkeep, fuel, insurance
+        "visitors": 3000}
 FEATURES = list(STUDIOS) + ["kitchen", "gallery"] + OTHER + list(CROPS) + NEW
 CREW_H_MONTH, SEASONAL_WAGE = 160.0, 28.0      # a resident crew member's month; seasonal help costs more
 
@@ -115,6 +125,7 @@ PROFILES = {k: _norm(v) for k, v in {
     "youth": [4, 4, 4, 4, 4, 20, 25, 25, 3, 3, 4, 0],            # summer camp
     "maple": [10, 40, 40, 0, 0, 0, 0, 0, 0, 0, 10, 0],           # tap in winter, boil in February and March
     "bees": [0, 0, 5, 15, 20, 20, 15, 15, 10, 0, 0, 0],
+    "yard": [2, 2, 6, 14, 18, 16, 6, 5, 10, 12, 6, 3],          # spring planting and fall cleanup
 }.items()}
 
 ANIMALS = {   # per head on 3 acres of pasture (berm crown and border)
@@ -386,6 +397,38 @@ def evaluate(chosen, animal, market, synergies=True, aqua="none+none", calendar=
             syn["beeswax candle and encaustic workshops"] = wax
             rev["beeswax workshops (net)"] = wax
             hl.append(("studio", 40))
+    if "yard" in has:
+        y = YARD
+        vol = min(m["fill"], 1.0)
+        sales = (y["mulch_yd3"] * y["mulch_margin"] + y["stone_t"] * y["stone_margin"]
+                 + y["loam_yd3"] * y["loam_net"] + y["fieldstone_t"] * y["fieldstone_net"]) * m["price"] * vol
+        rev["landscape yard: mulch, stone, loam and fieldstone (margin)"] = sales
+        cost["landscape yard: loader, screener, fuel, insurance"] = y["running"]
+        capex += y["capex"]
+        hl.append(("yard", y["hours"]))
+        visitors += y["visitors"]
+        if synergies:
+            if {"flock", "kitchen"} & has or animal != "none":
+                syn["farm compost sold through the yard"] = 300 * 40 * m["price"]
+                rev["compost from manure and cafe scraps"] = 300 * 40 * m["price"]
+                hl.append(("flat", 60))
+            if "willow" in has:
+                syn["willow and orchard chips become mulch"] = 100 * 30 * m["price"]
+                rev["chip mulch"] = 100 * 30 * m["price"]
+            if "biochar" in has:
+                syn["biochar-blended garden soil"] = 500 * 8 * m["price"]
+                rev["biochar soil premium"] = 500 * 8 * m["price"]
+            if {"forge", "ceramics"} & has:
+                syn["garden art sold at the yard: trellises, gates, planters"] = 6000 * m["price"]
+                rev["garden art commission at the yard"] = 6000 * m["price"]
+            if {"tunnels", "berries", "mushrooms"} & has:
+                syn["the yard supplies the farm's mulch and compost at cost"] = 1500
+                rev["mulch and compost at cost for the farm"] = 1500
+            if "tunnels" in has:
+                syn["the yard's loader hauls for the farm"] = 100 * WAGE
+                hl.append(("tunnels", -100))
+            if "kitchen" in has or "residency" in has:
+                cost["yard trucks and dust near the cafe and homes"] = 3000
     if synergies and aqua == "trout+prawns":
         syn["one dock and one crowd for two fish seasons"] = 3000
         capex -= 2000
@@ -590,7 +633,7 @@ def main():
     groups = {"Studios, camps and members": ["studio", "youth"], "Kitchen and cafe": ["kitchen"], "Gallery and shop": ["gallery"],
               "Tunnels, crops and bees": ["tunnels", "berries", "flowers", "mushrooms", "dye_garden", "willow", "bees", "biochar"],
               "Fish, animals and maple": ["trout", "prawns", "perch", "catfish", "tilapia", "herd", "maple", "flat"],
-              "Festivals": ["festival"]}
+              "Festivals": ["festival"], "Landscape yard": ["yard"]}
     by_group = {g: [0.0] * 12 for g in groups}
     for k, h in ref["hours_by_kind"].items():
         g = next(g for g, ks in groups.items() if k in ks)
