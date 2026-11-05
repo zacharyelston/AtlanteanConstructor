@@ -456,7 +456,7 @@ images are in `docs/img/` (`tools/make_figs.py` redraws the SVGs).
   carrying, spreading, grading) in place of the pond crew's dozer. It halves
   the earthworks bill; flat New England till with a 21 t excavator is done
   in about a month of excavator time.
-- **Synergy sweep:** `tools/synergy_sweep.py` picks the best mix of 24 site
+- **Synergy sweep:** `tools/synergy_sweep.py` picks the best mix of 26 site
   features (art studios, kitchen, gallery, youth camp, studio memberships,
   a landscape supply yard, tunnels, crops, maple, bees, festivals), 5 herds and fish in the deep and
   inner rings, with pairwise synergies. Labour is costed on a calendar (a
@@ -470,6 +470,11 @@ images are in `docs/img/` (`tools/make_figs.py` redraws the SVGs).
   pays through extra waterfront homes. Selling the spoil as loam and stone
   through a landscape yard makes two rings worth $220-350k, and with a busy
   yard the extra deep rings pay too.
+- **One-person farm:** `tools/solo_farm.py` digs the rings with an owned
+  backhoe in the off-seasons (2-3 seasons, about half the pond crew's cost),
+  prices an earth-berm home, and runs the synergy sweep in solo mode (one
+  owner's hours, capped help). For one person, a teaching studio with camps
+  and memberships earns more than farming.
 - **Where it makes sense:** [docs/where-it-pays.md](docs/where-it-pays.md)
   sweeps the drivers. A homeowner needs two of three things: a fill market,
   direct-sale produce, or land-value uplift. A builder profits almost anywhere
