@@ -1,0 +1,1795 @@
+{
+ "base_corporation": {
+  "total_capex": 1647937.6945362717,
+  "loan": 578286.8540474386,
+  "net_to_investors": 136281.401367725,
+  "cash_yield_pct": 13.6281401367725
+ },
+ "venues": {
+  "intimate": {
+   "label": "Intimate venue: 44 ft dome, up to 99 guests, no sprinklers",
+   "diameter_ft": 44,
+   "guests": 99,
+   "sprinklers": false,
+   "parking": 35,
+   "wc": 4,
+   "fee_factor": 0.6
+  },
+  "full": {
+   "label": "Full venue: 60 ft dome, up to 150 guests, sprinklered",
+   "diameter_ft": 60,
+   "guests": 150,
+   "sprinklers": true,
+   "parking": 50,
+   "wc": 6,
+   "fee_factor": 1.0
+  }
+ },
+ "demand": {
+  "cautious": {
+   "peak_sat": 10,
+   "fri_sun": 6,
+   "off_season": 4,
+   "small": 15
+  },
+  "base": {
+   "peak_sat": 18,
+   "fri_sun": 10,
+   "off_season": 6,
+   "small": 25
+  },
+  "strong": {
+   "peak_sat": 24,
+   "fri_sun": 16,
+   "off_season": 8,
+   "small": 40
+  }
+ },
+ "fees": {
+  "peak_sat": 9000,
+  "fri_sun": 5000,
+  "off_season": 5000,
+  "small": 1500
+ },
+ "event_costs": {
+  "coordinator_usd_year": 30000,
+  "event_staff_h": {
+   "big": 20,
+   "small": 6
+  },
+  "staff_usd_h": 20.0,
+  "utilities_per_event": {
+   "big": 150,
+   "small": 50
+  },
+  "insurance_usd_year": 10000,
+  "marketing_usd_year": 10000,
+  "software_usd_year": 1000,
+  "trash_per_event": {
+   "big": 150,
+   "small": 40
+  },
+  "card_fees_pct": 3.0,
+  "wear_pct_of_revenue": 3.0,
+  "produce_per_guest_usd": 8.0
+ },
+ "guest_cabins": {
+  "count": 4,
+  "nightly_usd": 175,
+  "occupancy": 0.45,
+  "turnover_usd": 45,
+  "nights_per_stay": 2.2,
+  "platform_fee_pct": 15
+ },
+ "ramp": {
+  "year 1": 0.4,
+  "year 2": 0.7,
+  "year 3 on": 1.0
+ },
+ "scenarios": [
+  {
+   "venue": "intimate",
+   "demand": "cautious",
+   "guest_cabins": false,
+   "dome": {
+    "ft2": 1520.53084433746,
+    "lines": [
+     {
+      "item": "Slab and ring foundation",
+      "retail": 18246.37013204952,
+      "engineered": 12164.24675469968,
+      "how": "members place forms, insulation and PEX; contractor pours"
+     },
+     {
+      "item": "Dome shell (concrete or panel)",
+      "retail": 91231.8506602476,
+      "engineered": 60821.233773498396,
+      "how": "shell crew hired direct; members do the interior foam and finish"
+     },
+     {
+      "item": "Interior finish and acoustic panels",
+      "retail": 15205.308443374599,
+      "engineered": 6082.12337734984,
+      "how": "members install; sealed concrete floor"
+     },
+     {
+      "item": "Heat pump on the ground loop, ventilation for a crowd",
+      "retail": 21287.43182072444,
+      "engineered": 13684.77759903714,
+      "how": "radiant floor plus an ERV sized for the guest count"
+     },
+     {
+      "item": "Electrical, lighting, sound",
+      "retail": 18246.37013204952,
+      "engineered": 12164.24675469968,
+      "how": "licensed electrician, members assist"
+     },
+     {
+      "item": "Glazing and wide doors to the terrace",
+      "retail": 30000,
+      "engineered": 20000,
+      "how": "stock storefront sizes"
+     },
+     {
+      "item": "Catering prep kitchen (the residents' kitchen too)",
+      "retail": 40000,
+      "engineered": 15000,
+      "how": "restaurant-surplus equipment; caterers bring the rest"
+     },
+     {
+      "item": "Fire alarm and egress lighting",
+      "retail": 12000,
+      "engineered": 9000,
+      "how": "licensed installer"
+     },
+     {
+      "item": "Terrace, paths and ramps",
+      "retail": 25000,
+      "engineered": 10000,
+      "how": "members build; gravel and pavers"
+     },
+     {
+      "item": "Causeway upgrade for a fire engine",
+      "retail": 20000,
+      "engineered": 12000,
+      "how": "wider, compacted, rated culverts"
+     },
+     {
+      "item": "Permits, engineering and a special permit",
+      "retail": 25000,
+      "engineered": 20000,
+      "how": "assembly use needs stamped drawings"
+     },
+     {
+      "item": "Tables and chairs",
+      "retail": 15000,
+      "engineered": 10000,
+      "how": "bought used from venues that are refitting"
+     },
+     {
+      "item": "Restrooms (4 WC with sinks, accessible)",
+      "retail": 36000,
+      "engineered": 20000,
+      "how": "licensed plumber; one restroom block, back to back"
+     },
+     {
+      "item": "Parking, 35 spaces",
+      "retail": 28000,
+      "engineered": 14000,
+      "how": "gravel lot outside the rings, members grade it with the eOx"
+     }
+    ],
+    "retail": 474260.7974261348,
+    "engineered": 234916.62825928474,
+    "engineered_ft2": 154.49645703283633,
+    "fits_island": true,
+    "terrace_m": 11.2944
+   },
+   "events": {
+    "events_big": 20,
+    "events_small": 15,
+    "revenue": 97500.0,
+    "costs": {
+     "coordinator (resident)": 30000,
+     "event-day staff (residents)": 9800.0,
+     "utilities": 3750,
+     "trash removal": 3600,
+     "insurance": 10000,
+     "marketing and listings": 10000,
+     "booking software": 1000,
+     "card fees": 2925.0,
+     "wear and repairs": 2925.0
+    },
+    "net": 23500.0,
+    "guests": 2283.0,
+    "produce_sold_to_caterers": 18264.0,
+    "resident_pay": 39800.0
+   },
+   "guests": null,
+   "trench_ft": 1314.1504702516359,
+   "trench_usd": 18398.106583522902,
+   "hall_replaced": 49900,
+   "extra_capex": 203414.73484280764,
+   "extra_debt_service": 17455.12360716587,
+   "extra_property_tax": 2783.20513890442,
+   "added_to_investors": 3261.6712539297087,
+   "net_to_investors": 139543.0726216547,
+   "cash_yield_pct": 13.954307262165468,
+   "total_capex": 1851352.4293790795,
+   "loan": 781701.5888902462,
+   "venue_payback_years": 7.873048011033394,
+   "resident_pay": 39800.0
+  },
+  {
+   "venue": "intimate",
+   "demand": "cautious",
+   "guest_cabins": true,
+   "dome": {
+    "ft2": 1520.53084433746,
+    "lines": [
+     {
+      "item": "Slab and ring foundation",
+      "retail": 18246.37013204952,
+      "engineered": 12164.24675469968,
+      "how": "members place forms, insulation and PEX; contractor pours"
+     },
+     {
+      "item": "Dome shell (concrete or panel)",
+      "retail": 91231.8506602476,
+      "engineered": 60821.233773498396,
+      "how": "shell crew hired direct; members do the interior foam and finish"
+     },
+     {
+      "item": "Interior finish and acoustic panels",
+      "retail": 15205.308443374599,
+      "engineered": 6082.12337734984,
+      "how": "members install; sealed concrete floor"
+     },
+     {
+      "item": "Heat pump on the ground loop, ventilation for a crowd",
+      "retail": 21287.43182072444,
+      "engineered": 13684.77759903714,
+      "how": "radiant floor plus an ERV sized for the guest count"
+     },
+     {
+      "item": "Electrical, lighting, sound",
+      "retail": 18246.37013204952,
+      "engineered": 12164.24675469968,
+      "how": "licensed electrician, members assist"
+     },
+     {
+      "item": "Glazing and wide doors to the terrace",
+      "retail": 30000,
+      "engineered": 20000,
+      "how": "stock storefront sizes"
+     },
+     {
+      "item": "Catering prep kitchen (the residents' kitchen too)",
+      "retail": 40000,
+      "engineered": 15000,
+      "how": "restaurant-surplus equipment; caterers bring the rest"
+     },
+     {
+      "item": "Fire alarm and egress lighting",
+      "retail": 12000,
+      "engineered": 9000,
+      "how": "licensed installer"
+     },
+     {
+      "item": "Terrace, paths and ramps",
+      "retail": 25000,
+      "engineered": 10000,
+      "how": "members build; gravel and pavers"
+     },
+     {
+      "item": "Causeway upgrade for a fire engine",
+      "retail": 20000,
+      "engineered": 12000,
+      "how": "wider, compacted, rated culverts"
+     },
+     {
+      "item": "Permits, engineering and a special permit",
+      "retail": 25000,
+      "engineered": 20000,
+      "how": "assembly use needs stamped drawings"
+     },
+     {
+      "item": "Tables and chairs",
+      "retail": 15000,
+      "engineered": 10000,
+      "how": "bought used from venues that are refitting"
+     },
+     {
+      "item": "Restrooms (4 WC with sinks, accessible)",
+      "retail": 36000,
+      "engineered": 20000,
+      "how": "licensed plumber; one restroom block, back to back"
+     },
+     {
+      "item": "Parking, 35 spaces",
+      "retail": 28000,
+      "engineered": 14000,
+      "how": "gravel lot outside the rings, members grade it with the eOx"
+     }
+    ],
+    "retail": 474260.7974261348,
+    "engineered": 234916.62825928474,
+    "engineered_ft2": 154.49645703283633,
+    "fits_island": true,
+    "terrace_m": 11.2944
+   },
+   "events": {
+    "events_big": 20,
+    "events_small": 15,
+    "revenue": 97500.0,
+    "costs": {
+     "coordinator (resident)": 30000,
+     "event-day staff (residents)": 9800.0,
+     "utilities": 3750,
+     "trash removal": 3600,
+     "insurance": 10000,
+     "marketing and listings": 10000,
+     "booking software": 1000,
+     "card fees": 2925.0,
+     "wear and repairs": 2925.0
+    },
+    "net": 23500.0,
+    "guests": 2283.0,
+    "produce_sold_to_caterers": 18264.0,
+    "resident_pay": 39800.0
+   },
+   "guests": {
+    "capex": 169200,
+    "nights": 657.0,
+    "revenue": 114975.0,
+    "costs": {
+     "cleaning turnovers (residents)": 13438.636363636364,
+     "platform fees": 17246.25,
+     "maintenance (1.5 %)": 2538.0,
+     "supplies and utilities": 7884.0
+    },
+    "net": 73868.11363636363,
+    "resident_pay": 13438.636363636364
+   },
+   "trench_ft": 1314.1504702516359,
+   "trench_usd": 18398.106583522902,
+   "hall_replaced": 49900,
+   "extra_capex": 372614.73484280764,
+   "extra_debt_service": 31974.26312090249,
+   "extra_property_tax": 5328.480738904419,
+   "added_to_investors": 60065.36977655672,
+   "net_to_investors": 196346.77114428172,
+   "cash_yield_pct": 19.634677114428175,
+   "total_capex": 2020552.4293790795,
+   "loan": 950901.5888902462,
+   "venue_payback_years": 7.873048011033394,
+   "resident_pay": 53238.63636363637
+  },
+  {
+   "venue": "intimate",
+   "demand": "base",
+   "guest_cabins": false,
+   "dome": {
+    "ft2": 1520.53084433746,
+    "lines": [
+     {
+      "item": "Slab and ring foundation",
+      "retail": 18246.37013204952,
+      "engineered": 12164.24675469968,
+      "how": "members place forms, insulation and PEX; contractor pours"
+     },
+     {
+      "item": "Dome shell (concrete or panel)",
+      "retail": 91231.8506602476,
+      "engineered": 60821.233773498396,
+      "how": "shell crew hired direct; members do the interior foam and finish"
+     },
+     {
+      "item": "Interior finish and acoustic panels",
+      "retail": 15205.308443374599,
+      "engineered": 6082.12337734984,
+      "how": "members install; sealed concrete floor"
+     },
+     {
+      "item": "Heat pump on the ground loop, ventilation for a crowd",
+      "retail": 21287.43182072444,
+      "engineered": 13684.77759903714,
+      "how": "radiant floor plus an ERV sized for the guest count"
+     },
+     {
+      "item": "Electrical, lighting, sound",
+      "retail": 18246.37013204952,
+      "engineered": 12164.24675469968,
+      "how": "licensed electrician, members assist"
+     },
+     {
+      "item": "Glazing and wide doors to the terrace",
+      "retail": 30000,
+      "engineered": 20000,
+      "how": "stock storefront sizes"
+     },
+     {
+      "item": "Catering prep kitchen (the residents' kitchen too)",
+      "retail": 40000,
+      "engineered": 15000,
+      "how": "restaurant-surplus equipment; caterers bring the rest"
+     },
+     {
+      "item": "Fire alarm and egress lighting",
+      "retail": 12000,
+      "engineered": 9000,
+      "how": "licensed installer"
+     },
+     {
+      "item": "Terrace, paths and ramps",
+      "retail": 25000,
+      "engineered": 10000,
+      "how": "members build; gravel and pavers"
+     },
+     {
+      "item": "Causeway upgrade for a fire engine",
+      "retail": 20000,
+      "engineered": 12000,
+      "how": "wider, compacted, rated culverts"
+     },
+     {
+      "item": "Permits, engineering and a special permit",
+      "retail": 25000,
+      "engineered": 20000,
+      "how": "assembly use needs stamped drawings"
+     },
+     {
+      "item": "Tables and chairs",
+      "retail": 15000,
+      "engineered": 10000,
+      "how": "bought used from venues that are refitting"
+     },
+     {
+      "item": "Restrooms (4 WC with sinks, accessible)",
+      "retail": 36000,
+      "engineered": 20000,
+      "how": "licensed plumber; one restroom block, back to back"
+     },
+     {
+      "item": "Parking, 35 spaces",
+      "retail": 28000,
+      "engineered": 14000,
+      "how": "gravel lot outside the rings, members grade it with the eOx"
+     }
+    ],
+    "retail": 474260.7974261348,
+    "engineered": 234916.62825928474,
+    "engineered_ft2": 154.49645703283633,
+    "fits_island": true,
+    "terrace_m": 11.2944
+   },
+   "events": {
+    "events_big": 34,
+    "events_small": 25,
+    "revenue": 167700.0,
+    "costs": {
+     "coordinator (resident)": 30000,
+     "event-day staff (residents)": 16600.0,
+     "utilities": 6350,
+     "trash removal": 6100,
+     "insurance": 10000,
+     "marketing and listings": 10000,
+     "booking software": 1000,
+     "card fees": 5031.0,
+     "wear and repairs": 5031.0
+    },
+    "net": 77588.0,
+    "guests": 3861.1,
+    "produce_sold_to_caterers": 30888.8,
+    "resident_pay": 46600.0
+   },
+   "guests": null,
+   "trench_ft": 1314.1504702516359,
+   "trench_usd": 18398.106583522902,
+   "hall_replaced": 49900,
+   "extra_capex": 203414.73484280764,
+   "extra_debt_service": 17455.12360716587,
+   "extra_property_tax": 2783.20513890442,
+   "added_to_investors": 57349.67125392971,
+   "net_to_investors": 193631.0726216547,
+   "cash_yield_pct": 19.363107262165467,
+   "total_capex": 1851352.4293790795,
+   "loan": 781701.5888902462,
+   "venue_payback_years": 2.3846036533907915,
+   "resident_pay": 46600.0
+  },
+  {
+   "venue": "intimate",
+   "demand": "base",
+   "guest_cabins": true,
+   "dome": {
+    "ft2": 1520.53084433746,
+    "lines": [
+     {
+      "item": "Slab and ring foundation",
+      "retail": 18246.37013204952,
+      "engineered": 12164.24675469968,
+      "how": "members place forms, insulation and PEX; contractor pours"
+     },
+     {
+      "item": "Dome shell (concrete or panel)",
+      "retail": 91231.8506602476,
+      "engineered": 60821.233773498396,
+      "how": "shell crew hired direct; members do the interior foam and finish"
+     },
+     {
+      "item": "Interior finish and acoustic panels",
+      "retail": 15205.308443374599,
+      "engineered": 6082.12337734984,
+      "how": "members install; sealed concrete floor"
+     },
+     {
+      "item": "Heat pump on the ground loop, ventilation for a crowd",
+      "retail": 21287.43182072444,
+      "engineered": 13684.77759903714,
+      "how": "radiant floor plus an ERV sized for the guest count"
+     },
+     {
+      "item": "Electrical, lighting, sound",
+      "retail": 18246.37013204952,
+      "engineered": 12164.24675469968,
+      "how": "licensed electrician, members assist"
+     },
+     {
+      "item": "Glazing and wide doors to the terrace",
+      "retail": 30000,
+      "engineered": 20000,
+      "how": "stock storefront sizes"
+     },
+     {
+      "item": "Catering prep kitchen (the residents' kitchen too)",
+      "retail": 40000,
+      "engineered": 15000,
+      "how": "restaurant-surplus equipment; caterers bring the rest"
+     },
+     {
+      "item": "Fire alarm and egress lighting",
+      "retail": 12000,
+      "engineered": 9000,
+      "how": "licensed installer"
+     },
+     {
+      "item": "Terrace, paths and ramps",
+      "retail": 25000,
+      "engineered": 10000,
+      "how": "members build; gravel and pavers"
+     },
+     {
+      "item": "Causeway upgrade for a fire engine",
+      "retail": 20000,
+      "engineered": 12000,
+      "how": "wider, compacted, rated culverts"
+     },
+     {
+      "item": "Permits, engineering and a special permit",
+      "retail": 25000,
+      "engineered": 20000,
+      "how": "assembly use needs stamped drawings"
+     },
+     {
+      "item": "Tables and chairs",
+      "retail": 15000,
+      "engineered": 10000,
+      "how": "bought used from venues that are refitting"
+     },
+     {
+      "item": "Restrooms (4 WC with sinks, accessible)",
+      "retail": 36000,
+      "engineered": 20000,
+      "how": "licensed plumber; one restroom block, back to back"
+     },
+     {
+      "item": "Parking, 35 spaces",
+      "retail": 28000,
+      "engineered": 14000,
+      "how": "gravel lot outside the rings, members grade it with the eOx"
+     }
+    ],
+    "retail": 474260.7974261348,
+    "engineered": 234916.62825928474,
+    "engineered_ft2": 154.49645703283633,
+    "fits_island": true,
+    "terrace_m": 11.2944
+   },
+   "events": {
+    "events_big": 34,
+    "events_small": 25,
+    "revenue": 167700.0,
+    "costs": {
+     "coordinator (resident)": 30000,
+     "event-day staff (residents)": 16600.0,
+     "utilities": 6350,
+     "trash removal": 6100,
+     "insurance": 10000,
+     "marketing and listings": 10000,
+     "booking software": 1000,
+     "card fees": 5031.0,
+     "wear and repairs": 5031.0
+    },
+    "net": 77588.0,
+    "guests": 3861.1,
+    "produce_sold_to_caterers": 30888.8,
+    "resident_pay": 46600.0
+   },
+   "guests": {
+    "capex": 169200,
+    "nights": 657.0,
+    "revenue": 114975.0,
+    "costs": {
+     "cleaning turnovers (residents)": 13438.636363636364,
+     "platform fees": 17246.25,
+     "maintenance (1.5 %)": 2538.0,
+     "supplies and utilities": 7884.0
+    },
+    "net": 73868.11363636363,
+    "resident_pay": 13438.636363636364
+   },
+   "trench_ft": 1314.1504702516359,
+   "trench_usd": 18398.106583522902,
+   "hall_replaced": 49900,
+   "extra_capex": 372614.73484280764,
+   "extra_debt_service": 31974.26312090249,
+   "extra_property_tax": 5328.480738904419,
+   "added_to_investors": 114153.36977655673,
+   "net_to_investors": 250434.77114428172,
+   "cash_yield_pct": 25.043477114428175,
+   "total_capex": 2020552.4293790795,
+   "loan": 950901.5888902462,
+   "venue_payback_years": 2.3846036533907915,
+   "resident_pay": 60038.63636363637
+  },
+  {
+   "venue": "intimate",
+   "demand": "strong",
+   "guest_cabins": false,
+   "dome": {
+    "ft2": 1520.53084433746,
+    "lines": [
+     {
+      "item": "Slab and ring foundation",
+      "retail": 18246.37013204952,
+      "engineered": 12164.24675469968,
+      "how": "members place forms, insulation and PEX; contractor pours"
+     },
+     {
+      "item": "Dome shell (concrete or panel)",
+      "retail": 91231.8506602476,
+      "engineered": 60821.233773498396,
+      "how": "shell crew hired direct; members do the interior foam and finish"
+     },
+     {
+      "item": "Interior finish and acoustic panels",
+      "retail": 15205.308443374599,
+      "engineered": 6082.12337734984,
+      "how": "members install; sealed concrete floor"
+     },
+     {
+      "item": "Heat pump on the ground loop, ventilation for a crowd",
+      "retail": 21287.43182072444,
+      "engineered": 13684.77759903714,
+      "how": "radiant floor plus an ERV sized for the guest count"
+     },
+     {
+      "item": "Electrical, lighting, sound",
+      "retail": 18246.37013204952,
+      "engineered": 12164.24675469968,
+      "how": "licensed electrician, members assist"
+     },
+     {
+      "item": "Glazing and wide doors to the terrace",
+      "retail": 30000,
+      "engineered": 20000,
+      "how": "stock storefront sizes"
+     },
+     {
+      "item": "Catering prep kitchen (the residents' kitchen too)",
+      "retail": 40000,
+      "engineered": 15000,
+      "how": "restaurant-surplus equipment; caterers bring the rest"
+     },
+     {
+      "item": "Fire alarm and egress lighting",
+      "retail": 12000,
+      "engineered": 9000,
+      "how": "licensed installer"
+     },
+     {
+      "item": "Terrace, paths and ramps",
+      "retail": 25000,
+      "engineered": 10000,
+      "how": "members build; gravel and pavers"
+     },
+     {
+      "item": "Causeway upgrade for a fire engine",
+      "retail": 20000,
+      "engineered": 12000,
+      "how": "wider, compacted, rated culverts"
+     },
+     {
+      "item": "Permits, engineering and a special permit",
+      "retail": 25000,
+      "engineered": 20000,
+      "how": "assembly use needs stamped drawings"
+     },
+     {
+      "item": "Tables and chairs",
+      "retail": 15000,
+      "engineered": 10000,
+      "how": "bought used from venues that are refitting"
+     },
+     {
+      "item": "Restrooms (4 WC with sinks, accessible)",
+      "retail": 36000,
+      "engineered": 20000,
+      "how": "licensed plumber; one restroom block, back to back"
+     },
+     {
+      "item": "Parking, 35 spaces",
+      "retail": 28000,
+      "engineered": 14000,
+      "how": "gravel lot outside the rings, members grade it with the eOx"
+     }
+    ],
+    "retail": 474260.7974261348,
+    "engineered": 234916.62825928474,
+    "engineered_ft2": 154.49645703283633,
+    "fits_island": true,
+    "terrace_m": 11.2944
+   },
+   "events": {
+    "events_big": 48,
+    "events_small": 40,
+    "revenue": 237600.0,
+    "costs": {
+     "coordinator (resident)": 30000,
+     "event-day staff (residents)": 24000.0,
+     "utilities": 9200,
+     "trash removal": 8800,
+     "insurance": 10000,
+     "marketing and listings": 10000,
+     "booking software": 1000,
+     "card fees": 7128.0,
+     "wear and repairs": 7128.0
+    },
+    "net": 130344.0,
+    "guests": 5639.2,
+    "produce_sold_to_caterers": 45113.6,
+    "resident_pay": 54000.0
+   },
+   "guests": null,
+   "trench_ft": 1314.1504702516359,
+   "trench_usd": 18398.106583522902,
+   "hall_replaced": 49900,
+   "extra_capex": 203414.73484280764,
+   "extra_debt_service": 17455.12360716587,
+   "extra_property_tax": 2783.20513890442,
+   "added_to_investors": 110105.6712539297,
+   "net_to_investors": 246387.0726216547,
+   "cash_yield_pct": 24.638707262165468,
+   "total_capex": 1851352.4293790795,
+   "loan": 781701.5888902462,
+   "venue_payback_years": 1.4194487529865951,
+   "resident_pay": 54000.0
+  },
+  {
+   "venue": "intimate",
+   "demand": "strong",
+   "guest_cabins": true,
+   "dome": {
+    "ft2": 1520.53084433746,
+    "lines": [
+     {
+      "item": "Slab and ring foundation",
+      "retail": 18246.37013204952,
+      "engineered": 12164.24675469968,
+      "how": "members place forms, insulation and PEX; contractor pours"
+     },
+     {
+      "item": "Dome shell (concrete or panel)",
+      "retail": 91231.8506602476,
+      "engineered": 60821.233773498396,
+      "how": "shell crew hired direct; members do the interior foam and finish"
+     },
+     {
+      "item": "Interior finish and acoustic panels",
+      "retail": 15205.308443374599,
+      "engineered": 6082.12337734984,
+      "how": "members install; sealed concrete floor"
+     },
+     {
+      "item": "Heat pump on the ground loop, ventilation for a crowd",
+      "retail": 21287.43182072444,
+      "engineered": 13684.77759903714,
+      "how": "radiant floor plus an ERV sized for the guest count"
+     },
+     {
+      "item": "Electrical, lighting, sound",
+      "retail": 18246.37013204952,
+      "engineered": 12164.24675469968,
+      "how": "licensed electrician, members assist"
+     },
+     {
+      "item": "Glazing and wide doors to the terrace",
+      "retail": 30000,
+      "engineered": 20000,
+      "how": "stock storefront sizes"
+     },
+     {
+      "item": "Catering prep kitchen (the residents' kitchen too)",
+      "retail": 40000,
+      "engineered": 15000,
+      "how": "restaurant-surplus equipment; caterers bring the rest"
+     },
+     {
+      "item": "Fire alarm and egress lighting",
+      "retail": 12000,
+      "engineered": 9000,
+      "how": "licensed installer"
+     },
+     {
+      "item": "Terrace, paths and ramps",
+      "retail": 25000,
+      "engineered": 10000,
+      "how": "members build; gravel and pavers"
+     },
+     {
+      "item": "Causeway upgrade for a fire engine",
+      "retail": 20000,
+      "engineered": 12000,
+      "how": "wider, compacted, rated culverts"
+     },
+     {
+      "item": "Permits, engineering and a special permit",
+      "retail": 25000,
+      "engineered": 20000,
+      "how": "assembly use needs stamped drawings"
+     },
+     {
+      "item": "Tables and chairs",
+      "retail": 15000,
+      "engineered": 10000,
+      "how": "bought used from venues that are refitting"
+     },
+     {
+      "item": "Restrooms (4 WC with sinks, accessible)",
+      "retail": 36000,
+      "engineered": 20000,
+      "how": "licensed plumber; one restroom block, back to back"
+     },
+     {
+      "item": "Parking, 35 spaces",
+      "retail": 28000,
+      "engineered": 14000,
+      "how": "gravel lot outside the rings, members grade it with the eOx"
+     }
+    ],
+    "retail": 474260.7974261348,
+    "engineered": 234916.62825928474,
+    "engineered_ft2": 154.49645703283633,
+    "fits_island": true,
+    "terrace_m": 11.2944
+   },
+   "events": {
+    "events_big": 48,
+    "events_small": 40,
+    "revenue": 237600.0,
+    "costs": {
+     "coordinator (resident)": 30000,
+     "event-day staff (residents)": 24000.0,
+     "utilities": 9200,
+     "trash removal": 8800,
+     "insurance": 10000,
+     "marketing and listings": 10000,
+     "booking software": 1000,
+     "card fees": 7128.0,
+     "wear and repairs": 7128.0
+    },
+    "net": 130344.0,
+    "guests": 5639.2,
+    "produce_sold_to_caterers": 45113.6,
+    "resident_pay": 54000.0
+   },
+   "guests": {
+    "capex": 169200,
+    "nights": 657.0,
+    "revenue": 114975.0,
+    "costs": {
+     "cleaning turnovers (residents)": 13438.636363636364,
+     "platform fees": 17246.25,
+     "maintenance (1.5 %)": 2538.0,
+     "supplies and utilities": 7884.0
+    },
+    "net": 73868.11363636363,
+    "resident_pay": 13438.636363636364
+   },
+   "trench_ft": 1314.1504702516359,
+   "trench_usd": 18398.106583522902,
+   "hall_replaced": 49900,
+   "extra_capex": 372614.73484280764,
+   "extra_debt_service": 31974.26312090249,
+   "extra_property_tax": 5328.480738904419,
+   "added_to_investors": 166909.36977655673,
+   "net_to_investors": 303190.7711442817,
+   "cash_yield_pct": 30.319077114428175,
+   "total_capex": 2020552.4293790795,
+   "loan": 950901.5888902462,
+   "venue_payback_years": 1.4194487529865951,
+   "resident_pay": 67438.63636363637
+  },
+  {
+   "venue": "full",
+   "demand": "cautious",
+   "guest_cabins": false,
+   "dome": {
+    "ft2": 2827.4333882308138,
+    "lines": [
+     {
+      "item": "Slab and ring foundation",
+      "retail": 33929.20065876977,
+      "engineered": 22619.46710584651,
+      "how": "members place forms, insulation and PEX; contractor pours"
+     },
+     {
+      "item": "Dome shell (concrete or panel)",
+      "retail": 169646.00329384883,
+      "engineered": 113097.33552923254,
+      "how": "shell crew hired direct; members do the interior foam and finish"
+     },
+     {
+      "item": "Interior finish and acoustic panels",
+      "retail": 28274.333882308136,
+      "engineered": 11309.733552923255,
+      "how": "members install; sealed concrete floor"
+     },
+     {
+      "item": "Heat pump on the ground loop, ventilation for a crowd",
+      "retail": 39584.067435231394,
+      "engineered": 25446.900494077323,
+      "how": "radiant floor plus an ERV sized for the guest count"
+     },
+     {
+      "item": "Electrical, lighting, sound",
+      "retail": 33929.20065876977,
+      "engineered": 22619.46710584651,
+      "how": "licensed electrician, members assist"
+     },
+     {
+      "item": "Glazing and wide doors to the terrace",
+      "retail": 30000,
+      "engineered": 20000,
+      "how": "stock storefront sizes"
+     },
+     {
+      "item": "Catering prep kitchen (the residents' kitchen too)",
+      "retail": 40000,
+      "engineered": 15000,
+      "how": "restaurant-surplus equipment; caterers bring the rest"
+     },
+     {
+      "item": "Fire alarm and egress lighting",
+      "retail": 12000,
+      "engineered": 9000,
+      "how": "licensed installer"
+     },
+     {
+      "item": "Terrace, paths and ramps",
+      "retail": 25000,
+      "engineered": 10000,
+      "how": "members build; gravel and pavers"
+     },
+     {
+      "item": "Causeway upgrade for a fire engine",
+      "retail": 20000,
+      "engineered": 12000,
+      "how": "wider, compacted, rated culverts"
+     },
+     {
+      "item": "Permits, engineering and a special permit",
+      "retail": 25000,
+      "engineered": 20000,
+      "how": "assembly use needs stamped drawings"
+     },
+     {
+      "item": "Tables and chairs",
+      "retail": 15000,
+      "engineered": 10000,
+      "how": "bought used from venues that are refitting"
+     },
+     {
+      "item": "Restrooms (6 WC with sinks, accessible)",
+      "retail": 54000,
+      "engineered": 30000,
+      "how": "licensed plumber; one restroom block, back to back"
+     },
+     {
+      "item": "Parking, 50 spaces",
+      "retail": 40000,
+      "engineered": 20000,
+      "how": "gravel lot outside the rings, members grade it with the eOx"
+     },
+     {
+      "item": "Sprinklers, tank and pump",
+      "retail": 60000,
+      "engineered": 45000,
+      "how": "licensed; 30,000 gal tank and pump, there is no hydrant"
+     }
+    ],
+    "retail": 751635.3671147134,
+    "engineered": 386092.90378792613,
+    "engineered_ft2": 136.55243140122667,
+    "fits_island": true,
+    "terrace_m": 8.856
+   },
+   "events": {
+    "events_big": 20,
+    "events_small": 15,
+    "revenue": 162500.0,
+    "costs": {
+     "coordinator (resident)": 30000,
+     "event-day staff (residents)": 9800.0,
+     "utilities": 3750,
+     "trash removal": 3600,
+     "insurance": 10000,
+     "marketing and listings": 10000,
+     "booking software": 1000,
+     "card fees": 4875.0,
+     "wear and repairs": 4875.0
+    },
+    "net": 84600.0,
+    "guests": 3150.0,
+    "produce_sold_to_caterers": 25200.0,
+    "resident_pay": 39800.0
+   },
+   "guests": null,
+   "trench_ft": 1314.1504702516359,
+   "trench_usd": 18398.106583522902,
+   "hall_replaced": 49900,
+   "extra_capex": 354591.01037144905,
+   "extra_debt_service": 30427.63800177244,
+   "extra_property_tax": 5057.349851681772,
+   "added_to_investors": 49115.012146545785,
+   "net_to_investors": 185396.41351427077,
+   "cash_yield_pct": 18.53964135142708,
+   "total_capex": 2002528.704907721,
+   "loan": 932877.8644188876,
+   "venue_payback_years": 3.973911392292271,
+   "resident_pay": 39800.0
+  },
+  {
+   "venue": "full",
+   "demand": "cautious",
+   "guest_cabins": true,
+   "dome": {
+    "ft2": 2827.4333882308138,
+    "lines": [
+     {
+      "item": "Slab and ring foundation",
+      "retail": 33929.20065876977,
+      "engineered": 22619.46710584651,
+      "how": "members place forms, insulation and PEX; contractor pours"
+     },
+     {
+      "item": "Dome shell (concrete or panel)",
+      "retail": 169646.00329384883,
+      "engineered": 113097.33552923254,
+      "how": "shell crew hired direct; members do the interior foam and finish"
+     },
+     {
+      "item": "Interior finish and acoustic panels",
+      "retail": 28274.333882308136,
+      "engineered": 11309.733552923255,
+      "how": "members install; sealed concrete floor"
+     },
+     {
+      "item": "Heat pump on the ground loop, ventilation for a crowd",
+      "retail": 39584.067435231394,
+      "engineered": 25446.900494077323,
+      "how": "radiant floor plus an ERV sized for the guest count"
+     },
+     {
+      "item": "Electrical, lighting, sound",
+      "retail": 33929.20065876977,
+      "engineered": 22619.46710584651,
+      "how": "licensed electrician, members assist"
+     },
+     {
+      "item": "Glazing and wide doors to the terrace",
+      "retail": 30000,
+      "engineered": 20000,
+      "how": "stock storefront sizes"
+     },
+     {
+      "item": "Catering prep kitchen (the residents' kitchen too)",
+      "retail": 40000,
+      "engineered": 15000,
+      "how": "restaurant-surplus equipment; caterers bring the rest"
+     },
+     {
+      "item": "Fire alarm and egress lighting",
+      "retail": 12000,
+      "engineered": 9000,
+      "how": "licensed installer"
+     },
+     {
+      "item": "Terrace, paths and ramps",
+      "retail": 25000,
+      "engineered": 10000,
+      "how": "members build; gravel and pavers"
+     },
+     {
+      "item": "Causeway upgrade for a fire engine",
+      "retail": 20000,
+      "engineered": 12000,
+      "how": "wider, compacted, rated culverts"
+     },
+     {
+      "item": "Permits, engineering and a special permit",
+      "retail": 25000,
+      "engineered": 20000,
+      "how": "assembly use needs stamped drawings"
+     },
+     {
+      "item": "Tables and chairs",
+      "retail": 15000,
+      "engineered": 10000,
+      "how": "bought used from venues that are refitting"
+     },
+     {
+      "item": "Restrooms (6 WC with sinks, accessible)",
+      "retail": 54000,
+      "engineered": 30000,
+      "how": "licensed plumber; one restroom block, back to back"
+     },
+     {
+      "item": "Parking, 50 spaces",
+      "retail": 40000,
+      "engineered": 20000,
+      "how": "gravel lot outside the rings, members grade it with the eOx"
+     },
+     {
+      "item": "Sprinklers, tank and pump",
+      "retail": 60000,
+      "engineered": 45000,
+      "how": "licensed; 30,000 gal tank and pump, there is no hydrant"
+     }
+    ],
+    "retail": 751635.3671147134,
+    "engineered": 386092.90378792613,
+    "engineered_ft2": 136.55243140122667,
+    "fits_island": true,
+    "terrace_m": 8.856
+   },
+   "events": {
+    "events_big": 20,
+    "events_small": 15,
+    "revenue": 162500.0,
+    "costs": {
+     "coordinator (resident)": 30000,
+     "event-day staff (residents)": 9800.0,
+     "utilities": 3750,
+     "trash removal": 3600,
+     "insurance": 10000,
+     "marketing and listings": 10000,
+     "booking software": 1000,
+     "card fees": 4875.0,
+     "wear and repairs": 4875.0
+    },
+    "net": 84600.0,
+    "guests": 3150.0,
+    "produce_sold_to_caterers": 25200.0,
+    "resident_pay": 39800.0
+   },
+   "guests": {
+    "capex": 169200,
+    "nights": 657.0,
+    "revenue": 114975.0,
+    "costs": {
+     "cleaning turnovers (residents)": 13438.636363636364,
+     "platform fees": 17246.25,
+     "maintenance (1.5 %)": 2538.0,
+     "supplies and utilities": 7884.0
+    },
+    "net": 73868.11363636363,
+    "resident_pay": 13438.636363636364
+   },
+   "trench_ft": 1314.1504702516359,
+   "trench_usd": 18398.106583522902,
+   "hall_replaced": 49900,
+   "extra_capex": 523791.01037144905,
+   "extra_debt_service": 44946.77751550906,
+   "extra_property_tax": 7602.625451681773,
+   "added_to_investors": 105918.71066917283,
+   "net_to_investors": 242200.1120368978,
+   "cash_yield_pct": 24.22001120368978,
+   "total_capex": 2171728.704907721,
+   "loan": 1102077.8644188875,
+   "venue_payback_years": 3.973911392292271,
+   "resident_pay": 53238.63636363637
+  },
+  {
+   "venue": "full",
+   "demand": "base",
+   "guest_cabins": false,
+   "dome": {
+    "ft2": 2827.4333882308138,
+    "lines": [
+     {
+      "item": "Slab and ring foundation",
+      "retail": 33929.20065876977,
+      "engineered": 22619.46710584651,
+      "how": "members place forms, insulation and PEX; contractor pours"
+     },
+     {
+      "item": "Dome shell (concrete or panel)",
+      "retail": 169646.00329384883,
+      "engineered": 113097.33552923254,
+      "how": "shell crew hired direct; members do the interior foam and finish"
+     },
+     {
+      "item": "Interior finish and acoustic panels",
+      "retail": 28274.333882308136,
+      "engineered": 11309.733552923255,
+      "how": "members install; sealed concrete floor"
+     },
+     {
+      "item": "Heat pump on the ground loop, ventilation for a crowd",
+      "retail": 39584.067435231394,
+      "engineered": 25446.900494077323,
+      "how": "radiant floor plus an ERV sized for the guest count"
+     },
+     {
+      "item": "Electrical, lighting, sound",
+      "retail": 33929.20065876977,
+      "engineered": 22619.46710584651,
+      "how": "licensed electrician, members assist"
+     },
+     {
+      "item": "Glazing and wide doors to the terrace",
+      "retail": 30000,
+      "engineered": 20000,
+      "how": "stock storefront sizes"
+     },
+     {
+      "item": "Catering prep kitchen (the residents' kitchen too)",
+      "retail": 40000,
+      "engineered": 15000,
+      "how": "restaurant-surplus equipment; caterers bring the rest"
+     },
+     {
+      "item": "Fire alarm and egress lighting",
+      "retail": 12000,
+      "engineered": 9000,
+      "how": "licensed installer"
+     },
+     {
+      "item": "Terrace, paths and ramps",
+      "retail": 25000,
+      "engineered": 10000,
+      "how": "members build; gravel and pavers"
+     },
+     {
+      "item": "Causeway upgrade for a fire engine",
+      "retail": 20000,
+      "engineered": 12000,
+      "how": "wider, compacted, rated culverts"
+     },
+     {
+      "item": "Permits, engineering and a special permit",
+      "retail": 25000,
+      "engineered": 20000,
+      "how": "assembly use needs stamped drawings"
+     },
+     {
+      "item": "Tables and chairs",
+      "retail": 15000,
+      "engineered": 10000,
+      "how": "bought used from venues that are refitting"
+     },
+     {
+      "item": "Restrooms (6 WC with sinks, accessible)",
+      "retail": 54000,
+      "engineered": 30000,
+      "how": "licensed plumber; one restroom block, back to back"
+     },
+     {
+      "item": "Parking, 50 spaces",
+      "retail": 40000,
+      "engineered": 20000,
+      "how": "gravel lot outside the rings, members grade it with the eOx"
+     },
+     {
+      "item": "Sprinklers, tank and pump",
+      "retail": 60000,
+      "engineered": 45000,
+      "how": "licensed; 30,000 gal tank and pump, there is no hydrant"
+     }
+    ],
+    "retail": 751635.3671147134,
+    "engineered": 386092.90378792613,
+    "engineered_ft2": 136.55243140122667,
+    "fits_island": true,
+    "terrace_m": 8.856
+   },
+   "events": {
+    "events_big": 34,
+    "events_small": 25,
+    "revenue": 279500.0,
+    "costs": {
+     "coordinator (resident)": 30000,
+     "event-day staff (residents)": 16600.0,
+     "utilities": 6350,
+     "trash removal": 6100,
+     "insurance": 10000,
+     "marketing and listings": 10000,
+     "booking software": 1000,
+     "card fees": 8385.0,
+     "wear and repairs": 8385.0
+    },
+    "net": 182680.0,
+    "guests": 5335.0,
+    "produce_sold_to_caterers": 42680.0,
+    "resident_pay": 46600.0
+   },
+   "guests": null,
+   "trench_ft": 1314.1504702516359,
+   "trench_usd": 18398.106583522902,
+   "hall_replaced": 49900,
+   "extra_capex": 354591.01037144905,
+   "extra_debt_service": 30427.63800177244,
+   "extra_property_tax": 5057.349851681772,
+   "added_to_investors": 147195.0121465458,
+   "net_to_investors": 283476.4135142708,
+   "cash_yield_pct": 28.34764135142708,
+   "total_capex": 2002528.704907721,
+   "loan": 932877.8644188876,
+   "venue_payback_years": 1.8403377698047194,
+   "resident_pay": 46600.0
+  },
+  {
+   "venue": "full",
+   "demand": "base",
+   "guest_cabins": true,
+   "dome": {
+    "ft2": 2827.4333882308138,
+    "lines": [
+     {
+      "item": "Slab and ring foundation",
+      "retail": 33929.20065876977,
+      "engineered": 22619.46710584651,
+      "how": "members place forms, insulation and PEX; contractor pours"
+     },
+     {
+      "item": "Dome shell (concrete or panel)",
+      "retail": 169646.00329384883,
+      "engineered": 113097.33552923254,
+      "how": "shell crew hired direct; members do the interior foam and finish"
+     },
+     {
+      "item": "Interior finish and acoustic panels",
+      "retail": 28274.333882308136,
+      "engineered": 11309.733552923255,
+      "how": "members install; sealed concrete floor"
+     },
+     {
+      "item": "Heat pump on the ground loop, ventilation for a crowd",
+      "retail": 39584.067435231394,
+      "engineered": 25446.900494077323,
+      "how": "radiant floor plus an ERV sized for the guest count"
+     },
+     {
+      "item": "Electrical, lighting, sound",
+      "retail": 33929.20065876977,
+      "engineered": 22619.46710584651,
+      "how": "licensed electrician, members assist"
+     },
+     {
+      "item": "Glazing and wide doors to the terrace",
+      "retail": 30000,
+      "engineered": 20000,
+      "how": "stock storefront sizes"
+     },
+     {
+      "item": "Catering prep kitchen (the residents' kitchen too)",
+      "retail": 40000,
+      "engineered": 15000,
+      "how": "restaurant-surplus equipment; caterers bring the rest"
+     },
+     {
+      "item": "Fire alarm and egress lighting",
+      "retail": 12000,
+      "engineered": 9000,
+      "how": "licensed installer"
+     },
+     {
+      "item": "Terrace, paths and ramps",
+      "retail": 25000,
+      "engineered": 10000,
+      "how": "members build; gravel and pavers"
+     },
+     {
+      "item": "Causeway upgrade for a fire engine",
+      "retail": 20000,
+      "engineered": 12000,
+      "how": "wider, compacted, rated culverts"
+     },
+     {
+      "item": "Permits, engineering and a special permit",
+      "retail": 25000,
+      "engineered": 20000,
+      "how": "assembly use needs stamped drawings"
+     },
+     {
+      "item": "Tables and chairs",
+      "retail": 15000,
+      "engineered": 10000,
+      "how": "bought used from venues that are refitting"
+     },
+     {
+      "item": "Restrooms (6 WC with sinks, accessible)",
+      "retail": 54000,
+      "engineered": 30000,
+      "how": "licensed plumber; one restroom block, back to back"
+     },
+     {
+      "item": "Parking, 50 spaces",
+      "retail": 40000,
+      "engineered": 20000,
+      "how": "gravel lot outside the rings, members grade it with the eOx"
+     },
+     {
+      "item": "Sprinklers, tank and pump",
+      "retail": 60000,
+      "engineered": 45000,
+      "how": "licensed; 30,000 gal tank and pump, there is no hydrant"
+     }
+    ],
+    "retail": 751635.3671147134,
+    "engineered": 386092.90378792613,
+    "engineered_ft2": 136.55243140122667,
+    "fits_island": true,
+    "terrace_m": 8.856
+   },
+   "events": {
+    "events_big": 34,
+    "events_small": 25,
+    "revenue": 279500.0,
+    "costs": {
+     "coordinator (resident)": 30000,
+     "event-day staff (residents)": 16600.0,
+     "utilities": 6350,
+     "trash removal": 6100,
+     "insurance": 10000,
+     "marketing and listings": 10000,
+     "booking software": 1000,
+     "card fees": 8385.0,
+     "wear and repairs": 8385.0
+    },
+    "net": 182680.0,
+    "guests": 5335.0,
+    "produce_sold_to_caterers": 42680.0,
+    "resident_pay": 46600.0
+   },
+   "guests": {
+    "capex": 169200,
+    "nights": 657.0,
+    "revenue": 114975.0,
+    "costs": {
+     "cleaning turnovers (residents)": 13438.636363636364,
+     "platform fees": 17246.25,
+     "maintenance (1.5 %)": 2538.0,
+     "supplies and utilities": 7884.0
+    },
+    "net": 73868.11363636363,
+    "resident_pay": 13438.636363636364
+   },
+   "trench_ft": 1314.1504702516359,
+   "trench_usd": 18398.106583522902,
+   "hall_replaced": 49900,
+   "extra_capex": 523791.01037144905,
+   "extra_debt_service": 44946.77751550906,
+   "extra_property_tax": 7602.625451681773,
+   "added_to_investors": 203998.7106691728,
+   "net_to_investors": 340280.1120368978,
+   "cash_yield_pct": 34.028011203689786,
+   "total_capex": 2171728.704907721,
+   "loan": 1102077.8644188875,
+   "venue_payback_years": 1.8403377698047194,
+   "resident_pay": 60038.63636363637
+  },
+  {
+   "venue": "full",
+   "demand": "strong",
+   "guest_cabins": false,
+   "dome": {
+    "ft2": 2827.4333882308138,
+    "lines": [
+     {
+      "item": "Slab and ring foundation",
+      "retail": 33929.20065876977,
+      "engineered": 22619.46710584651,
+      "how": "members place forms, insulation and PEX; contractor pours"
+     },
+     {
+      "item": "Dome shell (concrete or panel)",
+      "retail": 169646.00329384883,
+      "engineered": 113097.33552923254,
+      "how": "shell crew hired direct; members do the interior foam and finish"
+     },
+     {
+      "item": "Interior finish and acoustic panels",
+      "retail": 28274.333882308136,
+      "engineered": 11309.733552923255,
+      "how": "members install; sealed concrete floor"
+     },
+     {
+      "item": "Heat pump on the ground loop, ventilation for a crowd",
+      "retail": 39584.067435231394,
+      "engineered": 25446.900494077323,
+      "how": "radiant floor plus an ERV sized for the guest count"
+     },
+     {
+      "item": "Electrical, lighting, sound",
+      "retail": 33929.20065876977,
+      "engineered": 22619.46710584651,
+      "how": "licensed electrician, members assist"
+     },
+     {
+      "item": "Glazing and wide doors to the terrace",
+      "retail": 30000,
+      "engineered": 20000,
+      "how": "stock storefront sizes"
+     },
+     {
+      "item": "Catering prep kitchen (the residents' kitchen too)",
+      "retail": 40000,
+      "engineered": 15000,
+      "how": "restaurant-surplus equipment; caterers bring the rest"
+     },
+     {
+      "item": "Fire alarm and egress lighting",
+      "retail": 12000,
+      "engineered": 9000,
+      "how": "licensed installer"
+     },
+     {
+      "item": "Terrace, paths and ramps",
+      "retail": 25000,
+      "engineered": 10000,
+      "how": "members build; gravel and pavers"
+     },
+     {
+      "item": "Causeway upgrade for a fire engine",
+      "retail": 20000,
+      "engineered": 12000,
+      "how": "wider, compacted, rated culverts"
+     },
+     {
+      "item": "Permits, engineering and a special permit",
+      "retail": 25000,
+      "engineered": 20000,
+      "how": "assembly use needs stamped drawings"
+     },
+     {
+      "item": "Tables and chairs",
+      "retail": 15000,
+      "engineered": 10000,
+      "how": "bought used from venues that are refitting"
+     },
+     {
+      "item": "Restrooms (6 WC with sinks, accessible)",
+      "retail": 54000,
+      "engineered": 30000,
+      "how": "licensed plumber; one restroom block, back to back"
+     },
+     {
+      "item": "Parking, 50 spaces",
+      "retail": 40000,
+      "engineered": 20000,
+      "how": "gravel lot outside the rings, members grade it with the eOx"
+     },
+     {
+      "item": "Sprinklers, tank and pump",
+      "retail": 60000,
+      "engineered": 45000,
+      "how": "licensed; 30,000 gal tank and pump, there is no hydrant"
+     }
+    ],
+    "retail": 751635.3671147134,
+    "engineered": 386092.90378792613,
+    "engineered_ft2": 136.55243140122667,
+    "fits_island": true,
+    "terrace_m": 8.856
+   },
+   "events": {
+    "events_big": 48,
+    "events_small": 40,
+    "revenue": 396000.0,
+    "costs": {
+     "coordinator (resident)": 30000,
+     "event-day staff (residents)": 24000.0,
+     "utilities": 9200,
+     "trash removal": 8800,
+     "insurance": 10000,
+     "marketing and listings": 10000,
+     "booking software": 1000,
+     "card fees": 11880.0,
+     "wear and repairs": 11880.0
+    },
+    "net": 279240.0,
+    "guests": 7720.0,
+    "produce_sold_to_caterers": 61760.0,
+    "resident_pay": 54000.0
+   },
+   "guests": null,
+   "trench_ft": 1314.1504702516359,
+   "trench_usd": 18398.106583522902,
+   "hall_replaced": 49900,
+   "extra_capex": 354591.01037144905,
+   "extra_debt_service": 30427.63800177244,
+   "extra_property_tax": 5057.349851681772,
+   "added_to_investors": 243755.0121465458,
+   "net_to_investors": 380036.4135142708,
+   "cash_yield_pct": 38.00364135142708,
+   "total_capex": 2002528.704907721,
+   "loan": 932877.8644188876,
+   "venue_payback_years": 1.2039568249102068,
+   "resident_pay": 54000.0
+  },
+  {
+   "venue": "full",
+   "demand": "strong",
+   "guest_cabins": true,
+   "dome": {
+    "ft2": 2827.4333882308138,
+    "lines": [
+     {
+      "item": "Slab and ring foundation",
+      "retail": 33929.20065876977,
+      "engineered": 22619.46710584651,
+      "how": "members place forms, insulation and PEX; contractor pours"
+     },
+     {
+      "item": "Dome shell (concrete or panel)",
+      "retail": 169646.00329384883,
+      "engineered": 113097.33552923254,
+      "how": "shell crew hired direct; members do the interior foam and finish"
+     },
+     {
+      "item": "Interior finish and acoustic panels",
+      "retail": 28274.333882308136,
+      "engineered": 11309.733552923255,
+      "how": "members install; sealed concrete floor"
+     },
+     {
+      "item": "Heat pump on the ground loop, ventilation for a crowd",
+      "retail": 39584.067435231394,
+      "engineered": 25446.900494077323,
+      "how": "radiant floor plus an ERV sized for the guest count"
+     },
+     {
+      "item": "Electrical, lighting, sound",
+      "retail": 33929.20065876977,
+      "engineered": 22619.46710584651,
+      "how": "licensed electrician, members assist"
+     },
+     {
+      "item": "Glazing and wide doors to the terrace",
+      "retail": 30000,
+      "engineered": 20000,
+      "how": "stock storefront sizes"
+     },
+     {
+      "item": "Catering prep kitchen (the residents' kitchen too)",
+      "retail": 40000,
+      "engineered": 15000,
+      "how": "restaurant-surplus equipment; caterers bring the rest"
+     },
+     {
+      "item": "Fire alarm and egress lighting",
+      "retail": 12000,
+      "engineered": 9000,
+      "how": "licensed installer"
+     },
+     {
+      "item": "Terrace, paths and ramps",
+      "retail": 25000,
+      "engineered": 10000,
+      "how": "members build; gravel and pavers"
+     },
+     {
+      "item": "Causeway upgrade for a fire engine",
+      "retail": 20000,
+      "engineered": 12000,
+      "how": "wider, compacted, rated culverts"
+     },
+     {
+      "item": "Permits, engineering and a special permit",
+      "retail": 25000,
+      "engineered": 20000,
+      "how": "assembly use needs stamped drawings"
+     },
+     {
+      "item": "Tables and chairs",
+      "retail": 15000,
+      "engineered": 10000,
+      "how": "bought used from venues that are refitting"
+     },
+     {
+      "item": "Restrooms (6 WC with sinks, accessible)",
+      "retail": 54000,
+      "engineered": 30000,
+      "how": "licensed plumber; one restroom block, back to back"
+     },
+     {
+      "item": "Parking, 50 spaces",
+      "retail": 40000,
+      "engineered": 20000,
+      "how": "gravel lot outside the rings, members grade it with the eOx"
+     },
+     {
+      "item": "Sprinklers, tank and pump",
+      "retail": 60000,
+      "engineered": 45000,
+      "how": "licensed; 30,000 gal tank and pump, there is no hydrant"
+     }
+    ],
+    "retail": 751635.3671147134,
+    "engineered": 386092.90378792613,
+    "engineered_ft2": 136.55243140122667,
+    "fits_island": true,
+    "terrace_m": 8.856
+   },
+   "events": {
+    "events_big": 48,
+    "events_small": 40,
+    "revenue": 396000.0,
+    "costs": {
+     "coordinator (resident)": 30000,
+     "event-day staff (residents)": 24000.0,
+     "utilities": 9200,
+     "trash removal": 8800,
+     "insurance": 10000,
+     "marketing and listings": 10000,
+     "booking software": 1000,
+     "card fees": 11880.0,
+     "wear and repairs": 11880.0
+    },
+    "net": 279240.0,
+    "guests": 7720.0,
+    "produce_sold_to_caterers": 61760.0,
+    "resident_pay": 54000.0
+   },
+   "guests": {
+    "capex": 169200,
+    "nights": 657.0,
+    "revenue": 114975.0,
+    "costs": {
+     "cleaning turnovers (residents)": 13438.636363636364,
+     "platform fees": 17246.25,
+     "maintenance (1.5 %)": 2538.0,
+     "supplies and utilities": 7884.0
+    },
+    "net": 73868.11363636363,
+    "resident_pay": 13438.636363636364
+   },
+   "trench_ft": 1314.1504702516359,
+   "trench_usd": 18398.106583522902,
+   "hall_replaced": 49900,
+   "extra_capex": 523791.01037144905,
+   "extra_debt_service": 44946.77751550906,
+   "extra_property_tax": 7602.625451681773,
+   "added_to_investors": 300558.7106691728,
+   "net_to_investors": 436840.1120368978,
+   "cash_yield_pct": 43.684011203689785,
+   "total_capex": 2171728.704907721,
+   "loan": 1102077.8644188875,
+   "venue_payback_years": 1.2039568249102068,
+   "resident_pay": 67438.63636363637
+  }
+ ]
+}
