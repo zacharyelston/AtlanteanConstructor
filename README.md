@@ -430,6 +430,11 @@ images are in `docs/img/` (`tools/make_figs.py` redraws the SVGs).
   cabins (two for a resident cooking and cleaning crew) and 17 tunnels, one
   per cabin plus three second tunnels. One tunnel earns about a cabin's rent;
   two tunnels are a full-time job.
+- **Event dome and other revenue:** `tools/event_venue.py` puts one large
+  dome on the island as the residents' dining hall and a rentable event
+  venue, and moves the homes outside the rings. A 150-guest dome at base
+  bookings keeps about $183k a year after running costs; guest cabins add
+  more.
 - **Where it makes sense:** [docs/where-it-pays.md](docs/where-it-pays.md)
   sweeps the drivers. A homeowner needs two of three things: a fill market,
   direct-sale produce, or land-value uplift. A builder profits almost anywhere
