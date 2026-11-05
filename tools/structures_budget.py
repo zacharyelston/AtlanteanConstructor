@@ -2,13 +2,15 @@
 
     python3 tools/structures_budget.py
 
-The idea: take plumbing out of the private units. Kitchen and baths live in two shared
-central buildings; the private units are identical dry cabins from standard panel sizes,
-designed and permitted once, built twelve times. Each structure is costed line by line at
+The idea: every resident gets a private cabin with its own bathroom and kitchenette, and the
+group shares a common hall (big kitchen, dining) and a laundry house. The cabins are identical,
+from standard panel sizes, designed and permitted once, built twelve times, in pairs whose
+bathrooms share one wet wall. Each structure is costed line by line at
 RETAIL (contractor-built, general contractor margin) and ENGINEERED (members' labour, kits,
 bulk buying, licensed trades only where Connecticut requires them). The gap per line is
 where to look for savings. Writes docs/structures_budget.json.
 
+ADU retail baseline $250-350/ft2 turnkey in Connecticut.
 Every number is a screening ASSUMPTION built from published ranges (sources in the plan):
 ADUs $150-300/ft2 retail; Quonset kits $11-15/ft2, finished $40-125/ft2; post-frame kits
 $10-30/ft2; SIP panels $7-12 per ft2 of panel, $12-50 installed; MEP $35-75k per 1,000 ft2.
@@ -22,15 +24,22 @@ GC_MARGIN = 0.20          # general contractor overhead and profit on retail bui
 
 STRUCTURES = {
     "cabin": {
-        "label": "Private cabin, 16 x 20 ft, SIP panels, no plumbing", "count": 12, "ft2": 320,
+        "label": "Private cabin, 16 x 24 ft, SIP panels, own bathroom and kitchenette", "count": 12, "ft2": 384,
         "lines": [  # item, retail, engineered, how the saving is made
-            ("Foundation", 5000, 2500, "helical piers or sonotubes, members dig and set"),
-            ("SIP shell (956 ft2 of panel)", 23900, 9560, "panels bought direct at about $10/ft2 and set by members; one cut list for all 12"),
-            ("Windows and doors", 5500, 3000, "standard sizes, bought 12 at a time"),
-            ("Metal roof and trim", 3500, 2000, "stock panel lengths, members install"),
-            ("Electrical", 4500, 3500, "licensed electrician connects; members pull wire under supervision"),
+            ("Foundation", 5500, 2800, "helical piers or sonotubes, members dig and set"),
+            ("SIP shell (1,090 ft2 of panel)", 27250, 10900, "panels bought direct at about $10/ft2 and set by members; one cut list for all 12"),
+            ("Windows and doors", 6000, 3200, "standard sizes, bought 12 at a time"),
+            ("Metal roof and trim", 4000, 2300, "stock panel lengths, members install"),
+            ("Electrical", 5500, 4000, "licensed electrician connects; members pull wire under supervision"),
             ("Heat and cooling (mini-split)", 4500, 2500, "bulk order of 12 ductless units"),
-            ("Interior finish", 7000, 2500, "finished plywood walls, sealed floor, no drywall"),
+            ("Interior finish", 8000, 3000, "finished plywood walls, sealed floor, no drywall"),
+            ("Bathroom plumbing: shower, WC, vanity", 12000, 5500,
+             "licensed plumber; cabins built in pairs, bathrooms back to back on one wet wall; PEX manifold"),
+            ("Bath finishes", 4000, 1500, "one-piece shower surround and sheet floor instead of tile"),
+            ("Kitchenette: sink, 24-in fridge, induction hob, cabinets", 8000, 3500,
+             "flat-pack cabinets and apartment-size appliances bought 12 at a time"),
+            ("Heat-pump water heater, 50 gal", 2500, 1600, "bulk order; runs off the cabin's own circuit"),
+            ("Bath fan and fresh air (small ERV)", 1500, 700, "one through-wall unit"),
             ("Permits, design, delivery", 3000, 800, "one design approved once, built 12 times"),
         ],
     },
@@ -45,25 +54,24 @@ STRUCTURES = {
             ("Electrical", 7500, 4500, "licensed electrician, members assist"),
             ("Radiant floor on the ground-source loop", 7000, 2500, "PEX in the slab; heat pump costed with the energy system"),
             ("Kitchen: cabinets, range, sinks, fridge", 20000, 6500, "restaurant-surplus equipment"),
-            ("Kitchen plumbing", 6000, 2500, "hall and bath house built back to back on one shared wet wall"),
+            ("Kitchen plumbing", 6000, 2500, "back to back with the laundry house on one shared wet wall"),
             ("Finishes", 7000, 2000, "sealed concrete floor, plywood"),
             ("Permits and engineering", 3500, 1500, "stamped arch drawings come with the kit"),
         ],
     },
-    "bath": {
-        "label": "Bath and laundry house, 20 x 24 ft, 3 showers, 3 WCs, laundry", "count": 1, "ft2": 480,
+    "laundry": {
+        "label": "Laundry, mudroom and guest bath, 12 x 20 ft", "count": 1, "ft2": 240,
         "lines": [
-            ("Slab", 6000, 4000, "poured with the hall"),
-            ("SIP shell (1,312 ft2 of panel)", 32800, 13120, "same panels and crew as the cabins"),
-            ("Windows and doors", 3500, 1500, "stock sizes"),
-            ("Roof", 3000, 1800, "stock metal panels"),
-            ("Plumbing, 9 fixtures", 27000, 12000, "licensed plumber; one wet wall, PEX manifold, prefab shower pans"),
-            ("Wet-area finishes", 12000, 3500, "FRP wall panels instead of tile"),
-            ("Electrical", 5000, 3000, "licensed electrician, members assist"),
-            ("Ventilation (ERV) and heat", 5000, 2500, "one energy-recovery ventilator"),
-            ("Heat-pump water heater", 3500, 2500, "one 80 gal unit"),
+            ("Slab", 3000, 2000, "poured with the hall"),
+            ("SIP shell (836 ft2 of panel)", 20900, 8360, "same panels and crew as the cabins"),
+            ("Windows and doors", 2000, 1000, "stock sizes"),
+            ("Roof", 1800, 1000, "stock metal panels"),
+            ("Plumbing: guest WC and shower, utility sink, laundry", 12000, 5500, "licensed plumber; back to back with the hall kitchen"),
+            ("Wet-area finishes", 4000, 1200, "FRP wall panels instead of tile"),
+            ("Electrical", 3500, 2000, "licensed electrician, members assist"),
+            ("Ventilation (ERV) and heat", 3000, 1500, "one energy-recovery ventilator"),
             ("Washers and dryers", 4000, 3000, "two pairs, heat-pump dryers"),
-            ("Permits", 3000, 1000, "shared review with the cabins"),
+            ("Permits", 1500, 500, "shared review with the cabins"),
         ],
     },
     "shop": {
@@ -80,10 +88,9 @@ STRUCTURES = {
 }
 
 
-# The conventional retail baseline: every resident gets a self-contained studio (cabin + its own
-# bathroom and kitchenette), contractor-built, plus the same workshop. No shared hall or bath house.
-STUDIO_WET_LINES = [("Bathroom: rough-in and fixtures", 12000), ("Kitchenette", 8000),
-                    ("Water heater", 1500), ("Wet-area finishes", 4000)]
+# The conventional retail baseline: 12 turnkey contractor-built ADUs of the same size (Connecticut
+# turnkey ADUs run about $250-350/ft2), plus the same workshop. No common hall or laundry house.
+ADU_USD_FT2 = 275
 
 
 def cost(s, mode):
@@ -109,16 +116,17 @@ def summary():
         out["totals"]["engineered"] += e * s["count"]
     out["totals"]["ft2"] = sum(s["ft2"] * s["count"] for s in STRUCTURES.values())
     cab = STRUCTURES["cabin"]
-    studio = cost(cab, "retail") + sum(v for _, v in STUDIO_WET_LINES) * (1 + GC_MARGIN)
-    out["conventional"] = {"label": "12 self-contained studios with bath and kitchenette, retail, plus the workshop",
-                           "studio_each": studio, "studio_usd_ft2": studio / cab["ft2"],
+    studio = ADU_USD_FT2 * cab["ft2"]
+    out["conventional"] = {"label": "12 turnkey contractor-built ADUs of %d ft2 at $%d/ft2, plus the workshop"
+                           % (cab["ft2"], ADU_USD_FT2),
+                           "studio_each": studio, "studio_usd_ft2": ADU_USD_FT2,
                            "total": studio * cab["count"] + cost(STRUCTURES["shop"], "retail")}
     # where the savings are, by kind of work, across the whole set
     kinds = {"labour (members build)": ("Erection", "SIP shell", "Foundation", "Interior finish", "Finishes",
                                        "End walls", "Metal roof", "Roof", "Floor", "Insulated slab", "Slab"),
-             "plumbing and wet areas": ("Plumbing", "Kitchen plumbing", "Wet-area finishes"),
+             "plumbing and wet areas": ("Plumbing", "Kitchen plumbing", "Wet-area finishes", "Bathroom", "Bath finishes"),
              "equipment and kits": ("Kitchen:", "Washers", "Heat-pump water", "Steel arch kit", "Heat and cooling",
-                                    "Radiant", "Ventilation", "Windows"),
+                                    "Radiant", "Ventilation", "Windows", "Kitchenette", "Bath fan"),
              "licensed trades (electrical, spray foam)": ("Electrical", "Spray-foam"),
              "design and permits": ("Permits",)}
     by_kind = {k: 0.0 for k in kinds}

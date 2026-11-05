@@ -421,10 +421,11 @@ images are in `docs/img/` (`tools/make_figs.py` redraws the SVGs).
   quarters of it, and members farming 11 tunnels carry the rest on a
   mortgage.
 - **Simple structures and a leasing site:** `tools/structures_budget.py`
-  costs 12 dry cabins plus a shared hall, bath house and workshop, each under
-  $50k, at retail and engineered ($1.25M retail baseline down to $444k).
-  `tools/lease_scenario.py` has a site corporation lease cabins and tunnels,
-  paying ten investors about 11.5 % a year.
+  costs 12 private cabins (each with its own bathroom and kitchenette, built
+  in pairs on shared wet walls) plus a common hall, laundry house and
+  workshop, each under $50k engineered: $1.57M at retail down to $613k.
+  `tools/lease_scenario.py` has a site corporation lease cabins at $1,300 a
+  month and tunnels, paying ten investors about 12 % a year.
 - **Where it makes sense:** [docs/where-it-pays.md](docs/where-it-pays.md)
   sweeps the drivers. A homeowner needs two of three things: a fill market,
   direct-sale produce, or land-value uplift. A builder profits almost anywhere

@@ -24,7 +24,7 @@ import structures_budget as sb  # noqa: E402
 
 LEASE = {
     "investors": 10, "equity_each": 100000,
-    "cabins": 12, "cabin_rent_month": 1100,          # includes shared hall, baths, laundry, energy, internet
+    "cabins": 12, "cabin_rent_month": 1300,          # private bath and kitchenette; shared hall, laundry, energy, internet
     "vacancy_pct": 5,
     "tunnels": 11, "tunnel_lease_year": 3000,         # a grower keeps the rest (about $13k a tunnel, own labour)
     "site_manager_year": 24000,                       # part-time; or a resident's rent credit
@@ -35,7 +35,7 @@ LEASE = {
 VARIANTS = {
     "engineered": {"label": "Engineered structures, fill sold at $8/yd3", "structures": "engineered", "fill": 8.0},
     "retail_ours": {"label": "Same design at retail prices, no fill market", "structures": "retail", "fill": 0.0},
-    "conventional": {"label": "Conventional: 12 studios with bath and kitchenette at retail, no fill market",
+    "conventional": {"label": "Conventional: 12 turnkey contractor ADUs, no common hall, no fill market",
                      "structures": "conventional", "fill": 0.0},
 }
 
@@ -49,15 +49,15 @@ def build(r, eb, v):
     capex.pop("solar PV (grid-tied)")
     capex.pop("ground-source heat pump + loop")
     people = L["cabins"]
-    heat_th = c["heat_kwh_th_per_dome"] * 2 + 1500 * L["cabins"]      # hall + bath house + small cabins
+    heat_th = c["heat_kwh_th_per_dome"] * 2 + 1500 * L["cabins"]      # hall + laundry house + cabins
     elec = people * c["kwh_per_person"] + 2750 + heat_th / c["cop_heat"] + people * c["dhw_kwh_th_per_person"] / c["cop_dhw"]
     kwp = elec / c["pv_kwh_per_kwp"]
     capex["solar PV (%.0f kW)" % kwp] = kwp * 1000 * c["pv_usd_per_w"]
-    capex["ground-source heat pump for hall and bath house, 3 ton"] = 3 * c["gshp_usd_per_ton"] + 600 * c["trench_usd_per_ft"]
+    capex["ground-source heat pump for hall and laundry house, 3 ton"] = 3 * c["gshp_usd_per_ton"] + 600 * c["trench_usd_per_ft"]
     st = sb.summary()
     if v["structures"] == "conventional":
         structures = st["conventional"]["total"]
-        capex["12 studios with bath and kitchenette + workshop, retail"] = structures
+        capex["12 turnkey ADUs + workshop, retail"] = structures
     else:
         mode = "retail_each" if v["structures"] == "retail" else "engineered_each"
         structures = 0.0
