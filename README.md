@@ -415,6 +415,11 @@ images are in `docs/img/` (`tools/make_figs.py` redraws the SVGs).
 - **Greenhouses:** [docs/greenhouse.md](docs/greenhouse.md) puts 24×72 ft
   high tunnels on the pasture berm. Four, sized to the direct market, make the
   homestead pay even without a fill market.
+- **A 10-member commune:** `tools/commune_scenario.py` adds land, three
+  central domes (12 beds), septic and property tax to the homestead, and
+  swaps hired labour for members' time. $1M of seed builds about three
+  quarters of it, and members farming 11 tunnels carry the rest on a
+  mortgage.
 - **Where it makes sense:** [docs/where-it-pays.md](docs/where-it-pays.md)
   sweeps the drivers. A homeowner needs two of three things: a fill market,
   direct-sale produce, or land-value uplift. A builder profits almost anywhere
