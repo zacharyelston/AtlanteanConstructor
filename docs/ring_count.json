@@ -1,0 +1,890 @@
+{
+ "rings": [
+  [
+   [
+    18.0,
+    26.0,
+    0.9
+   ],
+   [
+    30.0,
+    40.0
+   ]
+  ],
+  [
+   [
+    44.0,
+    58.0,
+    2.44
+   ],
+   [
+    62.0,
+    76.0
+   ]
+  ],
+  [
+   [
+    80.0,
+    88.0,
+    0.9
+   ],
+   [
+    92.0,
+    104.0
+   ]
+  ],
+  [
+   [
+    108.0,
+    122.0,
+    2.44
+   ],
+   [
+    126.0,
+    140.0
+   ]
+  ],
+  [
+   [
+    144.0,
+    152.0,
+    0.9
+   ],
+   [
+    156.0,
+    168.0
+   ]
+  ]
+ ],
+ "cost": {
+  "design_permits": 18000,
+  "topsoil_usd_m3": 3.0,
+  "loading_usd_m3": 2.0,
+  "bund_usd_m3": 2.5,
+  "fill_usd_yd3": 8.0,
+  "causeway_usd_m": 110.0,
+  "culvert_usd_per_ring": 3000,
+  "land_usd_acre": 14400,
+  "land_margin_m": 15.0,
+  "arm_usd_m": 1500.0,
+  "contingency": 0.1,
+  "upkeep_pct": 1.0
+ },
+ "value": {
+  "crown_steps": [
+   [
+    1.0,
+    4000.0
+   ],
+   [
+    3.0,
+    600.0
+   ],
+   [
+    1000000000.0,
+    150.0
+   ]
+  ],
+  "first_deep_usd": 14000.0,
+  "first_shallow_usd": 5000.0,
+  "more_water_usd_acre": 1800.0
+ },
+ "results": {
+  "ne_flat": [
+   {
+    "rings": 0,
+    "waterfront_lots": 0,
+    "capex": {
+     "land": 12173.564791947836
+    },
+    "total_capex": 12173.564791947836,
+    "fill_value": 0.0,
+    "yearly": {},
+    "net_yearly": 0.0,
+    "crown_acres": 0.0,
+    "water_acres": 0.0,
+    "land_acres": 0.8453864438852664,
+    "r_out": 18.0,
+    "cut_bank_m3": 0.0,
+    "shoreline_m": 0.0,
+    "crew_days": 0.0,
+    "npv": -12173.564791947836,
+    "added_npv": 0.0,
+    "yearly_needed_to_pay": -0.0,
+    "added_lots": 0
+   },
+   {
+    "rings": 1,
+    "waterfront_lots": 6,
+    "capex": {
+     "design and permits": 18000,
+     "earthworks (pond crew)": 13675.587660945523,
+     "topsoil strip and respread": 2352.517533545907,
+     "causeway and culverts": 5420.0,
+     "land": 33815.45775541066,
+     "arm reaching every ring": 33000.0,
+     "surplus fill: loading trucks": 0.0,
+     "contingency": 7244.810519449144
+    },
+    "total_capex": 113508.37346935124,
+    "fill_value": 0.0,
+    "yearly": {
+     "berm crowns farmed": 1057.3119494231348,
+     "water: fish and fishing": 5000.0,
+     "upkeep": -796.9291571394057
+    },
+    "net_yearly": 5260.382792283729,
+    "crown_acres": 0.2643279873557837,
+    "water_acres": 0.27321794208748046,
+    "land_acres": 2.3482956774590735,
+    "r_out": 40.0,
+    "cut_bank_m3": 1128.005044734198,
+    "surplus_m3": 0.0,
+    "shoreline_m": 276.46015351590177,
+    "water_m3": 771.3716345239795,
+    "crew_days": 4.011461406479152,
+    "npv": -39368.8299987286,
+    "added_npv": -27195.265206780765,
+    "yearly_needed_to_pay": 1929.5708933253366,
+    "added_lots": 6
+   },
+   {
+    "rings": 2,
+    "waterfront_lots": 13,
+    "capex": {
+     "design and permits": 18000,
+     "earthworks (pond crew)": 105801.70387871724,
+     "topsoil strip and respread": 7535.0162429500615,
+     "causeway and culverts": 12380.0,
+     "land": 92570.51427191922,
+     "arm reaching every ring": 87000.0,
+     "surplus fill: loading trucks": 13313.918417842806,
+     "contingency": 24403.06385395101
+    },
+    "total_capex": 361004.21666538034,
+    "fill_value": 69658.42116215357,
+    "yearly": {
+     "berm crowns farmed": 4128.302702967513,
+     "water: fish and fishing": 19000.0,
+     "upkeep": -2684.3370239346114
+    },
+    "net_yearly": 20443.965679032903,
+    "crown_acres": 1.2138378382791881,
+    "water_acres": 1.380681203444087,
+    "land_acres": 6.428507935549946,
+    "r_out": 76.0,
+    "cut_bank_m3": 9663.011874732698,
+    "surplus_m3": 6656.959208921403,
+    "shoreline_m": 917.3450548482195,
+    "water_m3": 7903.044794006109,
+    "crew_days": 34.364030007484594,
+    "npv": -3209.6765128154075,
+    "added_npv": 36159.15348591319,
+    "yearly_needed_to_pay": 0.0,
+    "added_lots": 7
+   },
+   {
+    "rings": 3,
+    "waterfront_lots": 19,
+    "capex": {
+     "design and permits": 18000,
+     "earthworks (pond crew)": 152284.60563832126,
+     "topsoil strip and respread": 14495.203345832826,
+     "causeway and culverts": 18460.0,
+     "land": 158301.05695020506,
+     "arm reaching every ring": 129000.0,
+     "surplus fill: loading trucks": 15066.304926433982,
+     "contingency": 34730.61139105881
+    },
+    "total_capex": 540337.782251852,
+    "fill_value": 78826.9073751026,
+    "yearly": {
+     "berm crowns farmed": 4754.628507260153,
+     "water: fish and fishing": 20878.698177120365,
+     "upkeep": -3820.367253016469
+    },
+    "net_yearly": 21812.95943136405,
+    "crown_acres": 2.2577141787669217,
+    "water_acres": 2.42674489069967,
+    "land_acres": 10.993128954875353,
+    "r_out": 104.0,
+    "cut_bank_m3": 13969.41162633579,
+    "surplus_m3": 7533.152463216991,
+    "shoreline_m": 1972.9201864543902,
+    "water_m3": 10847.664321312674,
+    "crew_days": 49.678639179731576,
+    "npv": -154080.23382972117,
+    "added_npv": -150870.55731690576,
+    "yearly_needed_to_pay": 10704.636775738727,
+    "added_lots": 6
+   },
+   {
+    "rings": 4,
+    "waterfront_lots": 26,
+    "capex": {
+     "design and permits": 18000,
+     "earthworks (pond crew)": 360022.4272281885,
+     "topsoil strip and respread": 24997.225599252546,
+     "causeway and culverts": 25420.0,
+     "land": 268567.3958921458,
+     "arm reaching every ring": 183000.0,
+     "surplus fill: loading trucks": 51958.088045217235,
+     "contingency": 66339.77408726583
+    },
+    "total_capex": 998304.91085207,
+    "fill_value": 271844.7166525766,
+    "yearly": {
+     "berm crowns farmed": 5813.917859196513,
+     "water: fish and fishing": 25371.31004685092,
+     "upkeep": -7297.375149599242
+    },
+    "net_yearly": 23887.85275644819,
+    "crown_acres": 4.092785727976752,
+    "water_acres": 4.92059930933283,
+    "land_acres": 18.650513603621235,
+    "r_out": 140.0,
+    "cut_bank_m3": 33215.243306978104,
+    "surplus_m3": 25979.044022608618,
+    "shoreline_m": 3418.052807105695,
+    "water_m3": 26929.451448402342,
+    "crew_days": 118.12151661445324,
+    "npv": -389786.1216482731,
+    "added_npv": -235705.8878185519,
+    "yearly_needed_to_pay": 16723.911940622806,
+    "added_lots": 7
+   },
+   {
+    "rings": 5,
+    "waterfront_lots": 33,
+    "capex": {
+     "design and permits": 18000,
+     "earthworks (pond crew)": 441937.1959093517,
+     "topsoil strip and respread": 36780.42842941182,
+     "causeway and culverts": 31500.0,
+     "land": 374362.2693457678,
+     "arm reaching every ring": 225000.0,
+     "surplus fill: loading trucks": 56168.70442797853,
+     "contingency": 80938.63287667421
+    },
+    "total_capex": 1264687.230989184,
+    "fill_value": 293874.6615671837,
+    "yearly": {
+     "berm crowns farmed": 6072.299965547087,
+     "water: fish and fishing": 28681.71833980446,
+     "upkeep": -8903.249616434163
+    },
+    "net_yearly": 25850.768688917386,
+    "crown_acres": 5.815333103647244,
+    "water_acres": 6.762607676468068,
+    "land_acres": 25.99737981567832,
+    "r_out": 168.0,
+    "cut_bank_m3": 40804.22175168764,
+    "surplus_m3": 28084.352213989267,
+    "shoreline_m": 5277.875658030853,
+    "water_m3": 32118.696344510183,
+    "crew_days": 145.10977725004997,
+    "npv": -606473.2685307531,
+    "added_npv": -216687.14688248,
+    "yearly_needed_to_pay": 15374.485536471055,
+    "added_lots": 7
+   }
+  ],
+  "ne_flat_no_fill_market": [
+   {
+    "rings": 0,
+    "waterfront_lots": 0,
+    "capex": {
+     "land": 12173.564791947836
+    },
+    "total_capex": 12173.564791947836,
+    "fill_value": 0.0,
+    "yearly": {},
+    "net_yearly": 0.0,
+    "crown_acres": 0.0,
+    "water_acres": 0.0,
+    "land_acres": 0.8453864438852664,
+    "r_out": 18.0,
+    "cut_bank_m3": 0.0,
+    "shoreline_m": 0.0,
+    "crew_days": 0.0,
+    "npv": -12173.564791947836,
+    "added_npv": 0.0,
+    "yearly_needed_to_pay": -0.0,
+    "added_lots": 0
+   },
+   {
+    "rings": 1,
+    "waterfront_lots": 6,
+    "capex": {
+     "design and permits": 18000,
+     "earthworks (pond crew)": 13675.587660945523,
+     "topsoil strip and respread": 2352.517533545907,
+     "causeway and culverts": 5420.0,
+     "land": 33815.45775541066,
+     "arm reaching every ring": 33000.0,
+     "surplus fill: dozed into a bund": 0.0,
+     "contingency": 7244.810519449144
+    },
+    "total_capex": 113508.37346935124,
+    "fill_value": 0.0,
+    "yearly": {
+     "berm crowns farmed": 1057.3119494231348,
+     "water: fish and fishing": 5000.0,
+     "upkeep": -796.9291571394057
+    },
+    "net_yearly": 5260.382792283729,
+    "crown_acres": 0.2643279873557837,
+    "water_acres": 0.27321794208748046,
+    "land_acres": 2.3482956774590735,
+    "r_out": 40.0,
+    "cut_bank_m3": 1128.005044734198,
+    "surplus_m3": 0.0,
+    "shoreline_m": 276.46015351590177,
+    "water_m3": 771.3716345239795,
+    "crew_days": 4.011461406479152,
+    "npv": -39368.8299987286,
+    "added_npv": -27195.265206780765,
+    "yearly_needed_to_pay": 1929.5708933253366,
+    "added_lots": 6
+   },
+   {
+    "rings": 2,
+    "waterfront_lots": 13,
+    "capex": {
+     "design and permits": 18000,
+     "earthworks (pond crew)": 105801.70387871724,
+     "topsoil strip and respread": 7535.0162429500615,
+     "causeway and culverts": 12380.0,
+     "land": 92570.51427191922,
+     "arm reaching every ring": 87000.0,
+     "surplus fill: dozed into a bund": 16642.398022303507,
+     "contingency": 24735.911814397085
+    },
+    "total_capex": 364665.54423028714,
+    "fill_value": 0.0,
+    "yearly": {
+     "berm crowns farmed": 4128.302702967513,
+     "water: fish and fishing": 19000.0,
+     "upkeep": -2720.950299583679
+    },
+    "net_yearly": 20407.352403383833,
+    "crown_acres": 1.2138378382791881,
+    "water_acres": 1.380681203444087,
+    "land_acres": 6.428507935549946,
+    "r_out": 76.0,
+    "cut_bank_m3": 9663.011874732698,
+    "surplus_m3": 6656.959208921403,
+    "shoreline_m": 917.3450548482195,
+    "water_m3": 7903.044794006109,
+    "crew_days": 34.364030007484594,
+    "npv": -77045.45071725507,
+    "added_npv": -37676.620718526465,
+    "yearly_needed_to_pay": 2673.248822710518,
+    "added_lots": 7
+   },
+   {
+    "rings": 3,
+    "waterfront_lots": 19,
+    "capex": {
+     "design and permits": 18000,
+     "earthworks (pond crew)": 152284.60563832126,
+     "topsoil strip and respread": 14495.203345832826,
+     "causeway and culverts": 18460.0,
+     "land": 158301.05695020506,
+     "arm reaching every ring": 129000.0,
+     "surplus fill: dozed into a bund": 18832.881158042477,
+     "contingency": 35107.26901421966
+    },
+    "total_capex": 544481.0161066212,
+    "fill_value": 0.0,
+    "yearly": {
+     "berm crowns farmed": 4754.628507260153,
+     "water: fish and fishing": 20878.698177120365,
+     "upkeep": -3861.799591564162
+    },
+    "net_yearly": 21771.527092816355,
+    "crown_acres": 2.2577141787669217,
+    "water_acres": 2.42674489069967,
+    "land_acres": 10.993128954875353,
+    "r_out": 104.0,
+    "cut_bank_m3": 13969.41162633579,
+    "surplus_m3": 7533.152463216991,
+    "shoreline_m": 1972.9201864543902,
+    "water_m3": 10847.664321312674,
+    "crew_days": 49.678639179731576,
+    "npv": -237634.3201423259,
+    "added_npv": -160588.86942507082,
+    "yearly_needed_to_pay": 11394.174900613894,
+    "added_lots": 6
+   },
+   {
+    "rings": 4,
+    "waterfront_lots": 26,
+    "capex": {
+     "design and permits": 18000,
+     "earthworks (pond crew)": 360022.4272281885,
+     "topsoil strip and respread": 24997.225599252546,
+     "causeway and culverts": 25420.0,
+     "land": 268567.3958921458,
+     "arm reaching every ring": 183000.0,
+     "surplus fill: dozed into a bund": 64947.610056521546,
+     "contingency": 67638.72628839627
+    },
+    "total_capex": 1012593.3850645047,
+    "fill_value": 0.0,
+    "yearly": {
+     "berm crowns farmed": 5813.917859196513,
+     "water: fish and fishing": 25371.31004685092,
+     "upkeep": -7440.259891723589
+    },
+    "net_yearly": 23744.968014323844,
+    "crown_acres": 4.092785727976752,
+    "water_acres": 4.92059930933283,
+    "land_acres": 18.650513603621235,
+    "r_out": 140.0,
+    "cut_bank_m3": 33215.243306978104,
+    "surplus_m3": 25979.044022608618,
+    "shoreline_m": 3418.052807105695,
+    "water_m3": 26929.451448402342,
+    "crew_days": 118.12151661445324,
+    "npv": -677933.1221481184,
+    "added_npv": -440298.80200579256,
+    "yearly_needed_to_pay": 31240.281948217944,
+    "added_lots": 7
+   },
+   {
+    "rings": 5,
+    "waterfront_lots": 33,
+    "capex": {
+     "design and permits": 18000,
+     "earthworks (pond crew)": 441937.1959093517,
+     "topsoil strip and respread": 36780.42842941182,
+     "causeway and culverts": 31500.0,
+     "land": 374362.2693457678,
+     "arm reaching every ring": 225000.0,
+     "surplus fill: dozed into a bund": 70210.88053497317,
+     "contingency": 82342.85048737367
+    },
+    "total_capex": 1280133.624706878,
+    "fill_value": 0.0,
+    "yearly": {
+     "berm crowns farmed": 6072.299965547087,
+     "water: fish and fishing": 28681.71833980446,
+     "upkeep": -9057.713553611104
+    },
+    "net_yearly": 25696.304751740445,
+    "crown_acres": 5.815333103647244,
+    "water_acres": 6.762607676468068,
+    "land_acres": 25.99737981567832,
+    "r_out": 168.0,
+    "cut_bank_m3": 40804.22175168764,
+    "surplus_m3": 28084.352213989267,
+    "shoreline_m": 5277.875658030853,
+    "water_m3": 32118.696344510183,
+    "crew_days": 145.10977725004997,
+    "npv": -917971.3299836556,
+    "added_npv": -240038.20783553715,
+    "yearly_needed_to_pay": 17031.300691634548,
+    "added_lots": 7
+   }
+  ],
+  "ne_till": [
+   {
+    "rings": 0,
+    "waterfront_lots": 0,
+    "capex": {
+     "land": 12173.564791947836
+    },
+    "total_capex": 12173.564791947836,
+    "fill_value": 0.0,
+    "yearly": {},
+    "net_yearly": 0.0,
+    "crown_acres": 0.0,
+    "water_acres": 0.0,
+    "land_acres": 0.8453864438852664,
+    "r_out": 18.0,
+    "cut_bank_m3": 0.0,
+    "shoreline_m": 0.0,
+    "crew_days": 0.0,
+    "npv": -12173.564791947836,
+    "added_npv": 0.0,
+    "yearly_needed_to_pay": -0.0,
+    "added_lots": 0
+   },
+   {
+    "rings": 1,
+    "waterfront_lots": 6,
+    "capex": {
+     "design and permits": 18000,
+     "earthworks (pond crew)": 24101.465408152588,
+     "topsoil strip and respread": 2352.517533545907,
+     "causeway and culverts": 5420.0,
+     "land": 33815.45775541066,
+     "arm reaching every ring": 33000.0,
+     "surplus fill: loading trucks": 937.8639384921057,
+     "contingency": 8381.18468801906
+    },
+    "total_capex": 126008.48932362032,
+    "fill_value": 4906.904126190698,
+    "yearly": {
+     "berm crowns farmed": 1057.3119494231348,
+     "water: fish and fishing": 5000.0,
+     "upkeep": -921.9303156820966
+    },
+    "net_yearly": 5135.381633741038,
+    "crown_acres": 0.2643279873557837,
+    "water_acres": 0.27321794208748046,
+    "land_acres": 2.3482956774590735,
+    "r_out": 40.0,
+    "cut_bank_m3": 2093.908541314855,
+    "surplus_m3": 468.93196924605286,
+    "shoreline_m": 276.46015351590177,
+    "water_m3": 771.3716345239795,
+    "crew_days": 7.446450121294342,
+    "npv": -48723.801125999045,
+    "added_npv": -36550.23633405121,
+    "yearly_needed_to_pay": 2593.3290827685187,
+    "added_lots": 6
+   },
+   {
+    "rings": 2,
+    "waterfront_lots": 13,
+    "capex": {
+     "design and permits": 18000,
+     "earthworks (pond crew)": 155034.5067334267,
+     "topsoil strip and respread": 7535.0162429500615,
+     "causeway and culverts": 12380.0,
+     "land": 92570.51427191922,
+     "arm reaching every ring": 87000.0,
+     "surplus fill: loading trucks": 26085.177127680774,
+     "contingency": 30603.470010405756
+    },
+    "total_capex": 429208.6843863825,
+    "fill_value": 136477.6467320258,
+    "yearly": {
+     "berm crowns farmed": 4128.302702967513,
+     "water: fish and fishing": 19000.0,
+     "upkeep": -3366.381701144633
+    },
+    "net_yearly": 19761.92100182288,
+    "crown_acres": 1.2138378382791881,
+    "water_acres": 1.380681203444087,
+    "land_acres": 6.428507935549946,
+    "r_out": 76.0,
+    "cut_bank_m3": 14224.17569967483,
+    "surplus_m3": 13042.588563840387,
+    "shoreline_m": 917.3450548482195,
+    "water_m3": 7903.044794006109,
+    "crew_days": 50.58464243984802,
+    "npv": -14207.618536109221,
+    "added_npv": 34516.182589889824,
+    "yearly_needed_to_pay": 0.0,
+    "added_lots": 7
+   },
+   {
+    "rings": 3,
+    "waterfront_lots": 19,
+    "capex": {
+     "design and permits": 18000,
+     "earthworks (pond crew)": 242646.7307634822,
+     "topsoil strip and respread": 14495.203345832826,
+     "causeway and culverts": 18460.0,
+     "land": 158301.05695020506,
+     "arm reaching every ring": 129000.0,
+     "surplus fill: loading trucks": 38506.735099582,
+     "contingency": 46110.866920889704
+    },
+    "total_capex": 665520.5930799918,
+    "fill_value": 201467.23804101304,
+    "yearly": {
+     "berm crowns farmed": 4754.628507260153,
+     "water: fish and fishing": 20878.698177120365,
+     "upkeep": -5072.195361297867
+    },
+    "net_yearly": 20561.13132308265,
+    "crown_acres": 2.2577141787669217,
+    "water_acres": 2.42674489069967,
+    "land_acres": 10.993128954875353,
+    "r_out": 104.0,
+    "cut_bank_m3": 22340.993831031512,
+    "surplus_m3": 19253.367549791,
+    "shoreline_m": 1972.9201864543902,
+    "water_m3": 10847.664321312674,
+    "crew_days": 79.45002990362487,
+    "npv": -174265.90995628532,
+    "added_npv": -160058.2914201761,
+    "yearly_needed_to_pay": 11356.529087377692,
+    "added_lots": 6
+   },
+   {
+    "rings": 4,
+    "waterfront_lots": 26,
+    "capex": {
+     "design and permits": 18000,
+     "earthworks (pond crew)": 541868.0170872041,
+     "topsoil strip and respread": 24997.225599252546,
+     "causeway and culverts": 25420.0,
+     "land": 268567.3958921458,
+     "arm reaching every ring": 183000.0,
+     "surplus fill: loading trucks": 99129.83002761431,
+     "contingency": 89241.50727140711
+    },
+    "total_capex": 1250223.975877624,
+    "fill_value": 518647.2707044781,
+    "yearly": {
+     "berm crowns farmed": 5813.917859196513,
+     "water: fish and fishing": 25371.31004685092,
+     "upkeep": -9816.565799854781
+    },
+    "net_yearly": 21368.66210619265,
+    "crown_acres": 4.092785727976752,
+    "water_acres": 4.92059930933283,
+    "land_acres": 18.650513603621235,
+    "r_out": 140.0,
+    "cut_bank_m3": 50062.29401497706,
+    "surplus_m3": 49564.915013807156,
+    "shoreline_m": 3418.052807105695,
+    "water_m3": 26929.451448402346,
+    "crew_days": 178.03374310991177,
+    "npv": -430407.9659979255,
+    "added_npv": -256142.05604164017,
+    "yearly_needed_to_pay": 18173.908293831348,
+    "added_lots": 7
+   },
+   {
+    "rings": 5,
+    "waterfront_lots": 33,
+    "capex": {
+     "design and permits": 18000,
+     "earthworks (pond crew)": 695269.1455126253,
+     "topsoil strip and respread": 36780.42842941182,
+     "causeway and culverts": 31500.0,
+     "land": 374362.2693457678,
+     "arm reaching every ring": 225000.0,
+     "surplus fill: loading trucks": 121884.3996606654,
+     "contingency": 112843.39736027026
+    },
+    "total_capex": 1615639.6403087405,
+    "fill_value": 637699.1790246014,
+    "yearly": {
+     "berm crowns farmed": 6072.299965547087,
+     "water: fish and fishing": 28681.71833980446,
+     "upkeep": -12412.773709629728
+    },
+    "net_yearly": 22341.244595721822,
+    "crown_acres": 5.815333103647244,
+    "water_acres": 6.762607676468068,
+    "land_acres": 25.99737981567832,
+    "r_out": 168.0,
+    "cut_bank_m3": 64274.11290621867,
+    "surplus_m3": 60942.1998303327,
+    "shoreline_m": 5277.875658030853,
+    "water_m3": 32118.696344510186,
+    "crew_days": 228.5744417213447,
+    "npv": -663064.1984155887,
+    "added_npv": -232656.2324176632,
+    "yearly_needed_to_pay": 16507.531396013885,
+    "added_lots": 7
+   }
+  ],
+  "ne_till_no_fill_market": [
+   {
+    "rings": 0,
+    "waterfront_lots": 0,
+    "capex": {
+     "land": 12173.564791947836
+    },
+    "total_capex": 12173.564791947836,
+    "fill_value": 0.0,
+    "yearly": {},
+    "net_yearly": 0.0,
+    "crown_acres": 0.0,
+    "water_acres": 0.0,
+    "land_acres": 0.8453864438852664,
+    "r_out": 18.0,
+    "cut_bank_m3": 0.0,
+    "shoreline_m": 0.0,
+    "crew_days": 0.0,
+    "npv": -12173.564791947836,
+    "added_npv": 0.0,
+    "yearly_needed_to_pay": -0.0,
+    "added_lots": 0
+   },
+   {
+    "rings": 1,
+    "waterfront_lots": 6,
+    "capex": {
+     "design and permits": 18000,
+     "earthworks (pond crew)": 24101.465408152588,
+     "topsoil strip and respread": 2352.517533545907,
+     "causeway and culverts": 5420.0,
+     "land": 33815.45775541066,
+     "arm reaching every ring": 33000.0,
+     "surplus fill: dozed into a bund": 1172.3299231151323,
+     "contingency": 8404.631286481364
+    },
+    "total_capex": 126266.40190670565,
+    "fill_value": 0.0,
+    "yearly": {
+     "berm crowns farmed": 1057.3119494231348,
+     "water: fish and fishing": 5000.0,
+     "upkeep": -924.50944151295
+    },
+    "net_yearly": 5132.802507910184,
+    "crown_acres": 0.2643279873557837,
+    "water_acres": 0.27321794208748046,
+    "land_acres": 2.3482956774590735,
+    "r_out": 40.0,
+    "cut_bank_m3": 2093.908541314855,
+    "surplus_m3": 468.93196924605286,
+    "shoreline_m": 276.46015351590177,
+    "water_m3": 771.3716345239795,
+    "crew_days": 7.446450121294342,
+    "npv": -53924.96789176398,
+    "added_npv": -41751.40309981615,
+    "yearly_needed_to_pay": 2962.3646456226274,
+    "added_lots": 6
+   },
+   {
+    "rings": 2,
+    "waterfront_lots": 13,
+    "capex": {
+     "design and permits": 18000,
+     "earthworks (pond crew)": 155034.5067334267,
+     "topsoil strip and respread": 7535.0162429500615,
+     "causeway and culverts": 12380.0,
+     "land": 92570.51427191922,
+     "arm reaching every ring": 87000.0,
+     "surplus fill: dozed into a bund": 32606.471409600967,
+     "contingency": 31255.599438597776
+    },
+    "total_capex": 436382.10809649475,
+    "fill_value": 0.0,
+    "yearly": {
+     "berm crowns farmed": 4128.302702967513,
+     "water: fish and fishing": 19000.0,
+     "upkeep": -3438.1159382457554
+    },
+    "net_yearly": 19690.18676472176,
+    "crown_acres": 1.2138378382791881,
+    "water_acres": 1.380681203444087,
+    "land_acres": 6.428507935549946,
+    "r_out": 76.0,
+    "cut_bank_m3": 14224.17569967483,
+    "surplus_m3": 13042.588563840387,
+    "shoreline_m": 917.3450548482195,
+    "water_m3": 7903.044794006109,
+    "crew_days": 50.58464243984802,
+    "npv": -158869.70733943803,
+    "added_npv": -104944.73944767404,
+    "yearly_needed_to_pay": 7446.087144439869,
+    "added_lots": 7
+   },
+   {
+    "rings": 3,
+    "waterfront_lots": 19,
+    "capex": {
+     "design and permits": 18000,
+     "earthworks (pond crew)": 242646.7307634822,
+     "topsoil strip and respread": 14495.203345832826,
+     "causeway and culverts": 18460.0,
+     "land": 158301.05695020506,
+     "arm reaching every ring": 129000.0,
+     "surplus fill: dozed into a bund": 48133.4188744775,
+     "contingency": 47073.535298379255
+    },
+    "total_capex": 676109.9452323768,
+    "fill_value": 0.0,
+    "yearly": {
+     "berm crowns farmed": 4754.628507260153,
+     "water: fish and fishing": 20878.698177120365,
+     "upkeep": -5178.088882821718
+    },
+    "net_yearly": 20455.2378015588,
+    "crown_acres": 2.2577141787669217,
+    "water_acres": 2.42674489069967,
+    "land_acres": 10.993128954875353,
+    "r_out": 104.0,
+    "cut_bank_m3": 22340.993831031512,
+    "surplus_m3": 19253.367549791,
+    "shoreline_m": 1972.9201864543902,
+    "water_m3": 10847.664321312674,
+    "crew_days": 79.45002990362487,
+    "npv": -387814.95757194376,
+    "added_npv": -228945.25023250573,
+    "yearly_needed_to_pay": 16244.228090983299,
+    "added_lots": 6
+   },
+   {
+    "rings": 4,
+    "waterfront_lots": 26,
+    "capex": {
+     "design and permits": 18000,
+     "earthworks (pond crew)": 541868.0170872041,
+     "topsoil strip and respread": 24997.225599252546,
+     "causeway and culverts": 25420.0,
+     "land": 268567.3958921458,
+     "arm reaching every ring": 183000.0,
+     "surplus fill: dozed into a bund": 123912.28753451789,
+     "contingency": 91719.75302209746
+    },
+    "total_capex": 1277484.6791352178,
+    "fill_value": 0.0,
+    "yearly": {
+     "berm crowns farmed": 5813.917859196513,
+     "water: fish and fishing": 25371.31004685092,
+     "upkeep": -10089.17283243072
+    },
+    "net_yearly": 21096.05507361671,
+    "crown_acres": 4.092785727976752,
+    "water_acres": 4.92059930933283,
+    "land_acres": 18.650513603621235,
+    "r_out": 140.0,
+    "cut_bank_m3": 50062.29401497706,
+    "surplus_m3": 49564.915013807156,
+    "shoreline_m": 3418.052807105695,
+    "water_m3": 26929.451448402346,
+    "crew_days": 178.03374310991177,
+    "npv": -980158.0483654365,
+    "added_npv": -592343.0907934927,
+    "yearly_needed_to_pay": 42028.197856018975,
+    "added_lots": 7
+   },
+   {
+    "rings": 5,
+    "waterfront_lots": 33,
+    "capex": {
+     "design and permits": 18000,
+     "earthworks (pond crew)": 695269.1455126253,
+     "topsoil strip and respread": 36780.42842941182,
+     "causeway and culverts": 31500.0,
+     "land": 374362.2693457678,
+     "arm reaching every ring": 225000.0,
+     "surplus fill: dozed into a bund": 152355.49957583175,
+     "contingency": 115890.5073517869
+    },
+    "total_capex": 1649157.8502154236,
+    "fill_value": 0.0,
+    "yearly": {
+     "berm crowns farmed": 6072.299965547087,
+     "water: fish and fishing": 28681.71833980446,
+     "upkeep": -12747.955808696559
+    },
+    "net_yearly": 22006.062496654988,
+    "crown_acres": 5.815333103647244,
+    "water_acres": 6.762607676468068,
+    "land_acres": 25.99737981567832,
+    "r_out": 168.0,
+    "cut_bank_m3": 64274.11290621867,
+    "surplus_m3": 60942.1998303327,
+    "shoreline_m": 5277.875658030853,
+    "water_m3": 32118.696344510186,
+    "crew_days": 228.5744417213447,
+    "npv": -1339005.6252706517,
+    "added_npv": -358847.57690521516,
+    "yearly_needed_to_pay": 25461.117377299288,
+    "added_lots": 7
+   }
+  ]
+ }
+}
