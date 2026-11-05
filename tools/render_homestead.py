@@ -622,4 +622,5 @@ def main():
                os.path.join(a.out, "%s-island.png" % a.prefix), 1600, 900, a.samples)
 
 
-main()
+if __name__ == "__main__":
+    main()

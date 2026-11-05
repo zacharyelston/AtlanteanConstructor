@@ -444,6 +444,13 @@ images are in `docs/img/` (`tools/make_figs.py` redraws the SVGs).
   the island (store, cafe, wash-pack, the arm's pivot), a permanent powered
   arm, and 16 cottages for sale outside the rings. The home sales fund the
   farm with no loan; members' work-share and farm dinners make the farm pay.
+- **Destination scale:** `tools/destination.py` and
+  `tools/render_destination.py` model a regional farm market: a 120 ft
+  Monolithic dome on a 72 m plaza island, one deep ring in four basins,
+  crop rings and field quadrants, parking, solar and optional turbines. It
+  needs about 1,800 visitors per market day to carry its loan.
+
+  ![Destination-scale site](docs/img/destination-aerial.jpg)
 - **Where it makes sense:** [docs/where-it-pays.md](docs/where-it-pays.md)
   sweeps the drivers. A homeowner needs two of three things: a fill market,
   direct-sale produce, or land-value uplift. A builder profits almost anywhere

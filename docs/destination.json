@@ -1,0 +1,1064 @@
+{
+ "earthworks": {
+  "cut_bank_m3": 15559.23882988848,
+  "water_m3": 13386.520016900662,
+  "water_area_m2": 7049.669218550682,
+  "island_m2": 4071.5040790523717,
+  "berm_crown_m2": 4051.071859512227,
+  "island_raise_m": 1.0,
+  "fill_to_sell_m3": 13047.396506617624,
+  "crew_days": 55.33245296345014,
+  "crew_usd": 169445.06123466385
+ },
+ "fill_credit": 136527.95704524682,
+ "dome": {
+  "floor_m2": 1052.0879637606859,
+  "floor_ft2": 11324.674841920021,
+  "surface_m2": 2104.1759275213717
+ },
+ "envelopes": {
+  "monolithic": {
+   "label": "Monolithic concrete dome: airform, foam, shotcrete, with skylights and a glazed entry band",
+   "usd_m2": 350,
+   "range": [
+    250,
+    500
+   ],
+   "u_w_m2k": 0.3,
+   "solar_offset": 0.1
+  },
+  "etfe": {
+   "label": "Clear ETFE cushions on a steel frame (like the render)",
+   "usd_m2": 900,
+   "range": [
+    600,
+    1500
+   ],
+   "u_w_m2k": 1.9,
+   "solar_offset": 0.35
+  },
+  "polycarbonate": {
+   "label": "Polycarbonate panels on a steel geodesic frame",
+   "usd_m2": 500,
+   "range": [
+    350,
+    700
+   ],
+   "u_w_m2k": 2.5,
+   "solar_offset": 0.3
+  }
+ },
+ "site": {
+  "acres": 22,
+  "land_usd_acre": 14400,
+  "design_permits_usd": 300000,
+  "topsoil_and_grading_usd": 40000,
+  "fill_usd_yd3": 8.0,
+  "retaining_wall_usd_ft2": 45,
+  "wall_height_m": 1.5,
+  "hedge_usd": 15000,
+  "causeways": 4,
+  "causeway_usd": 60000,
+  "plaza_usd_ft2": 12,
+  "dome_slab_usd_ft2": 12,
+  "dome_mep_usd_ft2": 45,
+  "dome_sprinkler_usd_ft2": 7,
+  "sprinkler_tank_usd": 90000,
+  "restroom_fixtures": 20,
+  "fixture_usd": 12000,
+  "market_fitout_usd": 250000,
+  "fire_alarm_usd": 50000,
+  "dome_design_pct": 8,
+  "outdoor_stalls": 60,
+  "stall_canopy_usd": 1500,
+  "paths_m2": 3200,
+  "paths_usd_ft2": 3,
+  "parking_spaces": 400,
+  "parking_usd_space": 1200,
+  "shuttles": 4,
+  "shuttle_usd": 18000,
+  "septic_usd": 250000,
+  "well_storage_usd": 80000,
+  "power_service_usd": 100000,
+  "pv_kw": 150,
+  "pv_usd_w": 2.4,
+  "farm_setup_usd": 170000,
+  "contingency_pct": 15
+ },
+ "turbines": {
+  "count": 3,
+  "kw_each": 100,
+  "usd_kw": 5500,
+  "capacity_factor": 0.17,
+  "export_usd_kwh": 0.1,
+  "setback_note": "fall zone of 1.1-1.5 x tip height kept clear of paths and parking"
+ },
+ "visitors": {
+  "cautious": 800,
+  "base": 1500,
+  "strong": 3000
+ },
+ "revenue_assumptions": {
+  "stalls_summer": 90,
+  "stalls_winter": 30,
+  "stall_fee_day": 60,
+  "stall_occupancy": 0.8,
+  "people_per_car": 2.5,
+  "parking_fee": 5,
+  "cafe_spend": 5.0,
+  "cafe_cogs_pct": 32,
+  "farm_spend": 3.0,
+  "farm_cogs_pct": 25,
+  "festival_weekends": 4,
+  "festival_ticket": 15,
+  "festival_cost_pct": 35,
+  "event_fee": 10000,
+  "event_cost_pct": 30
+ },
+ "staff": [
+  [
+   "General manager",
+   1,
+   90000
+  ],
+  [
+   "Market manager",
+   1,
+   60000
+  ],
+  [
+   "Events and festivals manager",
+   1,
+   60000
+  ],
+  [
+   "Farm manager",
+   1,
+   55000
+  ],
+  [
+   "Growers",
+   3,
+   40000
+  ],
+  [
+   "Cafe lead",
+   1,
+   50000
+  ],
+  [
+   "Cafe staff",
+   3,
+   35000
+  ],
+  [
+   "Maintenance",
+   2,
+   45000
+  ],
+  [
+   "Cleaning",
+   2,
+   36000
+  ]
+ ],
+ "runs": {
+  "monolithic": {
+   "capex": {
+    "lines": {
+     "land, 22 acres": 316800,
+     "design, permits, site plan, traffic study": 300000,
+     "earthworks (excavator and dozer crew, 55 days)": 169445.06123466385,
+     "topsoil and grading": 40000,
+     "hedge-faced retaining wall round the island": 179346.26215094898,
+     "4 causeways with box culverts": 240000,
+     "plaza paving (32,501 ft2)": 390011.94077999645,
+     "the dome, 120 ft (11,325 ft2)": 2258540.0256765904,
+     "60 outdoor market stalls": 90000,
+     "promenade and cross paths": 103334.4,
+     "parking, 400 spaces, with stormwater": 480000,
+     "4 electric shuttles": 72000,
+     "commercial septic": 250000,
+     "well and water storage": 80000,
+     "three-phase power service": 100000,
+     "solar field, 150 kW": 360000.0,
+     "farm: berm beds, pick-your-own, equipment": 170000,
+     "contingency (15 %)": 839921.65347633
+    },
+    "dome": {
+     "envelope (monolithic)": 736461.57463248,
+     "slab": 135896.09810304025,
+     "heating, ventilation, electrical, lighting": 509610.36788640096,
+     "sprinklers and tank": 169272.72389344015,
+     "restrooms (20 fixtures)": 240000,
+     "indoor market and food-hall fit-out": 250000,
+     "fire alarm and egress": 50000,
+     "design and engineering": 167299.2611612289
+    },
+    "total": 6439399.343318529,
+    "plaza_ft2": 32500.995064999704
+   },
+   "energy": {
+    "dome_heat_kwh_th": 25906.61401964313,
+    "load_kwh": 68635.53800654771,
+    "pv_kwh": 180000,
+    "wind_kwh": 0.0,
+    "export_kwh": 111364.46199345229,
+    "net_energy_bill": -11136.44619934523
+   },
+   "levels": {
+    "cautious": {
+     "visitors_year": 74400,
+     "market_days": 78,
+     "revenue": {
+      "vendor stall fees": 262080.0,
+      "parking": 124800.0,
+      "farm cafe in the dome": 312000.0,
+      "farm produce, flowers, pick-your-own": 187200.0,
+      "festival weekends (4, ticketed)": 180000,
+      "private evening events (10)": 100000
+     },
+     "costs": {
+      "payroll (15 staff plus seasonal crew, with burden)": 866880.0000000001,
+      "cafe food": 99840.0,
+      "farm inputs": 46800.0,
+      "festival costs (acts, security, extra toilets)": 63000.0,
+      "private events: running costs": 30000.0,
+      "marketing": 100000,
+      "insurance": 60000,
+      "waste": 25000,
+      "security on market days": 23400,
+      "shuttle running": 15000,
+      "maintenance (1.5 % of what's built)": 91838.99014977794,
+      "property tax": 55261.35715292437,
+      "energy (net of solar)": -11136.44619934523
+     },
+     "noi": -299803.9011033571,
+     "equity": 2206004.985195649,
+     "loan": 4096866.4010776337,
+     "debt_service": 367532.63649871503,
+     "dscr": -0.8157204866469192,
+     "cash_to_equity": -667336.5376020721,
+     "cash_yield_pct": -30.250907957167946
+    },
+    "base": {
+     "visitors_year": 137000,
+     "market_days": 78,
+     "revenue": {
+      "vendor stall fees": 262080.0,
+      "parking": 234000.0,
+      "farm cafe in the dome": 585000.0,
+      "farm produce, flowers, pick-your-own": 351000.0,
+      "festival weekends (4, ticketed)": 300000,
+      "private evening events (20)": 200000
+     },
+     "costs": {
+      "payroll (15 staff plus seasonal crew, with burden)": 866880.0000000001,
+      "cafe food": 187200.0,
+      "farm inputs": 87750.0,
+      "festival costs (acts, security, extra toilets)": 105000.0,
+      "private events: running costs": 60000.0,
+      "marketing": 100000,
+      "insurance": 60000,
+      "waste": 25000,
+      "security on market days": 23400,
+      "shuttle running": 15000,
+      "maintenance (1.5 % of what's built)": 91838.99014977794,
+      "property tax": 55261.35715292437,
+      "energy (net of solar)": -11136.44619934523
+     },
+     "noi": 265886.0988966429,
+     "equity": 2206004.985195649,
+     "loan": 4096866.4010776337,
+     "debt_service": 367532.63649871503,
+     "dscr": 0.7234353428571574,
+     "cash_to_equity": -101646.53760207212,
+     "cash_yield_pct": -4.6077202129739145
+    },
+    "strong": {
+     "visitors_year": 266000,
+     "market_days": 78,
+     "revenue": {
+      "vendor stall fees": 262080.0,
+      "parking": 468000.0,
+      "farm cafe in the dome": 1170000.0,
+      "farm produce, flowers, pick-your-own": 702000.0,
+      "festival weekends (4, ticketed)": 480000,
+      "private evening events (30)": 300000
+     },
+     "costs": {
+      "payroll (15 staff plus seasonal crew, with burden)": 866880.0000000001,
+      "cafe food": 374400.0,
+      "farm inputs": 175500.0,
+      "festival costs (acts, security, extra toilets)": 168000.0,
+      "private events: running costs": 90000.0,
+      "marketing": 100000,
+      "insurance": 60000,
+      "waste": 25000,
+      "security on market days": 23400,
+      "shuttle running": 15000,
+      "maintenance (1.5 % of what's built)": 91838.99014977794,
+      "property tax": 55261.35715292437,
+      "energy (net of solar)": -11136.44619934523
+     },
+     "noi": 1347936.098896643,
+     "equity": 2206004.985195649,
+     "loan": 4096866.4010776337,
+     "debt_service": 367532.63649871503,
+     "dscr": 3.6675276289412073,
+     "cash_to_equity": 980403.4623979279,
+     "cash_yield_pct": 44.442486258070566
+    }
+   },
+   "visitors_per_market_day_for_dscr_1_25": 1824.3333278555838
+  },
+  "monolithic+wind": {
+   "capex": {
+    "lines": {
+     "land, 22 acres": 316800,
+     "design, permits, site plan, traffic study": 300000,
+     "earthworks (excavator and dozer crew, 55 days)": 169445.06123466385,
+     "topsoil and grading": 40000,
+     "hedge-faced retaining wall round the island": 179346.26215094898,
+     "4 causeways with box culverts": 240000,
+     "plaza paving (32,501 ft2)": 390011.94077999645,
+     "the dome, 120 ft (11,325 ft2)": 2258540.0256765904,
+     "60 outdoor market stalls": 90000,
+     "promenade and cross paths": 103334.4,
+     "parking, 400 spaces, with stormwater": 480000,
+     "4 electric shuttles": 72000,
+     "commercial septic": 250000,
+     "well and water storage": 80000,
+     "three-phase power service": 100000,
+     "solar field, 150 kW": 360000.0,
+     "farm: berm beds, pick-your-own, equipment": 170000,
+     "3 wind turbines, 100 kW each": 1650000,
+     "contingency (15 %)": 1087421.65347633
+    },
+    "dome": {
+     "envelope (monolithic)": 736461.57463248,
+     "slab": 135896.09810304025,
+     "heating, ventilation, electrical, lighting": 509610.36788640096,
+     "sprinklers and tank": 169272.72389344015,
+     "restrooms (20 fixtures)": 240000,
+     "indoor market and food-hall fit-out": 250000,
+     "fire alarm and egress": 50000,
+     "design and engineering": 167299.2611612289
+    },
+    "total": 8336899.343318529,
+    "plaza_ft2": 32500.995064999704
+   },
+   "energy": {
+    "dome_heat_kwh_th": 25906.61401964313,
+    "load_kwh": 68635.53800654771,
+    "pv_kwh": 180000,
+    "wind_kwh": 446760.00000000006,
+    "export_kwh": 558124.4619934523,
+    "net_energy_bill": -55812.44619934523
+   },
+   "levels": {
+    "cautious": {
+     "visitors_year": 74400,
+     "market_days": 78,
+     "revenue": {
+      "vendor stall fees": 262080.0,
+      "parking": 124800.0,
+      "farm cafe in the dome": 312000.0,
+      "farm produce, flowers, pick-your-own": 187200.0,
+      "festival weekends (4, ticketed)": 180000,
+      "private evening events (10)": 100000
+     },
+     "costs": {
+      "payroll (15 staff plus seasonal crew, with burden)": 866880.0000000001,
+      "cafe food": 99840.0,
+      "farm inputs": 46800.0,
+      "festival costs (acts, security, extra toilets)": 63000.0,
+      "private events: running costs": 30000.0,
+      "marketing": 100000,
+      "insurance": 60000,
+      "waste": 25000,
+      "security on market days": 23400,
+      "shuttle running": 15000,
+      "maintenance (1.5 % of what's built)": 120301.49014977794,
+      "property tax": 72387.81265292437,
+      "energy (net of solar and wind)": -55812.44619934523
+     },
+     "noi": -300716.85660335724,
+     "equity": 2870129.985195649,
+     "loan": 5330241.401077634,
+     "debt_service": 478179.5361443481,
+     "dscr": -0.6288785568451842,
+     "cash_to_equity": -778896.3927477053,
+     "cash_yield_pct": -27.138018025849448
+    },
+    "base": {
+     "visitors_year": 137000,
+     "market_days": 78,
+     "revenue": {
+      "vendor stall fees": 262080.0,
+      "parking": 234000.0,
+      "farm cafe in the dome": 585000.0,
+      "farm produce, flowers, pick-your-own": 351000.0,
+      "festival weekends (4, ticketed)": 300000,
+      "private evening events (20)": 200000
+     },
+     "costs": {
+      "payroll (15 staff plus seasonal crew, with burden)": 866880.0000000001,
+      "cafe food": 187200.0,
+      "farm inputs": 87750.0,
+      "festival costs (acts, security, extra toilets)": 105000.0,
+      "private events: running costs": 60000.0,
+      "marketing": 100000,
+      "insurance": 60000,
+      "waste": 25000,
+      "security on market days": 23400,
+      "shuttle running": 15000,
+      "maintenance (1.5 % of what's built)": 120301.49014977794,
+      "property tax": 72387.81265292437,
+      "energy (net of solar and wind)": -55812.44619934523
+     },
+     "noi": 264973.14339664276,
+     "equity": 2870129.985195649,
+     "loan": 5330241.401077634,
+     "debt_service": 478179.5361443481,
+     "dscr": 0.5541289899880937,
+     "cash_to_equity": -213206.39274770534,
+     "cash_yield_pct": -7.428457730048476
+    },
+    "strong": {
+     "visitors_year": 266000,
+     "market_days": 78,
+     "revenue": {
+      "vendor stall fees": 262080.0,
+      "parking": 468000.0,
+      "farm cafe in the dome": 1170000.0,
+      "farm produce, flowers, pick-your-own": 702000.0,
+      "festival weekends (4, ticketed)": 480000,
+      "private evening events (30)": 300000
+     },
+     "costs": {
+      "payroll (15 staff plus seasonal crew, with burden)": 866880.0000000001,
+      "cafe food": 374400.0,
+      "farm inputs": 175500.0,
+      "festival costs (acts, security, extra toilets)": 168000.0,
+      "private events: running costs": 90000.0,
+      "marketing": 100000,
+      "insurance": 60000,
+      "waste": 25000,
+      "security on market days": 23400,
+      "shuttle running": 15000,
+      "maintenance (1.5 % of what's built)": 120301.49014977794,
+      "property tax": 72387.81265292437,
+      "energy (net of solar and wind)": -55812.44619934523
+     },
+     "noi": 1347023.1433966428,
+     "equity": 2870129.985195649,
+     "loan": 5330241.401077634,
+     "debt_service": 478179.5361443481,
+     "dscr": 2.816981994373797,
+     "cash_to_equity": 868843.6072522947,
+     "cash_yield_pct": 30.271925373897936
+    }
+   },
+   "visitors_per_market_day_for_dscr_1_25": 2057.6525503358425
+  },
+  "etfe": {
+   "capex": {
+    "lines": {
+     "land, 22 acres": 316800,
+     "design, permits, site plan, traffic study": 300000,
+     "earthworks (excavator and dozer crew, 55 days)": 169445.06123466385,
+     "topsoil and grading": 40000,
+     "hedge-faced retaining wall round the island": 179346.26215094898,
+     "4 causeways with box culverts": 240000,
+     "plaza paving (32,501 ft2)": 390011.94077999645,
+     "the dome, 120 ft (11,325 ft2)": 3508420.526624285,
+     "60 outdoor market stalls": 90000,
+     "promenade and cross paths": 103334.4,
+     "parking, 400 spaces, with stormwater": 480000,
+     "4 electric shuttles": 72000,
+     "commercial septic": 250000,
+     "well and water storage": 80000,
+     "three-phase power service": 100000,
+     "solar field, 150 kW": 360000.0,
+     "farm: berm beds, pick-your-own, equipment": 170000,
+     "contingency (15 %)": 1027403.7286184841
+    },
+    "dome": {
+     "envelope (etfe)": 1893758.3347692345,
+     "slab": 135896.09810304025,
+     "heating, ventilation, electrical, lighting": 509610.36788640096,
+     "sprinklers and tank": 169272.72389344015,
+     "restrooms (20 fixtures)": 240000,
+     "indoor market and food-hall fit-out": 250000,
+     "fire alarm and egress": 50000,
+     "design and engineering": 259883.00197216927
+    },
+    "total": 7876761.919408378,
+    "plaza_ft2": 32500.995064999704
+   },
+   "energy": {
+    "dome_heat_kwh_th": 118498.77153429357,
+    "load_kwh": 99499.59051143119,
+    "pv_kwh": 180000,
+    "wind_kwh": 0.0,
+    "export_kwh": 80500.40948856881,
+    "net_energy_bill": -8050.040948856881
+   },
+   "levels": {
+    "cautious": {
+     "visitors_year": 74400,
+     "market_days": 78,
+     "revenue": {
+      "vendor stall fees": 262080.0,
+      "parking": 124800.0,
+      "farm cafe in the dome": 312000.0,
+      "farm produce, flowers, pick-your-own": 187200.0,
+      "festival weekends (4, ticketed)": 180000,
+      "private evening events (10)": 100000
+     },
+     "costs": {
+      "payroll (15 staff plus seasonal crew, with burden)": 866880.0000000001,
+      "cafe food": 99840.0,
+      "farm inputs": 46800.0,
+      "festival costs (acts, security, extra toilets)": 63000.0,
+      "private events: running costs": 30000.0,
+      "marketing": 100000,
+      "insurance": 60000,
+      "waste": 25000,
+      "security on market days": 23400,
+      "shuttle running": 15000,
+      "maintenance (1.5 % of what's built)": 113399.42879112568,
+      "property tax": 68234.70429219614,
+      "energy (net of solar)": -8050.040948856881
+     },
+     "noi": -337424.092134465,
+     "equity": 2709081.886827096,
+     "loan": 5031152.075536035,
+     "debt_service": 451348.031866832,
+     "dscr": -0.7475918101134432,
+     "cash_to_equity": -788772.1240012969,
+     "cash_yield_pct": -29.11584651009257
+    },
+    "base": {
+     "visitors_year": 137000,
+     "market_days": 78,
+     "revenue": {
+      "vendor stall fees": 262080.0,
+      "parking": 234000.0,
+      "farm cafe in the dome": 585000.0,
+      "farm produce, flowers, pick-your-own": 351000.0,
+      "festival weekends (4, ticketed)": 300000,
+      "private evening events (20)": 200000
+     },
+     "costs": {
+      "payroll (15 staff plus seasonal crew, with burden)": 866880.0000000001,
+      "cafe food": 187200.0,
+      "farm inputs": 87750.0,
+      "festival costs (acts, security, extra toilets)": 105000.0,
+      "private events: running costs": 60000.0,
+      "marketing": 100000,
+      "insurance": 60000,
+      "waste": 25000,
+      "security on market days": 23400,
+      "shuttle running": 15000,
+      "maintenance (1.5 % of what's built)": 113399.42879112568,
+      "property tax": 68234.70429219614,
+      "energy (net of solar)": -8050.040948856881
+     },
+     "noi": 228265.907865535,
+     "equity": 2709081.886827096,
+     "loan": 5031152.075536035,
+     "debt_service": 451348.031866832,
+     "dscr": 0.5057425572930907,
+     "cash_to_equity": -223082.124001297,
+     "cash_yield_pct": -8.234602471266493
+    },
+    "strong": {
+     "visitors_year": 266000,
+     "market_days": 78,
+     "revenue": {
+      "vendor stall fees": 262080.0,
+      "parking": 468000.0,
+      "farm cafe in the dome": 1170000.0,
+      "farm produce, flowers, pick-your-own": 702000.0,
+      "festival weekends (4, ticketed)": 480000,
+      "private evening events (30)": 300000
+     },
+     "costs": {
+      "payroll (15 staff plus seasonal crew, with burden)": 866880.0000000001,
+      "cafe food": 374400.0,
+      "farm inputs": 175500.0,
+      "festival costs (acts, security, extra toilets)": 168000.0,
+      "private events: running costs": 90000.0,
+      "marketing": 100000,
+      "insurance": 60000,
+      "waste": 25000,
+      "security on market days": 23400,
+      "shuttle running": 15000,
+      "maintenance (1.5 % of what's built)": 113399.42879112568,
+      "property tax": 68234.70429219614,
+      "energy (net of solar)": -8050.040948856881
+     },
+     "noi": 1310315.907865535,
+     "equity": 2709081.886827096,
+     "loan": 5031152.075536035,
+     "debt_service": 451348.031866832,
+     "dscr": 2.9031164763163013,
+     "cash_to_equity": 858967.8759987031,
+     "cash_yield_pct": 31.706973501813746
+    }
+   },
+   "visitors_per_market_day_for_dscr_1_25": 2062.9615082501005
+  },
+  "etfe+wind": {
+   "capex": {
+    "lines": {
+     "land, 22 acres": 316800,
+     "design, permits, site plan, traffic study": 300000,
+     "earthworks (excavator and dozer crew, 55 days)": 169445.06123466385,
+     "topsoil and grading": 40000,
+     "hedge-faced retaining wall round the island": 179346.26215094898,
+     "4 causeways with box culverts": 240000,
+     "plaza paving (32,501 ft2)": 390011.94077999645,
+     "the dome, 120 ft (11,325 ft2)": 3508420.526624285,
+     "60 outdoor market stalls": 90000,
+     "promenade and cross paths": 103334.4,
+     "parking, 400 spaces, with stormwater": 480000,
+     "4 electric shuttles": 72000,
+     "commercial septic": 250000,
+     "well and water storage": 80000,
+     "three-phase power service": 100000,
+     "solar field, 150 kW": 360000.0,
+     "farm: berm beds, pick-your-own, equipment": 170000,
+     "3 wind turbines, 100 kW each": 1650000,
+     "contingency (15 %)": 1274903.7286184842
+    },
+    "dome": {
+     "envelope (etfe)": 1893758.3347692345,
+     "slab": 135896.09810304025,
+     "heating, ventilation, electrical, lighting": 509610.36788640096,
+     "sprinklers and tank": 169272.72389344015,
+     "restrooms (20 fixtures)": 240000,
+     "indoor market and food-hall fit-out": 250000,
+     "fire alarm and egress": 50000,
+     "design and engineering": 259883.00197216927
+    },
+    "total": 9774261.91940838,
+    "plaza_ft2": 32500.995064999704
+   },
+   "energy": {
+    "dome_heat_kwh_th": 118498.77153429357,
+    "load_kwh": 99499.59051143119,
+    "pv_kwh": 180000,
+    "wind_kwh": 446760.00000000006,
+    "export_kwh": 527260.4094885688,
+    "net_energy_bill": -52726.040948856884
+   },
+   "levels": {
+    "cautious": {
+     "visitors_year": 74400,
+     "market_days": 78,
+     "revenue": {
+      "vendor stall fees": 262080.0,
+      "parking": 124800.0,
+      "farm cafe in the dome": 312000.0,
+      "farm produce, flowers, pick-your-own": 187200.0,
+      "festival weekends (4, ticketed)": 180000,
+      "private evening events (10)": 100000
+     },
+     "costs": {
+      "payroll (15 staff plus seasonal crew, with burden)": 866880.0000000001,
+      "cafe food": 99840.0,
+      "farm inputs": 46800.0,
+      "festival costs (acts, security, extra toilets)": 63000.0,
+      "private events: running costs": 30000.0,
+      "marketing": 100000,
+      "insurance": 60000,
+      "waste": 25000,
+      "security on market days": 23400,
+      "shuttle running": 15000,
+      "maintenance (1.5 % of what's built)": 141861.92879112568,
+      "property tax": 85361.15979219614,
+      "energy (net of solar and wind)": -52726.040948856884
+     },
+     "noi": -338337.04763446515,
+     "equity": 3373206.8868270963,
+     "loan": 6264527.075536037,
+     "debt_service": 561994.9315124652,
+     "dscr": -0.602028645923759,
+     "cash_to_equity": -900331.9791469304,
+     "cash_yield_pct": -26.690683653672963
+    },
+    "base": {
+     "visitors_year": 137000,
+     "market_days": 78,
+     "revenue": {
+      "vendor stall fees": 262080.0,
+      "parking": 234000.0,
+      "farm cafe in the dome": 585000.0,
+      "farm produce, flowers, pick-your-own": 351000.0,
+      "festival weekends (4, ticketed)": 300000,
+      "private evening events (20)": 200000
+     },
+     "costs": {
+      "payroll (15 staff plus seasonal crew, with burden)": 866880.0000000001,
+      "cafe food": 187200.0,
+      "farm inputs": 87750.0,
+      "festival costs (acts, security, extra toilets)": 105000.0,
+      "private events: running costs": 60000.0,
+      "marketing": 100000,
+      "insurance": 60000,
+      "waste": 25000,
+      "security on market days": 23400,
+      "shuttle running": 15000,
+      "maintenance (1.5 % of what's built)": 141861.92879112568,
+      "property tax": 85361.15979219614,
+      "energy (net of solar and wind)": -52726.040948856884
+     },
+     "noi": 227352.95236553485,
+     "equity": 3373206.8868270963,
+     "loan": 6264527.075536037,
+     "debt_service": 561994.9315124652,
+     "dscr": 0.40454626833319063,
+     "cash_to_equity": -334641.9791469304,
+     "cash_yield_pct": -9.920588637885212
+    },
+    "strong": {
+     "visitors_year": 266000,
+     "market_days": 78,
+     "revenue": {
+      "vendor stall fees": 262080.0,
+      "parking": 468000.0,
+      "farm cafe in the dome": 1170000.0,
+      "farm produce, flowers, pick-your-own": 702000.0,
+      "festival weekends (4, ticketed)": 480000,
+      "private evening events (30)": 300000
+     },
+     "costs": {
+      "payroll (15 staff plus seasonal crew, with burden)": 866880.0000000001,
+      "cafe food": 374400.0,
+      "farm inputs": 175500.0,
+      "festival costs (acts, security, extra toilets)": 168000.0,
+      "private events: running costs": 90000.0,
+      "marketing": 100000,
+      "insurance": 60000,
+      "waste": 25000,
+      "security on market days": 23400,
+      "shuttle running": 15000,
+      "maintenance (1.5 % of what's built)": 141861.92879112568,
+      "property tax": 85361.15979219614,
+      "energy (net of solar and wind)": -52726.040948856884
+     },
+     "noi": 1309402.9523655348,
+     "equity": 3373206.8868270963,
+     "loan": 6264527.075536037,
+     "debt_service": 561994.9315124652,
+     "dscr": 2.329919504508008,
+     "cash_to_equity": 747408.0208530696,
+     "cash_yield_pct": 22.15719479797742
+    }
+   },
+   "visitors_per_market_day_for_dscr_1_25": 2296.280730730359
+  },
+  "polycarbonate": {
+   "capex": {
+    "lines": {
+     "land, 22 acres": 316800,
+     "design, permits, site plan, traffic study": 300000,
+     "earthworks (excavator and dozer crew, 55 days)": 169445.06123466385,
+     "topsoil and grading": 40000,
+     "hedge-faced retaining wall round the island": 179346.26215094898,
+     "4 causeways with box culverts": 240000,
+     "plaza paving (32,501 ft2)": 390011.94077999645,
+     "the dome, 120 ft (11,325 ft2)": 2599416.5259350524,
+     "60 outdoor market stalls": 90000,
+     "promenade and cross paths": 103334.4,
+     "parking, 400 spaces, with stormwater": 480000,
+     "4 electric shuttles": 72000,
+     "commercial septic": 250000,
+     "well and water storage": 80000,
+     "three-phase power service": 100000,
+     "solar field, 150 kW": 360000.0,
+     "farm: berm beds, pick-your-own, equipment": 170000,
+     "contingency (15 %)": 891053.1285150993
+    },
+    "dome": {
+     "envelope (polycarbonate)": 1052087.9637606859,
+     "slab": 135896.09810304025,
+     "heating, ventilation, electrical, lighting": 509610.36788640096,
+     "sprinklers and tank": 169272.72389344015,
+     "restrooms (20 fixtures)": 240000,
+     "indoor market and food-hall fit-out": 250000,
+     "fire alarm and egress": 50000,
+     "design and engineering": 192549.37229148537
+    },
+    "total": 6831407.318615761,
+    "plaza_ft2": 32500.995064999704
+   },
+   "energy": {
+    "dome_heat_kwh_th": 167913.23901620542,
+    "load_kwh": 115971.07967206847,
+    "pv_kwh": 180000,
+    "wind_kwh": 0.0,
+    "export_kwh": 64028.920327931526,
+    "net_energy_bill": -6402.892032793153
+   },
+   "levels": {
+    "cautious": {
+     "visitors_year": 74400,
+     "market_days": 78,
+     "revenue": {
+      "vendor stall fees": 262080.0,
+      "parking": 124800.0,
+      "farm cafe in the dome": 312000.0,
+      "farm produce, flowers, pick-your-own": 187200.0,
+      "festival weekends (4, ticketed)": 180000,
+      "private evening events (10)": 100000
+     },
+     "costs": {
+      "payroll (15 staff plus seasonal crew, with burden)": 866880.0000000001,
+      "cafe food": 99840.0,
+      "farm inputs": 46800.0,
+      "festival costs (acts, security, extra toilets)": 63000.0,
+      "private events: running costs": 30000.0,
+      "marketing": 100000,
+      "insurance": 60000,
+      "waste": 25000,
+      "security on market days": 23400,
+      "shuttle running": 15000,
+      "maintenance (1.5 % of what's built)": 97719.10977923642,
+      "property tax": 58799.54273636213,
+      "energy (net of solar)": -6402.892032793153
+     },
+     "noi": -313955.76048280555,
+     "equity": 2343207.77654968,
+     "loan": 4351671.585020834,
+     "debt_service": 390391.38069001964,
+     "dscr": -0.8042077156721197,
+     "cash_to_equity": -704347.1411728251,
+     "cash_yield_pct": -30.059098822638774
+    },
+    "base": {
+     "visitors_year": 137000,
+     "market_days": 78,
+     "revenue": {
+      "vendor stall fees": 262080.0,
+      "parking": 234000.0,
+      "farm cafe in the dome": 585000.0,
+      "farm produce, flowers, pick-your-own": 351000.0,
+      "festival weekends (4, ticketed)": 300000,
+      "private evening events (20)": 200000
+     },
+     "costs": {
+      "payroll (15 staff plus seasonal crew, with burden)": 866880.0000000001,
+      "cafe food": 187200.0,
+      "farm inputs": 87750.0,
+      "festival costs (acts, security, extra toilets)": 105000.0,
+      "private events: running costs": 60000.0,
+      "marketing": 100000,
+      "insurance": 60000,
+      "waste": 25000,
+      "security on market days": 23400,
+      "shuttle running": 15000,
+      "maintenance (1.5 % of what's built)": 97719.10977923642,
+      "property tax": 58799.54273636213,
+      "energy (net of solar)": -6402.892032793153
+     },
+     "noi": 251734.23951719445,
+     "equity": 2343207.77654968,
+     "loan": 4351671.585020834,
+     "debt_service": 390391.38069001964,
+     "dscr": 0.6448253008871567,
+     "cash_to_equity": -138657.14117282518,
+     "cash_yield_pct": -5.91740700762758
+    },
+    "strong": {
+     "visitors_year": 266000,
+     "market_days": 78,
+     "revenue": {
+      "vendor stall fees": 262080.0,
+      "parking": 468000.0,
+      "farm cafe in the dome": 1170000.0,
+      "farm produce, flowers, pick-your-own": 702000.0,
+      "festival weekends (4, ticketed)": 480000,
+      "private evening events (30)": 300000
+     },
+     "costs": {
+      "payroll (15 staff plus seasonal crew, with burden)": 866880.0000000001,
+      "cafe food": 374400.0,
+      "farm inputs": 175500.0,
+      "festival costs (acts, security, extra toilets)": 168000.0,
+      "private events: running costs": 90000.0,
+      "marketing": 100000,
+      "insurance": 60000,
+      "waste": 25000,
+      "security on market days": 23400,
+      "shuttle running": 15000,
+      "maintenance (1.5 % of what's built)": 97719.10977923642,
+      "property tax": 58799.54273636213,
+      "energy (net of solar)": -6402.892032793153
+     },
+     "noi": 1333784.2395171945,
+     "equity": 2343207.77654968,
+     "loan": 4351671.585020834,
+     "debt_service": 390391.38069001964,
+     "dscr": 3.416530962235183,
+     "cash_to_equity": 943392.8588271749,
+     "cash_yield_pct": 40.26074291270488
+    }
+   },
+   "visitors_per_market_day_for_dscr_1_25": 1895.935958348491
+  },
+  "polycarbonate+wind": {
+   "capex": {
+    "lines": {
+     "land, 22 acres": 316800,
+     "design, permits, site plan, traffic study": 300000,
+     "earthworks (excavator and dozer crew, 55 days)": 169445.06123466385,
+     "topsoil and grading": 40000,
+     "hedge-faced retaining wall round the island": 179346.26215094898,
+     "4 causeways with box culverts": 240000,
+     "plaza paving (32,501 ft2)": 390011.94077999645,
+     "the dome, 120 ft (11,325 ft2)": 2599416.5259350524,
+     "60 outdoor market stalls": 90000,
+     "promenade and cross paths": 103334.4,
+     "parking, 400 spaces, with stormwater": 480000,
+     "4 electric shuttles": 72000,
+     "commercial septic": 250000,
+     "well and water storage": 80000,
+     "three-phase power service": 100000,
+     "solar field, 150 kW": 360000.0,
+     "farm: berm beds, pick-your-own, equipment": 170000,
+     "3 wind turbines, 100 kW each": 1650000,
+     "contingency (15 %)": 1138553.1285150992
+    },
+    "dome": {
+     "envelope (polycarbonate)": 1052087.9637606859,
+     "slab": 135896.09810304025,
+     "heating, ventilation, electrical, lighting": 509610.36788640096,
+     "sprinklers and tank": 169272.72389344015,
+     "restrooms (20 fixtures)": 240000,
+     "indoor market and food-hall fit-out": 250000,
+     "fire alarm and egress": 50000,
+     "design and engineering": 192549.37229148537
+    },
+    "total": 8728907.31861576,
+    "plaza_ft2": 32500.995064999704
+   },
+   "energy": {
+    "dome_heat_kwh_th": 167913.23901620542,
+    "load_kwh": 115971.07967206847,
+    "pv_kwh": 180000,
+    "wind_kwh": 446760.00000000006,
+    "export_kwh": 510788.9203279315,
+    "net_energy_bill": -51078.892032793156
+   },
+   "levels": {
+    "cautious": {
+     "visitors_year": 74400,
+     "market_days": 78,
+     "revenue": {
+      "vendor stall fees": 262080.0,
+      "parking": 124800.0,
+      "farm cafe in the dome": 312000.0,
+      "farm produce, flowers, pick-your-own": 187200.0,
+      "festival weekends (4, ticketed)": 180000,
+      "private evening events (10)": 100000
+     },
+     "costs": {
+      "payroll (15 staff plus seasonal crew, with burden)": 866880.0000000001,
+      "cafe food": 99840.0,
+      "farm inputs": 46800.0,
+      "festival costs (acts, security, extra toilets)": 63000.0,
+      "private events: running costs": 30000.0,
+      "marketing": 100000,
+      "insurance": 60000,
+      "waste": 25000,
+      "security on market days": 23400,
+      "shuttle running": 15000,
+      "maintenance (1.5 % of what's built)": 126181.60977923642,
+      "property tax": 75925.99823636211,
+      "energy (net of solar and wind)": -51078.892032793156
+     },
+     "noi": -314868.7159828055,
+     "equity": 3007332.77654968,
+     "loan": 5585046.585020835,
+     "debt_service": 501038.2803356527,
+     "dscr": -0.6284324538473796,
+     "cash_to_equity": -815906.9963184581,
+     "cash_yield_pct": -27.13058570307441
+    },
+    "base": {
+     "visitors_year": 137000,
+     "market_days": 78,
+     "revenue": {
+      "vendor stall fees": 262080.0,
+      "parking": 234000.0,
+      "farm cafe in the dome": 585000.0,
+      "farm produce, flowers, pick-your-own": 351000.0,
+      "festival weekends (4, ticketed)": 300000,
+      "private evening events (20)": 200000
+     },
+     "costs": {
+      "payroll (15 staff plus seasonal crew, with burden)": 866880.0000000001,
+      "cafe food": 187200.0,
+      "farm inputs": 87750.0,
+      "festival costs (acts, security, extra toilets)": 105000.0,
+      "private events: running costs": 60000.0,
+      "marketing": 100000,
+      "insurance": 60000,
+      "waste": 25000,
+      "security on market days": 23400,
+      "shuttle running": 15000,
+      "maintenance (1.5 % of what's built)": 126181.60977923642,
+      "property tax": 75925.99823636211,
+      "energy (net of solar and wind)": -51078.892032793156
+     },
+     "noi": 250821.28401719453,
+     "equity": 3007332.77654968,
+     "loan": 5585046.585020835,
+     "debt_service": 501038.2803356527,
+     "dscr": 0.5006030354590187,
+     "cash_to_equity": -250216.99631845817,
+     "cash_yield_pct": -8.320229748752071
+    },
+    "strong": {
+     "visitors_year": 266000,
+     "market_days": 78,
+     "revenue": {
+      "vendor stall fees": 262080.0,
+      "parking": 468000.0,
+      "farm cafe in the dome": 1170000.0,
+      "farm produce, flowers, pick-your-own": 702000.0,
+      "festival weekends (4, ticketed)": 480000,
+      "private evening events (30)": 300000
+     },
+     "costs": {
+      "payroll (15 staff plus seasonal crew, with burden)": 866880.0000000001,
+      "cafe food": 374400.0,
+      "farm inputs": 175500.0,
+      "festival costs (acts, security, extra toilets)": 168000.0,
+      "private events: running costs": 90000.0,
+      "marketing": 100000,
+      "insurance": 60000,
+      "waste": 25000,
+      "security on market days": 23400,
+      "shuttle running": 15000,
+      "maintenance (1.5 % of what's built)": 126181.60977923642,
+      "property tax": 75925.99823636211,
+      "energy (net of solar and wind)": -51078.892032793156
+     },
+     "noi": 1332871.2840171945,
+     "equity": 3007332.77654968,
+     "loan": 5585046.585020835,
+     "debt_service": 501038.2803356527,
+     "dscr": 2.6602184629970487,
+     "cash_to_equity": 831833.0036815419,
+     "cash_yield_pct": 27.66015820290782
+    }
+   },
+   "visitors_per_market_day_for_dscr_1_25": 2129.255180837754
+  }
+ }
+}
