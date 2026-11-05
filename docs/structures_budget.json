@@ -1,0 +1,328 @@
+{
+ "cap_usd": 50000,
+ "structures": {
+  "cabin": {
+   "label": "Private cabin, 16 x 20 ft, SIP panels, no plumbing",
+   "count": 12,
+   "ft2": 320,
+   "retail_each": 68280.0,
+   "engineered_each": 26360,
+   "retail_usd_ft2": 213.375,
+   "engineered_usd_ft2": 82.375,
+   "under_cap": true,
+   "saving_each": 41920.0,
+   "lines": [
+    {
+     "item": "Foundation",
+     "retail": 5000,
+     "engineered": 2500,
+     "how": "helical piers or sonotubes, members dig and set",
+     "saving": 2500
+    },
+    {
+     "item": "SIP shell (956 ft2 of panel)",
+     "retail": 23900,
+     "engineered": 9560,
+     "how": "panels bought direct at about $10/ft2 and set by members; one cut list for all 12",
+     "saving": 14340
+    },
+    {
+     "item": "Windows and doors",
+     "retail": 5500,
+     "engineered": 3000,
+     "how": "standard sizes, bought 12 at a time",
+     "saving": 2500
+    },
+    {
+     "item": "Metal roof and trim",
+     "retail": 3500,
+     "engineered": 2000,
+     "how": "stock panel lengths, members install",
+     "saving": 1500
+    },
+    {
+     "item": "Electrical",
+     "retail": 4500,
+     "engineered": 3500,
+     "how": "licensed electrician connects; members pull wire under supervision",
+     "saving": 1000
+    },
+    {
+     "item": "Heat and cooling (mini-split)",
+     "retail": 4500,
+     "engineered": 2500,
+     "how": "bulk order of 12 ductless units",
+     "saving": 2000
+    },
+    {
+     "item": "Interior finish",
+     "retail": 7000,
+     "engineered": 2500,
+     "how": "finished plywood walls, sealed floor, no drywall",
+     "saving": 4500
+    },
+    {
+     "item": "Permits, design, delivery",
+     "retail": 3000,
+     "engineered": 800,
+     "how": "one design approved once, built 12 times",
+     "saving": 2200
+    }
+   ]
+  },
+  "hall": {
+   "label": "Common hall (kitchen and dining), 30 x 32 ft steel arch",
+   "count": 1,
+   "ft2": 960,
+   "retail_each": 115320.0,
+   "engineered_each": 49900,
+   "retail_usd_ft2": 120.125,
+   "engineered_usd_ft2": 51.979166666666664,
+   "under_cap": true,
+   "saving_each": 65420.0,
+   "lines": [
+    {
+     "item": "Insulated slab",
+     "retail": 11500,
+     "engineered": 7500,
+     "how": "contractor pours, members place forms, foam and PEX",
+     "saving": 4000
+    },
+    {
+     "item": "Steel arch kit",
+     "retail": 14500,
+     "engineered": 13000,
+     "how": "direct from the maker",
+     "saving": 1500
+    },
+    {
+     "item": "Erection",
+     "retail": 6500,
+     "engineered": 1200,
+     "how": "members erect with a rented lift",
+     "saving": 5300
+    },
+    {
+     "item": "Spray-foam insulation (1,500 ft2 of arch)",
+     "retail": 4600,
+     "engineered": 4200,
+     "how": "contractor; no cheaper safe option",
+     "saving": 400
+    },
+    {
+     "item": "End walls, windows, doors",
+     "retail": 8000,
+     "engineered": 4500,
+     "how": "framed by members; salvaged and stock glazing",
+     "saving": 3500
+    },
+    {
+     "item": "Electrical",
+     "retail": 7500,
+     "engineered": 4500,
+     "how": "licensed electrician, members assist",
+     "saving": 3000
+    },
+    {
+     "item": "Radiant floor on the ground-source loop",
+     "retail": 7000,
+     "engineered": 2500,
+     "how": "PEX in the slab; heat pump costed with the energy system",
+     "saving": 4500
+    },
+    {
+     "item": "Kitchen: cabinets, range, sinks, fridge",
+     "retail": 20000,
+     "engineered": 6500,
+     "how": "restaurant-surplus equipment",
+     "saving": 13500
+    },
+    {
+     "item": "Kitchen plumbing",
+     "retail": 6000,
+     "engineered": 2500,
+     "how": "hall and bath house built back to back on one shared wet wall",
+     "saving": 3500
+    },
+    {
+     "item": "Finishes",
+     "retail": 7000,
+     "engineered": 2000,
+     "how": "sealed concrete floor, plywood",
+     "saving": 5000
+    },
+    {
+     "item": "Permits and engineering",
+     "retail": 3500,
+     "engineered": 1500,
+     "how": "stamped arch drawings come with the kit",
+     "saving": 2000
+    }
+   ]
+  },
+  "bath": {
+   "label": "Bath and laundry house, 20 x 24 ft, 3 showers, 3 WCs, laundry",
+   "count": 1,
+   "ft2": 480,
+   "retail_each": 125760.0,
+   "engineered_each": 47920,
+   "retail_usd_ft2": 262.0,
+   "engineered_usd_ft2": 99.83333333333333,
+   "under_cap": true,
+   "saving_each": 77840.0,
+   "lines": [
+    {
+     "item": "Slab",
+     "retail": 6000,
+     "engineered": 4000,
+     "how": "poured with the hall",
+     "saving": 2000
+    },
+    {
+     "item": "SIP shell (1,312 ft2 of panel)",
+     "retail": 32800,
+     "engineered": 13120,
+     "how": "same panels and crew as the cabins",
+     "saving": 19680
+    },
+    {
+     "item": "Windows and doors",
+     "retail": 3500,
+     "engineered": 1500,
+     "how": "stock sizes",
+     "saving": 2000
+    },
+    {
+     "item": "Roof",
+     "retail": 3000,
+     "engineered": 1800,
+     "how": "stock metal panels",
+     "saving": 1200
+    },
+    {
+     "item": "Plumbing, 9 fixtures",
+     "retail": 27000,
+     "engineered": 12000,
+     "how": "licensed plumber; one wet wall, PEX manifold, prefab shower pans",
+     "saving": 15000
+    },
+    {
+     "item": "Wet-area finishes",
+     "retail": 12000,
+     "engineered": 3500,
+     "how": "FRP wall panels instead of tile",
+     "saving": 8500
+    },
+    {
+     "item": "Electrical",
+     "retail": 5000,
+     "engineered": 3000,
+     "how": "licensed electrician, members assist",
+     "saving": 2000
+    },
+    {
+     "item": "Ventilation (ERV) and heat",
+     "retail": 5000,
+     "engineered": 2500,
+     "how": "one energy-recovery ventilator",
+     "saving": 2500
+    },
+    {
+     "item": "Heat-pump water heater",
+     "retail": 3500,
+     "engineered": 2500,
+     "how": "one 80 gal unit",
+     "saving": 1000
+    },
+    {
+     "item": "Washers and dryers",
+     "retail": 4000,
+     "engineered": 3000,
+     "how": "two pairs, heat-pump dryers",
+     "saving": 1000
+    },
+    {
+     "item": "Permits",
+     "retail": 3000,
+     "engineered": 1000,
+     "how": "shared review with the cabins",
+     "saving": 2000
+    }
+   ]
+  },
+  "shop": {
+   "label": "Workshop and barn, 30 x 40 ft steel arch, unheated",
+   "count": 1,
+   "ft2": 1200,
+   "retail_each": 67200.0,
+   "engineered_each": 29500,
+   "retail_usd_ft2": 56.0,
+   "engineered_usd_ft2": 24.583333333333332,
+   "under_cap": true,
+   "saving_each": 37700.0,
+   "lines": [
+    {
+     "item": "Floor",
+     "retail": 14000,
+     "engineered": 3500,
+     "how": "compacted gravel instead of a slab; slab later if needed",
+     "saving": 10500
+    },
+    {
+     "item": "Steel arch kit",
+     "retail": 18000,
+     "engineered": 16000,
+     "how": "direct from the maker",
+     "saving": 2000
+    },
+    {
+     "item": "Erection",
+     "retail": 8000,
+     "engineered": 1500,
+     "how": "members erect with a rented lift",
+     "saving": 6500
+    },
+    {
+     "item": "End walls, roll-up door",
+     "retail": 8000,
+     "engineered": 4500,
+     "how": "members frame; stock door",
+     "saving": 3500
+    },
+    {
+     "item": "Electrical",
+     "retail": 6000,
+     "engineered": 3000,
+     "how": "licensed electrician, members assist",
+     "saving": 3000
+    },
+    {
+     "item": "Permits",
+     "retail": 2000,
+     "engineered": 1000,
+     "how": "agricultural building",
+     "saving": 1000
+    }
+   ]
+  }
+ },
+ "totals": {
+  "retail": 1127640.0,
+  "engineered": 443640.0,
+  "ft2": 6480
+ },
+ "conventional": {
+  "label": "12 self-contained studios with bath and kitchenette, retail, plus the workshop",
+  "studio_each": 98880.0,
+  "studio_usd_ft2": 309.0,
+  "total": 1253760.0
+ },
+ "savings_by_kind": {
+  "labour (members build)": 335260.0,
+  "plumbing and wet areas": 27000.0,
+  "equipment and kits": 82000.0,
+  "licensed trades (electrical, spray foam)": 20400.0,
+  "design and permits": 31400.0,
+  "no general contractor margin": 187940.0
+ }
+}
