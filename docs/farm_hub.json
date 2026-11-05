@@ -1,0 +1,444 @@
+{
+ "hub": {
+  "retail": 724035.3671147134,
+  "engineered": 362092.90378792613,
+  "ft2": 2827.4333882308138,
+  "lines": [
+   {
+    "item": "Slab and ring foundation",
+    "retail": 33929.20065876977,
+    "engineered": 22619.46710584651,
+    "how": "members place forms, insulation and PEX; contractor pours"
+   },
+   {
+    "item": "Dome shell (concrete or panel)",
+    "retail": 169646.00329384883,
+    "engineered": 113097.33552923254,
+    "how": "shell crew hired direct; members do the interior foam and finish"
+   },
+   {
+    "item": "Interior finish and acoustic panels",
+    "retail": 28274.333882308136,
+    "engineered": 11309.733552923255,
+    "how": "members install; sealed concrete floor"
+   },
+   {
+    "item": "Heat pump on the ground loop, ventilation for a crowd",
+    "retail": 39584.067435231394,
+    "engineered": 25446.900494077323,
+    "how": "radiant floor plus an ERV sized for the guest count"
+   },
+   {
+    "item": "Electrical, lighting, sound",
+    "retail": 33929.20065876977,
+    "engineered": 22619.46710584651,
+    "how": "licensed electrician, members assist"
+   },
+   {
+    "item": "Glazing and wide doors to the terrace",
+    "retail": 30000,
+    "engineered": 20000,
+    "how": "stock storefront sizes"
+   },
+   {
+    "item": "Catering prep kitchen (the residents' kitchen too)",
+    "retail": 40000,
+    "engineered": 15000,
+    "how": "restaurant-surplus equipment; caterers bring the rest"
+   },
+   {
+    "item": "Fire alarm and egress lighting",
+    "retail": 12000,
+    "engineered": 9000,
+    "how": "licensed installer"
+   },
+   {
+    "item": "Terrace, paths and ramps",
+    "retail": 25000,
+    "engineered": 10000,
+    "how": "members build; gravel and pavers"
+   },
+   {
+    "item": "Causeway upgrade for a fire engine",
+    "retail": 20000,
+    "engineered": 12000,
+    "how": "wider, compacted, rated culverts"
+   },
+   {
+    "item": "Permits, engineering and a special permit",
+    "retail": 25000,
+    "engineered": 20000,
+    "how": "assembly use needs stamped drawings"
+   },
+   {
+    "item": "Tables and chairs",
+    "retail": 15000,
+    "engineered": 10000,
+    "how": "bought used from venues that are refitting"
+   },
+   {
+    "item": "Restrooms (3 WC with sinks, accessible)",
+    "retail": 27000,
+    "engineered": 15000,
+    "how": "licensed plumber; one restroom block, back to back"
+   },
+   {
+    "item": "Parking, 30 spaces",
+    "retail": 24000,
+    "engineered": 12000,
+    "how": "gravel lot outside the rings, members grade it with the eOx"
+   },
+   {
+    "item": "Cold room and wash-pack station",
+    "retail": 40000,
+    "engineered": 23000,
+    "how": "walk-in cooler kit; stainless sinks and a barrel washer"
+   },
+   {
+    "item": "Store fixtures, coolers and point of sale",
+    "retail": 25000,
+    "engineered": 12000,
+    "how": "used display coolers; members build the shelving"
+   },
+   {
+    "item": "Arm pivot bearing, slip ring and foundation",
+    "retail": 15000,
+    "engineered": 9000,
+    "how": "a slewing ring on a concrete pier at the hub's edge"
+   }
+  ]
+ },
+ "arm": {
+  "retail": 208800.0,
+  "engineered": 102000,
+  "lines": [
+   {
+    "item": "Truss, 58 m from the island edge to the pasture berm",
+    "retail": 70000,
+    "engineered": 40000,
+    "how": "galvanised steel sections, bolted"
+   },
+   {
+    "item": "Floats, ice-rated HDPE pontoons",
+    "retail": 18000,
+    "engineered": 12000,
+    "how": "stay in the water through the winter, parked at the island"
+   },
+   {
+    "item": "Drive: three eOx 48 V wheel modules on the berm crowns",
+    "retail": 24000,
+    "engineered": 12000,
+    "how": "the eOx drive module, reused"
+   },
+   {
+    "item": "Tool carriage running the length of the arm, with hoist",
+    "retail": 20000,
+    "engineered": 10000,
+    "how": "a gantry trolley on the bottom chord"
+   },
+   {
+    "item": "Tools: watering boom, fish feeder, harvest bins, mower deck",
+    "retail": 15000,
+    "engineered": 9000,
+    "how": "each a carriage attachment"
+   },
+   {
+    "item": "Controls, sensors, cameras, battery buffer",
+    "retail": 12000,
+    "engineered": 7000,
+    "how": "48 V bus shared with the eOx"
+   },
+   {
+    "item": "Structural and marine engineering",
+    "retail": 15000,
+    "engineered": 12000,
+    "how": "stamped design for wind and ice"
+   }
+  ]
+ },
+ "arm_savings": {
+  "field_hours": 12281.599999999999,
+  "saved_hours": 1828.1599999999999,
+  "saved_fte": 0.9140799999999999,
+  "saved_usd": 36855.7056
+ },
+ "homes": {
+  "retail": {
+   "cottage": 198180.0,
+   "site_share": 19828.360109768182,
+   "all_in": 239809.196120745,
+   "margin_each": 65690.80387925499,
+   "margin_total": 1051052.8620680799
+  },
+  "engineered": {
+   "cottage": 76140.0,
+   "site_share": 19828.360109768182,
+   "all_in": 105565.19612074501,
+   "margin_each": 199934.803879255,
+   "margin_total": 3198956.86206808
+  }
+ },
+ "homes_assumptions": {
+  "count": 16,
+  "ft2": 768,
+  "label": "Cottage, 24 x 32 ft, 2 bedrooms, own kitchen, bath and laundry",
+  "scale_factor": 0.9,
+  "acres": 6,
+  "land_usd_acre": 14400,
+  "septic_well_power_usd": 110000,
+  "trench_usd": null,
+  "roads_parking_usd_each": 3000,
+  "subdivision_legal_usd": 40000,
+  "contingency_pct": 10,
+  "sale_price_usd": 325000,
+  "selling_cost_pct": 6,
+  "member_share_usd_month": 130,
+  "member_dues_usd_month": 120,
+  "invest_homes": 8,
+  "invest_each_usd": 25000
+ },
+ "farm_capex": {
+  "design, survey, test pits, permits": 18000,
+  "earthworks (pond crew)": 105797.87708317077,
+  "topsoil strip and respread": 7532.693909922908,
+  "surplus spoil: loading trucks": 13312.469512391675,
+  "gravel bought": 31500.0,
+  "sand bought": 4480.0,
+  "culverts, spillway extras": 6000,
+  "farm: fruit trees (about 70)": 4200,
+  "farm: pasture fencing": 3500,
+  "farm: fish stocking": 1500,
+  "farm: ducks and goats": 2000,
+  "farm: aquatic plants": 1000,
+  "farm: solar pump and drip lines": 2000,
+  "greenhouses: 17 tunnels on the pasture berm (after EQIP)": 152974.2792028136,
+  "ground-source heat pump for hall and laundry house, 3 ton": 23400.0,
+  "Workshop and barn, 30 x 40 ft steel arch, unheated (x1), engineered": 29500,
+  "formation, leases, zoning and engineering": 15000,
+  "farm hub dome (store, cafe, wash-pack, arm control)": 362092.90378792613,
+  "the arm (permanent, powered)": 102000,
+  "solar PV for the hub and tunnels (12 kW)": 36000.0,
+  "land, 9 acres": 129600,
+  "septic, well and power for the hub and cafe": 45000,
+  "contingency (10 %)": 109639.02234962252
+ },
+ "farm_total": 1206029.2458458475,
+ "soil_returns": 69650.84048883324,
+ "equity": 1251052.8620680799,
+ "owner_shares": 200000,
+ "home_sale_margin": 1051052.8620680799,
+ "loan": 0.0,
+ "site_costs": {
+  "property tax": 6093.812551681772,
+  "insurance": 10000,
+  "utilities and internet": 6000,
+  "building maintenance (1.5 %)": 5873.893556818892,
+  "arm maintenance (3 %)": 3060.0,
+  "site and farm upkeep": 10801.0
+ },
+ "visitors": {
+  "cautious": {
+   "cafe_covers": 35,
+   "store_produce": 60000,
+   "store_goods": 40000
+  },
+  "base": {
+   "cafe_covers": 60,
+   "store_produce": 100000,
+   "store_goods": 80000
+  },
+  "strong": {
+   "cafe_covers": 90,
+   "store_produce": 160000,
+   "store_goods": 120000
+  }
+ },
+ "staff": [
+  [
+   "Farm manager and head grower",
+   1,
+   55000
+  ],
+  [
+   "Growers",
+   4,
+   40000
+  ],
+  [
+   "Arm and machine technician",
+   1,
+   45000
+  ],
+  [
+   "Chef",
+   1,
+   55000
+  ],
+  [
+   "Cook",
+   1,
+   40000
+  ],
+  [
+   "Store and front of house",
+   2,
+   36000
+  ]
+ ],
+ "levers": {
+  "work_share_h_week_per_home": 3,
+  "weeks": 50,
+  "dinners": 24,
+  "seats": 40,
+  "ticket_usd": 110,
+  "dinner_food_pct": 30,
+  "dinner_other_pct": 8,
+  "dinner_staff_h": 24
+ },
+ "runs": {
+  "cautious": {
+   "revenue": {
+    "produce from 17 tunnels (shares, store, cafe, CSA)": 283185.5510299749,
+    "cafe": 157500,
+    "store: other local goods": 40000,
+    "member access dues (16 homes)": 23040,
+    "orchard, fish, eggs, goats": 9044.0
+   },
+   "costs": {
+    "payroll (10 staff, with burden)": 478240.00000000006,
+    "tunnel inputs, selling, upkeep, heat": 54768.33710433758,
+    "cafe food and supplies": 66150.0,
+    "store goods bought in": 26000.0
+   },
+   "direct_cap": 188585.0,
+   "wholesale": 94600.5510299749,
+   "member_share_value": 24960,
+   "noi": -154217.4921828634,
+   "debt_service": 0.0,
+   "surplus": -154217.4921828634,
+   "yield_on_equity_pct": -12.327016456197612,
+   "dues_to_break_even": 923.2161051190802
+  },
+  "base": {
+   "revenue": {
+    "produce from 17 tunnels (shares, store, cafe, CSA)": 308846.1421101281,
+    "cafe": 270000,
+    "store: other local goods": 80000,
+    "member access dues (16 homes)": 23040,
+    "orchard, fish, eggs, goats": 9044.0
+   },
+   "costs": {
+    "payroll (10 staff, with burden)": 478240.00000000006,
+    "tunnel inputs, selling, upkeep, heat": 63299.58710433758,
+    "cafe food and supplies": 113400.0,
+    "store goods bought in": 52000.0
+   },
+   "direct_cap": 245460.0,
+   "wholesale": 63386.14211012807,
+   "member_share_value": 24960,
+   "noi": -57838.15110271023,
+   "debt_service": 0.0,
+   "surplus": -57838.15110271023,
+   "yield_on_equity_pct": -4.6231580500203355,
+   "dues_to_break_even": 421.2403703266158
+  },
+  "strong": {
+   "revenue": {
+    "produce from 17 tunnels (shares, store, cafe, CSA)": 345052.95413970685,
+    "cafe": 405000,
+    "store: other local goods": 120000,
+    "member access dues (16 homes)": 23040,
+    "orchard, fish, eggs, goats": 9044.0
+   },
+   "costs": {
+    "payroll (10 staff, with burden)": 478240.00000000006,
+    "tunnel inputs, selling, upkeep, heat": 75337.08710433758,
+    "cafe food and supplies": 170100.0,
+    "store goods bought in": 78000.0
+   },
+   "direct_cap": 325710.0,
+   "wholesale": 19342.95413970684,
+   "member_share_value": 24960,
+   "noi": 58631.16092686861,
+   "debt_service": 0.0,
+   "surplus": 58631.16092686861,
+   "yield_on_equity_pct": 4.686545445405649,
+   "dues_to_break_even": 120.0
+  },
+  "cautious+levers": {
+   "revenue": {
+    "produce from 17 tunnels (shares, store, cafe, CSA)": 283185.5510299749,
+    "cafe": 157500,
+    "store: other local goods": 40000,
+    "member access dues (16 homes)": 23040,
+    "orchard, fish, eggs, goats": 9044.0,
+    "farm dinners in the hub": 105600
+   },
+   "costs": {
+    "payroll (10 staff, with burden)": 429856.00000000006,
+    "tunnel inputs, selling, upkeep, heat": 54768.33710433758,
+    "cafe food and supplies": 66150.0,
+    "store goods bought in": 26000.0,
+    "farm dinners: food, supplies, extra staff": 50496.0
+   },
+   "direct_cap": 188585.0,
+   "wholesale": 94600.5510299749,
+   "member_share_value": 24960,
+   "noi": -50729.492182863476,
+   "debt_service": 0.0,
+   "surplus": -50729.492182863476,
+   "yield_on_equity_pct": -4.054943937301258,
+   "dues_to_break_even": 384.2161051190806
+  },
+  "base+levers": {
+   "revenue": {
+    "produce from 17 tunnels (shares, store, cafe, CSA)": 308846.1421101281,
+    "cafe": 270000,
+    "store: other local goods": 80000,
+    "member access dues (16 homes)": 23040,
+    "orchard, fish, eggs, goats": 9044.0,
+    "farm dinners in the hub": 105600
+   },
+   "costs": {
+    "payroll (10 staff, with burden)": 429856.00000000006,
+    "tunnel inputs, selling, upkeep, heat": 63299.58710433758,
+    "cafe food and supplies": 113400.0,
+    "store goods bought in": 52000.0,
+    "farm dinners: food, supplies, extra staff": 50496.0
+   },
+   "direct_cap": 245460.0,
+   "wholesale": 63386.14211012807,
+   "member_share_value": 24960,
+   "noi": 45649.84889728977,
+   "debt_service": 0.0,
+   "surplus": 45649.84889728977,
+   "yield_on_equity_pct": 3.6489144688760233,
+   "dues_to_break_even": 120.0
+  },
+  "strong+levers": {
+   "revenue": {
+    "produce from 17 tunnels (shares, store, cafe, CSA)": 345052.95413970685,
+    "cafe": 405000,
+    "store: other local goods": 120000,
+    "member access dues (16 homes)": 23040,
+    "orchard, fish, eggs, goats": 9044.0,
+    "farm dinners in the hub": 105600
+   },
+   "costs": {
+    "payroll (10 staff, with burden)": 429856.00000000006,
+    "tunnel inputs, selling, upkeep, heat": 75337.08710433758,
+    "cafe food and supplies": 170100.0,
+    "store goods bought in": 78000.0,
+    "farm dinners: food, supplies, extra staff": 50496.0
+   },
+   "direct_cap": 325710.0,
+   "wholesale": 19342.95413970684,
+   "member_share_value": 24960,
+   "noi": 162119.16092686862,
+   "debt_service": 0.0,
+   "surplus": 162119.16092686862,
+   "yield_on_equity_pct": 12.958617964302007,
+   "dues_to_break_even": 120.0
+  }
+ }
+}
