@@ -1,0 +1,230 @@
+{
+ "assumptions": {
+  "resident_cabins": 12,
+  "crew_cabins": 2,
+  "heated_tunnels": 1,
+  "septic_extra_usd": 10000,
+  "external_direct_usd": {
+   "cautious": 150000,
+   "base": 200000,
+   "strong": 300000
+  },
+  "internal_spend_per_person_usd": 2000,
+  "dinners_per_week": 6,
+  "ingredients_usd_per_meal": 5.0,
+  "site_produce_share": 0.4,
+  "cook_h_week": 30,
+  "clean_h_week": 13,
+  "crew_wage_usd_h": 20.0,
+  "tomato_season_weeks": 26,
+  "peak_factor": 1.3,
+  "remote_work_h_week": 40
+ },
+ "tunnel_hours": {
+  "year": 604.8,
+  "avg_week": 11.63076923076923,
+  "season_week": 19.93846153846154,
+  "peak_week": 25.92
+ },
+ "kitchen": {
+  "meals": 4368,
+  "ingredients": 21840.0,
+  "site_produce": 8736.0,
+  "cook_wages": 31200.0,
+  "board_fee_month": 315.7142857142857,
+  "usd_per_meal": 12.142857142857142
+ },
+ "growers": {
+  "cautious": {
+   "market": "cautious",
+   "direct_cap": 186736.0,
+   "internal_market": 36736.0,
+   "tunnels": 17,
+   "revenue": 282351.3280338043,
+   "net": 227860.3409294667,
+   "sold_wholesale": 95615.3280338043,
+   "avg_net_per_tunnel": 13403.549466439217,
+   "one_each_net_per_tunnel": 14128.081494961907,
+   "second_tunnel_net": 10022.400000000003
+  },
+  "base": {
+   "market": "base",
+   "direct_cap": 236736.0,
+   "internal_market": 36736.0,
+   "tunnels": 17,
+   "revenue": 304910.08942294994,
+   "net": 242919.10231861236,
+   "sold_wholesale": 68174.08942294994,
+   "avg_net_per_tunnel": 14289.358959918374,
+   "one_each_net_per_tunnel": 15203.70730847231,
+   "second_tunnel_net": 10022.400000000003
+  },
+  "strong": {
+   "market": "strong",
+   "direct_cap": 336736.0,
+   "internal_market": 36736.0,
+   "tunnels": 17,
+   "revenue": 350027.61220124125,
+   "net": 273036.62509690365,
+   "sold_wholesale": 13291.612201241236,
+   "avg_net_per_tunnel": 16060.977946876685,
+   "one_each_net_per_tunnel": 16524.6796182616,
+   "second_tunnel_net": 13897.03681374708
+  }
+ },
+ "corporation": {
+  "variant": "Engineered structures, fill sold at $8/yd3",
+  "capex": {
+   "design, survey, test pits, permits": 18000,
+   "earthworks (pond crew)": 105797.87708317077,
+   "topsoil strip and respread": 7532.693909922908,
+   "surplus spoil: loading trucks": 13312.469512391675,
+   "gravel bought": 31500.0,
+   "sand bought": 4480.0,
+   "culverts, spillway extras": 6000,
+   "farm: fruit trees (about 70)": 4200,
+   "farm: pasture fencing": 3500,
+   "farm: fish stocking": 1500,
+   "farm: ducks and goats": 2000,
+   "farm: aquatic plants": 1000,
+   "farm: solar pump and drip lines": 2000,
+   "farm: floating spoke (stage 2)": 15000,
+   "greenhouses: 17 tunnels on the pasture berm (after EQIP)": 152974.2792028136,
+   "solar PV (27 kW)": 82267.85714285713,
+   "ground-source heat pump for hall and laundry house, 3 ton": 23400.0,
+   "Private cabin, 16 x 24 ft, SIP panels, own bathroom and kitchenette (x14), engineered": 592200,
+   "Common hall (kitchen and dining), 30 x 32 ft steel arch (x1), engineered": 49900,
+   "Laundry, mudroom and guest bath, 12 x 20 ft (x1), engineered": 26060,
+   "Workshop and barn, 30 x 40 ft steel arch, unheated (x1), engineered": 29500,
+   "land, 15 acres": 216000,
+   "septic, well, power service": 95000,
+   "formation, leases, zoning and engineering": 15000,
+   "contingency (10 %)": 149812.51768511563
+  },
+  "total_capex": 1647937.6945362717,
+  "soil_returns": 69650.84048883324,
+  "equity": 1000000,
+  "loan": 578286.8540474386,
+  "income": {
+   "cabin leases (5 % vacancy)": 207480.0,
+   "tunnel leases": 51000,
+   "orchard, fish, eggs, goats": 9043.645458897776
+  },
+  "costs": {
+   "debt service": 49623.09404772226,
+   "property tax": 10833.366879999998,
+   "insurance": 8000,
+   "site manager": 24000,
+   "grid and internet": 4000,
+   "building maintenance": 10464.9,
+   "site and farm upkeep": 10800.883163450499,
+   "cleaning crew (residents)": 13520.0
+  },
+  "net_to_investors": 136281.401367725,
+  "cash_yield_pct": 13.6281401367725,
+  "rent_for_5pct_yield": 674.67793629245,
+  "structures_cost": 697660.0,
+  "kwp": 27.422619047619047,
+  "grower_net_per_tunnel": 13328.35584,
+  "tunnels": 17,
+  "cabins": 14
+ },
+ "households": {
+  "cautious": {
+   "Remote worker, one tunnel": {
+    "rent": 15600,
+    "board": 3788.5714285714284,
+    "tunnel_leases": 3000,
+    "tunnel_net": 14128.081494961907,
+    "crew_pay": 0.0,
+    "hours_week_avg": 11.63076923076923,
+    "hours_week_peak": 25.92,
+    "other_work_h_week": 40
+   },
+   "Grower, two tunnels": {
+    "rent": 15600,
+    "board": 3788.5714285714284,
+    "tunnel_leases": 6000,
+    "tunnel_net": 24150.48149496191,
+    "crew_pay": 0.0,
+    "hours_week_avg": 23.26153846153846,
+    "hours_week_peak": 51.84,
+    "other_work_h_week": 0
+   },
+   "Crew member, one tunnel": {
+    "rent": 15600,
+    "board": 3788.5714285714284,
+    "tunnel_leases": 3000,
+    "tunnel_net": 14128.081494961907,
+    "crew_pay": 22360.0,
+    "hours_week_avg": 33.13076923076923,
+    "hours_week_peak": 47.42,
+    "other_work_h_week": 21.5
+   }
+  },
+  "base": {
+   "Remote worker, one tunnel": {
+    "rent": 15600,
+    "board": 3788.5714285714284,
+    "tunnel_leases": 3000,
+    "tunnel_net": 15203.70730847231,
+    "crew_pay": 0.0,
+    "hours_week_avg": 11.63076923076923,
+    "hours_week_peak": 25.92,
+    "other_work_h_week": 40
+   },
+   "Grower, two tunnels": {
+    "rent": 15600,
+    "board": 3788.5714285714284,
+    "tunnel_leases": 6000,
+    "tunnel_net": 25226.107308472314,
+    "crew_pay": 0.0,
+    "hours_week_avg": 23.26153846153846,
+    "hours_week_peak": 51.84,
+    "other_work_h_week": 0
+   },
+   "Crew member, one tunnel": {
+    "rent": 15600,
+    "board": 3788.5714285714284,
+    "tunnel_leases": 3000,
+    "tunnel_net": 15203.70730847231,
+    "crew_pay": 22360.0,
+    "hours_week_avg": 33.13076923076923,
+    "hours_week_peak": 47.42,
+    "other_work_h_week": 21.5
+   }
+  },
+  "strong": {
+   "Remote worker, one tunnel": {
+    "rent": 15600,
+    "board": 3788.5714285714284,
+    "tunnel_leases": 3000,
+    "tunnel_net": 16524.6796182616,
+    "crew_pay": 0.0,
+    "hours_week_avg": 11.63076923076923,
+    "hours_week_peak": 25.92,
+    "other_work_h_week": 40
+   },
+   "Grower, two tunnels": {
+    "rent": 15600,
+    "board": 3788.5714285714284,
+    "tunnel_leases": 6000,
+    "tunnel_net": 30421.71643200868,
+    "crew_pay": 0.0,
+    "hours_week_avg": 23.26153846153846,
+    "hours_week_peak": 51.84,
+    "other_work_h_week": 0
+   },
+   "Crew member, one tunnel": {
+    "rent": 15600,
+    "board": 3788.5714285714284,
+    "tunnel_leases": 3000,
+    "tunnel_net": 16524.6796182616,
+    "crew_pay": 22360.0,
+    "hours_week_avg": 33.13076923076923,
+    "hours_week_peak": 47.42,
+    "other_work_h_week": 21.5
+   }
+  }
+ }
+}
