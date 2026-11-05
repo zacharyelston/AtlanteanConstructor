@@ -456,6 +456,12 @@ images are in `docs/img/` (`tools/make_figs.py` redraws the SVGs).
   carrying, spreading, grading) in place of the pond crew's dozer. It halves
   the earthworks bill; flat New England till with a 21 t excavator is done
   in about a month of excavator time.
+- **Synergy sweep:** `tools/synergy_sweep.py` scores every combination of
+  14 site features (art studios, kitchen, gallery, tunnels, biochar, flock,
+  festivals, residencies) and 5 herds (none, sheep, goats, llamas,
+  alpacas), with pairwise synergies, under building, budget and labour
+  limits. Ceramics, a forge, the kitchen, tunnels and festivals form the
+  core; a glass furnace doesn't pay on a small site.
 - **Where it makes sense:** [docs/where-it-pays.md](docs/where-it-pays.md)
   sweeps the drivers. A homeowner needs two of three things: a fill market,
   direct-sale produce, or land-value uplift. A builder profits almost anywhere
